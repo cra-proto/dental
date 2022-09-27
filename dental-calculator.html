@@ -866,8 +866,8 @@ html:lang(fr) .cnjnctn-type-or [class*=cnjnctn-col]:not(:first-child):before {
                 title: "Canada.ca",
                 href: "https://www.canada.ca/en.html"
             }, {
-                title: "Canada Revenue Agency",
-                href: "https://www.canada.ca/en/revenue-agency.html"
+                title: "Taxes",
+                href: "https://www.canada.ca/en/services/taxes.html"
 
             }, {
                 title: "Tax credits and benefits for individuals",
@@ -881,9 +881,9 @@ html:lang(fr) .cnjnctn-type-or [class*=cnjnctn-col]:not(:first-child):before {
     </script>
   
     <main property="mainContentOfPage" class="container">
-<nav class="provisional gc-subway">
+<nav class="provisional gc-subway" aria-label="Section menu">
     <h1 id="gc-document-nav">[Service name]</h1>
-    <ul>
+    <ul class="gc-navseq">
         <li>
             <a href="#" class="hidden-xs hidden-sm">[Page 1]</a>
             <a href="#gc-document-nav" class="visible-xs visible-sm">[Page 1]</a>
@@ -910,7 +910,23 @@ html:lang(fr) .cnjnctn-type-or [class*=cnjnctn-col]:not(:first-child):before {
     </ul>
 </nav>
       
-
+<section>
+    <nav aria-label="Section menu">
+      <h2>Sections</h2>
+      <ul class="gc-navseq">
+        <li><a href="/en/revenue-agency/services/benefits/apply-for-cerb-with-cra/who-apply.html">Eligibility criteria - Closed<span class="wb-inv">: Applying for CERB with CRA</span></a><br>
+          Who was eligible for the CERB</li>
+         <li><a href="/en/revenue-agency/services/benefits/apply-for-cerb-with-cra/keep-payment.html">Validation of applications<span class="wb-inv">: Applying for CERB with CRA</span></a><br>
+          How the CRA may verify your eligibility </li>
+          <li><a href="/en/revenue-agency/services/benefits/apply-for-cerb-with-cra/impact-taxes.html">Impact on your taxes<span class="wb-inv">: Applying for CERB with CRA</span></a><br>
+          How CERB is taxed and what you need to do at tax time</li>
+        <li><a href="/en/revenue-agency/services/benefits/apply-for-cerb-with-cra/return-payment.html">Return or repay a payment<span class="wb-inv">: Applying for CERB with CRA</span></a><br>
+        How to return a CERB payment and impact on your taxes</li>
+        <li><a href="/en/revenue-agency/services/benefits/apply-for-cerb-with-cra/contact.html">Contact us about CERB</a><br>
+          How to contact the CRA with your questions about the CERB </li>
+      </ul>
+    </nav>
+  </section>
      
 <h1 property="name" id="wb-cont">Calculate your Canada Dental Benefit</h1> 
 
@@ -1169,7 +1185,7 @@ html:lang(fr) .cnjnctn-type-or [class*=cnjnctn-col]:not(:first-child):before {
         const eligible_annual_household_income = 90000;
         let formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {style: "currency", currency: "CAD"}),
         netIncome = parseInt($("#proc_financial_netIncome").val(), 10) == NaN ? 0 : parseInt($("#proc_financial_netIncome").val(), 10),
-        spousalNetIncome = parseInt($("#proc_financial_spouse_netIncome").val(), 10), 10) == NaN ? 0 : parseInt($("#proc_finaproc_financial_spouse_netIncomencial_netIncome").val(), 10),
+        spousalNetIncome = parseInt($("#proc_financial_spouse_netIncome").val(), 10) == NaN ? 0 : parseInt($("#proc_finaproc_financial_spouse_netIncomencial_netIncome").val(), 10),
         afni = netIncome + spousalNetIncome;
         /*   generate results  */
         $("#results").removeClass("hidden");
