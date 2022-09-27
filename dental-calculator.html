@@ -1102,7 +1102,7 @@ html:lang(fr) .cnjnctn-type-or [class*=cnjnctn-col]:not(:first-child):before {
 
 
 
-<div class="panel panel-primary mrgn-tp-lg" id="results">
+<div class="panel panel-primary mrgn-tp-lg hidden" id="results">
   <header class="panel-heading">
     <h2 class="panel-title">Result</h2>
   </header>
@@ -1127,24 +1127,6 @@ html:lang(fr) .cnjnctn-type-or [class*=cnjnctn-col]:not(:first-child):before {
     </div>
   </div>
 </div>
-
-<script>
-    $("#calc-famly-income").click(function() {
-        const eligible_annual_household_income = 90000;
-        let formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {style: "currency", currency: "CAD"}),
-        netIncome = parseInt($("#proc_financial_netIncome").val(), 10),
-        spousalNetIncome = parseInt($("#proc_financial_spouse_netIncome").val(), 10), 
-        afni = netIncome + spousalNetIncome;
-        /*   generate results  */
-//        $("#results").removeClass("hidden");
-        $("output[name=net-income-value]").html(formatter.format(afni));
-//        if (afni <= eligible_annual_household_income) {
-//            $("#qualify").removeClass("hidden");
-//        } else {
-//            $("#doesnt-qualify").removeClass("hidden");
-//        }
-    });
-</script>
 
 </form>
 </div>
@@ -1182,6 +1164,22 @@ html:lang(fr) .cnjnctn-type-or [class*=cnjnctn-col]:not(:first-child):before {
     document.write(wet.builder.refFooter({
     }));
 </script>
-
+<script type="text/javascript">
+    $("#calc-famly-income").click(function() {
+        const eligible_annual_household_income = 90000;
+        let formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {style: "currency", currency: "CAD"}),
+        netIncome = parseInt($("#proc_financial_netIncome").val(), 10) == NaN ? 0 : parseInt($("#proc_financial_netIncome").val(), 10),
+        spousalNetIncome = parseInt($("#proc_financial_spouse_netIncome").val(), 10), 10) == NaN ? 0 : parseInt($("#proc_finaproc_financial_spouse_netIncomencial_netIncome").val(), 10),
+        afni = netIncome + spousalNetIncome;
+        /*   generate results  */
+        $("#results").removeClass("hidden");
+        $("output[name=net-income-value]").html(formatter.format(afni));
+//        if (afni <= eligible_annual_household_income) {
+//            $("#qualify").removeClass("hidden");
+//        } else {
+//            $("#doesnt-qualify").removeClass("hidden");
+//        }
+    });
+</script>
 </body>
 </html>
