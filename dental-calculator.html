@@ -1174,17 +1174,23 @@
 
         <div class="row mrgn-tp-lg">
             <div class="wb-frmvld col-sm-12">
-            <form name="proc_personal" action="#" method="post" autocomplete="off">
+                <form name="proc_personal" action="#" method="post" autocomplete="off">
 
-                <div class="row mrgn-tp-lg">
-                    <div class="col-sm-12">
-		    
+
+                    <fieldset id="claimPeriod">
+                        <div>
                             <div class="form-group">
                                 <label for="dentalclaimPeriod" class="required">Dental claim period <strong class="required">(required)</strong></label>
                                 <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control">
                                     <option value="">Select</option>
                                 </select>
                             </div>
+                        </div>
+                    </fieldset>
+
+
+                    <fieldset id="residency" class="chckbxrdio-grp provisional gc-chckbxrdio subfields">
+                        <div>
                             <div class="form-group">
                                 <legend class="h5 required"><span class="field-name">Were you a non-resident of Canada in 2021 <strong class="required">(required)</strong></span> <a href="#factualResident-help" aria-controls="factualResident-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></legend>
                                 <div class="radio">
@@ -1204,8 +1210,12 @@
                         <p>If you are a factual resident, select the last province or territory you lived in before leaving Canada.</p>
                     </div>
                 </section>
+                        </div>
+                    </fieldset>
 
 
+                    <fieldset id="marital">
+                        <div>
                             <div class="form-group">
                                 <label for="maritalStatus" class="required">Marital status as of December 1, 2022 <strong class="required">(required)</strong> <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a></label>
                                 <select name="maritalStatus" id="maritalStatus" class="form-control">
@@ -1232,8 +1242,12 @@
                                     <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/update-your-marital-status-canada-revenue-agency.html#def" target="help" rel="noopener noreferrer">marital status</a> for more information</p>
                                 </div>
                             </section>
+                        </div>
+                    </fieldset>
 
 
+                    <fieldset id="income">
+                        <div>
                             <div class="form-group">
                                 <label for="netIncome" class="required">Your net income for 2021 <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
                                 <a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>
@@ -1288,8 +1302,12 @@
                                     <p>If your households foreign income is negative, enter '0'.</p>
                                 </div>
                             </section>
+                        </div>
+                    </fieldset>
 
 
+                    <fieldset id="uccbAndRdsp"> 
+                        <div>
                             <div class="form-group">
                                 <label for="uccbAndRdspIncome"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> income <span class="wb-inv">(dollars only, no cents)</span></label>
                                 <a href="#uccbAndRdspIncome-help" aria-controls="uccbAndRdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your UCCB and RDSP income</span></a>
@@ -1326,6 +1344,8 @@
                                     <p>If field left blank, we will assume it is zero.</p>
                                 </div>
                             </section>
+                        </div>
+                    </fieldset>
                     <button id="calc-famly-income" class="btn btn-primary" type="button">Check if your family income qualifies</button>
                 </form>
             </div>
