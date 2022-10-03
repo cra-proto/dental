@@ -1180,9 +1180,9 @@
                                 <label for="dentalclaimPeriod" class="required"><span class="field-name">When did your qualified dependant(s) recieve dental care services in Canada?</span> <strong class="required">(required)</strong></label>
                                 <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
                                     <option label="Select a period"></option>
-                                    <option value="2022-09-30">Before October 1, 2022</option>
-                                    <option value="2022-10-01--2023-06-30">October 1, 2022 to June 30, 2023</option>
-                                    <option value="2023-07-01">After June 30, 2023</option>
+                                    <option value="2022-11-30" data-claim-period="0">Before December 1, 2022</option>
+                                    <option value="2022-12-01--2023-06-30" data-claim-period="1">December 1, 2022 to June 30, 2023</option>
+                                    <option value="2023-07-01" data-claim-period="2">After June 30, 2023</option>
                                 </select>
                             </div>
                         </div>
@@ -1195,10 +1195,10 @@
                             <div class="form-group">
                                 <legend class="h5 required">Were you a <span class="field-name">non-resident of Canada in 2021</span> <strong class="required">(required)</strong> <a href="#factualResident-help" aria-controls="factualResident-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></legend>
                                 <div class="radio">
-                                    <label for="non_residentTRUE"><input type="radio" name="non_resident" id="non_residentTRUE" checked="checked" value="true" data-rule-required="true">Yes</label>
+                                    <label for="non_residentTRUE"><input type="radio" name="non_resident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">Yes</label>
                                 </div>
                                 <div class="radio">
-                                    <label for="non_residentFALSE"><input type="radio" name="non_resident" id="non_residentFALSE" checked="checked" value="false" data-rule-required="true">No</label>
+                                    <label for="non_residentFALSE"><input type="radio" name="non_resident" id="non_residentFALSE" value="false" data-residency="false" data-rule-required="true">No</label>
                                 </div>
                             </div>
                         </div>
@@ -1421,15 +1421,18 @@
                 }),
                 netIncome = parseInt($("#netIncome").val(), 10) || 0,
                 spousalNetIncome = parseInt($("#spouseNetIncome").val(), 10) || 0,
-                foreignIncome = parseInt($("#foreignIncome").val(), 10) || 0,
+                worldIncome = parseInt($("#foreignIncome").val(), 10) || 0,
                 uccbAndRdspIncome = parseInt($("#uccbAndRdspIncome").val(), 10) || 0,
                 uccbAndRdspRepayment = parseInt($("#uccbAndRdspRepayment").val(), 10) || 0,
-                afni = netIncome + spousalNetIncome + foreignIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
+                claimPeriod = $("#dentalclaimPeriod").find(":selected").data("claim-period"), 
+                maritalStatus = $("#maritalStatus").find(":selected").data("marital-add"), 
+                residency = $("input[name=non_resident]:checked", "#dental_cal_form").data("residency"), 
+                afni = netIncome + spousalNetIncome + worldIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
             /*   generate results  */
             $("#results").removeClass("hidden");
             $("output[name=net-income-value]").html(formatter.format(netIncome));
             $("output[name=spouse-net-income-value]").html(formatter.format(spousalNetIncome));
-            $("output[name=household-income-value]").html(formatter.format(netIncome + spousalNetIncome + foreignIncome));
+            $("output[name=household-income-value]").html(formatter.format(netIncome + spousalNetIncome + worldIncome));
             $("output[name=avg-fam-net-income-value]").html(formatter.format(afni));
             if (afni <= eligible_annual_household_income) {
                 $("#qualify").removeClass("hidden");
