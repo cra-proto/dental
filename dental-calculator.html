@@ -1170,7 +1170,7 @@
 
         <div class="row mrgn-tp-lg">
             <div class="wb-frmvld col-sm-12 provisional wb-steps">
-                <form id="steps-example" name="proc_personal" action="#" method="get" autocomplete="off" class="panel panel-default">
+                <form id="dental_cal_form" name="proc_personal" action="#" method="get" autocomplete="off" class="panel panel-default">
 
 
                     <fieldset id="claimPeriod" class="panel-default p-0">
@@ -1180,7 +1180,7 @@
                                 <label for="dentalclaimPeriod" class="required"><span class="field-name">Dental claim period</span> <strong class="required">(required)</strong></label>
                                 <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
                                     <option label="Select a period"></option>
-                                    <option value="2022-09-30">before October 1, 2022</option>
+                                    <option value="2022-09-30">Before October 1, 2022</option>
                                     <option value="2022-10-01--2023-06-30">October 1, 2022 to June 30, 2023</option>
                                     <option value="2023-07-01">After June 30, 2023</option>
                                 </select>
@@ -1413,7 +1413,7 @@
     <![endif]-->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
-        $("#calc-famly-income").click(function () {
+        $("#dental_cal_form").onsubmit(function () {
             const eligible_annual_household_income = 90000;
             let formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
                     style: "currency",
@@ -1421,20 +1421,22 @@
                 }),
                 netIncome = parseInt($("#netIncome").val(), 10) || 0,
                 spousalNetIncome = parseInt($("#spouseNetIncome").val(), 10) || 0,
+                foreignIncome = parseInt($("#foreignIncome").val(), 10) || 0,
                 uccbAndRdspIncome = parseInt($("#uccbAndRdspIncome").val(), 10) || 0,
                 uccbAndRdspRepayment = parseInt($("#uccbAndRdspRepayment").val(), 10) || 0,
-                afni = netIncome + spousalNetIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
+                afni = netIncome + spousalNetIncome + foreignIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
             /*   generate results  */
             $("#results").removeClass("hidden");
             $("output[name=net-income-value]").html(formatter.format(netIncome));
             $("output[name=spouse-net-income-value]").html(formatter.format(spousalNetIncome));
-            $("output[name=household-income-value]").html(formatter.format(netIncome + spousalNetIncome));
+            $("output[name=household-income-value]").html(formatter.format(netIncome + spousalNetIncome + foreignIncome));
             $("output[name=avg-fam-net-income-value]").html(formatter.format(afni));
             if (afni <= eligible_annual_household_income) {
                 $("#qualify").removeClass("hidden");
             } else {
                 $("#doesnt-qualify").removeClass("hidden");
             }
+            return false;
         });
     </script>
 </body>
