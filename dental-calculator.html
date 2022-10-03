@@ -1173,20 +1173,23 @@
                 <form id="steps-example" name="proc_personal" action="#" method="get" autocomplete="off" class="panel panel-default">
 
 
-                    <fieldset id="claimPeriod" class="panel-default">
+                    <fieldset id="claimPeriod" class="panel-default p-0">
                         <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Claim period</span></legend>
                         <div class="panel-body">
                             <div class="form-group">
                                 <label for="dentalclaimPeriod" class="required"><span class="field-name">Dental claim period</span> <strong class="required">(required)</strong></label>
                                 <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
                                     <option label="Select a period"></option>
+                                    <option value="2022-09-30">before October 1, 2022</option>
+                                    <option value="2022-10-01--2023-06-30">October 1, 2022 to June 30, 2023</option>
+                                    <option value="2023-07-01">After June 30, 2023</option>
                                 </select>
                             </div>
                         </div>
                     </fieldset>
 
 
-                    <fieldset id="residency" class="panel-default chckbxrdio-grp provisional">
+                    <fieldset id="residency" class="panel-default chckbxrdio-grp provisional p-0">
                         <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
                         <div class="panel-body">
                             <div class="form-group">
@@ -1202,13 +1205,13 @@
                     </fieldset>
 
 
-                    <fieldset id="marital" class="panel-default">
+                    <fieldset id="marital" class="panel-default p-0">
                         <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
                         <div class="panel-body">
                             <div class="form-group">
                                 <label for="maritalStatus" class="required">What was your <span class="field-name">Marital status as of December 1, 2022</span> <strong class="required">(required)</strong> <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a></label>
                                 <select name="maritalStatus" id="maritalStatus" class="form-control" required="required">
-                                    <option value="">Select</option>
+                                    <option label="Select a marital status"></option>
                                     <option value="DIVORCED" data-marital-add="false">Divorced</option>
                                     <option value="common law partner" data-marital-add="true">Living Common Law</option>
                                     <option value="spouse" data-marital-add="true">Married</option>
@@ -1235,7 +1238,7 @@
                     </fieldset>
 
 
-                    <fieldset id="income" class="panel-default">
+                    <fieldset id="income" class="panel-default p-0">
                         <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Household net income</span></legend>
                         <div class="panel-body">
                             <div class="form-group">
@@ -1296,7 +1299,7 @@
                     </fieldset>
 
 
-                    <fieldset id="uccbAndRdsp" class="panel-default">
+                    <fieldset id="uccbAndRdsp" class="panel-default p-0">
                         <legend class="panel-heading mrgn-bttm-0"><span class="panel-title"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr></span></legend>
                         <div class="panel-body">
                             <div class="form-group">
