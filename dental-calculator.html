@@ -1278,21 +1278,21 @@
                                 </div>
                             </section>
                             <div class="form-group">
-                                <label for="foreignIncome" class="required">Your <span class="field-name">household foreign income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
-                                <a href="#foreignIncome-help" aria-controls="foreignIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your households foreign income</span></a>
+                                <label for="worldIncome" class="required">Your <span class="field-name">household world income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                                <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your households world income</span></a>
                                 <div class="input-group col-sm-3">
                                     <span class="input-group-addon">$</span>
-                                    <input type="text" name="foreignIncome" size="7" maxlength="7" value="" id="foreignIncome" class="form-control text-right" data-rule-digits="true">
+                                    <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" data-rule-digits="true">
                                     <span class="input-group-addon">.00</span>
                                 </div>
                             </div>
-                            <section id="foreignIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                            <section id="worldIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                 <header class="modal-header">
-                                    <h2 class="modal-title">Net Income</h2>
+                                    <h2 class="modal-title">Household World Income</h2>
                                 </header>
                                 <div class="modal-body">
                                     <p></p>
-                                    <p>If your households foreign income is negative, enter '0'.</p>
+                                    <p>If your households world income is negative, enter '0'.</p>
                                 </div>
                             </section>
                         </div>
@@ -1419,14 +1419,14 @@
                     style: "currency",
                     currency: "CAD"
                 }),
+                claimPeriod = $("#dentalclaimPeriod").find(":selected").data("claim-period"), 
+                residency = $("input[name=non_resident]:checked", "#dental_cal_form").data("residency"), 
+                maritalStatus = $("#maritalStatus").find(":selected").data("marital-add"), 
                 netIncome = parseInt($("#netIncome").val(), 10) || 0,
                 spousalNetIncome = parseInt($("#spouseNetIncome").val(), 10) || 0,
-                worldIncome = parseInt($("#foreignIncome").val(), 10) || 0,
+                worldIncome = parseInt($("#worldIncome").val(), 10) || 0,
                 uccbAndRdspIncome = parseInt($("#uccbAndRdspIncome").val(), 10) || 0,
                 uccbAndRdspRepayment = parseInt($("#uccbAndRdspRepayment").val(), 10) || 0,
-                claimPeriod = $("#dentalclaimPeriod").find(":selected").data("claim-period"), 
-                maritalStatus = $("#maritalStatus").find(":selected").data("marital-add"), 
-                residency = $("input[name=non_resident]:checked", "#dental_cal_form").data("residency"), 
                 afni = netIncome + spousalNetIncome + worldIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
             /*   generate results  */
             $("#results").removeClass("hidden");
