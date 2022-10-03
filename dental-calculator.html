@@ -1174,10 +1174,10 @@
 
 
                     <fieldset id="claimPeriod" class="panel-default p-0">
-                        <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Claim period</span></legend>
+                        <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Dental claim period</span></legend>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label for="dentalclaimPeriod" class="required"><span class="field-name">When did your qualified dependants recieve dental care services in Canada?</span> <strong class="required">(required)</strong></label>
+                                <label for="dentalclaimPeriod" class="required"><span class="field-name">When did your qualified dependant(s) recieve dental care services in Canada?</span> <strong class="required">(required)</strong></label>
                                 <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
                                     <option label="Select a period"></option>
                                     <option value="2022-09-30">Before October 1, 2022</option>
@@ -1413,7 +1413,7 @@
     <![endif]-->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
-        $("#dental_cal_form").onsubmit(function () {
+        $("#dental_cal_form").submit(function () {
             const eligible_annual_household_income = 90000;
             let formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
                     style: "currency",
@@ -1436,7 +1436,7 @@
             } else {
                 $("#doesnt-qualify").removeClass("hidden");
             }
-            return false;
+            event.preventDefault();
         });
     </script>
 </body>
