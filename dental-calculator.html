@@ -1099,11 +1099,9 @@
             }, {
                 title: "Taxes",
                 href: "https://www.canada.ca/en/services/taxes.html"
-
             }, {
                 title: "Tax credits and benefits for individuals",
                 href: "https://www.canada.ca/en/services/taxes/child-and-family-benefits.html"
-
             }],
             search: true,
             siteMenu: true,
@@ -1173,59 +1171,52 @@
         <p><strong class="text-warning">Warning:</strong> This is an online calculator estimator, <strong>not the application</strong>. This page does not save any data, so if you leave or refresh the page you may need to enter the information again.</p>
 
         <div class="row mrgn-tp-lg">
-            <div class="wb-frmvld col-sm-12">
-                <form name="proc_personal" action="#" method="post" autocomplete="off">
+            <div class="wb-frmvld col-sm-12 provisional wb-steps">
+                <form id="steps-example" name="proc_personal" action="#" method="get" autocomplete="off" class="panel panel-default">
 
 
-                    <fieldset id="claimPeriod">
-                        <div>
+                    <fieldset id="claimPeriod" class="panel-default">
+                        <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Claim period</span></legend>
+                        <div class="panel-body">
                             <div class="form-group">
-                                <label for="dentalclaimPeriod" class="required">Dental claim period <strong class="required">(required)</strong></label>
-                                <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control">
-                                    <option value="">Select</option>
+                                <label for="dentalclaimPeriod" class="required"><span class="field-name">Dental claim period</span> <strong class="required">(required)</strong></label>
+                                <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
+                                    <option label="Select a period"></option>
                                 </select>
                             </div>
                         </div>
                     </fieldset>
 
 
-                    <fieldset id="residency" class="chckbxrdio-grp provisional gc-chckbxrdio subfields">
-                        <div>
+                    <fieldset id="residency" class="panel-default chckbxrdio-grp provisional">
+                        <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
+                        <div class="panel-body">
                             <div class="form-group">
-                                <legend class="h5 required"><span class="field-name">Were you a non-resident of Canada in 2021 <strong class="required">(required)</strong></span> <a href="#factualResident-help" aria-controls="factualResident-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></legend>
+                                <legend class="h5 required">Were you a <span class="field-name">non-resident of Canada in 2021</span> <strong class="required">(required)</strong> <a href="#factualResident-help" aria-controls="factualResident-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></legend>
                                 <div class="radio">
-                                    <label for="non_residentTRUE" class="form-radio gc"><input type="radio" name="non_resident" id="non_residentTRUE" checked="checked" value="true" class="form-radio">Yes</label>
+                                    <label for="non_residentTRUE"><input type="radio" name="non_resident" id="non_residentTRUE" checked="checked" value="true" data-rule-required="true">Yes</label>
                                 </div>
                                 <div class="radio">
-                                    <label for="non_residentFALSE" class="form-radio gc"><input type="radio" name="non_resident" id="non_residentFALSE" checked="checked" value="false" class="form-radio">No</label>
+                                    <label for="non_residentFALSE"><input type="radio" name="non_resident" id="non_residentFALSE" checked="checked" value="false" data-rule-required="true">No</label>
                                 </div>
                             </div>
-                <section id="factualResident-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                    <header class="modal-header">
-                        <h2 class="modal-title">Factual resident</h2>
-                    </header>
-                    <div class="modal-body">
-                        <p>You are a <strong>factual resident of Canada for tax purposes</strong> if you keep significant <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html" target="help" rel="noopener noreferrer">residential ties</a> in Canada while living or travelling outside the country.</p>
-                        <p>The term factual resident means that, although you left Canada, you are still considered to be a resident of Canada for income tax purposes.</p>
-                        <p>If you are a factual resident, select the last province or territory you lived in before leaving Canada.</p>
-                    </div>
-                </section>
                         </div>
                     </fieldset>
 
 
-                    <fieldset id="marital">
-                        <div>
+                    <fieldset id="marital" class="panel-default">
+                        <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
+                        <div class="panel-body">
                             <div class="form-group">
-                                <label for="maritalStatus" class="required">Marital status as of December 1, 2022 <strong class="required">(required)</strong> <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a></label>
-                                <select name="maritalStatus" id="maritalStatus" class="form-control">
+                                <label for="maritalStatus" class="required">What was your <span class="field-name">Marital status as of December 1, 2022</span> <strong class="required">(required)</strong> <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a></label>
+                                <select name="maritalStatus" id="maritalStatus" class="form-control" required="required">
                                     <option value="">Select</option>
-                                    <option value="DIVORCED">Divorced</option>
-                                    <option value="COMMONLAW">Living Common Law</option>
-                                    <option value="MARRIED">Married</option>
-                                    <option value="SEPARATED">Separated</option>
-                                    <option value="SINGLE">Single</option>
-                                    <option value="WIDOWED">Widowed</option>
+                                    <option value="DIVORCED" data-marital-add="false">Divorced</option>
+                                    <option value="common law partner" data-marital-add="true">Living Common Law</option>
+                                    <option value="spouse" data-marital-add="true">Married</option>
+                                    <option value="SEPARATED" data-marital-add="false">Separated</option>
+                                    <option value="SINGLE" data-marital-add="false">Single</option>
+                                    <option value="WIDOWED" data-marital-add="false">Widowed</option>
                                 </select>
                             </div>
                             <section id="maritalStatus-help" class="mfp-hide modal-dialog modal-content overlay-def">
@@ -1246,14 +1237,15 @@
                     </fieldset>
 
 
-                    <fieldset id="income">
-                        <div>
+                    <fieldset id="income" class="panel-default">
+                        <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Household net income</span></legend>
+                        <div class="panel-body">
                             <div class="form-group">
-                                <label for="netIncome" class="required">Your net income for 2021 <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                                <label for="netIncome" class="required">Your <span class="field-name">net income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
                                 <a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>
                                 <div class="input-group col-sm-3">
                                     <span class="input-group-addon">$</span>
-                                    <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" data-rule-digits="true">
+                                    <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" data-rule-digits="true" required="required">
                                     <span class="input-group-addon">.00</span>
                                 </div>
                             </div>
@@ -1267,7 +1259,7 @@
                                 </div>
                             </section>
                             <div class="form-group">
-                                <label for="spouseNetIncome" class="required">Your spouse's net income for 2021 <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
+                                <label for="spouseNetIncome" class="required">Your <span class="field-name">spouse's net income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
                                 <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
                                 <div class="input-group col-sm-3">
                                     <span class="input-group-addon">$</span>
@@ -1285,7 +1277,7 @@
                                 </div>
                             </section>
                             <div class="form-group">
-                                <label for="foreignIncome" class="required">Your household foreign income for 2021 <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                                <label for="foreignIncome" class="required">Your <span class="field-name">household foreign income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
                                 <a href="#foreignIncome-help" aria-controls="foreignIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your households foreign income</span></a>
                                 <div class="input-group col-sm-3">
                                     <span class="input-group-addon">$</span>
@@ -1306,10 +1298,11 @@
                     </fieldset>
 
 
-                    <fieldset id="uccbAndRdsp"> 
-                        <div>
+                    <fieldset id="uccbAndRdsp" class="panel-default">
+                        <legend class="panel-heading mrgn-bttm-0"><span class="panel-title"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr></span></legend>
+                        <div class="panel-body">
                             <div class="form-group">
-                                <label for="uccbAndRdspIncome"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> income <span class="wb-inv">(dollars only, no cents)</span></label>
+                                <label for="uccbAndRdspIncome"><span class="field-name"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> income</span> <span class="wb-inv">(dollars only, no cents)</span></label>
                                 <a href="#uccbAndRdspIncome-help" aria-controls="uccbAndRdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your UCCB and RDSP income</span></a>
                                 <div class="input-group col-sm-3">
                                     <span class="input-group-addon">$</span>
@@ -1327,7 +1320,7 @@
                                 </div>
                             </section>
                             <div class="form-group">
-                                <label for="uccbAndRdspRepayment"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> repayment <span class="wb-inv">(dollars only, no cents)</span></label>
+                                <label for="uccbAndRdspRepayment"><span class="field-name"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span> <span class="wb-inv">(dollars only, no cents)</span></label>
                                 <a href="#uccbAndRdspRepayment-help" aria-controls="uccbAndRdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for UCCB and RDSP repayment</span></a>
                                 <div class="input-group col-sm-3">
                                     <span class="input-group-addon">$</span>
@@ -1346,7 +1339,7 @@
                             </section>
                         </div>
                     </fieldset>
-                    <button id="calc-famly-income" class="btn btn-primary" type="button">Check if your family income qualifies</button>
+                    <input id="calc-famly-income" class="btn btn-primary" type="button" value="Check if your family income qualifies">
                 </form>
             </div>
         </div>
@@ -1409,6 +1402,15 @@
     <script type="text/javascript">
         document.write(wet.builder.refFooter({}));
     </script>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://wet-boew.github.io/v4.0-ci/wet-boew/js/wet-boew.min.js"></script>
+<span id="wb-rsz" class="wb-init">&nbsp;</span>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+    <script src='https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/ie8-wet-boew2.min.js'></script>
+    <![endif]-->
+    <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
         $("#calc-famly-income").click(function () {
             const eligible_annual_household_income = 90000;
