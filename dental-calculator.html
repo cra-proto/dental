@@ -1259,7 +1259,7 @@
                                     <p>If your net income is negative, enter '0'.</p>
                                 </div>
                             </section>
-                            <div class="form-group">
+                            <div id="spouseNetIncomeElm" class="form-group hidden">
                                 <label for="spouseNetIncome" class="required">Your <span class="field-name">spouse's net income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
                                 <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
                                 <div class="input-group col-sm-3">
@@ -1277,7 +1277,7 @@
                                     <p>If your spouse's net income is negative, enter '0'.</p>
                                 </div>
                             </section>
-                            <div class="form-group">
+                            <div id="worldIncomeElm" class="form-group hidden">
                                 <label for="worldIncome" class="required">Your <span class="field-name">household world income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
                                 <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your households world income</span></a>
                                 <div class="input-group col-sm-3">
@@ -1413,22 +1413,32 @@
     <![endif]-->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
+        var claimPeriod, nonresident, relationship;
+        $("#dentalclaimPeriod", "#dental_cal_form").change(function () {
+            claimPeriod = $(this).find(":selected").data("claim-period");
+        });
+        $("#maritalStatus", "#dental_cal_form").change(function () {
+            relationship = $(this).find(":selected").data("marital-add");
+            if (relationship === true) {
+                $("#spouseNetIncomeElm").removeClass("hidden");
+            } else {
+                $("#spouseNetIncomeElm").addClass("hidden");
+            }
+        });
         $("#dental_cal_form").submit(function () {
             const eligible_annual_household_income = 90000;
-            let formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
+            let afni,
+                formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
                     style: "currency",
                     currency: "CAD"
                 }),
-                claimPeriod = $("#dentalclaimPeriod").find(":selected").data("claim-period"), 
-                residency = $("input[name=non_resident]:checked", "#dental_cal_form").data("residency"), 
-                maritalStatus = $("#maritalStatus").find(":selected").data("marital-add"), 
                 netIncome = parseInt($("#netIncome").val(), 10) || 0,
                 spousalNetIncome = parseInt($("#spouseNetIncome").val(), 10) || 0,
                 worldIncome = parseInt($("#worldIncome").val(), 10) || 0,
                 uccbAndRdspIncome = parseInt($("#uccbAndRdspIncome").val(), 10) || 0,
-                uccbAndRdspRepayment = parseInt($("#uccbAndRdspRepayment").val(), 10) || 0,
-                afni = netIncome + spousalNetIncome + worldIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
-            /*   generate results  */
+                uccbAndRdspRepayment = parseInt($("#uccbAndRdspRepayment").val(), 10) || 0;
+            afni = netIncome + spousalNetIncome + worldIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
+            /*  Generate results  */
             $("#results").removeClass("hidden");
             $("output[name=net-income-value]").html(formatter.format(netIncome));
             $("output[name=spouse-net-income-value]").html(formatter.format(spousalNetIncome));
