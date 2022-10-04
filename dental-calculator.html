@@ -1195,10 +1195,10 @@
                             <div class="form-group">
                                 <legend class="h5 required">Were you a <span class="field-name">non-resident of Canada in 2021</span> <strong class="required">(required)</strong> <a href="#factualResident-help" aria-controls="factualResident-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></legend>
                                 <div class="radio">
-                                    <label for="non_residentTRUE"><input type="radio" name="non_resident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">Yes</label>
+                                    <label for="non_residentTRUE"><input type="radio" name="nonResident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">Yes</label>
                                 </div>
                                 <div class="radio">
-                                    <label for="non_residentFALSE"><input type="radio" name="non_resident" id="non_residentFALSE" value="false" data-residency="false" data-rule-required="true">No</label>
+                                    <label for="non_residentFALSE"><input type="radio" name="nonResident" id="non_residentFALSE" value="false" data-residency="false" data-rule-required="true">No</label>
                                 </div>
                             </div>
                         </div>
@@ -1416,6 +1416,14 @@
         var claimPeriod, nonresident, relationship;
         $("#dentalclaimPeriod", "#dental_cal_form").change(function () {
             claimPeriod = $(this).find(":selected").data("claim-period");
+        });
+        $("input[type=radio][name=nonResident]", "#dental_cal_form").change(function () {
+            nonResident = $(this).data("residency");
+            if (nonResident === true) {
+                $("#worldIncomeElm").removeClass("hidden");
+            } else {
+                $("#worldIncomeElm").addClass("hidden");
+            }
         });
         $("#maritalStatus", "#dental_cal_form").change(function () {
             relationship = $(this).find(":selected").data("marital-add");
