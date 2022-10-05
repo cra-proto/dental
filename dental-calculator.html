@@ -1417,7 +1417,7 @@
         $("#dentalclaimPeriod", "#dental_cal_form").change(function () {
             claimPeriod = $(this).find(":selected").data("claim-period");
         });
-        $("input[type=radio][name=nonResident]", "#dental_cal_form").change(function () {
+        $document.on( "click vclick touchstart", "input[type=radio][name=nonResident]", function( event ) {
             nonResident = $(this).data("residency");
             if (nonResident === true) {
                 $("#worldIncomeElm").removeClass("hidden");
