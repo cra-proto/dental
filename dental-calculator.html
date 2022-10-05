@@ -1414,6 +1414,7 @@
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
         var claimPeriod, nonResident, relationship;
+	var $document = wb.doc;
         $("#dentalclaimPeriod", "#dental_cal_form").change(function () {
             claimPeriod = $(this).find(":selected").data("claim-period");
         });
