@@ -1131,9 +1131,9 @@
                         <li> <a class="gc-navseq-nav-btn" href="#gc-navseq-header">Go to navigation menu</a></li>
                         <li> <a class="gc-navseq-nav-btn" href="#wb-cont">Skip to main content</a></li>
                     </ul>
-                    <nav class="provisional gc-subway" aria-label="Section navigation">
-                        <h1 id="gc-document-nav">Canada Dental Benefit</h1>
-                        <ul class="gcnav-steps">
+                    <nav aria-label="Section navigation">
+                        <h1 id="gc-navseq-header">Canada Dental Benefit</h1>
+                        <ul class="gc-navseq">
                             <li><a href="who-apply.html">Who can apply</a></li>
                             <li><a class="active" aria-current="page">How much you can get</a></li>
                             <li><a href="get-ready.html">Get ready to apply</a></li>
@@ -1253,265 +1253,277 @@
                                 <summary>Read the privacy statement for the estimator tool</summary>
                                 <p>The CRA is not collecting or retaining any of the information you enter on this page. These amounts are only used to help you estimate the Canada Dental Benefit payment amount you may be eligible for. You may be required to provide additional information for verification after you apply.</p>
                             </details>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mrgn-tp-lg">
+                    <div class="col-xs-12">
+                        <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
                             <!--START OF TOOL-->
                             <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"> <span class="fas fa-square fa-stack-2x fa-inverse"></span><span class="fa fa-calculator fa-stack-2x"></span></span></div>
                             <h4 class="pull-left mrgn-tp-0 mrgn-lft-lg h3 text-info" id="calculator">Use the tool to estimate your benefit amount</h4>
                             <div class="clearfix"></div>
                             <p class="small text-muted">Your data is not collected or saved. If you leave or refresh the page, you will need to enter your information again.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- START OF CALC -->
-                <div class="row mrgn-tp-lg">
-                    <div class="wb-frmvld col-sm-12 provisional wb-steps">
-                        <form id="dental_cal_form" name="proc_personal" action="#" method="get" autocomplete="off" class="panel panel-default">
+                            <div class="row mrgn-tp-lg">
+                                <div class="wb-frmvld col-sm-12 provisional wb-steps">
+                                    <!-- START OF CALC -->
+                                    <form id="dental_cal_form" name="proc_personal" action="#" method="get" autocomplete="off" class="panel panel-default">
 
 
-                            <!-- STEP 1-->
-                            <fieldset id="claimPeriod" class="panel-default p-0">
-                                <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Dental claim period</span></legend>
-                                <div class="panel-body mrgn-lft-sm">
-                                    <div class="form-group">
-                                        <label for="dentalclaimPeriod" class="required"><span class="field-name">When did your child recieve dental care services in Canada?</span> <strong class="required">(required)</strong></label>
-                                        <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
-                                            <option label="Select a period"></option>
-                                            <option value="2022-10-01--2023-06-30" data-claim-period="1">October 1, 2022 to June 30, 2023</option>
-                                            <option value="2023-07-01--2024-06-30" data-claim-period="2">July 1, 2023 to June 30, 2024</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </fieldset>
+                                        <!-- STEP 1-->
+                                        <fieldset id="claimPeriod" class="panel-default p-0">
+                                            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Dental claim period</span></legend>
+                                            <div class="panel-body mrgn-lft-sm">
+                                                <div class="form-group">
+                                                    <label for="dentalclaimPeriod" class="required"><span class="field-name">When did your child recieve dental care services in Canada?</span> <strong class="required">(required)</strong></label>
+                                                    <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
+                                                        <option label="Select a period"></option>
+                                                        <option value="2022-10-01--2023-06-30" data-claim-period="1">October 1, 2022 to June 30, 2023</option>
+                                                        <option value="2023-07-01--2024-06-30" data-claim-period="2">July 1, 2023 to June 30, 2024</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </fieldset>
 
 
-                            <!--STEP 2-->
-                            <fieldset id="residency" class="panel-default p-0">
-                                <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
-                                <div class="panel-body mrgn-lft-sm">
-                                    <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp provisional">
-                                        <legend class="h5 required" tabindex="-1">Were you a <span class="field-name">non-resident of Canada in 2021</span> <strong class="required">(required)</strong> <a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx wb-init wb-lbx-inited" role="button" id="wb-auto-5"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></legend>
-                                        <ul class="list-unstyled">
-                                            <li class="radio">
-                                                <input type="radio" name="nonResident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">
-                                                <label for="non_residentTRUE">Yes</label>
-                                            </li>
-                                            <li class="radio">
-                                                <input type="radio" name="nonResident" id="non_residentFALSE" value="false" data-residency="false" data-rule-required="true">
-                                                <label for="non_residentFALSE">No</label>
-                                            </li>
-                                        </ul>
-                                    </fieldset>
-                                    <section id="nonResident-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                        <header class="modal-header">
-                                            <h2 class="modal-title">Non-resident</h2>
-                                        </header>
-                                        <div class="modal-body">
-                                            <p>You are a non-resident for income tax purposes if you:</p>
-                                            <ul>
-                                                <li>normally, customarily, or routinely live in another country and are <strong>not</strong> considered a resident of Canada</li>
-                                                <li>do <strong>not</strong> have significant <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html">residential ties</a> in Canada and <strong>any</strong> of the following applies:
-                                                    <ul>
-                                                        <li>You live outside Canada throughout the tax year</li>
-                                                        <li>You stay in Canada for <strong>less than <span class="nowrap">183 days</span></strong> in the tax year</li>
+                                        <!--STEP 2-->
+                                        <fieldset id="residency" class="panel-default p-0">
+                                            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
+                                            <div class="panel-body mrgn-lft-sm">
+                                                <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp provisional">
+                                                    <legend class="h5 required" tabindex="-1">Were you a <span class="field-name">non-resident of Canada in 2021</span> <strong class="required">(required)</strong> <a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx wb-init wb-lbx-inited" role="button" id="wb-auto-5"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></legend>
+                                                    <ul class="list-unstyled">
+                                                        <li class="radio">
+                                                            <input type="radio" name="nonResident" id="non_residentTRUE"             value="true" data-residency="true" data-rule-required="true">
+                                                            <label for="non_residentTRUE">Yes</label>
+                                                        </li>
+                                                        <li class="radio">
+                                                            <input type="radio" name="nonResident" id="non_residentFALSE" value="false" data-residency="false" data-rule-required="true">
+                                                            <label for="non_residentFALSE">No</label>
+                                                        </li>
                                                     </ul>
-                                                </li>
-                                            </ul>
-                                            <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/non-residents-canada.html" target="help" rel="noopener noreferrer">Non-residents of Canada</a> for more information</p>
-                                        </div>
-                                    </section>
+                                                </fieldset>
+                                                <section id="nonResident-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                    <header class="modal-header">
+                                                        <h2 class="modal-title">Non-resident</h2>
+                                                    </header>
+                                                    <div class="modal-body">
+                                                        <p>You are a non-resident for income tax purposes if you:</p>
+                                                        <ul>
+                                                            <li>normally, customarily, or routinely live in another country and are <strong>not</strong> considered a resident of Canada</li>
+                                                            <li>do <strong>not</strong> have significant <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html">residential ties</a> in Canada and <strong>any</strong> of the following applies:
+                                                                <ul>
+                                                                    <li>You live outside Canada throughout the tax year</li>
+                                                                    <li>You stay in Canada for <strong>less than <span class="nowrap">183 days</span></strong> in the tax year</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                        <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/non-residents-canada.html" target="help" rel="noopener noreferrer">Non-residents of Canada</a> for more information</p>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+
+
+                                        <!--STEP 3-->
+                                        <fieldset id="marital" class="panel-default p-0">
+                                            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
+                                            <div class="panel-body mrgn-lft-sm">
+                                                <div class="form-group">
+                                                    <label for="maritalStatus" class="required">What was your <span class="field-name">marital status as of December 1, 2022</span> <strong class="required">(required)</strong></label>
+                                                    <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a>
+                                                    <select name="maritalStatus" id="maritalStatus" class="form-control" required="required">
+                                                        <option label="Select your marital status"></option>
+                                                        <option value="common law partner" data-marital-add="true">Common-law</option>
+                                                        <option value="DIVORCED" data-marital-add="false">Divorced</option>
+                                                        <option value="spouse" data-marital-add="true">Married</option>
+                                                        <option value="SEPARATED" data-marital-add="false">Separated</option>
+                                                        <option value="SINGLE" data-marital-add="false">Single</option>
+                                                        <option value="WIDOWED" data-marital-add="false">Widowed</option>
+                                                    </select>
+                                                </div>
+                                                <section id="maritalStatus-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                    <header class="modal-header">
+                                                        <h2 class="modal-title">Marital status</h2>
+                                                    </header>
+                                                    <div class="modal-body">
+                                                        <dl>
+                                                            <dt>Common-law partner</dt>
+                                                            <dd class="mrgn-tp-md">This applies to a person <strong>who is not your spouse</strong>, with whom you are living in a conjugal relationship.</dd>
+                                                            <dt class="mrgn-tp-lg">Separated</dt>
+                                                            <dd class="mrgn-tp-md">You are separated when you start living separate and apart from your spouse or common law partner because of a breakdown in the relationship for a period of <strong>at least 90 days</strong> and you have not reconciled.</dd>
+                                                        </dl>
+                                                        <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/update-your-marital-status-canada-revenue-agency.html#def" target="help" rel="noopener noreferrer">marital status</a> for more information</p>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+
+
+                                        <!--STEP 4-->
+                                        <!--YOUR INCOME-->
+                                        <fieldset id="income" class="panel-default p-0">
+                                            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Household net income</span></legend>
+                                            <div class="panel-body mrgn-lft-sm">
+                                                <div class="form-group">
+                                                    <label for="netIncome" class="required">Your <span class="field-name">net income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                                                    <a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>
+                                                    <div class="input-group col-sm-3">
+                                                        <span class="input-group-addon">$</span>
+                                                        <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" data-rule-digits="true" required="required">
+                                                        <span class="input-group-addon">.00</span>
+                                                    </div>
+                                                </div>
+                                                <section id="netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                    <header class="modal-header">
+                                                        <h2 class="modal-title">Net Income</h2>
+                                                    </header>
+                                                    <div class="modal-body">
+                                                        <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
+                                                        <p>If your net income is negative, enter '0'.</p>
+                                                    </div>
+                                                </section>
+                                                <!--SPOUSE INCOME-->
+                                                <div id="spouseNetIncomeElm" class="form-group hidden">
+                                                    <label for="spouseNetIncome" class="required">Your <span class="field-name">spouse's net income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
+                                                    <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
+                                                    <div class="input-group col-sm-3">
+                                                        <span class="input-group-addon">$</span>
+                                                        <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true">
+                                                        <span class="input-group-addon">.00</span>
+                                                    </div>
+                                                </div>
+                                                <section id="spouse_netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                    <header class="modal-header">
+                                                        <h2 class="modal-title">Spouse's Net Income</h2>
+                                                    </header>
+                                                    <div class="modal-body">
+                                                        <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your spouse's tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
+                                                        <p>If your spouse's net income is negative, enter '0'.</p>
+                                                    </div>
+                                                </section>
+                                                <!--WORLD INCOME-->
+                                                <div id="worldIncomeElm" class="form-group hidden">
+                                                    <label for="worldIncome">Your <span class="field-name">household world income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span></label>
+                                                    <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your households world income</span></a>
+                                                    <div class="input-group col-sm-3">
+                                                        <span class="input-group-addon">$</span>
+                                                        <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" data-rule-digits="true">
+                                                        <span class="input-group-addon">.00</span>
+                                                    </div>
+                                                </div>
+                                                <section id="worldIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                    <header class="modal-header">
+                                                        <h2 class="modal-title">Household World Income</h2>
+                                                    </header>
+                                                    <div class="modal-body">
+                                                        <p>If your households world income is negative, enter '0'.</p>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+
+
+                                        <!--STEP 5-->
+                                        <fieldset id="uccbAndRdsp" class="panel-default p-0">
+                                            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr></span></legend>
+                                            <div class="panel-body mrgn-lft-sm">
+                                                <!--INCOME-->
+                                                <div class="form-group">
+                                                    <label for="uccbAndRdspIncome"><span class="field-name"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> income</span> <span class="wb-inv">(dollars only, no cents)</span></label>
+                                                    <a href="#uccbAndRdspIncome-help" aria-controls="uccbAndRdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your UCCB and RDSP income</span></a>
+                                                    <div class="input-group col-sm-3">
+                                                        <span class="input-group-addon">$</span>
+                                                        <input type="text" name="uccbAndRdspIncome" size="7" maxlength="7" value="" id="uccbAndRdspIncome" class="form-control text-right" data-rule-digits="true">
+                                                        <span class="input-group-addon">.00</span>
+                                                    </div>
+                                                </div>
+                                                <section id="uccbAndRdspIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                    <header class="modal-header">
+                                                        <h2 class="modal-title">UCCB and RDSP income</h2>
+                                                    </header>
+                                                    <div class="modal-body">
+                                                        <p>Income claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">line 11700</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-125-registered-disability-savings-plan-rdsp-income.html" target="help" rel="noopener noreferrer">line 12500</a> of your or your spouse's tax return).</p>
+                                                        <p>If field left blank, we will assume it is zero.</p>
+                                                    </div>
+                                                </section>
+                                                <!--REPAYMENTS-->
+                                                <div class="form-group">
+                                                    <label for="uccbAndRdspRepayment"><span class="field-name"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span> <span class="wb-inv">(dollars only, no cents)</span></label>
+                                                    <a href="#uccbAndRdspRepayment-help" aria-controls="uccbAndRdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for UCCB and RDSP repayment</span></a>
+                                                    <div class="input-group col-sm-3">
+                                                        <span class="input-group-addon">$</span>
+                                                        <input type="text" name="uccbAndRdspRepayment" size="7" maxlength="7" value="" id="uccbAndRdspRepayment" class="form-control text-right" data-rule-digits="true">
+                                                        <span class="input-group-addon">.00</span>
+                                                    </div>
+                                                </div>
+                                                <section id="uccbAndRdspRepayment-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                    <header class="modal-header">
+                                                        <h2 class="modal-title">UCCB and RDSP repayment</h2>
+                                                    </header>
+                                                    <div class="modal-body">
+                                                        <p>Repayment claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-21300-universal-child-care-benefit-uccb-repayment.html" target="help" rel="noopener noreferrer">line 21300</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23200-other-deductions/line-23200-income-amounts-repaid.html" target="help" rel="noopener noreferrer">line 23200</a> of your or your spouse's tax return).</p>
+                                                        <p>If field left blank, we will assume it is zero.</p>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+
+
+                                        <input id="calc-famly-income" class="btn btn-primary" type="submit" value="Check if your family income qualifies">
+                                    </form>
+                                    <!--END OF CALC--> 
                                 </div>
-                            </fieldset>
-
-
-                            <!--STEP 3-->
-                            <fieldset id="marital" class="panel-default p-0">
-                                <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
-                                <div class="panel-body mrgn-lft-sm">
-                                    <div class="form-group">
-                                        <label for="maritalStatus" class="required">What was your <span class="field-name">marital status as of December 1, 2022</span> <strong class="required">(required)</strong></label>
-                                        <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a>
-                                        <select name="maritalStatus" id="maritalStatus" class="form-control" required="required">
-                                            <option label="Select your marital status"></option>
-                                            <option value="common law partner" data-marital-add="true">Common-law</option>
-                                            <option value="DIVORCED" data-marital-add="false">Divorced</option>
-                                            <option value="spouse" data-marital-add="true">Married</option>
-                                            <option value="SEPARATED" data-marital-add="false">Separated</option>
-                                            <option value="SINGLE" data-marital-add="false">Single</option>
-                                            <option value="WIDOWED" data-marital-add="false">Widowed</option>
-                                        </select>
-                                    </div>
-                                    <section id="maritalStatus-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                        <header class="modal-header">
-                                            <h2 class="modal-title">Marital status</h2>
-                                        </header>
-                                        <div class="modal-body">
-                                            <dl>
-                                                <dt>Common-law partner</dt>
-                                                <dd class="mrgn-tp-md">This applies to a person <strong>who is not your spouse</strong>, with whom you are living in a conjugal relationship.</dd>
-                                                <dt class="mrgn-tp-lg">Separated</dt>
-                                                <dd class="mrgn-tp-md">You are separated when you start living separate and apart from your spouse or common law partner because of a breakdown in the relationship for a period of <strong>at least 90 days</strong> and you have not reconciled.</dd>
-                                            </dl>
-                                            <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/update-your-marital-status-canada-revenue-agency.html#def" target="help" rel="noopener noreferrer">marital status</a> for more information</p>
-                                        </div>
-                                    </section>
-                                </div>
-                            </fieldset>
-
-
-                            <!--STEP 4-->
-                            <!--YOUR INCOME-->
-                            <fieldset id="income" class="panel-default p-0">
-                                <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Household net income</span></legend>
-                                <div class="panel-body mrgn-lft-sm">
-                                    <div class="form-group">
-                                        <label for="netIncome" class="required">Your <span class="field-name">net income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
-                                        <a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>
-                                        <div class="input-group col-sm-3">
-                                            <span class="input-group-addon">$</span>
-                                            <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" data-rule-digits="true" required="required">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                    </div>
-                                    <section id="netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                        <header class="modal-header">
-                                            <h2 class="modal-title">Net Income</h2>
-                                        </header>
-                                        <div class="modal-body">
-                                            <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
-                                            <p>If your net income is negative, enter '0'.</p>
-                                        </div>
-                                    </section>
-                                    <!--SPOUSE INCOME-->
-                                    <div id="spouseNetIncomeElm" class="form-group hidden">
-                                        <label for="spouseNetIncome" class="required">Your <span class="field-name">spouse's net income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
-                                        <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
-                                        <div class="input-group col-sm-3">
-                                            <span class="input-group-addon">$</span>
-                                            <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                    </div>
-                                    <section id="spouse_netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                        <header class="modal-header">
-                                            <h2 class="modal-title">Spouse's Net Income</h2>
-                                        </header>
-                                        <div class="modal-body">
-                                            <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your spouse's tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
-                                            <p>If your spouse's net income is negative, enter '0'.</p>
-                                        </div>
-                                    </section>
-                                    <!--WORLD INCOME-->
-                                    <div id="worldIncomeElm" class="form-group hidden">
-                                        <label for="worldIncome">Your <span class="field-name">household world income for 2021</span> <span class="wb-inv">(dollars only, no cents)</span></label>
-                                        <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your households world income</span></a>
-                                        <div class="input-group col-sm-3">
-                                            <span class="input-group-addon">$</span>
-                                            <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" data-rule-digits="true">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                    </div>
-                                    <section id="worldIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                        <header class="modal-header">
-                                            <h2 class="modal-title">Household World Income</h2>
-                                        </header>
-                                        <div class="modal-body">
-                                            <p>If your households world income is negative, enter '0'.</p>
-                                        </div>
-                                    </section>
-                                </div>
-                            </fieldset>
-
-
-                            <!--STEP 5-->
-                            <fieldset id="uccbAndRdsp" class="panel-default p-0">
-                                <legend class="panel-heading mrgn-bttm-0"><span class="panel-title"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr></span></legend>
-                                <div class="panel-body mrgn-lft-sm">
-                                    <!--INCOME-->
-                                    <div class="form-group">
-                                        <label for="uccbAndRdspIncome"><span class="field-name"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> income</span> <span class="wb-inv">(dollars only, no cents)</span></label>
-                                        <a href="#uccbAndRdspIncome-help" aria-controls="uccbAndRdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your UCCB and RDSP income</span></a>
-                                        <div class="input-group col-sm-3">
-                                            <span class="input-group-addon">$</span>
-                                            <input type="text" name="uccbAndRdspIncome" size="7" maxlength="7" value="" id="uccbAndRdspIncome" class="form-control text-right" data-rule-digits="true">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                    </div>
-                                    <section id="uccbAndRdspIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                        <header class="modal-header">
-                                            <h2 class="modal-title">UCCB and RDSP income</h2>
-                                        </header>
-                                        <div class="modal-body">
-                                            <p>Income claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">line 11700</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-125-registered-disability-savings-plan-rdsp-income.html" target="help" rel="noopener noreferrer">line 12500</a> of your or your spouse's tax return).</p>
-                                            <p>If field left blank, we will assume it is zero.</p>
-                                        </div>
-                                    </section>
-                                    <!--REPAYMENTS-->
-                                    <div class="form-group">
-                                        <label for="uccbAndRdspRepayment"><span class="field-name"><abbr title="Universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span> <span class="wb-inv">(dollars only, no cents)</span></label>
-                                        <a href="#uccbAndRdspRepayment-help" aria-controls="uccbAndRdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for UCCB and RDSP repayment</span></a>
-                                        <div class="input-group col-sm-3">
-                                            <span class="input-group-addon">$</span>
-                                            <input type="text" name="uccbAndRdspRepayment" size="7" maxlength="7" value="" id="uccbAndRdspRepayment" class="form-control text-right" data-rule-digits="true">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                    </div>
-                                    <section id="uccbAndRdspRepayment-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                        <header class="modal-header">
-                                            <h2 class="modal-title">UCCB and RDSP repayment</h2>
-                                        </header>
-                                        <div class="modal-body">
-                                            <p>Repayment claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-21300-universal-child-care-benefit-uccb-repayment.html" target="help" rel="noopener noreferrer">line 21300</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23200-other-deductions/line-23200-income-amounts-repaid.html" target="help" rel="noopener noreferrer">line 23200</a> of your or your spouse's tax return).</p>
-                                            <p>If field left blank, we will assume it is zero.</p>
-                                        </div>
-                                    </section>
-                                </div>
-                            </fieldset>
-                            <input id="calc-famly-income" class="btn btn-primary" type="submit" value="Check if your family income qualifies">
-                        </form>
-                    </div>
-                </div>
-                <!--END OF CALC--> 
-
-
-                <!--START OF RESULTS-->
-                <div class="panel panel-primary mrgn-tp-lg hidden" id="results">
-                    <header class="panel-heading">
-                        <h2 class="panel-title">Result</h2>
-                    </header>
-                    <div class="panel-body">
-                        <div id="crb-statement">
-                            <p>Based on the amounts you entered, your adjusted family net income for this benefit is: <span class="mrgn-tp-0 h5"><output style="display: inline;" name="avg-fam-net-income-value"><strong>$0</strong></output></span></p>
-                            <details class="mrgn-bttm-md">
-                                <summary>Show the math for this amount</summary>
-                                <p>Your adjusted family net income (AFNI) for this benefit is:</p>
-                                <ul class="fa-ul lst-spcd">
-                                    <li><span class="mrgn-tp-0 h5"><output style="display: inline;" name="net-income-value">$0</output><span class="text-muted"> (your net income)</span></span></li>
-                                    <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="spouse-net-income-value">$0</output><span class="text-muted"> (your spouse's net income)</span></span></li>
-                                    <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 h4"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
-                                </ul>
-                                <br>
-                                <ul class="fa-ul lst-spcd">
-                                    <li><span class="mrgn-tp-0 h5"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
-                                    <li><span class="fas fa-minus fa-li"><span class="wb-inv">minus</span></span> <span class="h5"><output style="display: inline;" name="adjusted-income-value">$0</output><span class="text-muted"> (UCCB and RDSP income)</span></span></li>
-                                    <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="adjusted-payment-value">$0</output><span class="text-muted"> (UCCB and RDSP repayment)</span></span></li>
-                                    <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 h4"><output style="display: inline;" name="avg-fam-net-income-value">$0</output><span class="text-muted"> (your adjusted family net income)</span></span></li>
-                                </ul>
-                            </details>
-                            <!--QUALIFIES-->
-                            <div class="alert alert-success provisional hidden" id="qualify">
-                                <p>Your benefit amount:</p>
-                                <p class="lead"><strong>$XXX</strong> for each eligible child</p>
-                                <p><strong>$XXX </strong>(half the benefit amount) if you have shared custody</p>
                             </div>
-                            <!--DOES NOT QUALIFY-->
-                            <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
-                                <p>Based on the amounts you entered, your adjusted family net income does not qualify for this benefit.</p>
+    
+
+                            <!--START OF RESULTS-->
+                            <div class="row mrgn-tp-lg">
+                                <div class="panel panel-primary mrgn-tp-lg hidden" id="results">
+                                    <header class="panel-heading">
+                                            <h2 class="panel-title">Result</h2>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div id="crb-statement">
+                                            <h2 class="panel-title">Result</h2>
+                                            <p>Based on the amounts you entered, your adjusted family net income for this benefit is: <span class="mrgn-tp-0 h5"><output style="display: inline;" name="avg-fam-net-income-value"><strong>$0</strong></output></span></p>
+                                            <details class="mrgn-bttm-md">
+                                                <summary>Show the math for this amount</summary>
+                                                <p>Your adjusted family net income (AFNI) for this benefit is:</p>
+                                                <ul class="fa-ul lst-spcd">
+                                                    <li><span class="mrgn-tp-0 h5"><output style="display: inline;" name="net-income-value">$0</output><span class="text-muted"> (your net income)</span></span></li>
+                                                    <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="spouse-net-income-value">$0</output><span class="text-muted"> (your spouse's net income)</span></span></li>
+                                                    <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 h4"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
+                                                </ul>
+                                                <br>
+                                                <ul class="fa-ul lst-spcd">
+                                                    <li><span class="mrgn-tp-0 h5"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
+                                                    <li><span class="fas fa-minus fa-li"><span class="wb-inv">minus</span></span> <span class="h5"><output style="display: inline;" name="adjusted-income-value">$0</output><span class="text-muted"> (UCCB and RDSP income)</span></span></li>
+                                                    <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="adjusted-payment-value">$0</output><span class="text-muted"> (UCCB and RDSP repayment)</span></span></li>
+                                                    <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 h4"><output style="display: inline;" name="avg-fam-net-income-value">$0</output><span class="text-muted"> (your adjusted family net income)</span></span></li>
+                                                </ul>
+                                            </details>
+                                            <!--QUALIFIES-->
+                                            <div class="alert alert-success provisional hidden" id="qualify">
+                                                <p>Your benefit amount:</p>
+                                                <p class="lead"><strong>$XXX</strong> for each eligible child</p>
+                                                <p><strong>$XXX </strong>(half the benefit amount) if you have shared custody</p>
+                                            </div>
+                                            <!--DOES NOT QUALIFY-->
+                                            <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
+                                                <p>Based on the amounts you entered, your adjusted family net income does not qualify for this benefit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        <!--END OF RESULTS--> 
+                    <!--END OF TOOL-->
                         </div>
                     </div>
                 </div>
-                <!--END OF RESULTS--> 
-                <!--END OF TOOL-->
 
 
                 <h2 id="h-3">Maximum number of payments</h2>
@@ -1519,7 +1531,7 @@
                 <p>If you have shared custody of your child and currently split the Canada Child Benefit (CCB), each parent may receive a maximum of 2 payments for that child. In this case, each parent may receive 50% of the benefit payment amount.</p>
                 <div class="mwsbodytext text parbase section">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-sm-12">
                             <nav role="navigation" class="mrgn-bttm-lg mrgn-tp-lg">
                                 <h3 class="wb-inv">Section navigation</h3>
                                 <ul class="pager">
