@@ -1126,16 +1126,16 @@
                 <h1 property="name" class="wb-inv" id="wb-cont" dir="ltr">How much you can get - Canada Dental Benefit</h1>
             </div>
             <div class="container">
-                <section class="provisional gc-subwaygc-nav">
+                <section class="provisional gc-subway gc-nav">
                     <ul id="gc-navseq-nav" class="hidden-xs hidden-sm">
                         <li> <a class="gc-navseq-nav-btn" href="#gc-navseq-header">Go to navigation menu</a></li>
                         <li> <a class="gc-navseq-nav-btn" href="#wb-cont">Skip to main content</a></li>
                     </ul>
                     <nav class="provisional gc-subway" aria-label="Section navigation">
                         <h1 id="gc-navseq-header">Canada Dental Benefit</h1>
-                        <ul class="gc-navseq">
+                        <ul class="gc-navseq gc-steps">
                             <li><a href="who-apply.html">Who can apply</a></li>
-                            <li><a class="active" aria-current="page">How much you can get</a></li>
+                            <li class="active"><a class="active" aria-current="page">How much you can get</a></li>
                             <li><a href="get-ready.html">Get ready to apply</a></li>
                             <li><a href="how-apply.html">How to apply</a></li>
                             <li><a href="repay.html">Return a payment</a></li>
@@ -1154,6 +1154,12 @@
                                 <li><a href="#h-2">Estimate your benefit amount</a></li>
                                 <li><a href="#h-3">Maximum number of payments</a></li>
                             </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-8">
                             <h2 id="h-1">Benefit amount</h2>
                             <p>You may receive a set benefit amount for each eligible child. Your benefit amount depends on your adjusted family net income (AFNI).</p>
                             <details>
@@ -1197,7 +1203,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                                <section id="afni" class="mfp-hide modal-dialog modal-content overlay-def">
+                            <section id="afni" class="mfp-hide modal-dialog modal-content overlay-def">
                                 <header class="modal-header">
                                     <h2 class="modal-title">Your adjusted family net income</h2>
                                 </header>
@@ -1247,6 +1253,12 @@
                                     <p>Details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-we-calculate-your-ccb.html#shared">Shared custody and your payments</a></p>
                                 </div>
                             </section>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-8">
                             <h2 id="h-2">Estimate your benefit amount</h2>
                             <p>You can use the tool to estimate your adjusted family net income based on your tax information. The result will show your adjusted family net income for this benefit and the amount you could recieve for each eligible child.</p>
                             <details>
@@ -1259,7 +1271,7 @@
 
 
                 <div class="row mrgn-bttm-md mrgn-tp-lg">
-                    <div class="col-xs-12">
+                    <div class="col-md-8">
                         <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
                             <!--START OF TOOL-->
                             <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"> <span class="fas fa-square fa-stack-2x fa-inverse"></span><span class="fa fa-calculator fa-stack-2x"></span></span></div>
@@ -1269,7 +1281,7 @@
                                 <div class="wb-frmvld col-sm-12 provisional wb-steps">
                                     <p class="small text-muted">Your data is not collected or saved. If you leave or refresh the page, you will need to enter your information again.</p>
                                     <!-- START OF CALC -->
-                                    <form id="dental_cal_form" name="proc_personal" action="#" method="get" autocomplete="off" class="panel panel-default mrgn-bttm-none">
+                                    <form id="dental_cal_form" name="proc_personal" action="#" method="get" autocomplete="off" class="panel panel-default mrgn-bttm-md">
 
 
                                         <!-- STEP 1-->
@@ -1293,7 +1305,7 @@
                                             <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
                                             <div class="panel-body mrgn-lft-sm">
                                                 <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp gc-font-2019 provisional">
-                                                    <legend class="h5 required" tabindex="-1">Were you a <span class="field-name">non-resident of Canada in 2021</span> <strong class="required">(required)</strong> <a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></legend>
+                                                    <legend class="h5 required" tabindex="-1"><span class="gc-font-2019">Were you a <span class="field-name">non-resident of Canada in 2021</span> <strong class="required">(required)</strong> <a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for factual resident</span></a></span></legend>
                                                     <ul class="list-unstyled">
                                                         <li class="radio">
                                                             <input type="radio" name="nonResident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">
@@ -1480,9 +1492,9 @@
     
 
                             <!--START OF RESULTS-->
-                            <div class="row mrgn-tp-lg hidden" id="results">
-                                <div class="row mrgn-tp-lg hidden" id="results">
-                                    <div class="panel panel-primary mrgn-tp-lg">
+                            <div class="mrgn-tp-lg mrgn-lft-lg hidden" id="results">
+                                <div class="row mrgn-tp-md">
+                                    <div class="panel panel-primary">
                                         <header class="panel-heading">
                                                 <h2 class="panel-title">Result</h2>
                                         </header>
@@ -1528,18 +1540,22 @@
                 </div>
 
 
-                <h2 id="h-3">Maximum number of payments</h2>
-                <p>If you have more than one eligible child, you can apply for all your children at the same time or separately. You may apply for a <strong>maximum of 2 payments</strong> for this benefit for each eligible child.</p>
-                <p>If you have shared custody of your child and currently split the Canada Child Benefit (CCB), each parent may receive a maximum of 2 payments for that child. In this case, each parent may receive 50% of the benefit payment amount.</p>
-                <div class="mwsbodytext text parbase section">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <nav role="navigation" class="mrgn-bttm-lg mrgn-tp-lg">
-                                <h3 class="wb-inv">Section navigation</h3>
-                                <ul class="pager">
-                                    <li class="next"><a href="get-ready.html" rel="next"><span class="wb-inv">Next: </span>Get ready to apply</a></li>
-                                </ul>
-                            </nav>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 id="h-3">Maximum number of payments</h2>
+                        <p>If you have more than one eligible child, you can apply for all your children at the same time or separately. You may apply for a <strong>maximum of 2 payments</strong> for this benefit for each eligible child.</p>
+                        <p>If you have shared custody of your child and currently split the Canada Child Benefit (CCB), each parent may receive a maximum of 2 payments for that child. In this case, each parent may receive 50% of the benefit payment amount.</p>
+                        <div class="mwsbodytext text parbase section">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <nav role="navigation" class="mrgn-bttm-lg mrgn-tp-lg">
+                                        <h3 class="wb-inv">Section navigation</h3>
+                                        <ul class="pager">
+                                            <li class="next"><a href="get-ready.html" rel="next"><span class="wb-inv">Next: </span>Get ready to apply</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
