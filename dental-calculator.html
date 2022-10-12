@@ -1506,9 +1506,26 @@
                                                     <summary>Show the math for this amount</summary>
                                                     <p>Your adjusted family net income (AFNI) for this benefit is:</p>
                                                     <ul class="fa-ul lst-spcd">
-                                                        <li><span class="mrgn-tp-0 h5"><output style="display: inline;" name="net-income-value">$0</output><span class="text-muted"> (your net income)</span></span></li>
-                                                        <li id="spouseNetIncomeResult" class="brdr-bttm hidden"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="spouse-net-income-value">$0</output><span class="text-muted"> (your spouse's net income)</span></span></li>
-                                                        <li id="worldIncomeResult" class="brdr-bttm hidden"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="family-world-income-value">$0</output><span class="text-muted"> (your family world net income)</span></span></li>
+                                                        <li id="netIncomeResult" class="brdr-bttm">
+                                                            <span class="mrgn-tp-0 h5">
+                                                            <output style="display: inline;" name="net-income-value">$0</output>
+                                                            <span class="text-muted"> (your net income)</span>
+                                                            </span>
+                                                        </li>
+                                                        <li id="spouseNetIncomeResult" class="brdr-bttm hidden">
+                                                            <span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span>
+                                                            <span class="h5">
+                                                                <output style="display: inline;" name="spouse-net-income-value">$0</output>
+                                                                <span class="text-muted"> (your spouse's net income)</span>
+                                                            </span>
+                                                        </li>
+                                                        <li id="worldIncomeResult" class="brdr-bttm hidden">
+                                                            <span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> 
+                                                            <span class="h5">
+                                                                <output style="display: inline;" name="family-world-income-value">$0</output>
+                                                                <span class="text-muted"> (your family world net income)</span>
+                                                            </span>
+                                                        </li>
                                                         <li class="brdr-bttm"><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 h4"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
                                                     </ul>
                                                     <br>
@@ -1661,60 +1678,91 @@
     <![endif]-->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
-        var claimPeriod, nonResident, relationship;
-        var $document = wb.doc;
+        var claimPeriod = 1, 
+            nonResident = false, 
+            relationship = false, 
+            $document = wb.doc, 
+            calcResults = function () {
+                const eligible_annual_household_income = 90000;
+
+                let spousalNetIncome, worldIncome, afni,
+                    formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
+                        style: "currency",
+                        currency: "CAD"
+                    }),
+                    netIncome = parseInt($("#netIncome").val(), 10) || 0,
+                    uccbAndRdspIncome = parseInt($("#uccbAndRdspIncome").val(), 10) || 0,
+                    uccbAndRdspRepayment = parseInt($("#uccbAndRdspRepayment").val(), 10) || 0;
+                /*  calculate results  */
+                if (relationship === true) {
+                    spousalNetIncome = parseInt($("#spouseNetIncome").val(), 10) || 0;
+                    $("#netIncomeResult").removeClass("brdr-bttm");
+                    $("#spouseNetIncomeResult").removeClass("hidden");
+                    $("#spouseNetIncomeResult").addClass("brdr-bttm");
+                } else {
+                    spousalNetIncome = 0;
+                    $("#netIncomeResult").addClass("brdr-bttm");
+                    $("#spouseNetIncomeResult").addClass("hidden");
+                }
+                if (nonResident === true) {
+                    worldIncome = parseInt($("#worldIncome").val(), 10) || 0;
+                    $("#netIncomeResult").removeClass("brdr-bttm");
+                    $("#spouseNetIncomeResult").removeClass("hidden", "brdr-bttm");
+                    $("#worldIncomeResult").removeClass("hidden");
+                    $("#worldIncomeResult").addClass("brdr-bttm");
+                } else {
+                    worldIncome = 0;
+                    $("#worldIncomeResult").addClass("hidden");
+                }
+
+                afni = netIncome + spousalNetIncome + worldIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
+
+                /*  show results  */
+                $("output[name=net-income-value]").html(formatter.format(netIncome));
+                $("output[name=spouse-net-income-value]").html(formatter.format(spousalNetIncome));
+                $("output[name=family-world-income-value]").html(formatter.format(spousalNetIncome));
+                $("output[name=adjusted-income-value]").html(formatter.format(uccbAndRdspIncome));
+                $("output[name=adjusted-payment-value]").html(formatter.format(uccbAndRdspRepayment));
+                $("output[name=household-income-value]").html(formatter.format(netIncome + spousalNetIncome + worldIncome));
+                $("output[name=avg-fam-net-income-value]").html(formatter.format(afni));
+                if (afni <= eligible_annual_household_income) {
+                    $("#qualify").removeClass("hidden");
+                    $("#doesnt-qualify").addClass("hidden");
+                } else {
+                    $("#qualify").addClass("hidden");
+                    $("#doesnt-qualify").removeClass("hidden");
+                }
+            };
+
         $("#dentalclaimPeriod", "#dental_cal_form").change(function () {
             claimPeriod = $(this).find(":selected").data("claim-period");
-        });
-        $document.on( "click vclick touchstart", "input[type=radio][name=nonResident]", function( event ) {
-            nonResident = $(this).data("residency");
-            if (nonResident === true) {
-                $("#worldIncomeElm").removeClass("hidden");
-                $("#worldIncomeResult").removeClass("hidden");
-            } else {
-                $("#worldIncomeElm").addClass("hidden");
-                $("#worldIncomeResult").addClass("hidden");
-            }
         });
         $("#maritalStatus", "#dental_cal_form").change(function () {
             relationship = $(this).find(":selected").data("marital-add");
             if (relationship === true) {
                 $("#spouseNetIncomeElm").removeClass("hidden");
-                $("#spouseNetIncomeResult").removeClass("hidden");
             } else {
                 $("#spouseNetIncomeElm").addClass("hidden");
-                $("#spouseNetIncomeResult").addClass("hidden");
             }
+            calcResults();
+        });
+        $document.on( "click vclick touchstart", "input[type=radio][name=nonResident]", function( event ) {
+            nonResident = $(this).data("residency");
+            if (nonResident === true) {
+                $("#worldIncomeElm").removeClass("hidden");
+            } else {
+                $("#worldIncomeElm").addClass("hidden");
+            }
+            calcResults();
         });
         $("#dental_cal_form").submit(function () {
-            const eligible_annual_household_income = 90000;
-            let afni,
-                formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
-                    style: "currency",
-                    currency: "CAD"
-                }),
-                netIncome = parseInt($("#netIncome").val(), 10) || 0,
-                spousalNetIncome = parseInt($("#spouseNetIncome").val(), 10) || 0,
-                worldIncome = parseInt($("#worldIncome").val(), 10) || 0,
-                uccbAndRdspIncome = parseInt($("#uccbAndRdspIncome").val(), 10) || 0,
-                uccbAndRdspRepayment = parseInt($("#uccbAndRdspRepayment").val(), 10) || 0;
-            afni = netIncome + spousalNetIncome + worldIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
-            /*  Generate results  */
+            calcResults();
             $("#results").removeClass("hidden");
-            $("output[name=net-income-value]").html(formatter.format(netIncome));
-            $("output[name=spouse-net-income-value]").html(formatter.format(spousalNetIncome));
-            $("output[name=family-world-income-value]").html(formatter.format(spousalNetIncome));
-            $("output[name=adjusted-income-value]").html(formatter.format(uccbAndRdspIncome));
-            $("output[name=adjusted-payment-value]").html(formatter.format(uccbAndRdspRepayment));
-            $("output[name=household-income-value]").html(formatter.format(netIncome + spousalNetIncome + worldIncome));
-            $("output[name=avg-fam-net-income-value]").html(formatter.format(afni));
-            if (afni <= eligible_annual_household_income) {
-                $("#qualify").removeClass("hidden");
-            } else {
-                $("#doesnt-qualify").removeClass("hidden");
-            }
             event.preventDefault();
         });
+
+
+        /*  Step button   */            
         $(document).on("click", ".steps-wrapper button", function (event) {
             $("legend.wb-steps-active").parents().prevAll().find("legend.panel-heading").addClass("prev-wb-step");
             $("legend.wb-steps-active").parents().nextAll().find("legend.panel-heading").removeClass("prev-wb-step");
