@@ -1497,7 +1497,7 @@
                                 <div class="row mrgn-tp-md">
                                     <div class="panel panel-primary">
                                         <header class="panel-heading">
-                                                <h2 class="panel-title">Result</h2>
+                                            <h2 class="panel-title">Result</h2>
                                         </header>
                                         <div class="panel-body">
                                             <div id="crb-statement">
@@ -1507,8 +1507,9 @@
                                                     <p>Your adjusted family net income (AFNI) for this benefit is:</p>
                                                     <ul class="fa-ul lst-spcd">
                                                         <li><span class="mrgn-tp-0 h5"><output style="display: inline;" name="net-income-value">$0</output><span class="text-muted"> (your net income)</span></span></li>
-                                                        <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="spouse-net-income-value">$0</output><span class="text-muted"> (your spouse's net income)</span></span></li>
-                                                        <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 h4"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
+                                                        <li id="spouseNetIncomeResult" class="brdr-bttm hidden"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="spouse-net-income-value">$0</output><span class="text-muted"> (your spouse's net income)</span></span></li>
+                                                        <li id="worldIncomeResult" class="brdr-bttm hidden"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span> <span class="h5"><output style="display: inline;" name="family-world-income-value">$0</output><span class="text-muted"> (your family world net income)</span></span></li>
+                                                        <li class="brdr-bttm"><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 h4"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
                                                     </ul>
                                                     <br>
                                                     <ul class="fa-ul lst-spcd">
@@ -1669,16 +1670,20 @@
             nonResident = $(this).data("residency");
             if (nonResident === true) {
                 $("#worldIncomeElm").removeClass("hidden");
+                $("#worldIncomeResult").removeClass("hidden");
             } else {
                 $("#worldIncomeElm").addClass("hidden");
+                $("#worldIncomeResult").addClass("hidden");
             }
         });
         $("#maritalStatus", "#dental_cal_form").change(function () {
             relationship = $(this).find(":selected").data("marital-add");
             if (relationship === true) {
                 $("#spouseNetIncomeElm").removeClass("hidden");
+                $("#spouseNetIncomeResult").removeClass("hidden");
             } else {
                 $("#spouseNetIncomeElm").addClass("hidden");
+                $("#spouseNetIncomeResult").addClass("hidden");
             }
         });
         $("#dental_cal_form").submit(function () {
@@ -1698,6 +1703,7 @@
             $("#results").removeClass("hidden");
             $("output[name=net-income-value]").html(formatter.format(netIncome));
             $("output[name=spouse-net-income-value]").html(formatter.format(spousalNetIncome));
+            $("output[name=family-world-income-value]").html(formatter.format(spousalNetIncome));
             $("output[name=adjusted-income-value]").html(formatter.format(uccbAndRdspIncome));
             $("output[name=adjusted-payment-value]").html(formatter.format(uccbAndRdspRepayment));
             $("output[name=household-income-value]").html(formatter.format(netIncome + spousalNetIncome + worldIncome));
