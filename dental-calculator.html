@@ -1514,31 +1514,31 @@
                                                 <div id="crb-statement">
                                                     <p>Based on the amounts you entered, your adjusted family net income for this benefit is: 
                                                         <span class="mrgn-tp-0 h5">
-                                                            <output style="display: inline;" name="avg-fam-net-income-value"><strong>$0</strong></output>
+                                                            <span data-output="avg-fam-net-income-value"><strong>$0</strong></span>
                                                         </span>
                                                     </p>
                                                     <details class="mrgn-bttm-md">
                                                         <summary>Show the math for this amount</summary>
                                                         <p>Your adjusted family net income (AFNI) for this benefit is:</p>
                                                         <ul class="fa-ul lst-spcd">
-                                                            <li id="netIncomeResult" class="brdr-bttm"><span class="mrgn-tp-0 h5"><output style="display: inline;" name="net-income-value">$0</output><span class="text-muted"> (your net income)</span></span></li>
-                                                            <li id="spouseNetIncomeResult" class="brdr-bttm hidden"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><output style="display: inline;" name="spouse-net-income-value">$0</output><span class="text-muted"> (your spouse's net income)</span></span></li>
-                                                            <li id="worldIncomeResult" class="brdr-bttm hidden"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><output style="display: inline;" name="family-world-income-value">$0</output><span class="text-muted"> (your household world income)</span></span></li>
-                                                            <li class="brdr-bttm"><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
+                                                            <li id="netIncomeResult" class="brdr-bttm"><span class="mrgn-tp-0 h5"><span data-output="net-income-value">$0</span><span class="text-muted"> (your net income)</span></span></li>
+                                                            <li id="spouseNetIncomeResult" class="brdr-bttm hidden"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="spouse-net-income-value">$0</span><span class="text-muted"> (your spouse's net income)</span></span></li>
+                                                            <li id="worldIncomeResult" class="brdr-bttm hidden"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="family-world-income-value">$0</span><span class="text-muted"> (your household world income)</span></span></li>
+                                                            <li class="brdr-bttm"><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><span data-output="household-income-value">$0</span><span class="text-muted"> (your household net income)</span></span></li>
                                                         </ul>
                                                         <br>
                                                         <ul class="fa-ul lst-spcd">
-                                                            <li><span class="mrgn-tp-0 h5"><output style="display: inline;" name="household-income-value">$0</output><span class="text-muted"> (your household net income)</span></span></li>
-                                                            <li><span class="fas fa-minus fa-li"><span class="wb-inv">minus</span></span><span class="h5"><output style="display: inline;" name="adjusted-income-value">$0</output><span class="text-muted"> (UCCB and RDSP income)</span></span></li>
-                                                            <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><output style="display: inline;" name="adjusted-payment-value">$0</output><span class="text-muted"> (UCCB and RDSP repayment)</span></span></li>
-                                                            <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><output style="display: inline;" name="avg-fam-net-income-value">$0</output><span class="text-muted"> (your adjusted family net income)</span></span></li>
+                                                            <li><span class="mrgn-tp-0 h5"><span data-output="household-income-value">$0</span><span class="text-muted"> (your household net income)</span></span></li>
+                                                            <li><span class="fas fa-minus fa-li"><span class="wb-inv">minus</span></span><span class="h5"><span data-output="adjusted-income-value">$0</span><span class="text-muted"> (UCCB and RDSP income)</span></span></li>
+                                                            <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="adjusted-payment-value">$0</span><span class="text-muted"> (UCCB and RDSP repayment)</span></span></li>
+                                                            <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><span data-output="avg-fam-net-income-value">$0</span><span class="text-muted"> (your adjusted family net income)</span></span></li>
                                                         </ul>
                                                     </details>
                                                     <!--QUALIFIES-->
                                                     <div class="alert alert-success provisional hidden" id="qualify">
                                                         <p>If you are eligible, your benefit amount is:</p>
-                                                        <p class="lead"><strong><output style="display: inline;" name="benefit-amount">$0</output></strong> for each eligible child</p>
-                                                        <p><strong><output style="display: inline;" name="benefit-per-child">$0</output><span id="benefit-per-under-90" class="hidden">130</span></strong> (half the benefit amount) if you have shared custody</p>
+                                                        <p class="lead"><strong><span data-output="benefit-amount">$0</span></strong> for each eligible child</p>
+                                                        <p><strong><span data-output="benefit-per-child">$0</span><span id="benefit-per-under-90" class="hidden">130</span></strong> (half the benefit amount) if you have shared custody</p>
                                                     </div>
                                                     <!--DOES NOT QUALIFY-->
                                                     <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
@@ -1698,8 +1698,8 @@
                 return parseInt($("#uccbRepayment").val(), 10) || 0;
             }, 
             income = {
-	            low_eligible_household: 70000, 
-	            mid_eligible_household: 80000, 
+                low_eligible_household: 70000, 
+                mid_eligible_household: 80000, 
                 max_eligible_household: 90000, 
                 net: function() {
                     return parseInt($("#netIncome").val(), 10) || 0;
@@ -1775,23 +1775,23 @@
                 } else {
                     $("#worldIncomeResult").addClass("hidden");
                 }
-                $("output[name=net-income-value]").html(formatter.format(income.net()));
-                $("output[name=spouse-net-income-value]").html(formatter.format(income.spousal()));
-                $("output[name=family-world-income-value]").html(formatter.format(income.world()));
-                $("output[name=adjusted-payment-value]").html(formatter.format(rdspRepayment() + uccbRepayment()));
-                $("output[name=adjusted-income-value]").html(formatter.format(income.rdsp() + income.rdsp()));
-                $("output[name=household-income-value]").html(formatter.format(income.household()));
-                $("output[name=avg-fam-net-income-value]").html(formatter.format(income.avgFamNet()));
+                $("[data-output=net-income-value]").html(formatter.format(income.net()));
+                $("[data-output=spouse-net-income-value]").html(formatter.format(income.spousal()));
+                $("[data-output=family-world-income-value]").html(formatter.format(income.world()));
+                $("[data-output=adjusted-payment-value]").html(formatter.format(rdspRepayment() + uccbRepayment()));
+                $("[data-output=adjusted-income-value]").html(formatter.format(income.rdsp() + income.rdsp()));
+                $("[data-output=household-income-value]").html(formatter.format(income.household()));
+                $("[data-output=avg-fam-net-income-value]").html(formatter.format(income.avgFamNet()));
                 if (income.avgFamNet() < income.max_eligible_household) {
                     $("#qualify").removeClass("hidden");
                     $("#doesnt-qualify").addClass("hidden");
-                    $("output[name=benefit-amount]").html(formatter.format(benefitAmt()));
-                    $("output[name=benefit-per-child]").html(formatter.format(benefitAmt_perChild()));
+                    $("[data-output=benefit-amount]").html(formatter.format(benefitAmt()));
+                    $("[data-output=benefit-per-child]").html(formatter.format(benefitAmt_perChild()));
                 } else {
                     $("#qualify").addClass("hidden");
                     $("#doesnt-qualify").removeClass("hidden");
-                    $("output[name=benefit-amount]").html(formatter.format(0));
-                    $("output[name=benefit-per-child]").html(formatter.format(0));
+                    $("[data-output=benefit-amount]").html(formatter.format(0));
+                    $("[data-output=benefit-per-child]").html(formatter.format(0));
                 }
             };
 
@@ -1801,7 +1801,7 @@
                 $("time[data-eligible=year]").text("2021");
                 $("time[data-eligible=maritalDate]").text("December 1, 2022");
             }
-	        if (claimPeriod === 2) {
+            if (claimPeriod === 2) {
                 $("time[data-eligible=year]").text("2022");
                 $("time[data-eligible=maritalDate]").text("July 1, 2023");
             }
