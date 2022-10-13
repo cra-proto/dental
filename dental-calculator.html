@@ -1678,54 +1678,78 @@
     <![endif]-->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
-        var claimPeriod = 1, 
-            nonResident = false, 
-            relationship = false, 
-            $document = wb.doc, 
-            calcResults = function () {
-                const eligible_annual_household_income = 90000;
-
-                let spousalNetIncome, worldIncome, afni,
-                    formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
+        "use strict";
+        
+        var $document = wb.doc, 
+            claimPeriod = function() {
+                return $("#dentalclaimPeriod").find(":selected").data("claim-period") || 1;
+            }, 
+            nonResident = function() {
+                return $(":input[type=radio][name=nonResident]", "#dental_cal_form").data("residency") || false;
+            }, 
+            relationship = function() {
+                return $("#maritalStatus").find(":selected").data("marital-add") || false;
+            }, 
+            uccbAndRdspRepayment = function() {
+                return parseInt($("#uccbAndRdspRepayment").val(), 10) || 0;
+            }, 
+            income = {
+                eligible_annual_household: 90000, 
+                net: function() {
+                    return parseInt($("#netIncome").val(), 10) || 0;
+                }, 
+                uccb_rdsp: function() {
+                    return parseInt($("#uccbAndRdspIncome").val(), 10) || 0;
+                }, 
+                spousal: function() {
+                    if (relationship() === true) {
+                        return parseInt($("#spouseNetIncome").val(), 10) || 0;
+                    }
+                    return 0;
+                }, 
+                world: function() {
+                    if (nonResident() === true) {
+                        return parseInt($("#worldIncome").val(), 10) || 0;
+                    }
+                    return 0;
+                },
+                household: function() {
+                    return this.net() + this.spousal() + this.world();
+                },
+                avgFamNet: function() {
+                    return this.household() - this.uccb_rdsp() + uccbAndRdspRepayment();
+                }
+            }, 
+            displayResults = function () {
+                /*  show results  */
+                let formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
                         style: "currency",
                         currency: "CAD"
-                    }),
-                    netIncome = parseInt($("#netIncome").val(), 10) || 0,
-                    uccbAndRdspIncome = parseInt($("#uccbAndRdspIncome").val(), 10) || 0,
-                    uccbAndRdspRepayment = parseInt($("#uccbAndRdspRepayment").val(), 10) || 0;
-                /*  calculate results  */
-                if (relationship === true) {
-                    spousalNetIncome = parseInt($("#spouseNetIncome").val(), 10) || 0;
+                    });
+                if (relationship() === true) {
                     $("#netIncomeResult").removeClass("brdr-bttm");
                     $("#spouseNetIncomeResult").removeClass("hidden");
                     $("#spouseNetIncomeResult").addClass("brdr-bttm");
                 } else {
-                    spousalNetIncome = 0;
                     $("#netIncomeResult").addClass("brdr-bttm");
                     $("#spouseNetIncomeResult").addClass("hidden");
                 }
-                if (nonResident === true) {
-                    worldIncome = parseInt($("#worldIncome").val(), 10) || 0;
+                if (nonResident() === true) {
                     $("#netIncomeResult").removeClass("brdr-bttm");
                     $("#spouseNetIncomeResult").removeClass("hidden brdr-bttm");
                     $("#worldIncomeResult").removeClass("hidden");
                     $("#worldIncomeResult").addClass("brdr-bttm");
                 } else {
-                    worldIncome = 0;
                     $("#worldIncomeResult").addClass("hidden");
                 }
-
-                afni = netIncome + spousalNetIncome + worldIncome - uccbAndRdspIncome + uccbAndRdspRepayment;
-
-                /*  show results  */
-                $("output[name=net-income-value]").html(formatter.format(netIncome));
-                $("output[name=spouse-net-income-value]").html(formatter.format(spousalNetIncome));
-                $("output[name=family-world-income-value]").html(formatter.format(worldIncome));
-                $("output[name=adjusted-income-value]").html(formatter.format(uccbAndRdspIncome));
-                $("output[name=adjusted-payment-value]").html(formatter.format(uccbAndRdspRepayment));
-                $("output[name=household-income-value]").html(formatter.format(netIncome + spousalNetIncome + worldIncome));
-                $("output[name=avg-fam-net-income-value]").html(formatter.format(afni));
-                if (afni <= eligible_annual_household_income) {
+                $("output[name=net-income-value]").html(formatter.format(income.net()));
+                $("output[name=spouse-net-income-value]").html(formatter.format(income.spousal()));
+                $("output[name=family-world-income-value]").html(formatter.format(income.world()));
+                $("output[name=adjusted-payment-value]").html(formatter.format(uccbAndRdspRepayment()));
+                $("output[name=household-income-value]").html(formatter.format(income.household()));
+                $("output[name=adjusted-income-value]").html(formatter.format(income.uccb_rdsp()));
+                $("output[name=avg-fam-net-income-value]").html(formatter.format(income.avgFamNet()));
+                if (income.avgFamNet() <= income.eligible_annual_household) {
                     $("#qualify").removeClass("hidden");
                     $("#doesnt-qualify").addClass("hidden");
                 } else {
@@ -1733,31 +1757,31 @@
                     $("#doesnt-qualify").removeClass("hidden");
                 }
             };
-
-        $("#dentalclaimPeriod", "#dental_cal_form").change(function () {
-            claimPeriod = $(this).find(":selected").data("claim-period");
+        $("#dentalclaimPeriod").change(function () {
+            displayResults();
         });
-        $("#maritalStatus", "#dental_cal_form").change(function () {
-            relationship = $(this).find(":selected").data("marital-add");
-            if (relationship === true) {
+        $(":input", "#dental_cal_form").filter("[type=text], [type=number]").change(function () {
+            displayResults();
+        });
+        $("#maritalStatus").change(function () {
+            if (relationship() === true) {
                 $("#spouseNetIncomeElm").removeClass("hidden");
             } else {
                 $("#spouseNetIncomeElm").addClass("hidden");
             }
-            calcResults();
+            displayResults();
         });
-        $document.on( "click vclick touchstart", "input[type=radio][name=nonResident]", function( event ) {
-            nonResident = $(this).data("residency");
-            if (nonResident === true) {
+        $document.on( "click vclick touchstart", "input[type=radio][name=nonResident]", "#dental_cal_form", function( event ) {
+            if (nonResident() === true) {
                 $("#worldIncomeElm").removeClass("hidden");
             } else {
                 $("#worldIncomeElm").addClass("hidden");
             }
-            calcResults();
+            displayResults();
         });
         $("#dental_cal_form").submit(function () {
-            calcResults();
             $("#results").removeClass("hidden");
+            displayResults();
             event.preventDefault();
         });
 
