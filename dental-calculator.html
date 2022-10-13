@@ -1211,7 +1211,6 @@
                                     <p>You do not need to calculate this number. You can use the tool below if you want to estimate your adjusted family net income and your benefit amount.</p>
                                     <!--<p>For this benefit, include your spouse or common-law partner's amounts if you are married or living common-law on <span class="nowrap">December 1, 2022</span>.</p>
                                     <p class="mrgn-tp-md h4">Steps to calculate your adjusted family net income for the first benefit period</p>
-                        
                                     <ul class="fa-ul lst-spcd mrgn-bttm-lg mrgn-lft-lg">
                                         <li><span class="mrgn-tp-0 text-muted h5">your 2021 net income (line 23600)</span></li>
                                         <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">your spouse or common-law partner's 2021 net income (line 23600)</span></li>
@@ -1281,7 +1280,7 @@
                                 <div class="wb-frmvld col-sm-12 provisional wb-steps">
                                     <p class="small text-muted">Your data is not collected or saved. If you leave or refresh the page, you will need to enter your information again.</p>
                                     <!-- START OF CALC -->
-                                    <form id="dental_cal_form" name="dental_cal_form" action="#" method="get" autocomplete="off" class="panel panel-default mrgn-bttm-sm">
+                                    <form id="dental_cal_form" name="dental_cal_form" action="#" method="get" autocomplete="off" class="panel panel-default mrgn-bttm-md">
 
 
                                         <!-- STEP 1-->
@@ -1305,7 +1304,8 @@
                                             <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
                                             <div class="panel-body mrgn-lft-sm">
                                                 <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp gc-font-2019 provisional">
-                                                    <legend class="h5 required" tabindex="-1"><span class="gc-font-2019"><span class="field-name">Did you live outside of Canada in <time data-eligible="year">2021</time> as a non-resident for tax purposes?</span> <strong class="required">(required)</strong> <a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What counts as living outside of Canada</span></a></span></legend>
+                                                    <legend class="h5 required" tabindex="-1"><span class="gc-font-2019"><span class="field-name">Did you live outside of Canada in <time data-eligible="year">2021</time> as a non-resident for tax purposes?</span> <strong class="required">(required)</strong></span></legend>
+                                                    <p><a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx" role="button">Who is considered a non-resident of Canada&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
                                                     <ul class="list-unstyled">
                                                         <li class="radio">
                                                             <input type="radio" name="nonResident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">
@@ -1381,10 +1381,10 @@
                                             <div class="panel-body mrgn-lft-sm">
                                                 <div class="form-group">
                                                     <label for="netIncome" class="required">Your <span class="field-name">net income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
-                                                    <a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>
+                                                    <!--<a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" data-rule-digits="true" required="required">
+                                                        <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right no-enter" data-rule-digits="true" required="required">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                     <p class="small">This is line 23600 of your <time data-eligible="year">2021</time> tax return.</p>
@@ -1404,7 +1404,7 @@
                                                     <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true">
+                                                        <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right no-enter" data-rule-digits="true">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                 </div>
@@ -1448,16 +1448,16 @@
                                                 <p class="h2 mrgn-tp-md">Registered disability savings plan</p>
                                                 <div class="form-group">
                                                     <label for="rdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> income</span> (line 12500) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                    <!--<a href="#uccbAndRdspIncome-help" aria-controls="uccbAndRdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your UCCB and RDSP income</span></a>-->
+                                                    <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" data-rule-digits="true">
+                                                        <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right no-enter" data-rule-digits="true">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="rdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span> (line 23200) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                    <!--<a href="#uccbAndRdspRepayment-help" aria-controls="uccbAndRdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for UCCB and RDSP repayment</span></a>-->
+                                                    <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
                                                         <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" data-rule-digits="true">
@@ -1476,20 +1476,20 @@
                                                 <!--UCCB-->
                                                 <p class="h2">Universal child care benefit</p>
                                                 <div class="form-group">
-                                                    <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> income</span> (line 12500) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                    <!--<a href="#uccbAndRdspIncome-help" aria-controls="uccbAndRdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your UCCB and RDSP income</span></a>-->
+                                                    <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span> (line 11700) income</span> (line 12500) <span class="wb-inv">(dollars only, no cents)</span></label>
+                                                    <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" data-rule-digits="true">
+                                                        <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right no-enter" data-rule-digits="true">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="uccbRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> (line 21300) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                    <!--<a href="#uccbAndRdspRepayment-help" aria-controls="uccbAndRdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for UCCB and RDSP repayment</span></a>-->
+                                                    <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" data-rule-digits="true">
+                                                        <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right no-enter" data-rule-digits="true">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                 </div>
@@ -1512,11 +1512,7 @@
                                             <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Estimated benefit amount</span></legend>
                                             <div class="panel-body mrgn-lft-sm">
                                                 <div id="crb-statement">
-                                                    <p>Based on the amounts you entered, your adjusted family net income for this benefit is: 
-                                                        <span class="mrgn-tp-0 h5">
-                                                            <span data-output="avg-fam-net-income-value"><strong>$0</strong></span>
-                                                        </span>
-                                                    </p>
+                                                    <p>Based on the amounts you entered, your adjusted family net income for this benefit is: <span class="mrgn-tp-0 h5"><strong><span data-output="avg-fam-net-income-value">$0</span></strong></span></p>
                                                     <details class="mrgn-bttm-md">
                                                         <summary>Show the math for this amount</summary>
                                                         <p>Your adjusted family net income (AFNI) for this benefit is:</p>
@@ -1538,7 +1534,7 @@
                                                     <div class="alert alert-success provisional hidden" id="qualify">
                                                         <p>If you are eligible, your benefit amount is:</p>
                                                         <p class="lead"><strong><span data-output="benefit-amount">$0</span></strong> for each eligible child</p>
-                                                        <p><strong><span data-output="benefit-per-child">$0</span><span id="benefit-per-under-90" class="hidden">130</span></strong> (half the benefit amount) if you have shared custody</p>
+                                                        <p><strong><span data-output="benefit-per-child">$0</span></strong> (half the benefit amount) if you have shared custody</p>
                                                     </div>
                                                     <!--DOES NOT QUALIFY-->
                                                     <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
