@@ -567,6 +567,7 @@
 
         /* Firefox */
         input[type=number] {
+            -webkit-appearance: textfield;
             appearance: textfield;
         }
 
@@ -1125,12 +1126,12 @@
             <div class="container">
                 <section class="provisional gc-nav">
                     <h1 property="name" id="wb-cont-nav">Canada Dental Benefit</h1>
-                    <ul id="gc-navseq-nav" class="hidden-xs hidden-sm">
+                    <ul id="gc-navseq-nav">
                         <li> <a class="gc-navseq-nav-btn" href="#gc-navseq-header">Go to navigation menu</a></li>
                         <li> <a class="gc-navseq-nav-btn" href="#wb-cont">Skip to main content</a></li>
                     </ul>
                     <nav class="provisional" aria-label="Section navigation">
-                        <h2 id="gc-navseq-header mrgn-tp-0">Canada Dental Benefit</h2>
+                        <h2 id="gc-navseq-header" class="hidden-xs hidden-sm mrgn-tp-0">Canada Dental Benefit</h2>
                         <ul class="gc-navseq gc-steps">
                             <li><a href="who-apply.html">Who can apply</a></li>
                             <li class="active"><a class="active" aria-current="page">How much you can get</a></li>
@@ -1544,7 +1545,7 @@
                                             </div>
                                         </fieldset>
                                         <!--END OF RESULTS-->
-                                        <button id="calc-dental-benefit" class="btn btn-primary hidden" type="submit" value="Calculate your estimated dental benefit">
+                                        <button id="calc-dental-benefit" class="btn btn-primary hidden" type="submit">Calculate your estimated dental benefit</button>
                                     </form>
                                     <!--END OF CALC--> 
                                 </div>
