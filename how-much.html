@@ -1292,8 +1292,8 @@
                                                     <label for="dentalclaimPeriod" class="required"><span class="field-name">When did your child receive dental care services in Canada?</span> <strong class="required">(required)</strong></label>
                                                     <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
                                                         <option label="Select a period"></option>
-                                                        <option value="2022-10-01--2023-06-30" data-claim-period="1">October 1, 2022 to June 30, 2023</option>
-                                                        <option value="2023-07-01--2024-06-30" data-claim-period="2">July 1, 2023 to June 30, 2024</option>
+                                                        <option value="2022-12-01--2021" data-claim-period="2022-12-01T00:00:00" data-claim-year="2021">October 1, 2022 to June 30, 2023</option>
+                                                        <option value="2023-07-01--2022" data-claim-period="2023-07-01T00:00:00" data-claim-year="2022">July 1, 2023 to June 30, 2024</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -1680,7 +1680,7 @@
         
         let $document = wb.doc, 
             claimPeriod = function() {
-                return $("#dentalclaimPeriod").find(":selected").data("claim-period") || 1;
+                return $("#dentalclaimPeriod").find(":selected");
             }, 
             nonResident = function() {
                 return $(":input[type=radio][name=nonResident]", "#dental_cal_form").data("residency") || false;
@@ -1794,19 +1794,15 @@
 
 
         $("#dentalclaimPeriod").change(function () {
-            let claimYear, claimDate, 
-                options = { year: 'numeric', month: 'long', day: 'numeric' };
+            let claimDate, 
+                claimElm = claimPeriod(), 
+                options = { year: 'numeric', month: 'long', day: 'numeric' }, 
                 dateFormatter = Intl.DateTimeFormat(document.documentElement.lang + "-CA", options);
-            if (claimPeriod() === 1) {
-                claimYear = "2021";
-                claimDate = new Date(2022, 11, 1);
+            if (claimElm.is("[data-claim-period]") === true) {
+                claimDate = new Date(claimElm.data("claim-period"));
+                $("time[data-eligible=year]").text(claimElm.data("claim-period-year"));
+                $("time[data-eligible=maritalDate]").text(dateFormatter.format(claimDate));
             }
-            if (claimPeriod() === 2) {
-                claimYear = "2022";
-                claimDate = new Date(2023, 6, 1);
-            }
-            $("time[data-eligible=year]").text(claimYear);
-            $("time[data-eligible=maritalDate]").text(dateFormatter.format(claimDate));
             updateResults();
         });
 
