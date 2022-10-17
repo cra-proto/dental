@@ -1385,7 +1385,7 @@
                                                     <!--<a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right no-enter" data-rule-digits="true" required="required">
+                                                        <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" data-rule-digits="true" required="required">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                     <p class="small">This is line 23600 of your <time data-eligible="year">2021</time> tax return.</p>
@@ -1405,7 +1405,7 @@
                                                     <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right no-enter" data-rule-digits="true">
+                                                        <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                 </div>
@@ -1452,7 +1452,7 @@
                                                     <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right no-enter" data-rule-digits="true">
+                                                        <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" data-rule-digits="true">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                 </div>
@@ -1481,7 +1481,7 @@
                                                     <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right no-enter" data-rule-digits="true">
+                                                        <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" data-rule-digits="true">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                 </div>
@@ -1490,7 +1490,7 @@
                                                     <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
                                                     <div class="input-group col-sm-3">
                                                         <span class="input-group-addon">$</span>
-                                                        <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right no-enter" data-rule-digits="true">
+                                                        <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" data-rule-digits="true">
                                                         <span class="input-group-addon">.00</span>
                                                     </div>
                                                 </div>
@@ -1752,7 +1752,7 @@
             }, 
             updateResults = function () {
                 /*  show results  */
-                let formatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
+                let currencyFormatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
                         style: "currency",
                         currency: "CAD"
                     });
@@ -1772,36 +1772,41 @@
                 } else {
                     $("#worldIncomeResult").addClass("hidden");
                 }
-                $("[data-output=net-income-value]").html(formatter.format(income.net()));
-                $("[data-output=spouse-net-income-value]").html(formatter.format(income.spousal()));
-                $("[data-output=family-world-income-value]").html(formatter.format(income.world()));
-                $("[data-output=adjusted-payment-value]").html(formatter.format(rdspRepayment() + uccbRepayment()));
-                $("[data-output=adjusted-income-value]").html(formatter.format(income.rdsp() + income.rdsp()));
-                $("[data-output=household-income-value]").html(formatter.format(income.household()));
-                $("[data-output=avg-fam-net-income-value]").html(formatter.format(income.avgFamNet()));
+                $("[data-output=net-income-value]").html(currencyFormatter.format(income.net()));
+                $("[data-output=spouse-net-income-value]").html(currencyFormatter.format(income.spousal()));
+                $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world()));
+                $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment()));
+                $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.rdsp()));
+                $("[data-output=household-income-value]").html(currencyFormatter.format(income.household()));
+                $("[data-output=avg-fam-net-income-value]").html(currencyFormatter.format(income.avgFamNet()));
                 if (income.avgFamNet() < income.max_eligible_household) {
                     $("#qualify").removeClass("hidden");
                     $("#doesnt-qualify").addClass("hidden");
-                    $("[data-output=benefit-amount]").html(formatter.format(benefitAmt()));
-                    $("[data-output=benefit-per-child]").html(formatter.format(benefitAmt_perChild()));
+                    $("[data-output=benefit-amount]").html(currencyFormatter.format(benefitAmt()));
+                    $("[data-output=benefit-per-child]").html(currencyFormatter.format(benefitAmt_perChild()));
                 } else {
                     $("#qualify").addClass("hidden");
                     $("#doesnt-qualify").removeClass("hidden");
-                    $("[data-output=benefit-amount]").html(formatter.format(0));
-                    $("[data-output=benefit-per-child]").html(formatter.format(0));
+                    $("[data-output=benefit-amount]").html(currencyFormatter.format(0));
+                    $("[data-output=benefit-per-child]").html(currencyFormatter.format(0));
                 }
             };
 
 
-            $("#dentalclaimPeriod").change(function () {
-            if (claimPeriod === 1) {
-                $("time[data-eligible=year]").text("2021");
-                $("time[data-eligible=maritalDate]").text("December 1, 2022");
+        $("#dentalclaimPeriod").change(function () {
+            let claimYear, claimDate, 
+                options = { year: 'numeric', month: 'long', day: 'numeric' };
+                dateFormatter = Intl.DateTimeFormat(document.documentElement.lang + "-CA", options);
+            if (claimPeriod() === 1) {
+                claimYear = "2021";
+                claimDate = new Date(2022, 11, 1);
             }
-            if (claimPeriod === 2) {
-                $("time[data-eligible=year]").text("2022");
-                $("time[data-eligible=maritalDate]").text("July 1, 2023");
+            if (claimPeriod() === 2) {
+                claimYear = "2022";
+                claimDate = new Date(2023, 6, 1);
             }
+            $("time[data-eligible=year]").text(claimYear);
+            $("time[data-eligible=maritalDate]").text(dateFormatter.format(claimDate));
             updateResults();
         });
 
@@ -1810,6 +1815,11 @@
             updateResults();
         });
 
+        $(":input", "#dental_cal_form").filter("[type=text], [type=number]").keypress(function(event) {
+		    if (event.key === "Enter") {
+                return false;
+            }
+	    });
 
         $("#maritalStatus").change(function () {
             if (relationship() === true) {
