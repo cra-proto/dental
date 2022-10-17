@@ -857,10 +857,12 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <h2 id="h-1">Benefit amounts based on income</h2>
-                                <p>You may receive a set benefit amount for each eligible child. Your benefit amount depends on your adjusted family net income (AFNI).</p>
+                                <p>The CRA determines your benefit amount based on your adjusted family net income (AFNI).</p>
+                                 <p>The set benefit amount for each eligible child will not change based on your dental costs. If your dental costs are more than $650, you may be eligible to apply for an <a href="additional-payment.html">additional payment</a> in the next benefit period.</p>
                                 <details>
                                     <summary>How shared custody benefit amounts are split</summary>
-                                    <p>If you have shared custody of your child and currently split the Canada Child Benefit (CCB), both parents can apply for this benefit. The amount you receive would be  50% of the benefit amount based on your adjusted family income. This means you may receive a different amount from your child's other parent.</p>
+                                    <p>You will receive half of the dental benefit amount if you have shared custody of your child and currently split the Canada Child Benefit (CCB).</p>
+                                    <p>Both parents can apply for the dental benefit if they are eligible. The amount you receive would be  50% of the benefit amount based on your adjusted family income. This means you may receive a different amount from your child's other parent.</p>
                                     <p>The dental benefit uses the same custody arrangement as the Canada Child Benefit (CCB) as of:</p>
                                     <ul>
                                         <li>December 1, 2022 for first benefit period</li>
@@ -996,46 +998,6 @@
 
 
                                                 <!--STEP 2-->
-                                                <fieldset id="residency" class="panel-default p-0">
-                                                    <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
-                                                    <div class="panel-body mrgn-lft-sm">
-                                                        <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp gc-font-2019 provisional">
-                                                            <legend class="h5 required" tabindex="-1"><span class="gc-font-2019"><span class="field-name">Did you live outside of Canada in <time data-eligible="year">2021</time> as a non-resident for tax purposes?</span> <strong class="required">(required)</strong></span></legend>
-                                                            <p><a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx" role="button">Who is considered a non-resident of Canada&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
-                                                            <ul class="list-unstyled">
-                                                                <li class="radio">
-                                                                    <input type="radio" name="nonResident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">
-                                                                    <label for="non_residentTRUE">Yes</label>
-                                                                </li>
-                                                                <li class="radio">
-                                                                    <input type="radio" name="nonResident" id="non_residentFALSE" value="false" data-residency="false" data-rule-required="true">
-                                                                    <label for="non_residentFALSE">No</label>
-                                                                </li>
-                                                            </ul>
-                                                        </fieldset>
-                                                        <section id="nonResident-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                                            <header class="modal-header">
-                                                                <h2 class="modal-title">Non-resident</h2>
-                                                            </header>
-                                                            <div class="modal-body">
-                                                                <p>You are a non-resident for income tax purposes if you:</p>
-                                                                <ul>
-                                                                    <li>normally, customarily, or routinely live in another country and are <strong>not</strong> considered a resident of Canada</li>
-                                                                    <li>do <strong>not</strong> have significant <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html">residential ties</a> in Canada and <strong>any</strong> of the following applies:
-                                                                        <ul>
-                                                                            <li>You live outside Canada throughout the tax year</li>
-                                                                            <li>You stay in Canada for <strong>less than <span class="nowrap">183 days</span></strong> in the tax year</li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                                <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/non-residents-canada.html" target="help" rel="noopener noreferrer">Non-residents of Canada</a> for more information</p>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                </fieldset>
-
-
-                                                <!--STEP 3-->
                                                 <fieldset id="marital" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
                                                     <div class="panel-body mrgn-lft-sm">
@@ -1070,7 +1032,85 @@
                                                 </fieldset>
 
 
+                                                <!--STEP 3-->
+                                                <fieldset id="custody" class="panel-default p-0">
+                                                    <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Custody arrangment</span></legend>
+                                                    <div class="panel-body mrgn-lft-sm">
+                                                        <fieldset id="custody" class="gc-chckbxrdio chckbxrdio-grp gc-font-2019 provisional">
+                                                            <div class="form-group">
+                                                                <legend class="h5 required" tabindex="-1"><span class="gc-font-2019"><span class="field-name">What is your custody arrangment for the children you are applying for?</span> <strong class="required">(required)</strong></span></legend>
+                                                                <p><a href="#custody-help" aria-controls="custody-help" class="wb-lbx" role="button">What is considered a shared custody&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
+                                                                <ul class="list-unstyled">
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="custody" id="custody_Full" value="1" data-custody="1" data-rule-required="true">
+                                                                        <label for="custody_Full">Full custody</label>
+                                                                    </li>
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="custody" id="custody_shared" value="2" data-custody="2" data-rule-required="true">
+                                                                        <label for="custody_shared">Shared custody</label>
+                                                                    </li>
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="custody" id="custody_both" value="3" data-custody="3" data-rule-required="true">
+                                                                        <label for="custody_both">Different for each child</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </fieldset>
+                                                        <section id="custody-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                            <header class="modal-header">
+                                                                <h2 class="modal-title">Custody</h2>
+                                                            </header>
+                                                            <div class="modal-body">
+                                                                <p>&nbsp;</p>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                  </fieldset>
+
+
                                                 <!--STEP 4-->
+                                                <fieldset id="residency" class="panel-default p-0">
+                                                    <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
+                                                    <div class="panel-body mrgn-lft-sm">
+                                                        <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp gc-font-2019 provisional">
+                                                            <div class="form-group">
+                                                                <legend class="h5 required" tabindex="-1"><span class="gc-font-2019"><span class="field-name">Did you live outside of Canada in <time data-eligible="year">2021</time> as a non-resident for tax purposes?</span> <strong class="required">(required)</strong></span></legend>
+                                                                <p><a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx" role="button">Who is considered a non-resident of Canada&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
+                                                                <ul class="list-unstyled">
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="nonResident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">
+                                                                        <label for="non_residentTRUE">Yes</label>
+                                                                    </li>
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="nonResident" id="non_residentFALSE" value="false" data-residency="false" data-rule-required="true">
+                                                                        <label for="non_residentFALSE">No</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </fieldset>
+                                                        <section id="nonResident-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                            <header class="modal-header">
+                                                                <h2 class="modal-title">Non-resident</h2>
+                                                            </header>
+                                                            <div class="modal-body">
+                                                                <p>You are a non-resident for income tax purposes if you:</p>
+                                                                <ul>
+                                                                    <li>normally, customarily, or routinely live in another country and are <strong>not</strong> considered a resident of Canada</li>
+                                                                    <li>do <strong>not</strong> have significant <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html">residential ties</a> in Canada and <strong>any</strong> of the following applies:
+                                                                        <ul>
+                                                                            <li>You live outside Canada throughout the tax year</li>
+                                                                            <li>You stay in Canada for <strong>less than <span class="nowrap">183 days</span></strong> in the tax year</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                                <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/non-residents-canada.html" target="help" rel="noopener noreferrer">Non-residents of Canada</a> for more information</p>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </fieldset>
+
+
+                                                <!--STEP 5-->
                                                 <!--YOUR INCOME-->
                                                 <fieldset id="income" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Household net income</span></legend>
@@ -1135,7 +1175,7 @@
                                                 </fieldset>
 
 
-                                                <!--STEP 5-->
+                                                <!--STEP 6-->
                                                 <fieldset id="uccbAndRdsp" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Adjustments</span></legend>
                                                     <div class="panel-body mrgn-lft-sm">
@@ -1172,7 +1212,7 @@
                                                         <!--UCCB-->
                                                         <p class="h2">Universal child care benefit</p>
                                                         <div class="form-group">
-                                                            <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span> (line 11700) income</span> (line 12500) <span class="wb-inv">(dollars only, no cents)</span></label>
+                                                            <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span> (line 11700) <span class="wb-inv">(dollars only, no cents)</span></label>
                                                             <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
                                                             <div class="input-group col-sm-3">
                                                                 <span class="input-group-addon">$</span>
@@ -1202,7 +1242,7 @@
                                                 </fieldset>
 
 
-                                                <!--STEP 6-->
+                                                <!--STEP 7-->
                                                 <!--START OF RESULTS-->
                                                 <fieldset id="results" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Estimated benefit amount</span></legend>
@@ -1229,13 +1269,21 @@
                                                             <!--QUALIFIES-->
                                                             <div class="alert alert-success provisional hidden" id="qualify">
                                                                 <p>If you are eligible, your benefit amount is:</p>
-                                                                <p class="lead"><strong><span data-output="benefit-amount">$0</span></strong> for each eligible child</p>
-                                                                <p><strong><span data-output="benefit-per-child">$0</span></strong> (half the benefit amount) if you have shared custody</p>
+                                                                <div id="full-cust-benefit" class="hidden">
+                                                                    <p class="lead"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child</p>
+                                                                </div>
+                                                                <div id="mixed-cust-benefit">
+                                                                    <p class="lead"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child that you have full custody of</p>
+                                                                    <p><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child that you have shared custody of</p>
+                                                                </div>
                                                             </div>
                                                             <!--DOES NOT QUALIFY-->
                                                             <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
                                                                 <p>Based on the amounts you entered, your adjusted family net income does not qualify for this benefit.</p>
                                                             </div>
+                                                            <!--DISCLAIMER-->
+                                                            <p class="text-muted small">This result is an estimate based on the information you entered. The CRA will determine your benefit amount when you apply.</p>
+                                                            <p class="text-muted small shared-custody mixed-custody">Since you have shared custody, your child's other parent may get a different result.</p>
                                                         </div>
                                                     </div>
                                                 </fieldset>
@@ -1330,8 +1378,8 @@
                     </section>
                 </div>
 
-        <div id="def-preFooter">
-        </div>
+                <div id="def-preFooter">
+                </div>
         <!-- Write closure template -->
         <script type="text/javascript">
             var defPreFooter = document.getElementById("def-preFooter");
@@ -1376,11 +1424,14 @@
             claimPeriod = function() {
                 return $("#dentalclaimPeriod").find(":selected");
             }, 
-            nonResident = function() {
-                return $(":input[type=radio][name=nonResident]", "#dental_cal_form").data("residency") || false;
-            }, 
             relationship = function() {
                 return $("#maritalStatus").find(":selected").data("marital-add") || false;
+            }, 
+            custody = function() {
+                return $(":input[type=radio][name=custody]", "#dental_cal_form").data("custody") || 2;
+            }, 
+            nonResident = function() {
+                return $(":input[type=radio][name=nonResident]", "#dental_cal_form").data("residency") || false;
             }, 
             rdspRepayment = function() {
                 return parseInt($("#rdspRepayment").val(), 10) || 0;
@@ -1448,7 +1499,8 @@
                 /*  show results  */
                 let currencyFormatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
                         style: "currency",
-                        currency: "CAD"
+                        currency: "CAD",
+                        minimumFractionDigits: 0
                     });
                 if (relationship() === true) {
                     $("#netIncomeResult").removeClass("brdr-bttm");
@@ -1476,13 +1528,13 @@
                 if (income.avgFamNet() < income.max_eligible_household) {
                     $("#qualify").removeClass("hidden");
                     $("#doesnt-qualify").addClass("hidden");
-                    $("[data-output=benefit-amount]").html(currencyFormatter.format(benefitAmt()));
-                    $("[data-output=benefit-per-child]").html(currencyFormatter.format(benefitAmt_perChild()));
+                    $("[data-output=benefit-per-child]").html(currencyFormatter.format(benefitAmt()));
+                    $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(benefitAmt_perChild()));
                 } else {
                     $("#qualify").addClass("hidden");
                     $("#doesnt-qualify").removeClass("hidden");
-                    $("[data-output=benefit-amount]").html(currencyFormatter.format(0));
                     $("[data-output=benefit-per-child]").html(currencyFormatter.format(0));
+                    $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(0));
                 }
             };
 
@@ -1501,22 +1553,23 @@
         });
 
 
-        $(":input", "#dental_cal_form").filter("[type=text], [type=number]").change(function () {
-            updateResults();
-        });
-
-        /*  Stop text fields from going to step 2 on enter  */
-        $(":input", "#dental_cal_form").filter("[type=text], [type=number]").keypress(function(event) {
-            if (event.key === "Enter") {
-                return false;
-            }
-        });
-
         $("#maritalStatus").change(function () {
             if (relationship() === true) {
                 $("#spouseNetIncomeElm").removeClass("hidden");
             } else {
                 $("#spouseNetIncomeElm").addClass("hidden");
+            }
+            updateResults();
+        });
+
+
+        $document.on("click vclick touchstart", "input[type=radio][name=custody]", function (event) {
+            if (custody() === 2) {
+                $("full-cust-benefit").removeClass("hidden");
+                $("mixed-cust-benefit").addClass("hidden");
+            } else {
+                $("full-cust-benefit").addClass("hidden");
+                $("mixed-cust-benefit").removeClass("hidden");
             }
             updateResults();
         });
@@ -1529,6 +1582,18 @@
                 $("#worldIncomeElm").addClass("hidden");
             }
             updateResults();
+        });
+
+
+        $(":input", "#dental_cal_form").filter("[type=text], [type=number]").change(function () {
+            updateResults();
+        });
+
+        /*  Stop text fields from going to step 2 on enter  */
+        $(":input", "#dental_cal_form").filter("[type=text], [type=number]").keypress(function(event) {
+            if (event.key === "Enter") {
+                return false;
+            }
         });
 
 
