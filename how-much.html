@@ -1428,10 +1428,10 @@
                 return $("#maritalStatus").find(":selected").data("marital-add") || false;
             }, 
             custody = function() {
-                return $(":input[type=radio][name=custody]", "#dental_cal_form").data("custody") || 2;
+                return $(":input[type=radio][name=custody]:checked", "#dental_cal_form").data("custody") || 2;
             }, 
             nonResident = function() {
-                return $(":input[type=radio][name=nonResident]", "#dental_cal_form").data("residency") || false;
+                return $(":input[type=radio][name=nonResident]:checked", "#dental_cal_form").data("residency") || false;
             }, 
             rdspRepayment = function() {
                 return parseInt($("#rdspRepayment").val(), 10) || 0;
