@@ -1200,25 +1200,49 @@
                                                         </fieldset>                                                        
                                                         <div id="rdspfields" class="hidden">
                                                             <p class="text-muted">Leave fields blank if amounts are zero.</p>
-                                                            <div class="form-group">
-                                                                <label for="rdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                                                                <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
-                                                                <div class="input-group col-sm-3">
-                                                                    <span class="input-group-addon">$</span>
-                                                                    <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" data-rule-digits="true">
-                                                                    <span class="input-group-addon">.00</span>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="rdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
+                                                                    <div class="input-group col-sm-3">
+                                                                        <span class="input-group-addon">$</span>
+                                                                        <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" data-rule-digits="true">
+                                                                        <span class="input-group-addon">.00</span>
+                                                                    </div>
+                                                                    <p class="small">This is line 12500 of your <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
-                                                                <p class="small">This is line 12500 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                                <div class="form-group">
+                                                                    <label for="rdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
+                                                                    <div class="input-group col-sm-3">
+                                                                        <span class="input-group-addon">$</span>
+                                                                        <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" data-rule-digits="true">
+                                                                        <span class="input-group-addon">.00</span>
+                                                                    </div>
+                                                                    <p class="small">This is line 23200 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                                </div>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label for="rdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                                                                <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
-                                                                <div class="input-group col-sm-3">
-                                                                    <span class="input-group-addon">$</span>
-                                                                    <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" data-rule-digits="true">
-                                                                    <span class="input-group-addon">.00</span>
+                                                            <div id="rdspSpouse" class="col-md-6 brdr-lft hidden">
+                                                                <div class="form-group">
+                                                                    <label for="spouseRdspIncome"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
+                                                                    <div class="input-group col-sm-3">
+                                                                        <span class="input-group-addon">$</span>
+                                                                        <input type="text" name="spouseRdspIncome" size="7" maxlength="7" value="" id="spouseRdspIncome" class="form-control text-right" data-rule-digits="true">
+                                                                        <span class="input-group-addon">.00</span>
+                                                                    </div>
+                                                                    <p class="small">This is line 12500 of your spouse's <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
-                                                                <p class="small">This is line 23200 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                                <div class="form-group">
+                                                                    <label for="spouseRdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
+                                                                    <div class="input-group col-sm-3">
+                                                                        <span class="input-group-addon">$</span>
+                                                                        <input type="text" name="spouseRdspRepayment" size="7" maxlength="7" value="" id="spouseRdspRepayment" class="form-control text-right" data-rule-digits="true">
+                                                                        <span class="input-group-addon">.00</span>
+                                                                    </div>
+                                                                    <p class="small">This is line 23200 of your spouse's <time data-eligible="year">2021</time> tax return.</p>
+                                                                </div>
                                                             </div>
                                                             <section id="rdsp-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                                                 <header class="modal-header">
@@ -1261,25 +1285,49 @@
                                                         </fieldset>
                                                         <div id="uccbfields" class="hidden">
                                                             <p class="text-muted">Leave fields blank if amounts are zero.</p>
-                                                            <div class="form-group">
-                                                                <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                                                                <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
-                                                                <div class="input-group col-sm-3">
-                                                                    <span class="input-group-addon">$</span>
-                                                                    <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" data-rule-digits="true">
-                                                                    <span class="input-group-addon">.00</span>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
+                                                                    <div class="input-group col-sm-3">
+                                                                        <span class="input-group-addon">$</span>
+                                                                        <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" data-rule-digits="true">
+                                                                        <span class="input-group-addon">.00</span>
+                                                                    </div>
+                                                                    <p class="small">This is line 11700 of your <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
-                                                                <p class="small">This is line 11700 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                                <div class="form-group">
+                                                                    <label for="uccbRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
+                                                                    <div class="input-group col-sm-3">
+                                                                        <span class="input-group-addon">$</span>
+                                                                        <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" data-rule-digits="true">
+                                                                        <span class="input-group-addon">.00</span>
+                                                                    </div>
+                                                                    <p class="small">This is line 21300 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                                </div>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label for="uccbRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> (line 21300) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                                <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
-                                                                <div class="input-group col-sm-3">
-                                                                    <span class="input-group-addon">$</span>
-                                                                    <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" data-rule-digits="true">
-                                                                    <span class="input-group-addon">.00</span>
+                                                            <div id="uccbSpouse" class="col-md-6 brdr-lft hidden">
+                                                                <div class="form-group">
+                                                                    <label for="spouseUccbIncome"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
+                                                                    <div class="input-group col-sm-3">
+                                                                        <span class="input-group-addon">$</span>
+                                                                        <input type="text" name="spouseUccbIncome" size="7" maxlength="7" value="" id="spouseUccbIncome" class="form-control text-right" data-rule-digits="true">
+                                                                        <span class="input-group-addon">.00</span>
+                                                                    </div>
+                                                                    <p class="small">This is line 11700 of your spouse's <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
-                                                                <p class="small">This is line 21300 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                                <div class="form-group">
+                                                                    <label for="spouseUccbRepayment"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Universal child care benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
+                                                                    <div class="input-group col-sm-3">
+                                                                        <span class="input-group-addon">$</span>
+                                                                        <input type="text" name="spouseUccbRepayment" size="7" maxlength="7" value="" id="spouseUccbRepayment" class="form-control text-right" data-rule-digits="true">
+                                                                        <span class="input-group-addon">.00</span>
+                                                                    </div>
+                                                                    <p class="small">This is line 21300 of your spouse's <time data-eligible="year">2021</time> tax return.</p>
+                                                                </div>
                                                             </div>
                                                             <section id="uccb-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                                                 <header class="modal-header">
@@ -1505,8 +1553,14 @@
             rdspRepayment = function() {
                 return parseInt($("#rdspRepayment").val(), 10) || 0;
             }, 
+            spousalRdspRepayment = function() {
+                return parseInt($("#spouseRdspRepayment").val(), 10) || 0;
+            }, 
             uccbRepayment = function() {
                 return parseInt($("#uccbRepayment").val(), 10) || 0;
+            }, 
+            spousalUccbRepayment = function() {
+                return parseInt($("#spouseUccbRepayment").val(), 10) || 0;
             }, 
             income = {
                 low_eligible_household: 70000, 
@@ -1518,8 +1572,14 @@
                 rdsp: function() {
                     return parseInt($("#rdspIncome").val(), 10) || 0;
                 }, 
+                spousalRdsp: function() {
+                    return parseInt($("#spouseRdspIncome").val(), 10) || 0;
+                }, 
                 uccb: function() {
                     return parseInt($("#uccbIncome").val(), 10) || 0;
+                }, 
+                spousalUccb: function() {
+                    return parseInt($("#spouseUccbIncome").val(), 10) || 0;
                 }, 
                 spousal: function() {
                     if (relationship() === true) {
@@ -1596,8 +1656,8 @@
                 $("[data-output=net-income-value]").html(currencyFormatter.format(income.net()));
                 $("[data-output=spouse-net-income-value]").html(currencyFormatter.format(income.spousal()));
                 $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world()));
-                $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment()));
-                $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.rdsp()));
+                $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + spousalRdspRepayment() + spousalUccbRepayment()));
+                $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.spousalRdsp() + income.uccb() + income.spousalUccb()));
                 $("[data-output=household-income-value]").html(currencyFormatter.format(income.household()));
                 $("[data-output=avg-fam-net-income-value]").html(currencyFormatter.format(income.avgFamNet()));
                 if (income.avgFamNet() < income.max_eligible_household) {
@@ -1621,6 +1681,7 @@
                 updateResults();
             };
 
+
         $("#dentalclaimPeriod").change(function () {
             let claimDate, 
                 claimElm = claimPeriod(), 
@@ -1637,9 +1698,9 @@
 
         $("#maritalStatus").change(function () {
             if (relationship() === true) {
-                $("#spouseNetIncomeElm").removeClass("hidden");
+                $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").removeClass("hidden");
             } else {
-                $("#spouseNetIncomeElm").addClass("hidden");
+                $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").addClass("hidden");
             }
             updateResults();
         });
