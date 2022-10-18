@@ -985,7 +985,7 @@
                                                 <!-- STEP 1-->
                                                 <fieldset id="claimPeriod" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Dental claim period</span></legend>
-                                                    <div class="panel-body mrgn-lft-sm">
+                                                    <div class="panel-body mrgn-lft-sm gc-font-2019">
                                                         <div class="form-group">
                                                             <label for="dentalclaimPeriod" class="required"><span class="field-name">When did your child receive dental care services in Canada?</span> <strong class="required">(required)</strong></label>
                                                             <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
@@ -1001,7 +1001,7 @@
                                                 <!--STEP 2-->
                                                 <fieldset id="marital" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
-                                                    <div class="panel-body mrgn-lft-sm">
+                                                    <div class="panel-body mrgn-lft-sm gc-font-2019">
                                                         <div class="form-group">
                                                             <label for="maritalStatus" class="required">What was your <span class="field-name">marital status as of <time data-eligible="maritalDate">December 1, 2022</time></span> <strong class="required">(required)</strong></label>
                                                             <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a>
@@ -1036,10 +1036,10 @@
                                                 <!--STEP 3-->
                                                 <fieldset class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Custody arrangment</span></legend>
-                                                    <div class="panel-body mrgn-lft-sm">
-                                                        <fieldset id="custody" class="gc-chckbxrdio chckbxrdio-grp gc-font-2019 provisional">
+                                                    <div class="panel-body mrgn-lft-sm gc-font-2019">
+                                                        <fieldset id="custody" class="gc-chckbxrdio chckbxrdio-grp provisional">
                                                             <div class="form-group">
-                                                                <legend class="h5 required" tabindex="-1"><span class="gc-font-2019"><span class="field-name">What is your custody arrangment for the children you are applying for?</span> <strong class="required">(required)</strong></span></legend>
+                                                                <legend class="h5 required" tabindex="-1"><span class="field-name">What is your custody arrangment for the children you are applying for?</span> <strong class="required">(required)</strong></legend>
                                                                 <p><a href="#custody-help" aria-controls="custody-help" class="wb-lbx" role="button">What is considered a shared custody&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
                                                                 <ul class="list-unstyled">
                                                                     <li class="radio">
@@ -1072,10 +1072,10 @@
                                                 <!--STEP 4-->
                                                 <fieldset id="residency" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
-                                                    <div class="panel-body mrgn-lft-sm">
-                                                        <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp gc-font-2019 provisional">
+                                                    <div class="panel-body mrgn-lft-sm gc-font-2019">
+                                                        <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp provisional">
                                                             <div class="form-group">
-                                                                <legend class="h5 required" tabindex="-1"><span class="gc-font-2019"><span class="field-name">Did you live outside of Canada in <time data-eligible="year">2021</time> as a non-resident for tax purposes?</span> <strong class="required">(required)</strong></span></legend>
+                                                                <legend class="h5 required" tabindex="-1"><span class="field-name">Did you live outside of Canada in <time data-eligible="year">2021</time> as a non-resident for tax purposes?</span> <strong class="required">(required)</strong></legend>
                                                                 <p><a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx" role="button">Who is considered a non-resident of Canada&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
                                                                 <ul class="list-unstyled">
                                                                     <li class="radio">
@@ -1115,7 +1115,7 @@
                                                 <!--YOUR INCOME-->
                                                 <fieldset id="income" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Household net income</span></legend>
-                                                    <div class="panel-body mrgn-lft-sm">
+                                                    <div class="panel-body mrgn-lft-sm gc-font-2019">
                                                         <div class="form-group">
                                                             <label for="netIncome" class="required">Your <span class="field-name">net income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
                                                             <!--<a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>-->
@@ -1179,66 +1179,128 @@
                                                 <!--STEP 6-->
                                                 <fieldset id="uccbAndRdsp" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Adjustments</span></legend>
-                                                    <div class="panel-body mrgn-lft-sm">
-                                                        <p class="text-muted">Leave fields blank if amounts are zero.</p>
+                                                    <div class="panel-body mrgn-lft-sm gc-font-2019">
                                                         <!--RDSP-->
-                                                        <p class="h2 mrgn-tp-md">Registered disability savings plan</p>
-                                                        <div class="form-group">
-                                                            <label for="rdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> income</span> (line 12500) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                            <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
-                                                            <div class="input-group col-sm-3">
-                                                                <span class="input-group-addon">$</span>
-                                                                <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" data-rule-digits="true">
-                                                                <span class="input-group-addon">.00</span>
+                                                        <p class="h2 mrgn-tp-md">Registered disability savings plan (RDSP)</p>
+                                                        <fieldset id="includeRDSP" class="gc-chckbxrdio chckbxrdio-grp provisional">
+                                                            <div class="form-group">
+                                                                <legend class="h5 required" tabindex="-1"><span class="field-name">Did you claim <abbr title="Registered disability savings plan">RDSP</abbr> Income or make a <abbr title="Registered disability savings plan">RDSP</abbr> repayment in <time data-eligible="year">2021</time>?</span> <strong class="required">(required)</strong></legend>
+                                                                <p><a href="#rdsp-help" aria-controls="rdsp-help" class="wb-lbx" role="button">What is the registered disability savings plan&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
+                                                                <ul class="list-unstyled">
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="rdsp" id="rdspTRUE" value="true" data-rdsp="true" data-rule-required="true">
+                                                                        <label for="rdspTRUE">Yes</label>
+                                                                    </li>
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="rdsp" id="rdspFALSE" value="false" data-rdsp="false" data-rule-required="true">
+                                                                        <label for="rdspFALSE">No</label>
+                                                                    </li>
+                                                                </ul>
                                                             </div>
+                                                        </fieldset>                                                        
+                                                        <div id="rdspfields" class="hidden">
+                                                            <p class="text-muted">Leave fields blank if amounts are zero.</p>
+                                                            <div class="form-group">
+                                                                <label for="rdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
+                                                                <div class="input-group col-sm-3">
+                                                                    <span class="input-group-addon">$</span>
+                                                                    <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" data-rule-digits="true">
+                                                                    <span class="input-group-addon">.00</span>
+                                                                </div>
+                                                                <p class="small">This is line 12500 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="rdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
+                                                                <div class="input-group col-sm-3">
+                                                                    <span class="input-group-addon">$</span>
+                                                                    <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" data-rule-digits="true">
+                                                                    <span class="input-group-addon">.00</span>
+                                                                </div>
+                                                                <p class="small">This is line 23200 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                            </div>
+                                                            <section id="rdsp-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                                <header class="modal-header">
+                                                                    <h2 class="modal-title">Registered disability savings plan</h2>
+                                                                </header>
+                                                                <div class="modal-body">
+                                                                    <p>A registered disability savings plan (RDSP) is a savings plan intended to help parents and others save for the long term financial security of a person who is eligible for the disability tax credit (DTC).</p>
+                                                                    <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/registered-disability-savings-plan-rdsp.html" target="help" rel="noopener noreferrer">Registered disability savings plan</a> for more information</p>
+                                                                </div>
+                                                            </section>
+<!--
+                                                            <section id="uccbAndRdspIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                                <header class="modal-header">
+                                                                    <h2 class="modal-title">UCCB and RDSP income</h2>
+                                                                </header>
+                                                                <div class="modal-body">
+                                                                    <p>Income claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">line 11700</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-125-registered-disability-savings-plan-rdsp-income.html" target="help" rel="noopener noreferrer">line 12500</a> of your or your spouse's tax return).</p>
+                                                                    <p>If field left blank, we will assume it is zero.</p>
+                                                                </div>
+                                                            </section>
+                                                        -->
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="rdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span> (line 23200) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                            <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
-                                                            <div class="input-group col-sm-3">
-                                                                <span class="input-group-addon">$</span>
-                                                                <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" data-rule-digits="true">
-                                                                <span class="input-group-addon">.00</span>
-                                                            </div>
-                                                        </div>
-                                                        <section id="uccbAndRdspIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                                            <header class="modal-header">
-                                                                <h2 class="modal-title">UCCB and RDSP income</h2>
-                                                            </header>
-                                                            <div class="modal-body">
-                                                                <p>Income claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">line 11700</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-125-registered-disability-savings-plan-rdsp-income.html" target="help" rel="noopener noreferrer">line 12500</a> of your or your spouse's tax return).</p>
-                                                                <p>If field left blank, we will assume it is zero.</p>
-                                                            </div>
-                                                        </section>
                                                         <!--UCCB-->
-                                                        <p class="h2">Universal child care benefit</p>
-                                                        <div class="form-group">
-                                                            <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span> (line 11700) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                            <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
-                                                            <div class="input-group col-sm-3">
-                                                                <span class="input-group-addon">$</span>
-                                                                <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" data-rule-digits="true">
-                                                                <span class="input-group-addon">.00</span>
+                                                        <p class="h2">Universal child care benefit (UCCB)</p>
+                                                        <fieldset id="includeUCCB" class="gc-chckbxrdio chckbxrdio-grp provisional">
+                                                            <div class="form-group">
+                                                                <legend class="h5 required" tabindex="-1"><span class="field-name">Did you claim <abbr title="Universal child care benefit">UCCB</abbr> Income or make a <abbr title="Universal child care benefit">UCCB</abbr> repayment in <time data-eligible="year">2021</time>?</span> <strong class="required">(required)</strong></legend>
+                                                                <p><a href="#uccb-help" aria-controls="uccb-help" class="wb-lbx" role="button">What is the universal child care benefit&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
+                                                                <ul class="list-unstyled">
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="uccb" id="uccbTRUE" value="true" data-uccb="true" data-rule-required="true">
+                                                                        <label for="uccbTRUE">Yes</label>
+                                                                    </li>
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="uccb" id="uccbFALSE" value="false" data-uccb="false" data-rule-required="true">
+                                                                        <label for="uccbFALSE">No</label>
+                                                                    </li>
+                                                                </ul>
                                                             </div>
+                                                        </fieldset>
+                                                        <div id="uccbfields" class="hidden">
+                                                            <p class="text-muted">Leave fields blank if amounts are zero.</p>
+                                                            <div class="form-group">
+                                                                <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
+                                                                <div class="input-group col-sm-3">
+                                                                    <span class="input-group-addon">$</span>
+                                                                    <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" data-rule-digits="true">
+                                                                    <span class="input-group-addon">.00</span>
+                                                                </div>
+                                                                <p class="small">This is line 11700 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="uccbRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> (line 21300) <span class="wb-inv">(dollars only, no cents)</span></label>
+                                                                <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
+                                                                <div class="input-group col-sm-3">
+                                                                    <span class="input-group-addon">$</span>
+                                                                    <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" data-rule-digits="true">
+                                                                    <span class="input-group-addon">.00</span>
+                                                                </div>
+                                                                <p class="small">This is line 21300 of your <time data-eligible="year">2021</time> tax return.</p>
+                                                            </div>
+                                                            <section id="uccb-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                                <header class="modal-header">
+                                                                    <h2 class="modal-title">Universal child care benefit</h2>
+                                                                </header>
+                                                                <div class="modal-body">
+                                                                    <p>The UCCB was a taxable benefit paid for children under 18 years of age, available to all eligible individuals, regardless of their income. Payments ended as of July 2016, but lump-sum amounts continue to be paid for months prior to that date. The Canada Child Benefit (CCB), which is an income-tested, non-taxable benefit, replaced the UCCB in 2016.</p>
+                                                                    <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">Line 11700 – Universal child care benefit (UCCB)</a> for more information</p>
+                                                                </div>
+                                                            </section>
+<!--
+                                                            <section id="uccbAndRdspRepayment-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                                <header class="modal-header">
+                                                                    <h2 class="modal-title">UCCB and RDSP repayment</h2>
+                                                                </header>
+                                                                <div class="modal-body">
+                                                                    <p>Repayment claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-21300-universal-child-care-benefit-uccb-repayment.html" target="help" rel="noopener noreferrer">line 21300</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23200-other-deductions/line-23200-income-amounts-repaid.html" target="help" rel="noopener noreferrer">line 23200</a> of your or your spouse's tax return).</p>
+                                                                </div>
+                                                            </section>
+-->
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="uccbRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> (line 21300) <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                            <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
-                                                            <div class="input-group col-sm-3">
-                                                                <span class="input-group-addon">$</span>
-                                                                <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" data-rule-digits="true">
-                                                                <span class="input-group-addon">.00</span>
-                                                            </div>
-                                                        </div>
-                                                        <section id="uccbAndRdspRepayment-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                                            <header class="modal-header">
-                                                                <h2 class="modal-title">UCCB and RDSP repayment</h2>
-                                                            </header>
-                                                            <div class="modal-body">
-                                                                <p>Repayment claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-21300-universal-child-care-benefit-uccb-repayment.html" target="help" rel="noopener noreferrer">line 21300</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23200-other-deductions/line-23200-income-amounts-repaid.html" target="help" rel="noopener noreferrer">line 23200</a> of your or your spouse's tax return).</p>
-                                                                <p>If field left blank, we will assume it is zero.</p>
-                                                            </div>
-                                                        </section>
                                                     </div>
                                                 </fieldset>
 
@@ -1428,6 +1490,12 @@
             relationship = function() {
                 return $("#maritalStatus").find(":selected").data("marital-add") || false;
             }, 
+            rdsp = function() {
+                return $(":input[type=radio][name=rdsp]:checked", "#dental_cal_form").data("rdsp") || false;
+            }, 
+            uccb = function() {
+                return $(":input[type=radio][name=uccb]:checked", "#dental_cal_form").data("uccb") || false;
+            }, 
             custody = function() {
                 return $(":input[type=radio][name=custody]:checked", "#dental_cal_form").data("custody") || 2;
             }, 
@@ -1543,8 +1611,15 @@
                     $("[data-output=benefit-per-child]").html(currencyFormatter.format(0));
                     $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(0));
                 }
+            },
+            showfield = function (updateCheck, updateSelector) {
+                if (updateCheck === true) {
+                    $(updateSelector).removeClass("hidden");
+                } else {
+                    $(updateSelector).addClass("hidden");
+                }
+                updateResults();
             };
-
 
         $("#dentalclaimPeriod").change(function () {
             let claimDate, 
@@ -1592,6 +1667,26 @@
         });
 
 
+        $document.on("click vclick touchstart", "input[type=radio][name=rdsp]", function (event) {
+            if (rdsp() === true) {
+                $("#rdspfields").removeClass("hidden");
+            } else {
+                $("#rdspfields").addClass("hidden");
+            }
+            updateResults();
+        });
+
+
+        $document.on("click vclick touchstart", "input[type=radio][name=uccb]", function (event) {
+            if (uccb() === true) {
+                $("#uccbfields").removeClass("hidden");
+            } else {
+                $("#uccbfields").addClass("hidden");
+            }
+            updateResults();
+        });
+
+
         $(":input", "#dental_cal_form").filter("[type=text], [type=number]").change(function () {
             updateResults();
         });
@@ -1599,7 +1694,7 @@
         /*  Stop text fields from going to step 2 on enter  */
         $(":input", "#dental_cal_form").filter("[type=text], [type=number]").keypress(function(event) {
             if (event.key === "Enter") {
-                return false;
+//                return false;
             }
         });
 
