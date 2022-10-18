@@ -1473,19 +1473,21 @@
                 }
             }, 
             benefitAmt_perChild = function() {
-                switch (true) {
-                    case (income.avgFamNet() < income.low_eligible_household):
-                        return 325;
-                    case (income.avgFamNet() < income.mid_eligible_household):
-                        return 195;
-                    case (income.avgFamNet() < income.max_eligible_household):
-                        return 130;
-                    default:
+                if (custody() === 2) {
+                    switch (true) {
+                        case (income.avgFamNet() < income.low_eligible_household):
+                            return 325;
+                        case (income.avgFamNet() < income.mid_eligible_household):
+                            return 195;
+                        case (income.avgFamNet() < income.max_eligible_household):
+                            return 130;
+                        default:
+                    }
                 }
                 return 0;
             }, 
             benefitAmt = function() {
-                if(custody() === 1 || custody() === 3) {
+                if (custody() === 1 || custody() === 3) {
                     switch (true) {
                         case (income.avgFamNet() < income.low_eligible_household):
                             return 650;
