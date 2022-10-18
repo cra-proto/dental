@@ -1141,7 +1141,7 @@
                                                             <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
                                                             <div class="input-group col-sm-3">
                                                                 <span class="input-group-addon">$</span>
-                                                                <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true">
+                                                                <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true" required="required">
                                                                 <span class="input-group-addon">.00</span>
                                                             </div>
                                                         </div>
@@ -1200,7 +1200,7 @@
                                                         </fieldset>                                                        
                                                         <div id="rdspfields" class="hidden">
                                                             <p class="text-center text-muted">Leave fields blank if amounts are zero.</p>
-                                                            <div id="rdspAmounts" class="col-md-6 mrgn-bttm-md">
+                                                            <div id="rdspAmounts" class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="rdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
@@ -1222,7 +1222,7 @@
                                                                     <p class="small">This is line 23200 of your <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                             </div>
-                                                            <div id="rdspSpouse" class="col-md-6 mrgn-bttm-md brdr-lft hidden">
+                                                            <div id="rdspSpouse" class="col-md-6 brdr-lft hidden">
                                                                 <div class="form-group">
                                                                     <label for="spouseRdspIncome"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
@@ -1286,7 +1286,7 @@
                                                         </fieldset>
                                                         <div id="uccbfields" class="hidden">
                                                             <p class="text-center text-muted">Leave fields blank if amounts are zero.</p>
-                                                            <div id="uccbAmounts" class="col-md-6 mrgn-bttm-md">
+                                                            <div id="uccbAmounts" class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
@@ -1308,7 +1308,7 @@
                                                                     <p class="small">This is line 21300 of your <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                             </div>
-                                                            <div id="uccbSpouse" class="col-md-6 mrgn-bttm-md brdr-lft hidden">
+                                                            <div id="uccbSpouse" class="col-md-6 brdr-lft hidden">
                                                                 <div class="form-group">
                                                                     <label for="spouseUccbIncome"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
@@ -1703,15 +1703,15 @@
                 $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").removeClass("hidden");
                 $("#rdspAmounts, #uccbAmounts").addClass("col-md-6");
                 $("#rdspAmounts, #uccbAmounts").removeClass("col-md-12");
-                $("#rdspAmounts, #uccbAmounts").children(".input-group").addClass("col-md-7");
-                $("#rdspAmounts, #uccbAmounts").children(".input-group").removeClass("col-md-12");
+                $("#rdspAmounts .input-group, #uccbAmounts .input-group").addClass("col-md-7");
+                $("#rdspAmounts .input-group, #uccbAmounts .input-group").removeClass("col-md-3");
                 $("#uccbfields, #rdspfields").children(":first-child").addClass("text-center");
             } else {
                 $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").addClass("hidden");
                 $("#rdspAmounts, #uccbAmounts").addClass("col-md-12");
                 $("#rdspAmounts, #uccbAmounts").removeClass("col-md-6");
-                $("#rdspAmounts, #uccbAmounts").children(".input-group").addClass("col-md-12");
-                $("#rdspAmounts, #uccbAmounts").children(".input-group").removeClass("col-md-7");
+                $("#rdspAmounts .input-group, #uccbAmounts .input-group").addClass("col-md-3");
+                $("#rdspAmounts .input-group, #uccbAmounts .input-group").removeClass("col-md-7");
                 $("#uccbfields, #rdspfields").children(":first-child").removeClass("text-center");
             }
             updateResults();
