@@ -1553,7 +1553,7 @@
                 dateFormatter = Intl.DateTimeFormat(document.documentElement.lang + "-CA", options);
             if (claimElm.is("[data-claim-year]") === true) {
                 claimDate = new Date(claimElm.val());
-                $("time[data-eligible=year]").text(claimElm.data("claim-period-year"));
+                $("time[data-eligible=year]").text(claimElm.data("claim-year"));
                 $("time[data-eligible=maritalDate]").text(dateFormatter.format(claimDate));
             }
             updateResults();
