@@ -723,8 +723,7 @@
             border-radius: 0;
         }
 
-        .ds-example>.wb-tabs [role=tablist]>li:focus,
-        .ds-example>.wb-tabs [role=tablist]>li:hover {
+        .ds-example>.wb-tabs [role=tablist]>li:focus, .ds-example>.wb-tabs [role=tablist]>li:hover {
             background: #ddd;
         }
 
@@ -777,8 +776,7 @@
             text-decoration-line: underline;
         }
 
-        .prev-wb-step:focus,
-        .prev-wb-step:hover {
+        .prev-wb-step:focus, .prev-wb-step:hover {
             color: #0535d2;
         }
 
@@ -810,6 +808,9 @@
             }, {
                 title: "Tax credits and benefits for individuals",
                 href: "https://www.canada.ca/en/services/taxes/child-and-family-benefits.html"
+            }, {
+                title: "Canada Dental Benefit"
+                href: "index.html"
             }],
             search: true,
             siteMenu: true,
@@ -1471,22 +1472,10 @@
                     return this.household() - (this.rdsp() + this.uccb()) + (rdspRepayment() + uccbRepayment());
                 }
             }, 
-            benefitAmt = function() {
-                switch (true) {
-                    case (income.avgFamNet() < income.low_eligible_household):
-                        return 650;
-                    case (income.avgFamNet() < income.mid_eligible_household):
-                        return 390;
-                    case (income.avgFamNet() < income.max_eligible_household):
-                        return 260;
-                    default:
-                }
-                return 0;
-            }, 
             benefitAmt_perChild = function() {
                 switch (true) {
                     case (income.avgFamNet() < income.low_eligible_household):
-                        return 260;
+                        return 325;
                     case (income.avgFamNet() < income.mid_eligible_household):
                         return 195;
                     case (income.avgFamNet() < income.max_eligible_household):
@@ -1494,6 +1483,22 @@
                     default:
                 }
                 return 0;
+            }, 
+            benefitAmt = function() {
+                if(custody() === 1 || custody() === 3) {
+                    switch (true) {
+                        case (income.avgFamNet() < income.low_eligible_household):
+                            return 650;
+                        case (income.avgFamNet() < income.mid_eligible_household):
+                            return 390;
+                        case (income.avgFamNet() < income.max_eligible_household):
+                            return 260;
+                        default:
+                    }
+                    return 0;
+                } else {
+                    return benefitAmt_perChild();
+                }
             }, 
             updateResults = function () {
                 /*  show results  */
