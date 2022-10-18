@@ -1141,7 +1141,7 @@
                                                             <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
                                                             <div class="input-group col-sm-3">
                                                                 <span class="input-group-addon">$</span>
-                                                                <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true" required="required">
+                                                                <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true">
                                                                 <span class="input-group-addon">.00</span>
                                                             </div>
                                                         </div>
@@ -1701,6 +1701,8 @@
         $("#maritalStatus").change(function () {
             if (relationship() === true) {
                 $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").removeClass("hidden");
+                $("#spouseNetIncome").attr("required", "required");
+                $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").attr("hidden");
                 $("#rdspAmounts, #uccbAmounts").addClass("col-md-6");
                 $("#rdspAmounts, #uccbAmounts").removeClass("col-md-12");
                 $("#rdspAmounts .input-group, #uccbAmounts .input-group").addClass("col-md-7");
@@ -1708,6 +1710,7 @@
                 $("#uccbfields, #rdspfields").children(":first-child").addClass("text-center");
             } else {
                 $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").addClass("hidden");
+                $("#spouseNetIncome").removeAttr("required");
                 $("#rdspAmounts, #uccbAmounts").addClass("col-md-12");
                 $("#rdspAmounts, #uccbAmounts").removeClass("col-md-6");
                 $("#rdspAmounts .input-group, #uccbAmounts .input-group").addClass("col-md-3");
