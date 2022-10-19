@@ -1009,7 +1009,7 @@
                                                             <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a>
                                                             <select name="maritalStatus" id="maritalStatus" class="form-control" required="required">
                                                                 <option label="Select your marital status"></option>
-                                                                <option value="Common-law" data-partner="true">Common-law</option>
+                                                                <option value="Common-law partner" data-partner="true">Common-law</option>
                                                                 <option value="Divorced" data-partner="false">Divorced</option>
                                                                 <option value="Spouse" data-partner="true">Married</option>
                                                                 <option value="Separated" data-partner="false">Separated</option>
@@ -1140,16 +1140,17 @@
                                                         <!--PARTNER INCOME-->
                                                         <div id="partnerNetIncomeElm" data-has-partner="true" class="form-group hidden">
                                                             <label for="partnerNetIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s net income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
-                                                            <a href="#partner_netIncome-help" aria-controls="partner_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <span data-partner-case="false">spouse</span>'s net income</span></a>
+                                                           <!--<a href="#partner_netIncome-help" aria-controls="partner_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <span data-partner-case="false">spouse</span>'s net income</span></a>--> 
                                                             <div class="input-group col-sm-3">
                                                                 <span class="input-group-addon">$</span>
                                                                 <input type="text" name="partnernetIncome" size="7" maxlength="7" value="" id="partnerNetIncome" class="form-control text-right" data-rule-digits="true">
                                                                 <span class="input-group-addon">.00</span>
                                                             </div>
+                                                            <p class="small">This is line 23600 of your <span data-partner-case="false">spouse</span>'s <time data-eligible="year">2021</time> tax return.</p>
                                                         </div>
                                                         <section id="partner_netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                                             <header class="modal-header">
-                                                                <h2 class="modal-title">Spouse/Common law partner's net income</h2>
+                                                                <h2 class="modal-title">Spouse or Common law partner's net income</h2>
                                                             </header>
                                                             <div class="modal-body">
                                                                 <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your spouse or common law partner's tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
@@ -1167,7 +1168,7 @@
                                                             </div>
                                                         </div>
                                                         <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group hidden">
-                                                            <label for="partnerWorldIncome" class="required">Your <span class="field-name"><span data-partner-case="true">Spouse</span>'s world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                                                            <label for="partnerWorldIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
                                                             <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>
                                                             <div class="input-group col-sm-3">
                                                                 <span class="input-group-addon">$</span>
@@ -1407,7 +1408,9 @@
                                                             <!--DISCLAIMER-->
                                                             <p class="text-muted small">This result is an estimate based on the information you entered. The CRA will determine your benefit amount when you apply.</p>
                                                             <p class="text-muted small shared-custody mixed-custody">Since you have shared custody, your child's other parent may get a different result.</p>
-                                                        </div>
+
+                                                            <p><a href="#dental-statement" class="wb-lbx btn btn-default btn-lg" role="button"><span class="h3"><span class="glyphicon glyphicon-print"></span> Print preview<span class="wb-inv"> Canada dental benefit statement</span></span></a></p>
+                                                                        </div>
                                                     </div>
                                                 </fieldset>
                                                 <!--END OF RESULTS-->
@@ -1415,7 +1418,25 @@
                                             </form>
                                             <!--END OF CALC--> 
                                         </div>
-                                    </div>
+                                        <!--START OF PRINT STATEMENT-->
+                                        <section id="dental-statement" class="mfp-hide modal-dialog modal-content overlay-def experimental">
+                                            <header class="modal-header">
+                                                <h2 class="modal-title">Print preview for the Canada dental benefit statement</h2>
+                                            </header>
+                                            <div class="modal-body">
+                                                <ul class="list-inline">
+                                                    <li>
+                                                        <button id="printDentalBtn" type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-print"></span> Print this statement</button>
+                                                    </li>
+                                                    <li class="pull-right">
+                                                        <button type="button" title="Close overlay" class="btn btn-sm btn-default pull-right popup-modal-dismiss">Close<span class="wb-inv"> overlay</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer hidden"> </div>
+                                        </section>
+                                        <!--END OF PRINT STATEMENT-->
+                                </div>
                                     <!--END OF TOOL-->
                                 </div>
                             </div>
@@ -1744,7 +1765,7 @@
             updateResults();
         });
 
-
+        
         $document.on("click vclick touchstart", "input[type=radio][name=custody]", function (event) {
             switch (custody()) {
                 case (3):
@@ -1809,6 +1830,11 @@
         $("#dental_cal_form").submit(function () {
             updateResults();
             event.preventDefault();
+        });
+
+
+        $document.on("click vclick touchstart", "#printDentalBtn", function (event) {
+            window.print();
         });
 
 
