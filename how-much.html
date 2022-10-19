@@ -870,38 +870,40 @@
                                         <li>July 1, 2023 for second benefit period</li>
                                     </ul>
                                 </details>
-                                <table class="table table-bordered table-responsive table-hover mrgn-tp-lg">
-                                    <caption>Benefit amount per eligible child</caption>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col"><a class="wb-lbx" href="#afni">Adjusted family net income <span class="nowrap">(AFNI)<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a></th>
-                                            <th scope="col"><a class="wb-lbx" href="#full"><span class="nowrap">Full custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
-                                            <th scope="col"><a class="wb-lbx" href="#shared"><span class="nowrap">Shared custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">less than $70,000</th>
-                                            <td>$650</td>
-                                            <td>$325</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><span class="nowrap">$70,000 to less than $80,000</span></th>
-                                            <td>$390</td>
-                                            <td>$195</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><span class="nowrap">$80,000 to less than $90,000</span></th>
-                                            <td>$260</td>
-                                            <td>$130</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">$90,000 or more</th>
-                                            <td>not eligible</td>
-                                            <td>not eligible</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-responsive table-hover mrgn-tp-lg">
+                                        <caption>Benefit amount per eligible child</caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><a class="wb-lbx" href="#afni">Adjusted family net income <span class="nowrap">(AFNI)<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a></th>
+                                                <th scope="col"><a class="wb-lbx" href="#full"><span class="nowrap">Full custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
+                                                <th scope="col"><a class="wb-lbx" href="#shared"><span class="nowrap">Shared custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">less than $70,000</th>
+                                                <td>$650</td>
+                                                <td>$325</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="nowrap">$70,000 to less than $80,000</span></th>
+                                                <td>$390</td>
+                                                <td>$195</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><span class="nowrap">$80,000 to less than $90,000</span></th>
+                                                <td>$260</td>
+                                                <td>$130</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">$90,000 or more</th>
+                                                <td>not eligible</td>
+                                                <td>not eligible</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <section id="afni" class="mfp-hide modal-dialog modal-content overlay-def">
                                     <header class="modal-header">
                                         <h2 class="modal-title">Your adjusted family net income</h2>
@@ -918,7 +920,7 @@
                                         </ul>
                                         <ul class="fa-ul lst-spcd mrgn-bttm-lg mrgn-lft-lg">
                                             <li><span class="fas fa-minus fa-li" aria-hidden="true"><span class="wb-inv">minus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 <abbr title="registered disability savings plan">RDSP</abbr> and <abbr title="universal child care benefit">UCCB</abbr> payments to you or your spouse or common-law partner (11700 and line 12500)</span></li>
-                                            <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 RDSP and UCCB repayments from you or your spouse or common-law partner (line 21300 and line 23200)</span></li>
+                                            <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 <abbr title="Registered disability savings plan">RDSP</abbr> and <abbr title="universal child care benefit">UCCB</abbr> repayments from you or your spouse or common-law partner (line 21300 and line 23200)</span></li>
                                             <li><hr class="brdr-bttm mrgn-tp-0 mrgn-bttm-md"><span class="fas fa-equals fa-li" aria-hidden="true"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 text-muted h5">your 2021 adjusted family net income (AFNI)</span></li>
                                         </ul>-->
                                     </div>
@@ -970,12 +972,12 @@
 
                         <div class="row mrgn-bttm-md mrgn-tp-lg">
                             <div class="col-xs-12">
-                                <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
+                                <div class="mrgn-tp-sm">
                                     <!--START OF TOOL-->
                                     <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"> <span class="fas fa-square fa-stack-2x fa-inverse"></span><span class="fa fa-calculator fa-stack-2x"></span></span></div>
-                                    <h3 class="pull-left mrgn-tp-0 mrgn-lft-lg text-info" id="calculator">Use the tool to estimate your benefit amount</h3>
+                                    <h3 class="mrgn-tp-0 mrgn-lft-xl text-info" id="calculator">Use the tool to estimate your benefit amount</h3>
                                     <div class="clearfix"></div>
-                                    <div class="row mrgn-tp-lg mrgn-lft-lg">
+                                    <div class="row mrgn-tp-lg">
                                         <div class="wb-frmvld col-sm-12 provisional wb-steps">
                                             <p class="small text-muted">Your data is not collected or saved. If you leave or refresh the page, you will need to enter your information again.</p>
                                             <!-- START OF CALC -->
@@ -1000,19 +1002,19 @@
 
                                                 <!--STEP 2-->
                                                 <fieldset id="marital" class="panel-default p-0">
-                                                    <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
+                                                    <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Family status</span></legend>
                                                     <div class="panel-body mrgn-lft-sm gc-font-2019">
                                                         <div class="form-group">
                                                             <label for="maritalStatus" class="required">What was your <span class="field-name">marital status as of <time data-eligible="maritalDate">December 1, 2022</time></span> <strong class="required">(required)</strong></label>
                                                             <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a>
                                                             <select name="maritalStatus" id="maritalStatus" class="form-control" required="required">
                                                                 <option label="Select your marital status"></option>
-                                                                <option value="common law partner" data-marital-add="true">Common-law</option>
-                                                                <option value="DIVORCED" data-marital-add="false">Divorced</option>
-                                                                <option value="spouse" data-marital-add="true">Married</option>
-                                                                <option value="SEPARATED" data-marital-add="false">Separated</option>
-                                                                <option value="SINGLE" data-marital-add="false">Single</option>
-                                                                <option value="WIDOWED" data-marital-add="false">Widowed</option>
+                                                                <option value="Common-law" data-partner="true">Common-law</option>
+                                                                <option value="Divorced" data-partner="false">Divorced</option>
+                                                                <option value="Spouse" data-partner="true">Married</option>
+                                                                <option value="Separated" data-partner="false">Separated</option>
+                                                                <option value="Single" data-partner="false">Single</option>
+                                                                <option value="widowed" data-partner="false">Widowed</option>
                                                             </select>
                                                         </div>
                                                         <section id="maritalStatus-help" class="mfp-hide modal-dialog modal-content overlay-def">
@@ -1040,7 +1042,7 @@
                                                         <fieldset id="custody" class="gc-chckbxrdio chckbxrdio-grp provisional">
                                                             <div class="form-group">
                                                                 <legend class="h5 required" tabindex="-1"><span class="field-name">What is your custody arrangment for the children you are applying for?</span> <strong class="required">(required)</strong></legend>
-                                                                <p><a href="#custody-help" aria-controls="custody-help" class="wb-lbx" role="button">What is considered a shared custody&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
+                                                                <p><a href="#custody-help" aria-controls="custody-help" class="wb-lbx" role="button">What is considered shared custody&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
                                                                 <ul class="list-unstyled">
                                                                     <li class="radio">
                                                                         <input type="radio" name="custody" id="custody_Full" value="1" data-custody="1" data-rule-required="true">
@@ -1135,23 +1137,23 @@
                                                                 <p>If your net income is negative, enter '0'.</p>
                                                             </div>
                                                         </section>
-                                                        <!--SPOUSE INCOME-->
-                                                        <div id="spouseNetIncomeElm" class="form-group hidden">
-                                                            <label for="spouseNetIncome" class="required">Your <span class="field-name">spouse's net income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
-                                                            <a href="#spouse_netIncome-help" aria-controls="spouse_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your spouse's net income</span></a>
+                                                        <!--PARTNER INCOME-->
+                                                        <div id="partnerNetIncomeElm" class="form-group hidden">
+                                                            <label for="partnerNetIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s net income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
+                                                            <a href="#partner_netIncome-help" aria-controls="partner_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <span data-partner-case="false">spouse</span>'s net income</span></a>
                                                             <div class="input-group col-sm-3">
                                                                 <span class="input-group-addon">$</span>
-                                                                <input type="text" name="spousenetIncome" size="7" maxlength="7" value="" id="spouseNetIncome" class="form-control text-right" data-rule-digits="true">
+                                                                <input type="text" name="partnernetIncome" size="7" maxlength="7" value="" id="partnerNetIncome" class="form-control text-right" data-rule-digits="true">
                                                                 <span class="input-group-addon">.00</span>
                                                             </div>
                                                         </div>
-                                                        <section id="spouse_netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                                                        <section id="partner_netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                                             <header class="modal-header">
-                                                                <h2 class="modal-title">Spouse's Net Income</h2>
+                                                                <h2 class="modal-title">Spouse/Common law partner's net income</h2>
                                                             </header>
                                                             <div class="modal-body">
-                                                                <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your spouse's tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
-                                                                <p>If your spouse's net income is negative, enter '0'.</p>
+                                                                <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your spouse or common law partner's tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
+                                                                <p>If your spouse or common law partner's net income is negative, enter '0'.</p>
                                                             </div>
                                                         </section>
                                                         <!--WORLD INCOME-->
@@ -1200,7 +1202,7 @@
                                                         </fieldset>                                                        
                                                         <div id="rdspfields" class="hidden">
                                                             <p class="text-center text-muted">Leave fields blank if amounts are zero.</p>
-                                                            <div id="rdspAmounts" class="col-md-6">
+                                                            <div id="rdspAmounts" class="col-md-6 wb-eqht brdr-rght">
                                                                 <div class="form-group">
                                                                     <label for="rdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
@@ -1214,7 +1216,7 @@
                                                                 <div class="form-group">
                                                                     <label for="rdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
-                                                                    <div class="input-group col-sm-7">
+                                                                    <div class="input-group input col-sm-7">
                                                                         <span class="input-group-addon">$</span>
                                                                         <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" data-rule-digits="true">
                                                                         <span class="input-group-addon">.00</span>
@@ -1222,26 +1224,26 @@
                                                                     <p class="small">This is line 23200 of your <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                             </div>
-                                                            <div id="rdspSpouse" class="col-md-6 brdr-lft hidden">
+                                                            <div id="rdspPartner" class="col-md-6 wb-eqht hidden">
                                                                 <div class="form-group">
-                                                                    <label for="spouseRdspIncome"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <label for="partnerRdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <span data-partner-case="true">Spouse</span>'s <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
                                                                     <div class="input-group col-sm-7">
                                                                         <span class="input-group-addon">$</span>
-                                                                        <input type="text" name="spouseRdspIncome" size="7" maxlength="7" value="" id="spouseRdspIncome" class="form-control text-right" data-rule-digits="true">
+                                                                        <input type="text" name="partnerRdspIncome" size="7" maxlength="7" value="" id="partnerRdspIncome" class="form-control text-right" data-rule-digits="true">
                                                                         <span class="input-group-addon">.00</span>
                                                                     </div>
-                                                                    <p class="small">This is line 12500 of your spouse's <time data-eligible="year">2021</time> tax return.</p>
+                                                                    <p class="small">This is line 12500 of your <span data-partner-case="false">spouse</span>'s <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="spouseRdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <label for="partnerRdspRepayment"><span class="field-name"><time data-eligible="year">2021</time> <span data-partner-case="true">Spouse</span>'s <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
                                                                     <div class="input-group col-sm-7">
                                                                         <span class="input-group-addon">$</span>
-                                                                        <input type="text" name="spouseRdspRepayment" size="7" maxlength="7" value="" id="spouseRdspRepayment" class="form-control text-right" data-rule-digits="true">
+                                                                        <input type="text" name="partnerRdspRepayment" size="7" maxlength="7" value="" id="partnerRdspRepayment" class="form-control text-right" data-rule-digits="true">
                                                                         <span class="input-group-addon">.00</span>
                                                                     </div>
-                                                                    <p class="small">This is line 23200 of your spouse's <time data-eligible="year">2021</time> tax return.</p>
+                                                                    <p class="small">This is line 23200 of your <span data-partner-case="false">spouse</span>'s <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                             </div>
                                                             <section id="rdsp-help" class="mfp-hide modal-dialog modal-content overlay-def">
@@ -1256,10 +1258,10 @@
 <!--
                                                             <section id="uccbAndRdspIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                                                 <header class="modal-header">
-                                                                    <h2 class="modal-title">UCCB and RDSP income</h2>
+                                                                    <h2 class="modal-title"><abbr title="universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> income</h2>
                                                                 </header>
                                                                 <div class="modal-body">
-                                                                    <p>Income claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">line 11700</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-125-registered-disability-savings-plan-rdsp-income.html" target="help" rel="noopener noreferrer">line 12500</a> of your or your spouse's tax return).</p>
+                                                                    <p>Income claimed by you or your spouse or common law partner (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">line 11700</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-125-registered-disability-savings-plan-rdsp-income.html" target="help" rel="noopener noreferrer">line 12500</a> of your or your spouse or common law partner's tax return).</p>
                                                                     <p>If field left blank, we will assume it is zero.</p>
                                                                 </div>
                                                             </section>
@@ -1286,7 +1288,7 @@
                                                         </fieldset>
                                                         <div id="uccbfields" class="hidden">
                                                             <p class="text-center text-muted">Leave fields blank if amounts are zero.</p>
-                                                            <div id="uccbAmounts" class="col-md-6">
+                                                            <div id="uccbAmounts" class="col-md-6 wb-eqht brdr-rght">
                                                                 <div class="form-group">
                                                                     <label for="uccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
@@ -1308,26 +1310,26 @@
                                                                     <p class="small">This is line 21300 of your <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                             </div>
-                                                            <div id="uccbSpouse" class="col-md-6 brdr-lft hidden">
+                                                            <div id="uccbPartner" class="col-md-6 wb-eqht hidden">
                                                                 <div class="form-group">
-                                                                    <label for="spouseUccbIncome"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <label for="partnerUccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <span data-partner-case="true">Spouse</span>'s <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
                                                                     <div class="input-group col-sm-7">
                                                                         <span class="input-group-addon">$</span>
-                                                                        <input type="text" name="spouseUccbIncome" size="7" maxlength="7" value="" id="spouseUccbIncome" class="form-control text-right" data-rule-digits="true">
+                                                                        <input type="text" name="partnerUccbIncome" size="7" maxlength="7" value="" id="partnerUccbIncome" class="form-control text-right" data-rule-digits="true">
                                                                         <span class="input-group-addon">.00</span>
                                                                     </div>
-                                                                    <p class="small">This is line 11700 of your spouse's <time data-eligible="year">2021</time> tax return.</p>
+                                                                    <p class="small">This is line 11700 of your <span data-partner-case="false">spouse</span>'s <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="spouseUccbRepayment"><span class="field-name"><time data-eligible="year">2021</time> Spouse's <abbr title="Universal child care benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                                                                    <label for="partnerUccbRepayment"><span class="field-name"><time data-eligible="year">2021</time> <span data-partner-case="true">Spouse</span>'s <abbr title="Universal child care benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
                                                                     <div class="input-group col-sm-7">
                                                                         <span class="input-group-addon">$</span>
-                                                                        <input type="text" name="spouseUccbRepayment" size="7" maxlength="7" value="" id="spouseUccbRepayment" class="form-control text-right" data-rule-digits="true">
+                                                                        <input type="text" name="partnerUccbRepayment" size="7" maxlength="7" value="" id="partnerUccbRepayment" class="form-control text-right" data-rule-digits="true">
                                                                         <span class="input-group-addon">.00</span>
                                                                     </div>
-                                                                    <p class="small">This is line 21300 of your spouse's <time data-eligible="year">2021</time> tax return.</p>
+                                                                    <p class="small">This is line 21300 of your <span data-partner-case="false">spouse</span>'s <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                             </div>
                                                             <section id="uccb-help" class="mfp-hide modal-dialog modal-content overlay-def">
@@ -1335,17 +1337,17 @@
                                                                     <h2 class="modal-title">Universal child care benefit</h2>
                                                                 </header>
                                                                 <div class="modal-body">
-                                                                    <p>The UCCB was a taxable benefit paid for children under 18 years of age, available to all eligible individuals, regardless of their income. Payments ended as of July 2016, but lump-sum amounts continue to be paid for months prior to that date. The Canada Child Benefit (CCB), which is an income-tested, non-taxable benefit, replaced the UCCB in 2016.</p>
+                                                                    <p>The <abbr title="universal child care benefit">UCCB</abbr> was a taxable benefit paid for children under 18 years of age, available to all eligible individuals, regardless of their income. Payments ended as of July 2016, but lump-sum amounts continue to be paid for months prior to that date. The Canada Child Benefit (CCB), which is an income-tested, non-taxable benefit, replaced the <abbr title="universal child care benefit">UCCB</abbr> in 2016.</p>
                                                                     <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">Line 11700 – Universal child care benefit (UCCB)</a> for more information</p>
                                                                 </div>
                                                             </section>
 <!--
                                                             <section id="uccbAndRdspRepayment-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                                                 <header class="modal-header">
-                                                                    <h2 class="modal-title">UCCB and RDSP repayment</h2>
+                                                                    <h2 class="modal-title"><abbr title="universal child care benefit">UCCB</abbr>and <abbr title="Registered disability savings plan">RDSP</abbr> repayment</h2>
                                                                 </header>
                                                                 <div class="modal-body">
-                                                                    <p>Repayment claimed by you or your spouse (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-21300-universal-child-care-benefit-uccb-repayment.html" target="help" rel="noopener noreferrer">line 21300</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23200-other-deductions/line-23200-income-amounts-repaid.html" target="help" rel="noopener noreferrer">line 23200</a> of your or your spouse's tax return).</p>
+                                                                    <p>Repayment claimed by you or your spouse or common law partner (<a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-21300-universal-child-care-benefit-uccb-repayment.html" target="help" rel="noopener noreferrer">line 21300</a> and <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23200-other-deductions/line-23200-income-amounts-repaid.html" target="help" rel="noopener noreferrer">line 23200</a> of your or your spouse or common law partner's tax return).</p>
                                                                 </div>
                                                             </section>
 -->
@@ -1367,27 +1369,26 @@
                                                                 <p>Your adjusted family net income (AFNI) for this benefit is:</p>
                                                                 <ul class="fa-ul lst-spcd">
                                                                     <li id="netIncomeResult"><span class="mrgn-tp-0 h5"><span data-output="net-income-value">$0</span><span class="text-muted"> (your net income)</span></span></li>
-                                                                    <li id="spouseNetIncomeResult"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="spouse-net-income-value">$0</span><span class="text-muted"> (your spouse's net income)</span></span></li>
+                                                                    <li id="partnerNetIncomeResult"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="partner-net-income-value">$0</span><span class="text-muted"> (your <span data-partner-case="false">spouse</span>'s net income)</span></span></li>
                                                                     <li id="worldIncomeResult" class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="family-world-income-value">$0</span><span class="text-muted"> (your household world income)</span></span></li>
                                                                     <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><span data-output="household-income-value">$0</span><span class="text-muted"> (your household net income)</span></span></li>
                                                                 </ul>
                                                                 <br>
                                                                 <ul class="fa-ul lst-spcd">
                                                                     <li><span class="mrgn-tp-0 h5"><span data-output="household-income-value">$0</span><span class="text-muted"> (your household net income)</span></span></li>
-                                                                    <li><span class="fas fa-minus fa-li"><span class="wb-inv">minus</span></span><span class="h5"><span data-output="adjusted-income-value">$0</span><span class="text-muted"> (UCCB and RDSP income)</span></span></li>
-                                                                    <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="adjusted-payment-value">$0</span><span class="text-muted"> (UCCB and RDSP repayment)</span></span></li>
+                                                                    <li><span class="fas fa-minus fa-li"><span class="wb-inv">minus</span></span><span class="h5"><span data-output="adjusted-income-value">$0</span><span class="text-muted"> (<abbr title="universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> income)</span></span></li>
+                                                                    <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="adjusted-payment-value">$0</span><span class="text-muted"> (<abbr title="universal child care benefit">UCCB</abbr> and <abbr title="Registered disability savings plan">RDSP</abbr> repayment)</span></span></li>
                                                                     <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><span data-output="avg-fam-net-income-value">$0</span><span class="text-muted"> (your adjusted family net income)</span></span></li>
                                                                 </ul>
                                                             </details>
                                                             <!--QUALIFIES-->
                                                             <div class="alert alert-success provisional hidden" id="qualify">
                                                                 <p>If you are eligible, your benefit amount is:</p>
-                                                                <div id="full-cust-benefit" class="hidden">
-                                                                    <p class="lead"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child</p>
-                                                                </div>
-                                                                <div id="mixed-cust-benefit">
+                                                                <div id="full-cust-benefit">
                                                                     <p class="lead"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child that you have full custody of</p>
-                                                                    <p><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child that you have shared custody of</p>
+                                                                </div>
+                                                                <div id="shared-cust-benefit">
+                                                                    <p class="lead"><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child that you have shared custody of</p>
                                                                 </div>
                                                             </div>
                                                             <!--DOES NOT QUALIFY-->
@@ -1535,10 +1536,20 @@
         
         let $document = wb.doc, 
             claimPeriod = function() {
-                return $("#dentalclaimPeriod").find(":selected");
+                let claimElm = $("#dentalclaimPeriod").find(":selected"),
+                claimData = {
+                    claimDate: claimElm.val() || null, 
+                    claimYear: claimElm.data("claim-year") || null
+                };
+                return claimData;
             }, 
             relationship = function() {
-                return $("#maritalStatus").find(":selected").data("marital-add") || false;
+                let relationOpt = $("#maritalStatus").find(":selected"), 
+                relationData = {
+                    relationType: relationOpt.val() || null,
+                    partner: relationOpt.data("partner") || false
+                };
+                return relationData;
             }, 
             rdsp = function() {
                 return $(":input[type=radio][name=rdsp]:checked", "#dental_cal_form").data("rdsp") || false;
@@ -1555,14 +1566,14 @@
             rdspRepayment = function() {
                 return parseInt($("#rdspRepayment").val(), 10) || 0;
             }, 
-            spousalRdspRepayment = function() {
-                return parseInt($("#spouseRdspRepayment").val(), 10) || 0;
+            partnerRdspRepayment = function() {
+                return parseInt($("#partnerRdspRepayment").val(), 10) || 0;
             }, 
             uccbRepayment = function() {
                 return parseInt($("#uccbRepayment").val(), 10) || 0;
             }, 
-            spousalUccbRepayment = function() {
-                return parseInt($("#spouseUccbRepayment").val(), 10) || 0;
+            partnerUccbRepayment = function() {
+                return parseInt($("#partnerUccbRepayment").val(), 10) || 0;
             }, 
             income = {
                 low_eligible_household: 70000, 
@@ -1574,18 +1585,19 @@
                 rdsp: function() {
                     return parseInt($("#rdspIncome").val(), 10) || 0;
                 }, 
-                spousalRdsp: function() {
-                    return parseInt($("#spouseRdspIncome").val(), 10) || 0;
+                partnerRdsp: function() {
+                    return parseInt($("#partnerRdspIncome").val(), 10) || 0;
                 }, 
                 uccb: function() {
                     return parseInt($("#uccbIncome").val(), 10) || 0;
                 }, 
-                spousalUccb: function() {
-                    return parseInt($("#spouseUccbIncome").val(), 10) || 0;
+                partnerUccb: function() {
+                    return parseInt($("#partnerUccbIncome").val(), 10) || 0;
                 }, 
-                spousal: function() {
-                    if (relationship() === true) {
-                        return parseInt($("#spouseNetIncome").val(), 10) || 0;
+                partner: function() {
+                    let relation = relationship();
+                    if (relation.partner === true) {
+                        return parseInt($("#partnerNetIncome").val(), 10) || 0;
                     }
                     return 0;
                 }, 
@@ -1596,70 +1608,65 @@
                     return 0;
                 },
                 household: function() {
-                    return this.net() + this.spousal() + this.world();
+                    return this.net() + this.partner() + this.world();
                 },
                 avgFamNet: function() {
                     return this.household() - (this.rdsp() + this.uccb()) + (rdspRepayment() + uccbRepayment());
                 }
             }, 
             benefitAmt_perChild = function() {
-                if (custody() === 2) {
-                    switch (true) {
-                        case (income.avgFamNet() < income.low_eligible_household):
-                            return 325;
-                        case (income.avgFamNet() < income.mid_eligible_household):
-                            return 195;
-                        case (income.avgFamNet() < income.max_eligible_household):
-                            return 130;
-                        default:
-                    }
+                switch (true) {
+                    case (income.avgFamNet() < income.low_eligible_household):
+                        return 325;
+                    case (income.avgFamNet() < income.mid_eligible_household):
+                        return 195;
+                    case (income.avgFamNet() < income.max_eligible_household):
+                        return 130;
+                    default:
                 }
                 return 0;
             }, 
             benefitAmt = function() {
-                if (custody() === 1 || custody() === 3) {
-                    switch (true) {
-                        case (income.avgFamNet() < income.low_eligible_household):
-                            return 650;
-                        case (income.avgFamNet() < income.mid_eligible_household):
-                            return 390;
-                        case (income.avgFamNet() < income.max_eligible_household):
-                            return 260;
-                        default:
-                    }
-                    return 0;
-                } else {
-                    return benefitAmt_perChild();
+                switch (true) {
+                    case (income.avgFamNet() < income.low_eligible_household):
+                        return 650;
+                    case (income.avgFamNet() < income.mid_eligible_household):
+                        return 390;
+                    case (income.avgFamNet() < income.max_eligible_household):
+                        return 260;
+                    default:
                 }
+                return 0;
             }, 
             updateResults = function () {
                 /*  show results  */
-                let currencyFormatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
+                let relation = relationship(),
+                    currencyFormatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
                         style: "currency",
                         currency: "CAD",
                         minimumFractionDigits: 0
                     });
-                if (relationship() === true) {
+                if (relation.partner === true) {
                     $("#netIncomeResult").removeClass("brdr-bttm");
-                    $("#spouseNetIncomeResult").removeClass("hidden");
-                    $("#spouseNetIncomeResult").addClass("brdr-bttm");
+                    $("#partnerNetIncomeResult").removeClass("hidden");
+                    $("#partnerNetIncomeResult").addClass("brdr-bttm");
                 } else {
                     $("#netIncomeResult").addClass("brdr-bttm");
-                    $("#spouseNetIncomeResult").addClass("hidden");
+                    $("#partnerNetIncomeResult").addClass("hidden");
                 }
                 if (nonResident() === true) {
                     $("#netIncomeResult").removeClass("brdr-bttm");
-                    $("#spouseNetIncomeResult").removeClass("hidden brdr-bttm");
+                    $("#partnerNetIncomeResult").removeClass("hidden brdr-bttm");
                     $("#worldIncomeResult").removeClass("hidden");
                     $("#worldIncomeResult").addClass("brdr-bttm");
                 } else {
                     $("#worldIncomeResult").addClass("hidden");
                 }
                 $("[data-output=net-income-value]").html(currencyFormatter.format(income.net()));
-                $("[data-output=spouse-net-income-value]").html(currencyFormatter.format(income.spousal()));
+                $("[data-output=partner-net-income-value]").html(currencyFormatter.format(income.partner()));
                 $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world()));
-                $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + spousalRdspRepayment() + spousalUccbRepayment()));
-                $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.spousalRdsp() + income.uccb() + income.spousalUccb()));
+                $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + partnerRdspRepayment() + partnerUccbRepayment()));
+                $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.partnerRdsp() + income.uccb() + income.partnerUccb()));
                 $("[data-output=household-income-value]").html(currencyFormatter.format(income.household()));
                 $("[data-output=avg-fam-net-income-value]").html(currencyFormatter.format(income.avgFamNet()));
                 if (income.avgFamNet() < income.max_eligible_household) {
@@ -1686,12 +1693,12 @@
 
         $("#dentalclaimPeriod").change(function () {
             let claimDate, 
-                claimElm = claimPeriod(), 
+                claim = claimPeriod(), 
                 options = { year: 'numeric', month: 'long', day: 'numeric' }, 
                 dateFormatter = Intl.DateTimeFormat(document.documentElement.lang + "-CA", options);
-            if (claimElm.is("[data-claim-year]") === true) {
-                claimDate = new Date(claimElm.val());
-                $("time[data-eligible=year]").text(claimElm.data("claim-year"));
+            if (claim.claimYear !== null) {
+                claimDate = new Date(claim.claimDate);
+                $("time[data-eligible=year]").text(claim.claimYear);
                 $("time[data-eligible=maritalDate]").text(dateFormatter.format(claimDate));
             }
             updateResults();
@@ -1699,18 +1706,21 @@
 
 
         $("#maritalStatus").change(function () {
-            if (relationship() === true) {
-                $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").removeClass("hidden");
-                $("#spouseNetIncome").attr("required", "required");
-                $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").attr("hidden");
+            let relation = relationship();
+            if (relation.partner === true) {
+                $("#partnerNetIncomeElm, #rdspPartner, #uccbPartner").removeClass("hidden");
+                $("#partnerNetIncome").attr("required", "required");
+                $("#partnerNetIncomeElm, #rdspPartner, #uccbPartner").attr("hidden");
                 $("#rdspAmounts, #uccbAmounts").addClass("col-md-6");
                 $("#rdspAmounts, #uccbAmounts").removeClass("col-md-12");
                 $("#rdspAmounts .input-group, #uccbAmounts .input-group").addClass("col-md-7");
                 $("#rdspAmounts .input-group, #uccbAmounts .input-group").removeClass("col-md-3");
                 $("#uccbfields, #rdspfields").children(":first-child").addClass("text-center");
+                $("[data-partner-case=true]").text(relation.relationType);
+                $("[data-partner-case=false]").text(relation.relationType.toLowerCase());
             } else {
-                $("#spouseNetIncomeElm, #rdspSpouse, #uccbSpouse").addClass("hidden");
-                $("#spouseNetIncome").removeAttr("required");
+                $("#partnerNetIncomeElm, #rdspPartner, #uccbPartner").addClass("hidden");
+                $("#partnerNetIncome").removeAttr("required");
                 $("#rdspAmounts, #uccbAmounts").addClass("col-md-12");
                 $("#rdspAmounts, #uccbAmounts").removeClass("col-md-6");
                 $("#rdspAmounts .input-group, #uccbAmounts .input-group").addClass("col-md-3");
@@ -1722,12 +1732,19 @@
 
 
         $document.on("click vclick touchstart", "input[type=radio][name=custody]", function (event) {
-            if (custody() === 2) {
-                $("full-cust-benefit").removeClass("hidden");
-                $("mixed-cust-benefit").addClass("hidden");
-            } else {
-                $("full-cust-benefit").addClass("hidden");
-                $("mixed-cust-benefit").removeClass("hidden");
+            switch (custody()) {
+                case (3):
+                    $("#full-cust-benefit").removeClass("hidden");
+                    $("#shared-cust-benefit").removeClass("hidden");
+                    break;
+                case (2):
+                    $("#full-cust-benefit").addClass("hidden");
+                    $("#shared-cust-benefit").removeClass("hidden");
+                    break;
+                case (1):
+                default:
+                    $("#full-cust-benefit").removeClass("hidden");
+                    $("#shared-cust-benefit").addClass("hidden");
             }
             updateResults();
         });
