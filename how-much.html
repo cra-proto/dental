@@ -1036,7 +1036,7 @@
 
 
                                                 <!--STEP 3-->
-                                                <fieldset class="panel-default p-0">
+                                                <fieldset id="custodyArrangment" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Custody arrangment</span></legend>
                                                     <div class="panel-body mrgn-lft-sm gc-font-2019">
                                                         <fieldset id="custody" class="gc-chckbxrdio chckbxrdio-grp provisional">
@@ -1172,7 +1172,7 @@
                                                             <!--<a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>-->
                                                             <div class="input-group col-sm-3">
                                                                 <span class="input-group-addon">$</span>
-                                                                <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnereWorldIncome" class="form-control text-right" data-rule-digits="true">
+                                                                <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" data-rule-digits="true">
                                                                 <span class="input-group-addon">.00</span>
                                                             </div>
                                                         </div>
@@ -1716,14 +1716,6 @@
                     $("[data-output=benefit-per-child]").html(currencyFormatter.format(0));
                     $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(0));
                 }
-            },
-            showfield = function (updateCheck, updateSelector) {
-                if (updateCheck === true) {
-                    $(updateSelector).removeClass("hidden");
-                } else {
-                    $(updateSelector).addClass("hidden");
-                }
-                updateResults();
             };
 
 
