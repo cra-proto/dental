@@ -1072,48 +1072,6 @@
 
 
                                                 <!--STEP 4-->
-                                                <fieldset id="residency" class="panel-default p-0">
-                                                    <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Residency status</span></legend>
-                                                    <div class="panel-body mrgn-lft-sm gc-font-2019">
-                                                        <fieldset id="nonResident" class="gc-chckbxrdio chckbxrdio-grp provisional">
-                                                            <div class="form-group">
-                                                                <legend class="h5 required" tabindex="-1"><span class="field-name">Did you live outside of Canada in <time data-eligible="year">2021</time> as a non-resident for tax purposes?</span> <strong class="required">(required)</strong></legend>
-                                                                <p><a href="#nonResident-help" aria-controls="nonResident-help" class="wb-lbx" role="button">Who is considered a non-resident of Canada&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
-                                                                <ul class="list-unstyled">
-                                                                    <li class="radio">
-                                                                        <input type="radio" name="nonResident" id="non_residentTRUE" value="true" data-residency="true" data-rule-required="true">
-                                                                        <label for="non_residentTRUE">Yes</label>
-                                                                    </li>
-                                                                    <li class="radio">
-                                                                        <input type="radio" name="nonResident" id="non_residentFALSE" value="false" data-residency="false" data-rule-required="true">
-                                                                        <label for="non_residentFALSE">No</label>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </fieldset>
-                                                        <section id="nonResident-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                                                            <header class="modal-header">
-                                                                <h2 class="modal-title">Non-resident</h2>
-                                                            </header>
-                                                            <div class="modal-body">
-                                                                <p>You are a non-resident for income tax purposes if you:</p>
-                                                                <ul>
-                                                                    <li>normally, customarily, or routinely live in another country and are <strong>not</strong> considered a resident of Canada</li>
-                                                                    <li>do <strong>not</strong> have significant <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html">residential ties</a> in Canada and <strong>any</strong> of the following applies:
-                                                                        <ul>
-                                                                            <li>You live outside Canada throughout the tax year</li>
-                                                                            <li>You stay in Canada for <strong>less than <span class="nowrap">183 days</span></strong> in the tax year</li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                                <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/non-residents-canada.html" target="help" rel="noopener noreferrer">Non-residents of Canada</a> for more information</p>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                </fieldset>
-
-
-                                                <!--STEP 5-->
                                                 <!--YOUR INCOME-->
                                                 <fieldset id="income" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Household net income</span></legend>
@@ -1157,6 +1115,22 @@
                                                                 <p>If your spouse or common law partner's net income is negative, enter '0'.</p>
                                                             </div>
                                                         </section>
+                                                        <fieldset id="includeWorldIncome" class="gc-chckbxrdio chckbxrdio-grp provisional">
+                                                            <div class="form-group">
+                                                                <legend class="h5 required" tabindex="-1"><span class="field-name">Did you <span class="spouse-specific">or your <span data-partner-case="false">spouse</span> </span>report income in another country during <time data-eligible="year">2021</time>?</span> <strong class="required">(required)</strong></legend>
+                                                                <p>You might have world income to report if you were resident in another country for part of <time data-eligible="year">2021</time>. Make sure to submit a sechedule X or RCXX with your <time data-eligible="year">2021</time> tax return to declare your foreign income before you apply.</p>
+                                                                <ul class="list-unstyled">
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="hasWorldIncome" id="world-income-true" value="true" data-world-income="true" data-rule-required="true">
+                                                                        <label for="world-income-true">Yes</label>
+                                                                    </li>
+                                                                    <li class="radio">
+                                                                        <input type="radio" name="hasWorldIncome" id="world-income-false value="false" data-world-income="false" data-rule-required="true">
+                                                                        <label for="world-income-false">No</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </fieldset>
                                                         <!--WORLD INCOME-->
                                                         <div id="worldIncomeElm" class="form-group hidden">
                                                             <label for="worldIncome">Your <span class="field-name">world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span></label>
@@ -1188,7 +1162,7 @@
                                                 </fieldset>
 
 
-                                                <!--STEP 6-->
+                                                <!--STEP 5-->
                                                 <fieldset id="uccbAndRdsp" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Adjustments</span></legend>
                                                     <div class="panel-body mrgn-lft-sm gc-font-2019">
@@ -1209,7 +1183,7 @@
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                        </fieldset>                                                        
+                                                        </fieldset>
                                                         <div id="rdspfields" class="row wb-eqht hidden">
                                                             <p class="text-center text-muted">Leave fields blank if amounts are zero.</p>
                                                             <div id="rdspAmounts" class="col-md-6 brdr-rght">
@@ -1367,7 +1341,7 @@
                                                 </fieldset>
 
 
-                                                <!--STEP 7-->
+                                                <!--STEP 6-->
                                                 <!--START OF RESULTS-->
                                                 <fieldset id="results" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Estimated benefit amount</span></legend>
@@ -1565,6 +1539,7 @@
         "use strict";
         
         let $document = wb.doc, 
+            formId = "#dental_cal_form", 
             claimPeriod = function() {
                 let claimElm = $("#dentalclaimPeriod").find(":selected"),
                 claimData = {
@@ -1582,16 +1557,13 @@
                 return relationData;
             }, 
             rdsp = function() {
-                return $(":input[type=radio][name=rdsp]:checked", "#dental_cal_form").data("rdsp") || false;
+                return $(":input[type=radio][name=rdsp]:checked", formId).data("rdsp") || false;
             }, 
             uccb = function() {
-                return $(":input[type=radio][name=uccb]:checked", "#dental_cal_form").data("uccb") || false;
+                return $(":input[type=radio][name=uccb]:checked", formId).data("uccb") || false;
             }, 
             custody = function() {
-                return $(":input[type=radio][name=custody]:checked", "#dental_cal_form").data("custody") || 2;
-            }, 
-            nonResident = function() {
-                return $(":input[type=radio][name=nonResident]:checked", "#dental_cal_form").data("residency") || false;
+                return $(":input[type=radio][name=custody]:checked", formId).data("custody") || 2;
             }, 
             rdspRepayment = function() {
                 return parseInt($("#rdspRepayment").val(), 10) || 0;
@@ -1631,14 +1603,17 @@
                     }
                     return 0;
                 }, 
+                hasWorld = function() {
+                    return $(":input[type=radio][name=hasWorldIncome]:checked", formId).data("world-income") || false;
+                }, 
                 world: function() {
-                    if (nonResident() === true) {
+                    if (this.hasWorld() === true) {
                         return parseInt($("#worldIncome").val(), 10) || 0;
                     }
                     return 0;
                 },
                 partnerWorld: function() {
-                    if (nonResident() === true) {
+                    if (this.hasWorld() === true) {
                         return parseInt($("#partnerWorldIncome").val(), 10) || 0;
                     }
                     return 0;
@@ -1690,7 +1665,7 @@
                     $("#netIncomeResult").addClass("brdr-bttm");
                     $("#partnerNetIncomeResult").addClass("hidden");
                 }
-                if (nonResident() === true) {
+                if (income.hasWorld() === true) {
                     $("#netIncomeResult").removeClass("brdr-bttm");
                     $("#partnerNetIncomeResult").removeClass("hidden brdr-bttm");
                     $("#worldIncomeResult").removeClass("hidden");
@@ -1777,8 +1752,8 @@
         });
 
 
-        $document.on( "click vclick touchstart", "input[type=radio][name=nonResident]", "#dental_cal_form", function( event ) {
-            if (nonResident() === true) {
+        $document.on("click vclick touchstart", "input[type=radio][name=hasWorldIncome]", function (event) {
+            if (income.hasWorld() === true) {
                 $("#worldIncomeElm").removeClass("hidden");
             } else {
                 $("#worldIncomeElm").addClass("hidden");
@@ -1807,12 +1782,12 @@
         });
 
 
-        $(":input", "#dental_cal_form").filter("[type=text], [type=number]").change(function () {
+        $(":input", formId).filter("[type=text], [type=number]").change(function () {
             updateResults();
         });
 
 
-        $("#dental_cal_form").submit(function () {
+        $(formId).submit(function () {
             updateResults();
             event.preventDefault();
         });
