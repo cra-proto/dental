@@ -1731,6 +1731,11 @@
                 $("#rdspAmounts .input-group, #uccbAmounts .input-group").removeClass("col-md-7");
                 $("#uccbfields, #rdspfields").children(":first-child").removeClass("text-center");
             }
+            if (income.hasWorld() === true) {
+                $("#partnerWorldIncome").attr("required", "required");
+            } else {
+                $("#partnerWorldIncome").removeAttr("required");
+            }
             updateResults();
         });
 
@@ -1759,6 +1764,11 @@
                 $("#worldIncomefields").removeClass("hidden");
             } else {
                 $("#worldIncomefields").addClass("hidden");
+            }
+            if (relation.partner === true) {
+                $("#partnerWorldIncome").attr("required", "required");
+            } else {
+                $("#partnerWorldIncome").removeAttr("required");
             }
             updateResults();
         });
