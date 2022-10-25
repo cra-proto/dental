@@ -1125,34 +1125,36 @@
                                                                         <label for="world-income-true">Yes</label>
                                                                     </li>
                                                                     <li class="radio">
-                                                                        <input type="radio" name="hasWorldIncome" id="world-income-false value="false" data-world-income="false" data-rule-required="true">
+                                                                        <input type="radio" name="hasWorldIncome" id="world-income-false" value="false" data-world-income="false" data-rule-required="true">
                                                                         <label for="world-income-false">No</label>
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                         </fieldset>
                                                         <!--WORLD INCOME-->
-                                                        <div id="worldIncomeElm" class="form-group hidden">
-                                                            <label for="worldIncome">Your <span class="field-name">world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                            <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>
-                                                            <div class="input-group col-sm-3">
-                                                                <span class="input-group-addon">$</span>
-                                                                <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" data-rule-digits="true">
-                                                                <span class="input-group-addon">.00</span>
+                                                        <div id="worldIncomefields" class="hidden">
+                                                            <div id="worldIncomeElm" class="form-group">
+                                                                <label for="worldIncome" class="required">Your <span class="field-name">world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                                                                <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>
+                                                                <div class="input-group col-sm-3">
+                                                                    <span class="input-group-addon">$</span>
+                                                                    <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" data-rule-digits="true">
+                                                                    <span class="input-group-addon">.00</span>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group hidden">
-                                                            <label for="partnerWorldIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span></label>
-                                                            <!--<a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>-->
-                                                            <div class="input-group col-sm-3">
-                                                                <span class="input-group-addon">$</span>
-                                                                <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" data-rule-digits="true">
-                                                                <span class="input-group-addon">.00</span>
+                                                            <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group hidden">
+                                                                <label for="partnerWorldIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                                                                <!--<a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>-->
+                                                                <div class="input-group col-sm-3">
+                                                                    <span class="input-group-addon">$</span>
+                                                                    <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" data-rule-digits="true">
+                                                                    <span class="input-group-addon">.00</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <section id="worldIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                                             <header class="modal-header">
-                                                                <h2 class="modal-title">World Income</h2>
+                                                                <h2 class="modal-title">Household World Income</h2>
                                                             </header>
                                                             <div class="modal-body">
                                                                 <p>If you or your spouse or common law partner's world income is negative, enter '0'.</p>
@@ -1603,7 +1605,7 @@
                     }
                     return 0;
                 }, 
-                hasWorld: function() {
+                hasWorld = function() {
                     return $(":input[type=radio][name=hasWorldIncome]:checked", formId).data("world-income") || false;
                 }, 
                 world: function() {
@@ -1754,9 +1756,9 @@
 
         $document.on("click vclick touchstart", "input[type=radio][name=hasWorldIncome]", function (event) {
             if (income.hasWorld() === true) {
-                $("#worldIncomeElm").removeClass("hidden");
+                $("#worldIncomefields").removeClass("hidden");
             } else {
-                $("#worldIncomeElm").addClass("hidden");
+                $("#worldIncomefields").addClass("hidden");
             }
             updateResults();
         });
