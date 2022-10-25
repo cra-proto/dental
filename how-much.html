@@ -1096,7 +1096,7 @@
                                                             </div>
                                                         </section>
                                                         <!--PARTNER INCOME-->
-                                                        <div id="partnerNetIncomeElm" data-has-partner="true" class="form-group hidden">
+                                                        <div id="partnerNetIncomeElm" data-has-partner="true" class="form-group">
                                                             <label for="partnerNetIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s net income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
                                                            <!--<a href="#partner_netIncome-help" aria-controls="partner_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <span data-partner-case="false">spouse</span>'s net income</span></a>--> 
                                                             <div class="input-group col-sm-3">
@@ -1118,7 +1118,7 @@
                                                         <fieldset id="includeWorldIncome" class="gc-chckbxrdio chckbxrdio-grp provisional">
                                                             <div class="form-group">
                                                                 <legend class="h5 required" tabindex="-1"><span class="field-name">Did you <span class="spouse-specific">or your <span data-partner-case="false">spouse</span> </span>report income in another country during <time data-eligible="year">2021</time>?</span> <strong class="required">(required)</strong></legend>
-                                                                <p>You might have world income to report if you were resident in another country for part of <time data-eligible="year">2021</time>. Make sure to submit a sechedule X or RCXX with your <time data-eligible="year">2021</time> tax return to declare your foreign income before you apply.</p>
+                                                                <p>You might have world income to report if you were resident in another country for part of <time data-eligible="year">2021</time>. Make sure to submit a schedule X or RCXX with your <time data-eligible="year">2021</time> tax return to declare your foreign income before you apply.</p>
                                                                 <ul class="list-unstyled">
                                                                     <li class="radio">
                                                                         <input type="radio" name="hasWorldIncome" id="world-income-true" value="true" data-world-income="true" data-rule-required="true">
@@ -1132,7 +1132,7 @@
                                                             </div>
                                                         </fieldset>
                                                         <!--WORLD INCOME-->
-                                                        <div id="worldIncomefields" class="hidden">
+                                                        <div id="worldIncomefields">
                                                             <div id="worldIncomeElm" class="form-group">
                                                                 <label for="worldIncome" class="required">Your <span class="field-name">world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
                                                                 <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>
@@ -1142,8 +1142,8 @@
                                                                     <span class="input-group-addon">.00</span>
                                                                 </div>
                                                             </div>
-                                                            <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group hidden">
-                                                                <label for="partnerWorldIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                                                            <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group">
+                                                                <label for="partnerWorldIncome">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s world income for <time data-eligible="year">2021</time></span> <span class="wb-inv">(dollars only, no cents)</span></label>
                                                                 <!--<a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>-->
                                                                 <div class="input-group col-sm-3">
                                                                     <span class="input-group-addon">$</span>
@@ -1154,7 +1154,7 @@
                                                         </div>
                                                         <section id="worldIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
                                                             <header class="modal-header">
-                                                                <h2 class="modal-title">Household World Income</h2>
+                                                                <h2 class="modal-title">Household world income</h2>
                                                             </header>
                                                             <div class="modal-body">
                                                                 <p>If you or your spouse or common law partner's world income is negative, enter '0'.</p>
@@ -1186,7 +1186,7 @@
                                                                 </ul>
                                                             </div>
                                                         </fieldset>
-                                                        <div id="rdspfields" class="row wb-eqht hidden">
+                                                        <div id="rdspfields" class="row wb-eqht">
                                                             <p class="text-center text-muted">Leave fields blank if amounts are zero.</p>
                                                             <div id="rdspAmounts" class="col-md-6 brdr-rght">
                                                                 <div class="form-group">
@@ -1210,7 +1210,7 @@
                                                                     <p class="small">This is the <abbr title="Registered disability savings plan">RDSP</abbr> amounts that you entered on line 23200 of your <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                             </div>
-                                                            <div id="rdspPartner" data-has-partner="true" class="col-md-6 hidden">
+                                                            <div id="rdspPartner" data-has-partner="true" class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="partnerRdspIncome"><span class="field-name"><time data-eligible="year">2021</time> <span data-partner-case="true">Spouse</span>'s <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
@@ -1272,7 +1272,7 @@
                                                                 </ul>
                                                             </div>
                                                         </fieldset>
-                                                        <div id="uccbfields" class="row wb-eqht hidden">
+                                                        <div id="uccbfields" class="row wb-eqht">
                                                             <p class="text-center text-muted">Leave fields blank if amounts are zero.</p>
                                                             <div id="uccbAmounts" class="col-md-6 brdr-rght">
                                                                 <div class="form-group">
@@ -1296,7 +1296,7 @@
                                                                     <p class="small">This is line 21300 of your <time data-eligible="year">2021</time> tax return.</p>
                                                                 </div>
                                                             </div>
-                                                            <div id="uccbPartner" data-has-partner="true" class="col-md-6 hidden">
+                                                            <div id="uccbPartner" data-has-partner="true" class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="partnerUccbIncome"><span class="field-name"><time data-eligible="year">2021</time> <span data-partner-case="true">Spouse</span>'s <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                                                                     <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
@@ -1368,7 +1368,7 @@
                                                                 </ul>
                                                             </details>
                                                             <!--QUALIFIES-->
-                                                            <div class="alert alert-success provisional hidden" id="qualify">
+                                                            <div class="alert alert-success provisional" id="qualify">
                                                                 <p>If you are eligible, your benefit amount is:</p>
                                                                 <div id="full-cust-benefit">
                                                                     <p class="lead"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child that you have full custody of</p>
@@ -1695,6 +1695,9 @@
                     $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(0));
                 }
             };
+        $("#worldIncomefields").addClass("hidden");
+        $("#rdspfields").addClass("hidden");
+        $("#uccbfields").addClass("hidden");
 
 
         $("#dentalclaimPeriod").change(function () {
@@ -1732,11 +1735,6 @@
                 $("#rdspAmounts .input-group, #uccbAmounts .input-group").removeClass("col-md-7");
                 $("#uccbfields, #rdspfields").children(":first-child").removeClass("text-center");
             }
-            if (income.hasWorld() === true) {
-                $("#partnerWorldIncome").attr("required", "required");
-            } else {
-                $("#partnerWorldIncome").removeAttr("required");
-            }
             updateResults();
         });
 
@@ -1764,13 +1762,10 @@
             let relation = relationship();
             if (income.hasWorld() === true) {
                 $("#worldIncomefields").removeClass("hidden");
+                $("#worldIncome").attr("required", "required");
             } else {
                 $("#worldIncomefields").addClass("hidden");
-            }
-            if (relation.partner === true) {
-                $("#partnerWorldIncome").attr("required", "required");
-            } else {
-                $("#partnerWorldIncome").removeAttr("required");
+                $("#worldIncome").removeAttr("required");
             }
             updateResults();
         });
