@@ -1348,7 +1348,7 @@
                                                 <fieldset id="results" class="panel-default p-0">
                                                     <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Estimated benefit amount</span></legend>
                                                     <div class="panel-body mrgn-lft-sm">
-                                                        <div id="crb-statement">
+                                                        <div id="cdb-statement">
                                                             <p>Based on the amounts you entered, your adjusted family net income for this benefit is: <span class="mrgn-tp-0 h5"><strong><span data-output="avg-fam-net-income-value">$0</span></strong></span></p>
                                                             <details class="mrgn-bttm-md">
                                                                 <summary>Show the math for this amount</summary>
@@ -1386,7 +1386,7 @@
                                                             <p class="text-muted small shared-custody mixed-custody">Since you have shared custody, your child's other parent may get a different result.</p>
 
                                                             <p><a href="#dental-statement" class="wb-lbx btn btn-default btn-lg" role="button"><span class="h3"><span class="glyphicon glyphicon-print"></span> Print preview<span class="wb-inv"> Canada dental benefit statement</span></span></a></p>
-                                                                        </div>
+                                                        </div>
                                                     </div>
                                                 </fieldset>
                                                 <!--END OF RESULTS-->
@@ -1400,6 +1400,7 @@
                                                 <h2 class="modal-title">Print preview for the Canada dental benefit statement</h2>
                                             </header>
                                             <div class="modal-body">
+                                                <div data-ajax-replace="#cdb-statement"></div>
                                                 <ul class="list-inline">
                                                     <li>
                                                         <button id="printDentalBtn" type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-print"></span> Print this statement</button>
@@ -1605,7 +1606,7 @@
                     }
                     return 0;
                 }, 
-                hasWorld = function() {
+                hasWorld: function() {
                     return $(":input[type=radio][name=hasWorldIncome]:checked", formId).data("world-income") || false;
                 }, 
                 world: function() {
@@ -1760,6 +1761,7 @@
 
 
         $document.on("click vclick touchstart", "input[type=radio][name=hasWorldIncome]", function (event) {
+            let relation = relationship();
             if (income.hasWorld() === true) {
                 $("#worldIncomefields").removeClass("hidden");
             } else {
