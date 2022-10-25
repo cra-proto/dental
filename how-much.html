@@ -1115,7 +1115,7 @@
                                                                 <p>If your spouse or common law partner's net income is negative, enter '0'.</p>
                                                             </div>
                                                         </section>
-                                                        <fieldset id="includeWorldIncome" class="gc-chckbxrdio chckbxrdio-grp provisional">
+                                                        <fieldset id="includeWorldIncome" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
                                                             <div class="form-group">
                                                                 <legend class="h5 required" tabindex="-1"><span class="field-name">Did you<span data-has-partner="true"> or your <span data-partner-case="false">spouse</span></span> report income in another country during <time data-eligible="year">2021</time>?</span> <strong class="required">(required)</strong></legend>
                                                                 <p>You might have world income to report if you were resident in another country for part of <time data-eligible="year">2021</time>. Make sure to submit a schedule X or RCXX with your <time data-eligible="year">2021</time> tax return to declare your foreign income before you apply.</p>
@@ -1170,7 +1170,7 @@
                                                     <div class="panel-body mrgn-lft-sm gc-font-2019">
                                                         <!--RDSP-->
                                                         <p class="h2 mrgn-tp-md">Registered disability savings plan (RDSP)</p>
-                                                        <fieldset id="includeRDSP" class="gc-chckbxrdio chckbxrdio-grp provisional">
+                                                        <fieldset id="includeRDSP" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
                                                             <div class="form-group">
                                                                 <legend class="h5 required" tabindex="-1"><span class="field-name">Did you claim <abbr title="Registered disability savings plan">RDSP</abbr> Income or make a <abbr title="Registered disability savings plan">RDSP</abbr> repayment in <time data-eligible="year">2021</time>?</span> <strong class="required">(required)</strong></legend>
                                                                 <p><a href="#rdsp-help" aria-controls="rdsp-help" class="wb-lbx" role="button">What is the registered disability savings plan&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
@@ -1256,7 +1256,7 @@
                                                         <div class="clearfix"></div>
                                                         <!--UCCB-->
                                                         <p class="h2">Universal child care benefit (UCCB)</p>
-                                                        <fieldset id="includeUCCB" class="gc-chckbxrdio chckbxrdio-grp provisional">
+                                                        <fieldset id="includeUCCB" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
                                                             <div class="form-group">
                                                                 <legend class="h5 required" tabindex="-1"><span class="field-name">Did you claim <abbr title="Universal child care benefit">UCCB</abbr> Income or make a <abbr title="Universal child care benefit">UCCB</abbr> repayment in <time data-eligible="year">2021</time>?</span> <strong class="required">(required)</strong></legend>
                                                                 <p><a href="#uccb-help" aria-controls="uccb-help" class="wb-lbx" role="button">What is the universal child care benefit&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
@@ -1696,8 +1696,11 @@
                 }
             };
         $("#worldIncomefields").addClass("hidden");
+        $("#includeWorldIncome").removeClass("hidden");
         $("#rdspfields").addClass("hidden");
+        $("#includeRDSP").removeClass("hidden");
         $("#uccbfields").addClass("hidden");
+        $("#includeUCCB").removeClass("hidden");
 
 
         $("#dentalclaimPeriod").change(function () {
