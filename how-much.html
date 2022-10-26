@@ -1529,181 +1529,172 @@
     <script type="text/javascript">
         document.write(wet.builder.refFooter({}));
     </script>
-    <!--[if gte IE 9 | !IE ]><!-->
-    <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://wet-boew.github.io/v4.0-ci/wet-boew/js/wet-boew.min.js"></script>
-    <span id="wb-rsz" class="wb-init">&nbsp;</span>
-    <!--<![endif]-->
-    <!--[if lt IE 9]>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://wet-boew.github.io/v4.0-ci/wet-boew/js/wet-boew.min.js"></script>
+<span id="wb-rsz" class="wb-init">&nbsp;</span>
+<!--<![endif]-->
+<!--[if lt IE 9]>
     <script src='https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/ie8-wet-boew2.min.js'></script>
     <![endif]-->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
         "use strict";
-
+        
         let $document = wb.doc, 
-        dentalBenefit = (function dentalBenefit() {
-            "use strict";
-
-            return {
-                formId: "#dental_cal_form", 
-                claimPeriod: function() {
-                    let claimElm = $("#dentalclaimPeriod").find(":selected"),
-                    claimData = {
-                        claimDate: claimElm.val() || null, 
-                        claimYear: claimElm.data("claim-year") || null
-                    };
-                    return claimData;
-                }, 
-                relationship: function() {
-                    let relationOpt = $("#maritalStatus").find(":selected"), 
-                    relationData = {
-                        relationType: relationOpt.val() || null,
-                        partner: relationOpt.data("partner") || false
-                    };
-                    return relationData;
-                }, 
-                custody: function() {
-                    return $(":input[type=radio][name=custody]:checked", this.formId).data("custody") || 2;
+            formId = "#dental_cal_form", 
+            claimPeriod = function() {
+                let claimElm = $("#dentalclaimPeriod").find(":selected"),
+                claimData = {
+                    claimDate: claimElm.val() || null, 
+                    claimYear: claimElm.data("claim-year") || null
+                };
+                return claimData;
+            }, 
+            relationship = function() {
+                let relationOpt = $("#maritalStatus").find(":selected"), 
+                relationData = {
+                    relationType: relationOpt.val() || null,
+                    partner: relationOpt.data("partner") || false
+                };
+                return relationData;
+            }, 
+            rdsp = function() {
+                return $(":input[type=radio][name=rdsp]:checked", formId).data("rdsp") || false;
+            }, 
+            uccb = function() {
+                return $(":input[type=radio][name=uccb]:checked", formId).data("uccb") || false;
+            }, 
+            custody = function() {
+                return $(":input[type=radio][name=custody]:checked", formId).data("custody") || 2;
+            }, 
+            rdspRepayment = function() {
+                return parseInt($("#rdspRepayment").val(), 10) || 0;
+            }, 
+            partnerRdspRepayment = function() {
+                return parseInt($("#partnerRdspRepayment").val(), 10) || 0;
+            }, 
+            uccbRepayment = function() {
+                return parseInt($("#uccbRepayment").val(), 10) || 0;
+            }, 
+            partnerUccbRepayment = function() {
+                return parseInt($("#partnerUccbRepayment").val(), 10) || 0;
+            }, 
+            income = {
+                low_eligible_household: 70000, 
+                mid_eligible_household: 80000, 
+                max_eligible_household: 90000, 
+                net: function() {
+                    return parseInt($("#netIncome").val(), 10) || 0;
                 }, 
                 rdsp: function() {
-                    return $(":input[type=radio][name=rdsp]:checked", this.formId).data("rdsp") || false;
+                    return parseInt($("#rdspIncome").val(), 10) || 0;
                 }, 
-                rdspRepayment: function() {
-                    return parseInt($("#rdspRepayment").val(), 10) || 0;
-                }, 
-                partnerRdspRepayment: function() {
-                    return parseInt($("#partnerRdspRepayment").val(), 10) || 0;
+                partnerRdsp: function() {
+                    return parseInt($("#partnerRdspIncome").val(), 10) || 0;
                 }, 
                 uccb: function() {
-                    return $(":input[type=radio][name=uccb]:checked", this.formId).data("uccb") || false;
+                    return parseInt($("#uccbIncome").val(), 10) || 0;
                 }, 
-                uccbRepayment: function() {
-                    return parseInt($("#uccbRepayment").val(), 10) || 0;
+                partnerUccb: function() {
+                    return parseInt($("#partnerUccbIncome").val(), 10) || 0;
                 }, 
-                partnerUccbRepayment: function() {
-                    return parseInt($("#partnerUccbRepayment").val(), 10) || 0;
-                }, 
-                income: {
-                    low_eligible_household: 70000, 
-                    mid_eligible_household: 80000, 
-                    max_eligible_household: 90000, 
-                    net: function() {
-                        return parseInt($("#netIncome").val(), 10) || 0;
-                    }, 
-                    partner: function() {
-                        let dentalBen = dentalBenefit(),
-                            relation = dentalBen.relationship();
-                        if (relation.partner === true) {
-                            return parseInt($("#partnerNetIncome").val(), 10) || 0;
-                        }
-                        return 0;
-                    }, 
-                    hasWorld: function() {
-                        let dentalBen = dentalBenefit();
-                        return $(":input[type=radio][name=hasWorldIncome]:checked", dentalBen.formId).data("world-income") || false;
-                    }, 
-                    world: function() {
-                        if (this.hasWorld() === true) {
-                            return parseInt($("#worldIncome").val(), 10) || 0;
-                        }
-                        return 0;
-                    },
-                    partnerWorld: function() {
-                        if (this.hasWorld() === true) {
-                            return parseInt($("#partnerWorldIncome").val(), 10) || 0;
-                        }
-                        return 0;
-                    },
-                    rdsp: function() {
-                        return parseInt($("#rdspIncome").val(), 10) || 0;
-                    }, 
-                    partnerRdsp: function() {
-                        return parseInt($("#partnerRdspIncome").val(), 10) || 0;
-                    }, 
-                    uccb: function() {
-                        return parseInt($("#uccbIncome").val(), 10) || 0;
-                    }, 
-                    partnerUccb: function() {
-                        return parseInt($("#partnerUccbIncome").val(), 10) || 0;
-                    }, 
-                    household: function() {
-                        return this.net() + this.partner() + this.world() + this.partnerWorld();
-                    },
-                    avgFamNet: function() {
-                        let dentalBen = dentalBenefit();
-                        return this.household() - (this.rdsp() + this.uccb()) + (dentalBen.rdspRepayment() + dentalBen.uccbRepayment());
-                    }
-                }, 
-                benefitAmt_perChild: function() {
-                    switch (true) {
-                        case (this.income.avgFamNet() < this.income.low_eligible_household):
-                            return 325;
-                        case (this.income.avgFamNet() < this.income.mid_eligible_household):
-                            return 195;
-                        case (this.income.avgFamNet() < this.income.max_eligible_household):
-                            return 130;
-                        default:
-                    }
-                    return 0;
-                }, 
-                benefitAmt: function() {
-                    switch (true) {
-                        case (this.income.avgFamNet() < this.income.low_eligible_household):
-                            return 650;
-                        case (this.income.avgFamNet() < this.income.mid_eligible_household):
-                            return 390;
-                        case (this.income.avgFamNet() < this.income.max_eligible_household):
-                            return 260;
-                        default:
-                    }
-                    return 0;
-                }, 
-                updateResults: function () {
-                    /*  show results  */
-                    let relation = this.relationship(),
-                        currencyFormatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
-                            style: "currency",
-                            currency: "CAD",
-                            minimumFractionDigits: 0
-                        });
+                partner: function() {
+                    let relation = relationship();
                     if (relation.partner === true) {
-                        $("#netIncomeResult").removeClass("brdr-bttm");
-                        $("#partnerNetIncomeResult").removeClass("hidden");
-                        $("#partnerNetIncomeResult").addClass("brdr-bttm");
-                    } else {
-                        $("#netIncomeResult").addClass("brdr-bttm");
-                        $("#partnerNetIncomeResult").addClass("hidden");
+                        return parseInt($("#partnerNetIncome").val(), 10) || 0;
                     }
-                    if (this.income.hasWorld() === true) {
-                        $("#netIncomeResult").removeClass("brdr-bttm");
-                        $("#partnerNetIncomeResult").removeClass("hidden brdr-bttm");
-                        $("#worldIncomeResult").removeClass("hidden");
-                        $("#worldIncomeResult").addClass("brdr-bttm");
-                    } else {
-                        $("#worldIncomeResult").addClass("hidden");
+                    return 0;
+                }, 
+                hasWorld: function() {
+                    return $(":input[type=radio][name=hasWorldIncome]:checked", formId).data("world-income") || false;
+                }, 
+                world: function() {
+                    if (this.hasWorld() === true) {
+                        return parseInt($("#worldIncome").val(), 10) || 0;
                     }
-                    $("[data-output=net-income-value]").html(currencyFormatter.format(this.income.net()));
-                    $("[data-output=partner-net-income-value]").html(currencyFormatter.format(this.income.partner()));
-                    $("[data-output=family-world-income-value]").html(currencyFormatter.format(this.income.world() + this.income.partnerWorld()));
-                    $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(this.rdspRepayment() + this.uccbRepayment() + this.partnerRdspRepayment() + this.partnerUccbRepayment()));
-                    $("[data-output=adjusted-income-value]").html(currencyFormatter.format(this.income.rdsp() + this.income.partnerRdsp() + this.income.uccb() + this.income.partnerUccb()));
-                    $("[data-output=household-income-value]").html(currencyFormatter.format(this.income.household()));
-                    $("[data-output=avg-fam-net-income-value]").html(currencyFormatter.format(this.income.avgFamNet()));
-                    if (this.income.avgFamNet() < this.income.max_eligible_household) {
-                        $("#qualify").removeClass("hidden");
-                        $("#doesnt-qualify").addClass("hidden");
-                        $("[data-output=benefit-per-child]").html(currencyFormatter.format(this.benefitAmt()));
-                        $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(this.benefitAmt_perChild()));
-                    } else {
-                        $("#qualify").addClass("hidden");
-                        $("#doesnt-qualify").removeClass("hidden");
-                        $("[data-output=benefit-per-child]").html(currencyFormatter.format(0));
-                        $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(0));
+                    return 0;
+                },
+                partnerWorld: function() {
+                    if (this.hasWorld() === true) {
+                        return parseInt($("#partnerWorldIncome").val(), 10) || 0;
                     }
+                    return 0;
+                },
+                household: function() {
+                    return this.net() + this.partner() + this.world() + this.partnerWorld();
+                },
+                avgFamNet: function() {
+                    return this.household() - (this.rdsp() + this.uccb()) + (rdspRepayment() + uccbRepayment());
+                }
+            }, 
+            benefitAmt_perChild = function() {
+                switch (true) {
+                    case (income.avgFamNet() < income.low_eligible_household):
+                        return 325;
+                    case (income.avgFamNet() < income.mid_eligible_household):
+                        return 195;
+                    case (income.avgFamNet() < income.max_eligible_household):
+                        return 130;
+                    default:
+                }
+                return 0;
+            }, 
+            benefitAmt = function() {
+                switch (true) {
+                    case (income.avgFamNet() < income.low_eligible_household):
+                        return 650;
+                    case (income.avgFamNet() < income.mid_eligible_household):
+                        return 390;
+                    case (income.avgFamNet() < income.max_eligible_household):
+                        return 260;
+                    default:
+                }
+                return 0;
+            }, 
+            updateResults = function () {
+                /*  show results  */
+                let relation = relationship(),
+                    currencyFormatter = new Intl.NumberFormat(document.documentElement.lang + "-CA", {
+                        style: "currency",
+                        currency: "CAD",
+                        minimumFractionDigits: 0
+                    });
+                if (relation.partner === true) {
+                    $("#netIncomeResult").removeClass("brdr-bttm");
+                    $("#partnerNetIncomeResult").removeClass("hidden");
+                    $("#partnerNetIncomeResult").addClass("brdr-bttm");
+                } else {
+                    $("#netIncomeResult").addClass("brdr-bttm");
+                    $("#partnerNetIncomeResult").addClass("hidden");
+                }
+                if (income.hasWorld() === true) {
+                    $("#netIncomeResult").removeClass("brdr-bttm");
+                    $("#partnerNetIncomeResult").removeClass("hidden brdr-bttm");
+                    $("#worldIncomeResult").removeClass("hidden");
+                    $("#worldIncomeResult").addClass("brdr-bttm");
+                } else {
+                    $("#worldIncomeResult").addClass("hidden");
+                }
+                $("[data-output=net-income-value]").html(currencyFormatter.format(income.net()));
+                $("[data-output=partner-net-income-value]").html(currencyFormatter.format(income.partner()));
+                $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world() + income.partnerWorld()));
+                $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + partnerRdspRepayment() + partnerUccbRepayment()));
+                $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.partnerRdsp() + income.uccb() + income.partnerUccb()));
+                $("[data-output=household-income-value]").html(currencyFormatter.format(income.household()));
+                $("[data-output=avg-fam-net-income-value]").html(currencyFormatter.format(income.avgFamNet()));
+                if (income.avgFamNet() < income.max_eligible_household) {
+                    $("#qualify").removeClass("hidden");
+                    $("#doesnt-qualify").addClass("hidden");
+                    $("[data-output=benefit-per-child]").html(currencyFormatter.format(benefitAmt()));
+                    $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(benefitAmt_perChild()));
+                } else {
+                    $("#qualify").addClass("hidden");
+                    $("#doesnt-qualify").removeClass("hidden");
+                    $("[data-output=benefit-per-child]").html(currencyFormatter.format(0));
+                    $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(0));
                 }
             };
-        }());
         $("#worldIncomefields").addClass("hidden");
         $("#includeWorldIncome").removeClass("hidden");
         $("#rdspfields").addClass("hidden");
@@ -1714,7 +1705,7 @@
 
         $("#dentalclaimPeriod").change(function () {
             let claimDate, 
-                claim = dentalBenefit.claimPeriod(), 
+                claim = claimPeriod(), 
                 options = { year: 'numeric', month: 'long', day: 'numeric' }, 
                 dateFormatter = Intl.DateTimeFormat(document.documentElement.lang + "-CA", options);
             if (claim.claimYear !== null) {
@@ -1722,12 +1713,12 @@
                 $("time[data-eligible=year]").text(claim.claimYear);
                 $("time[data-eligible=maritalDate]").text(dateFormatter.format(claimDate));
             }
-            dentalBenefit.updateResults();
+            updateResults();
         });
 
 
         $("#maritalStatus").change(function () {
-            let relation = dentalBenefit.relationship();
+            let relation = relationship();
             if (relation.partner === true) {
                 $("[data-has-partner=true]").removeClass("hidden");
                 $("#partnerNetIncome").attr("required", "required");
@@ -1747,12 +1738,12 @@
                 $("#rdspAmounts .input-group, #uccbAmounts .input-group").removeClass("col-md-7");
                 $("#uccbfields, #rdspfields").children(":first-child").removeClass("text-center");
             }
-            dentalBenefit.updateResults();
+            updateResults();
         });
 
-
-        $(dentalBenefit.formId).on("click vclick touchstart", "input[type=radio][name=custody]", function (event) {
-            switch (dentalBenefit.custody()) {
+        
+        $document.on("click vclick touchstart", "input[type=radio][name=custody]", function (event) {
+            switch (custody()) {
                 case (3):
                     $("#full-cust-benefit").removeClass("hidden");
                     $("#shared-cust-benefit").removeClass("hidden");
@@ -1766,49 +1757,50 @@
                     $("#full-cust-benefit").removeClass("hidden");
                     $("#shared-cust-benefit").addClass("hidden");
             }
-            dentalBenefit.updateResults();
+            updateResults();
         });
 
 
-        $(dentalBenefit.formId).on("click vclick touchstart", "input[type=radio][name=hasWorldIncome]", function (event) {
-            if (dentalBenefit.income.hasWorld() === true) {
+        $document.on("click vclick touchstart", "input[type=radio][name=hasWorldIncome]", function (event) {
+            let relation = relationship();
+            if (income.hasWorld() === true) {
                 $("#worldIncomefields").removeClass("hidden");
                 $("#worldIncome").attr("required", "required");
             } else {
                 $("#worldIncomefields").addClass("hidden");
                 $("#worldIncome").removeAttr("required");
             }
-            dentalBenefit.updateResults();
+            updateResults();
         });
 
 
-        $(dentalBenefit.formId).on("click vclick touchstart", "input[type=radio][name=rdsp]", function (event) {
-            if (dentalBenefit.rdsp() === true) {
+        $document.on("click vclick touchstart", "input[type=radio][name=rdsp]", function (event) {
+            if (rdsp() === true) {
                 $("#rdspfields").removeClass("hidden");
             } else {
                 $("#rdspfields").addClass("hidden");
             }
-            dentalBenefit.updateResults();
+            updateResults();
         });
 
 
-        $(dentalBenefit.formId).on("click vclick touchstart", "input[type=radio][name=uccb]", function (event) {
-            if (dentalBenefit.uccb() === true) {
+        $document.on("click vclick touchstart", "input[type=radio][name=uccb]", function (event) {
+            if (uccb() === true) {
                 $("#uccbfields").removeClass("hidden");
             } else {
                 $("#uccbfields").addClass("hidden");
             }
-            dentalBenefit.updateResults();
+            updateResults();
         });
 
 
-        $(":input", dentalBenefit.formId).filter("[type=text], [type=number]").change(function () {
-            dentalBenefit.updateResults();
+        $(":input", formId).filter("[type=text], [type=number]").change(function () {
+            updateResults();
         });
 
 
-        $(dentalBenefit.formId).submit(function () {
-            dentalBenefit.updateResults();
+        $(formId).submit(function () {
+            updateResults();
             event.preventDefault();
         });
 
@@ -1818,7 +1810,7 @@
         });
 
 
-        /*  Step button   */
+        /*  Step button   */            
         $(document).on("click", ".steps-wrapper div.buttons > :button", function (event) {
             $("legend.wb-steps-active").parents().prevAll().find("legend.panel-heading").addClass("prev-wb-step");
             $("legend.wb-steps-active").parents().nextAll().find("legend.panel-heading").removeClass("prev-wb-step");
