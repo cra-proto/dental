@@ -562,6 +562,7 @@
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
+            appearance: none;
             margin: 0;
         }
 
@@ -1529,18 +1530,18 @@
     <script type="text/javascript">
         document.write(wet.builder.refFooter({}));
     </script>
-<!--[if gte IE 9 | !IE ]><!-->
-<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://wet-boew.github.io/v4.0-ci/wet-boew/js/wet-boew.min.js"></script>
-<span id="wb-rsz" class="wb-init">&nbsp;</span>
-<!--<![endif]-->
-<!--[if lt IE 9]>
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://wet-boew.github.io/v4.0-ci/wet-boew/js/wet-boew.min.js"></script>
+    <span id="wb-rsz" class="wb-init">&nbsp;</span>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
     <script src='https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/ie8-wet-boew2.min.js'></script>
     <![endif]-->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/js/theme.min.js"></script>
     <script type="text/javascript">
         "use strict";
-        
+
         let $document = wb.doc, 
             formId = "#dental_cal_form", 
             claimPeriod = function() {
@@ -1559,20 +1560,20 @@
                 };
                 return relationData;
             }, 
-            rdsp = function() {
-                return $(":input[type=radio][name=rdsp]:checked", formId).data("rdsp") || false;
-            }, 
-            uccb = function() {
-                return $(":input[type=radio][name=uccb]:checked", formId).data("uccb") || false;
-            }, 
             custody = function() {
                 return $(":input[type=radio][name=custody]:checked", formId).data("custody") || 2;
+            }, 
+            rdsp = function() {
+                return $(":input[type=radio][name=rdsp]:checked", formId).data("rdsp") || false;
             }, 
             rdspRepayment = function() {
                 return parseInt($("#rdspRepayment").val(), 10) || 0;
             }, 
             partnerRdspRepayment = function() {
                 return parseInt($("#partnerRdspRepayment").val(), 10) || 0;
+            }, 
+            uccb = function() {
+                return $(":input[type=radio][name=uccb]:checked", formId).data("uccb") || false;
             }, 
             uccbRepayment = function() {
                 return parseInt($("#uccbRepayment").val(), 10) || 0;
@@ -1586,18 +1587,6 @@
                 max_eligible_household: 90000, 
                 net: function() {
                     return parseInt($("#netIncome").val(), 10) || 0;
-                }, 
-                rdsp: function() {
-                    return parseInt($("#rdspIncome").val(), 10) || 0;
-                }, 
-                partnerRdsp: function() {
-                    return parseInt($("#partnerRdspIncome").val(), 10) || 0;
-                }, 
-                uccb: function() {
-                    return parseInt($("#uccbIncome").val(), 10) || 0;
-                }, 
-                partnerUccb: function() {
-                    return parseInt($("#partnerUccbIncome").val(), 10) || 0;
                 }, 
                 partner: function() {
                     let relation = relationship();
@@ -1621,6 +1610,18 @@
                     }
                     return 0;
                 },
+                rdsp: function() {
+                    return parseInt($("#rdspIncome").val(), 10) || 0;
+                }, 
+                partnerRdsp: function() {
+                    return parseInt($("#partnerRdspIncome").val(), 10) || 0;
+                }, 
+                uccb: function() {
+                    return parseInt($("#uccbIncome").val(), 10) || 0;
+                }, 
+                partnerUccb: function() {
+                    return parseInt($("#partnerUccbIncome").val(), 10) || 0;
+                }, 
                 household: function() {
                     return this.net() + this.partner() + this.world() + this.partnerWorld();
                 },
@@ -1695,6 +1696,9 @@
                     $("[data-output=benefit-per-shared-child]").html(currencyFormatter.format(0));
                 }
             };
+
+
+        /* initalize form areas */
         $("#worldIncomefields").addClass("hidden");
         $("#includeWorldIncome").removeClass("hidden");
         $("#rdspfields").addClass("hidden");
@@ -1741,19 +1745,19 @@
             updateResults();
         });
 
-        
-        $document.on("click vclick touchstart", "input[type=radio][name=custody]", function (event) {
+
+        $(formId).on("click vclick touchstart", "input[type=radio][name=custody]", function (event) {
             switch (custody()) {
-                case (3):
+                case (3): // Different custody for each child 
                     $("#full-cust-benefit").removeClass("hidden");
                     $("#shared-cust-benefit").removeClass("hidden");
                     break;
-                case (2):
+                case (2): // Shared custody
                     $("#full-cust-benefit").addClass("hidden");
                     $("#shared-cust-benefit").removeClass("hidden");
                     break;
                 case (1):
-                default:
+                default: // Full custody 
                     $("#full-cust-benefit").removeClass("hidden");
                     $("#shared-cust-benefit").addClass("hidden");
             }
@@ -1761,8 +1765,7 @@
         });
 
 
-        $document.on("click vclick touchstart", "input[type=radio][name=hasWorldIncome]", function (event) {
-            let relation = relationship();
+        $(formId).on("click vclick touchstart", "input[type=radio][name=hasWorldIncome]", function (event) {
             if (income.hasWorld() === true) {
                 $("#worldIncomefields").removeClass("hidden");
                 $("#worldIncome").attr("required", "required");
@@ -1774,7 +1777,7 @@
         });
 
 
-        $document.on("click vclick touchstart", "input[type=radio][name=rdsp]", function (event) {
+        $(formId).on("click vclick touchstart", "input[type=radio][name=rdsp]", function (event) {
             if (rdsp() === true) {
                 $("#rdspfields").removeClass("hidden");
             } else {
@@ -1784,7 +1787,7 @@
         });
 
 
-        $document.on("click vclick touchstart", "input[type=radio][name=uccb]", function (event) {
+        $(formId).on("click vclick touchstart", "input[type=radio][name=uccb]", function (event) {
             if (uccb() === true) {
                 $("#uccbfields").removeClass("hidden");
             } else {
@@ -1808,9 +1811,9 @@
         $document.on("click vclick touchstart", "#printDentalBtn", function (event) {
             window.print();
         });
-
-
-        /*  Step button   */            
+    </script>
+    <script type="text/javascript">
+        /*  Step button   */
         $(document).on("click", ".steps-wrapper div.buttons > :button", function (event) {
             $("legend.wb-steps-active").parents().prevAll().find("legend.panel-heading").addClass("prev-wb-step");
             $("legend.wb-steps-active").parents().nextAll().find("legend.panel-heading").removeClass("prev-wb-step");
