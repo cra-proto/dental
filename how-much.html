@@ -1632,11 +1632,11 @@
             benefitAmt_perChild = function() {
                 switch (true) {
                     case (income.avgFamNet() < income.low_eligible_household):
-                        return 325;
+                        return 325; // Benefit amount with adjusted family net income less than $70,000 and shared custody
                     case (income.avgFamNet() < income.mid_eligible_household):
-                        return 195;
+                        return 195; // Benefit amount with Adjusted family net income $70,000 to less than $80,000 and shared custody
                     case (income.avgFamNet() < income.max_eligible_household):
-                        return 130;
+                        return 130; // Benefit amount with Adjusted family net income $80,000 to less than $90,000 and shared custody
                     default:
                 }
                 return 0;
@@ -1644,11 +1644,11 @@
             benefitAmt = function() {
                 switch (true) {
                     case (income.avgFamNet() < income.low_eligible_household):
-                        return 650;
+                        return 650; // Benefit amount with adjusted family net income less than $70,000 and full custody
                     case (income.avgFamNet() < income.mid_eligible_household):
-                        return 390;
+                        return 390; // Benefit amount with Adjusted family net income $70,000 to less than $80,000 and full custody
                     case (income.avgFamNet() < income.max_eligible_household):
-                        return 260;
+                        return 260; // Benefit amount with Adjusted family net income $80,000 to less than $90,000 and full custody
                     default:
                 }
                 return 0;
