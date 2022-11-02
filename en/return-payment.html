@@ -6,9 +6,9 @@
 <title>Return a payment - Canada Dental Benefit</title>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
-<link rel="canonical" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/return-payment.html"/>
-<link rel="alternate" hreflang="en" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/return-payment.html"/>
-<link rel="alternate" hreflang="fr" href="https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/prestation-dentaire/retourner-paiement.html"/>
+<link rel="canonical" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit.html"/>
+<link rel="alternate" hreflang="en" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit.html"/>
+<link rel="alternate" hreflang="fr" href="https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/prestation-dentaire.html"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <meta name="author" content="Canada Revenue Agency"/>
@@ -139,7 +139,8 @@
         <h2 id="why">Why you may need to repay</h2>
         <!--p>If you were not eligible for the Canada Dental Benefit, you will have to return any payments you received.</p-->
         <p>If you made a mistake or your situation changed after you applied for the Canada Dental Benefit, you may no longer be eligible. You will have to return any amounts you were not eligible for.</p>
-        <div class="row mrgn-bttm-md">
+        <p>If your child was eligible and your dental costs were less than you received, you do not need to return any unused amounts.</p>
+        <div class="row mrgn-bttm-md mrgn-tp-lg">
           <div class="col-xs-12">
             <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
               <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"><span class="fas fa-square fa-stack-2x fa-inverse">&nbsp;</span><span class="fa-stack fa-fw pull-left"><span class="fas fa-sync-alt fa-stack-2x "></span><span class="fas fa-dollar-sign fa-stack-1x"></span></span></span></div>
@@ -326,7 +327,6 @@
         <!--p>Individuals who intentionally made fraudulent claims may face additional consequences.</p-->
         <h2 id="rpy">How to repay</h2>
         <p>If you were not eligible for the Canada Dental Benefit, you must return the amount you received for each child who was not eligible.</p>
-        <p>If your child was eligible and your dental costs were less than you received, you do not need to return any unused amounts.</p>
         <ol class="lst-stps">
           <li>
             <h3>Find out how much you received</h3>
@@ -744,6 +744,24 @@
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/ep-pp.min.js"></script> 
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script> 
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script> 
+<script>
+        $(".action-checkbox").change(function() {
+            if ($('.action-checkbox:checked').length == $('.action-checkbox').length) {
+                $("#action-msg1").removeClass("hidden").addClass("visible");
+                $("#action-no-msg, #action-msg2").addClass("hidden").removeClass("visible");
+            }
+
+            if ($('.action-checkbox:checked').length !== $('.action-checkbox').length) {
+                $("#action-msg1, #action-no-msg").addClass("hidden").removeClass("visible");
+                $("#action-msg2").removeClass("hidden").addClass("visible");
+            }
+
+            if ($('.action-checkbox:checked').length == 0) {
+                $("#action-msg1, #action-msg2").addClass("hidden").removeClass("visible");
+                $("#action-no-msg").removeClass("hidden").addClass("visible");
+            }
+        })
+    </script> 
 <script src="https://test.canada.ca/covid-19-guidance/proto/js/alpha-banner.js"></script>
 </body>
 </html>
