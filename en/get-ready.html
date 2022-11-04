@@ -160,35 +160,70 @@
                             </ul>
                           </div>
                         </li>
-                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer0-4&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+                        <li>No
+                          <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert0&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
+                            <div class="wb-fieldflow-header">
+                              <p class="wb-fieldflow-label">Did you earn all your income in 2021 outside of Canada?</p>
+                            </div>
+                            <ul>
+                              <li>Yes
+                                <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert0&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
+                                  <div class="wb-fieldflow-header">
+                                    <p class="wb-fieldflow-label">Did you file a statement of income for the Canada Child Benefit in 2021?</p>
+                                  </div>
+                                  <ul>
+                                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer0-4&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
+                                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer0-5&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer0-6&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+                            </ul>
+                          </div>
+                        </li>
                       </ul>
                     </div>
                   </form>
                 </div>
                 <div id="answers0"> 
                   <!--you and spouse filed taxes or you filed, no spouse-->
-                  <div id="answer0-1" class="hidden alert alert-success alert0 provisional">
+                  <div id="answer0-1" class="alert alert-success alert0 provisional hidden">
                     <p>Great. Your 2021 tax returns will be used to determine if you're eligible for the benefit.</p>
                     <div class="mrgn-tp-md">
                       <p>Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>.</p>
                     </div>
                   </div>
                   <!--you filed, spouse did not-->
-                  <div id="answer0-2" class="hidden alert alert-warning alert0 provisional">
+                  <div id="answer0-2" class="alert alert-warning alert0 provisional hidden">
                     <p>Your spouse or common-law partner <strong>who lives with you</strong> must also file their 2021 taxes before you can apply.</p>
                     <p>For information on how to file, go to: <a href="https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax/get-ready-taxes.html">Get ready to do your taxes</a>.</p>
                   </div>
                   <!--you filed, no spouse-->
-                  <div id="answer0-3" class="hidden alert alert-success alert0 provisional">
-                    <p>Since you've filed your 2021 taxes, you're ready for the next step.</p>
+                  <div id="answer0-3" class="alert alert-success alert0 provisional hidden">
+                    <p>Since you've filed your 2021 tax return, you're ready for the next step.</p>
                     <div class="mrgn-tp-md">
                       <p>Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>.</p>
                     </div>
                   </div>
+                  
+                  <!--World income, filed a statement of income-->
+                  <div id="answer0-4" class="alert alert-success alert0 provisional hidden">
+                    <p>Great. Your 2021 income will be used to determine if you're eligible for the benefit.</p>
+                    <p>If you have a spouse or common-law partner who lives with you, they will also need to file their 2021 taxes or submit a statement of income before you can apply.</p>
+                    <div class="mrgn-tp-md">
+                      <p>Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>.</p>
+                    </div>
+                  </div>
+                  <!--World income, did not file-->
+                  <div id="answer0-5" class="alert alert-warning alert0 provisional hidden">
+                    <p>You can apply for the Canada Child Benefit to submit a statement of income for 2021.</p>
+                    <p>If you have a spouse or common-law partner who lives with you, they will also need to file their 2021 taxes or submit a statement of income before you can apply.</p>
+                    <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-apply.html#additional">Additional documents to apply for the CCB</a></p>
+                  </div>
                   <!--Did not file-->
-                  <div id="answer0-4" class="hidden alert alert-warning alert0 provisional">
+                  <div id="answer0-6" class="alert alert-warning alert0 provisional hidden">
                     <p>You must file your 2021 taxes before you can apply.</p>
-                    <p>If you have a spouse or common-law partner who lives with you, they must also file their 2021 taxes.</p>
+                    <p>If you have a spouse or common-law partner who lives with you, they will also need to file their 2021 taxes.</p>
                     <p>For information on how to file, go to: <a href="https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax/get-ready-taxes.html">Get ready to do your taxes</a>.</p>
                   </div>
                 </div>
