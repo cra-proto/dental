@@ -271,8 +271,8 @@ fieldset fieldset {
               <thead>
                 <tr>
                   <th scope="col"><a class="wb-lbx" href="#afni">Adjusted family net <span class="nowrap">income<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a></th>
-                  <th scope="col"><a class="wb-lbx" href="#full"><span class="nowrap">Full custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
-                  <th scope="col"><a class="wb-lbx" href="#shared"><span class="nowrap">Shared custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
+                  <th scope="col"><a class="wb-lbx" href="#full-custody"><span class="nowrap">Full custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
+                  <th scope="col"><a class="wb-lbx" href="#custody-help"><span class="nowrap">Shared custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
                 </tr>
               </thead>
               <tbody>
@@ -306,25 +306,9 @@ fieldset fieldset {
             <div class="modal-body">
               <p>The CRA calculates your adjusted family net income based on your previous year's tax return. We use this number to determine your eligibility for certain benefits.</p>
               <p>You do not need to calculate this number. You can use the tool below if you want to estimate your adjusted family net income and your benefit amount.</p>
-              <!--p>For this benefit, include your spouse or common-law partner's amounts if you are married or living common-law on <span class="nowrap">December 1, 2022</span>.</p>
-            <p class="mrgn-tp-md h4">Steps to calculate your adjusted family net income for the first benefit period</p>
-            <ul class="fa-ul lst-spcd mrgn-bttm-lg mrgn-lft-lg">
-              <li><span class="mrgn-tp-0 text-muted h5">your 2021 net income (line 23600)</span></li>
-              <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">your spouse or common-law partner's 2021 net income (line 23600)</span></li>
-              <li>
-                <hr class="brdr-bttm mrgn-tp-0 mrgn-bttm-md">
-                <span class="fas fa-equals fa-li" aria-hidden="true"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 text-muted h5">your 2021 household net income</span></li>
-            </ul>
-            <ul class="fa-ul lst-spcd mrgn-bttm-lg mrgn-lft-lg">
-              <li><span class="fas fa-minus fa-li" aria-hidden="true"><span class="wb-inv">minus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 <abbr title="registered disability savings plan">RDSP</abbr> and <abbr title="universal child care benefit">UCCB</abbr> payments to you or your spouse or common-law partner (11700 and line 12500)</span></li>
-              <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 RDSP and UCCB repayments from you or your spouse or common-law partner (line 21300 and line 23200)</span></li>
-              <li>
-                <hr class="brdr-bttm mrgn-tp-0 mrgn-bttm-md">
-                <span class="fas fa-equals fa-li" aria-hidden="true"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 text-muted h5">your 2021 adjusted family net income</span></li>
-            </ul--> 
             </div>
           </section>
-          <section id="full" class="mfp-hide modal-dialog modal-content overlay-def">
+          <section id="full-custody" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
               <h2 class="modal-title">Full custody</h2>
             </header>
@@ -334,11 +318,13 @@ fieldset fieldset {
                 <li>December 1, 2022 for first benefit period</li>
                 <li>July 1, 2023 for second benefit period</li>
               </ul>
+              <p>You must have either full or shared custody to receive the CCB. You must receive the CCB to be eligible for the Canada Dental Benefit.</p>
+              <h3>What counts as full custody for the CCB</h3>
               <p>If the child lives with you more than 60% of the time, you are considered to have <strong>full custody</strong> for the purposes of the CCB.</p>
               <p>For example, the child lives with you during the week and with another individual every second weekend.</p>
             </div>
           </section>
-          <section id="shared" class="mfp-hide modal-dialog modal-content overlay-def">
+          <section id="custody-help" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
               <h2 class="modal-title">Shared custody</h2>
             </header>
@@ -348,6 +334,8 @@ fieldset fieldset {
                 <li>December 1, 2022 for first benefit period</li>
                 <li>July 1, 2023 for second benefit period</li>
               </ul>
+              <p>You must have either full or shared custody to receive the CCB. You must receive the CCB to be eligible for the Canada Dental Benefit.</p>
+              <h3>What counts as shared custody for the CCB</h3>
               <p>If the child lives with you at least 40% of the time or on an approximately equal basis with you and another individual at a different address, then both individuals are considered to have <strong>shared custody</strong> for the purposes of the CCB.</p>
               <p>For example, the child lives with you one week and with another individual one week, or with you 4 days a week and with the other individual 3 days a week (between 40% and 60%).</p>
               <p>Details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-we-calculate-your-ccb.html#shared">Shared custody and your payments</a></p>
@@ -381,11 +369,11 @@ fieldset fieldset {
               <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Dental claim period</span></legend>
               <div class="panel-body mrgn-lft-sm gc-font-2019">
                 <div class="form-group">
-                  <label for="dentalclaimPeriod" class="required"><span class="field-name">When did your child receive dental care services in Canada?</span> <strong class="required">(required)</strong></label>
+                  <label for="dentalclaimPeriod" class="required"><span class="field-name">Select the period when your child receives dental care services in Canada?</span> <strong class="required">(required)</strong></label>
                   <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required="required">
                     <option label="Select a period"></option>
-                    <option value="2022-12-01T00:00:00" data-claim-year="2021">October 1, 2022 to June 30, 2023</option>
-                    <option value="2023-07-01T00:00:00" data-claim-year="2022">July 1, 2023 to June 30, 2024</option>
+                    <option value="2022-12-01T00:00:00" data-claim-year="2021">Period 1: October 1, 2022 to June 30, 2023</option>
+                    <option value="2023-07-01T00:00:00" data-claim-year="2022">Period 2: July 1, 2023 to June 30, 2024</option>
                   </select>
                 </div>
               </div>
@@ -398,7 +386,7 @@ fieldset fieldset {
                 <div class="form-group">
                   <label for="maritalStatus" class="required">What was your <span class="field-name">marital status as of
                     <time data-eligible="maritalDate">December 1, 2022</time>
-                    </span> <strong class="required">(required)</strong></label>
+                    ? </span> <strong class="required">(required)</strong></label>
                   <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a>
                   <select name="maritalStatus" id="maritalStatus" class="form-control" required="required">
                     <option label="Select your marital status"></option>
@@ -417,9 +405,20 @@ fieldset fieldset {
                   <div class="modal-body">
                     <dl>
                       <dt>Common-law partner</dt>
-                      <dd class="mrgn-tp-md">This applies to a person <strong>who is not your spouse</strong>, with whom you are living in a conjugal relationship.</dd>
+                      <dd class="mrgn-tp-md">
+                        <p>A person you are living with in a conjugal relationship, but are not married to, and one of the following situations apply:</p>
+                        <ul>
+                          <li>you have been living together for at least 12 continuous months during which you have not been separated due to a breakdown in the relationship for more than 90 days</li>
+                          <li>you have a child together by birth or adoption</li>
+                          <li>they have custody and control of your child (or did immediately before the child turned 19 years of age) and your child is wholly dependent on them for support</li>
+                        </ul>
+                      </dd>
+                      <!--dd class="mrgn-tp-md">This applies to a person <strong>who is not your spouse</strong>, with whom you are living in a conjugal relationship.</dd-->
                       <dt class="mrgn-tp-lg">Separated</dt>
-                      <dd class="mrgn-tp-md">You are separated when you start living separate and apart from your spouse or common law partner because of a breakdown in the relationship for a period of <strong>at least 90 days</strong> and you have not reconciled.</dd>
+                      <dd class="mrgn-tp-md">
+                        <p>You are separated when you have been living apart from your spouse or common-law partner because of a breakdown in the relationship for a period of <strong>at least 90 days</strong>.</p>
+                        <p>Once you are considered separated, the day you started living apart is the effective date of your separation.</p>
+                      </dd>
                     </dl>
                     <p class="mrgn-tp-lg">Refer to <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/update-your-marital-status-canada-revenue-agency.html#def" target="help" rel="noopener noreferrer">marital status</a> for more information</p>
                   </div>
@@ -451,14 +450,6 @@ fieldset fieldset {
                     </ul>
                   </div>
                 </fieldset>
-                <section id="custody-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                  <header class="modal-header">
-                    <h2 class="modal-title">Custody</h2>
-                  </header>
-                  <div class="modal-body">
-                    <p>&nbsp;</p>
-                  </div>
-                </section>
               </div>
             </fieldset>
             
