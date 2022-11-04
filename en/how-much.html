@@ -473,7 +473,7 @@ fieldset fieldset {
                     </span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
                   <!--<a href="#netIncome-help" aria-controls="netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your net income</span></a>-->
                   <div class="input-group col-sm-4 col-xs-7"> <span class="input-group-addon">$</span>
-                    <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true" required="required">
+                    <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits." required="required">
                     <span class="input-group-addon">.00</span> </div>
                   <p class="small">This is line 23600 of your
                     <time data-eligible="year">2021</time>
@@ -495,7 +495,7 @@ fieldset fieldset {
                     </span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
                   <!--<a href="#partner_netIncome-help" aria-controls="partner_netIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <span data-partner-case="false">spouse</span>'s net income</span></a>-->
                   <div class="input-group col-sm-4 col-xs-7"> <span class="input-group-addon">$</span>
-                    <input type="text" name="partnernetIncome" size="7" maxlength="7" value="" id="partnerNetIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                    <input type="text" name="partnernetIncome" size="7" maxlength="7" value="" id="partnerNetIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                     <span class="input-group-addon">.00</span> </div>
                   <p class="small">This is line 23600 of your <span data-partner-case="false">spouse</span>'s
                     <time data-eligible="year">2021</time>
@@ -536,7 +536,7 @@ fieldset fieldset {
                       </span> <span class="wb-inv">(dollars only, no cents)</span><strong id="worldIncomeRequire" class="required hidden"> (required)</strong></label>
                     <!--<a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>-->
                     <div class="input-group col-sm-4 col-xs-7"> <span class="input-group-addon">$</span>
-                      <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                      <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                       <span class="input-group-addon">.00</span> </div>
                   </div>
                   <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group">
@@ -545,7 +545,7 @@ fieldset fieldset {
                       </span> <span class="wb-inv">(dollars only, no cents)</span></label>
                     <!--<a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>-->
                     <div class="input-group col-sm-4 col-xs-7"> <span class="input-group-addon">$</span>
-                      <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                      <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                       <span class="input-group-addon">.00</span> </div>
                   </div>
                 </div>
@@ -597,7 +597,7 @@ fieldset fieldset {
                         <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                       <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
                       <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                        <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
                     <p class="small visible-sm visible-xs">This is line 12500 of your
@@ -609,7 +609,7 @@ fieldset fieldset {
                         <span data-partner-case="true" data-shortform="true">Spouse</span>'s <abbr title="Registered disability savings plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                       <!--<a href="#rdspIncome-help" aria-controls="rdspIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Registered disability savings plan">RDSP</abbr> income</span></a>-->
                       <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="partnerRdspIncome" size="7" maxlength="7" value="" id="partnerRdspIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                        <input type="text" name="partnerRdspIncome" size="7" maxlength="7" value="" id="partnerRdspIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
                     <p class="small visible-sm visible-xs" data-has-partner="true">This is line 12500 on your <span data-partner-case="false">spouse</span>'s
@@ -624,7 +624,7 @@ fieldset fieldset {
                         <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                       <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
                       <div class="input-group input col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                        <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
                     <p class="small visible-sm visible-xs">This is the <abbr title="Registered disability savings plan">RDSP</abbr> amounts that is entered on line 23200 of your
@@ -636,7 +636,7 @@ fieldset fieldset {
                         <span data-partner-case="true" data-shortform="true">Spouse</span>'s <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                       <!--<a href="#rdspRepayment-help" aria-controls="rdspRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Registered disability savings plan">RDSP</abbr> repayment</span></a>-->
                       <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="partnerRdspRepayment" size="7" maxlength="7" value="" id="partnerRdspRepayment" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                        <input type="text" name="partnerRdspRepayment" size="7" maxlength="7" value="" id="partnerRdspRepayment" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
                     <p class="small visible-sm visible-xs" data-has-partner="true">This is the <abbr title="Registered disability savings plan">RDSP</abbr> amounts that is entered on line 23200 of your <span data-partner-case="false">spouse</span>'s
@@ -697,7 +697,7 @@ fieldset fieldset {
                         <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                       <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
                       <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                        <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
                     <p class="small visible-sm visible-xs">This is line 11700 of your
@@ -709,7 +709,7 @@ fieldset fieldset {
                         <span data-partner-case="true" data-shortform="true">Spouse</span>'s <abbr title="Universal child care benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                       <!--<a href="#uccbIncome-help" aria-controls="uccbIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for your <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> income</span></a>-->
                       <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="partnerUccbIncome" size="7" maxlength="7" value="" id="partnerUccbIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                        <input type="text" name="partnerUccbIncome" size="7" maxlength="7" value="" id="partnerUccbIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
                     <p class="small visible-sm visible-xs" data-has-partner="true">This is line 11700 of your <span data-partner-case="false">spouse</span>'s
@@ -724,7 +724,7 @@ fieldset fieldset {
                         <abbr title="Universal child care benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                       <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
                       <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                        <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
                     <p class="small visible-sm visible-xs">This is line 21300 of your
@@ -736,7 +736,7 @@ fieldset fieldset {
                         <span data-partner-case="true" data-shortform="true">Spouse</span>'s <abbr title="Universal child care benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
                       <!--<a href="#uccbRepayment-help" aria-controls="uccbRepayment-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for <abbr title="Universal child care benefit">UCCB</abbr> repayment</span> repayment</span></a>-->
                       <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="partnerUccbRepayment" size="7" maxlength="7" value="" id="partnerUccbRepayment" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-rule-digits="true">
+                        <input type="text" name="partnerUccbRepayment" size="7" maxlength="7" value="" id="partnerUccbRepayment" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
                     <p class="small visible-sm visible-xs" data-has-partner="true">This is line 21300 of your <span data-partner-case="false">spouse</span>'s
