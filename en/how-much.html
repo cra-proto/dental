@@ -545,11 +545,12 @@ fieldset fieldset {
                     <h2 class="modal-title">Household world income</h2>
                   </header>
                   <div class="modal-body">
-                    <p>You might have world income to report if you were resident in another country for part of
+                    <p>You might have world income to include if you reported income in another country for part of
                       <time data-eligible="year">2021</time>
-                      . Make sure to submit a schedule X or RCXX with your
+                      . Make sure to <a href="who-apply.html#tax-return-checkmark" target="_blank">report 
                       <time data-eligible="year">2021</time>
-                      tax return to declare your foreign income before you apply.</p>
+                       income as a part of a tax return or statement of income before you apply <span class="far fa-window-restore mrgn-lft-sm"></span><span class="wb-inv"> (opens in new window)</span></a></p>
+                    <p>If your household's world income is negative, enter '0'.</p>
                   </div>
                 </section>
               </div>
@@ -768,6 +769,7 @@ fieldset fieldset {
               <div class="panel-body mrgn-lft-sm">
                 <div id="cdb-statement">
                   <p>Based on the amounts you entered, your adjusted family net income for this benefit is: <span class="mrgn-tp-0 h5"><strong><span data-output="avg-fam-net-income-value">$0</span></strong></span></p>
+                  <p>Ensure you meet <a href="who-apply.html" target="_blank">all the other eligibility criteria <span class="far fa-window-restore mrgn-lft-sm"></span><span class="wb-inv"> (opens in new window)</span></a> before you apply.</p>
                   <details class="mrgn-bttm-md">
                     <summary>Show the math for this amount</summary>
                     <p>Your adjusted family net income for this benefit is:</p>
@@ -1061,19 +1063,33 @@ $(".no-enter").keypress(function(e){
                 return $(":input[type=radio][name=rdsp]:checked", formId).data("rdsp") || false;
             }, 
             rdspRepayment = function() {
-                return parseInt($("#rdspRepayment").val(), 10) || 0;
+		if (rdsp() === true) {
+                    return parseInt($("#rdspRepayment").val(), 10) || 0;
+	        }
+                return 0;
             }, 
             partnerRdspRepayment = function() {
-                return parseInt($("#partnerRdspRepayment").val(), 10) || 0;
+                let relation = relationship();
+		if (rdsp() === true && relation.partner === true) {
+                    return parseInt($("#partnerRdspRepayment").val(), 10) || 0;
+	        }
+                return 0;
             }, 
             uccb = function() {
                 return $(":input[type=radio][name=uccb]:checked", formId).data("uccb") || false;
             }, 
             uccbRepayment = function() {
-                return parseInt($("#uccbRepayment").val(), 10) || 0;
+		if (uccb() === true) {
+                    return parseInt($("#uccbRepayment").val(), 10) || 0;
+	        }
+                return 0;
             }, 
             partnerUccbRepayment = function() {
-                return parseInt($("#partnerUccbRepayment").val(), 10) || 0;
+                let relation = relationship();
+		if (uccb() === true && relation.partner === true) {
+                    return parseInt($("#partnerUccbRepayment").val(), 10) || 0;
+	        }
+                return 0;
             }, 
             income = {
                 low_eligible_household: 70000, 
@@ -1105,16 +1121,30 @@ $(".no-enter").keypress(function(e){
                     return 0;
                 },
                 rdsp: function() {
-                    return parseInt($("#rdspIncome").val(), 10) || 0;
+		    if (rdsp() === true) {
+                        return parseInt($("#rdspIncome").val(), 10) || 0;
+                    }
+                    return 0;
                 }, 
                 partnerRdsp: function() {
-                    return parseInt($("#partnerRdspIncome").val(), 10) || 0;
+                    let relation = relationship();
+		    if (rdsp() === true && relation.partner === true) {
+                        return parseInt($("#partnerRdspIncome").val(), 10) || 0;
+                    }
+                    return 0;
                 }, 
                 uccb: function() {
-                    return parseInt($("#uccbIncome").val(), 10) || 0;
+ 		    if (uccb() === true) {
+                       return parseInt($("#uccbIncome").val(), 10) || 0;
+                    }
+                    return 0;
                 }, 
                 partnerUccb: function() {
-                    return parseInt($("#partnerUccbIncome").val(), 10) || 0;
+                    let relation = relationship();
+		    if (uccb() === true && relation.partner === true) {
+                        return parseInt($("#partnerUccbIncome").val(), 10) || 0;
+                    }
+                    return 0;
                 }, 
                 household: function() {
                     return this.net() + this.partner() + this.world() + this.partnerWorld();
