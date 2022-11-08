@@ -1150,7 +1150,7 @@ $(".no-enter").keypress(function(e){
                     return this.net() + this.partner() + this.world() + this.partnerWorld();
                 },
                 avgFamNet: function() {
-                    return this.household() - (this.rdsp() + this.uccb()) + (rdspRepayment() + uccbRepayment());
+                    return this.household() - (this.rdsp() + this.partnerRdsp() + this.uccb() + this.partnerUccb()) + (rdspRepayment() + partnerRdspRepayment() + uccbRepayment() + partnerUccbRepayment());
                 }
             }, 
             benefitAmt_perChild = function() {
