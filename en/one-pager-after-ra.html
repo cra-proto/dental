@@ -98,21 +98,21 @@
     <link href="https://cra-arc.gc.ca/wet-boew/css/custom/and-or.css" rel="stylesheet">
     <link href="https://test.canada.ca/covid-19-guidance/proto/css/remove-line.css" rel="stylesheet">
     <div class="row">
-      <div class="col-md-8"> 
-        <p><span class="label label-warning">Status: Not yet available</span></p> 
+      <div class="col-md-8">
+        <p><span class="label label-warning">Status: Not yet available</span></p>
         <!-- AJAX ALERT - DO NOT REMOVE --> 
-        <!-- <section data-ajax-replace="https://www.canada.ca/content/dam/cra-arc/includes/dental-alert.txt#eng"></section> -->
-		  
-		<!--Who can apply-->
-        <p>The interim Canada Dental Benefit is intended to help lower dental costs for eligible families earning less than $90,000 per year. Parents and guardians can apply if the child receiving dental care is under 12 years old and does not have access to a private dental insurance plan.</p>		  
-		
-		<!--How much-->
-        <p>Depending on family net income, a payment of $260, $390, or $650 will be provided for each eligible child. This interim dental benefit is temporary and will end after 2 periods. You can get a maximum of 2 payments for each eligible child. Benefit payments will be administered by the Canada Revenue Agency (CRA).</p>
-		  
-		<!--When-->
+        <!-- <section data-ajax-replace="https://www.canada.ca/content/dam/cra-arc/includes/dental-alert.txt#eng"></section> --> 
+        
+        <!--Who can apply-->
+        <p>The interim Canada Dental Benefit is intended to help lower dental costs for eligible families earning less than $90,000 per year. Parents and guardians can apply if the child receiving dental care is under 12 years old and does not have access to a private dental insurance plan.</p>
+        
+        <!--How much-->
+        <p>Depending on family net income, a payment of $260, $390, or $650 will be provided for each eligible child. This interim dental benefit is only available for 2 periods. You can get a maximum of 2 payments for each eligible child. Benefit payments will be administered by the Canada Revenue Agency (CRA).</p>
+        
+        <!--When-->
         <p>The first benefit period is for dental services received between <span class="nowrap">October 1, 2022</span> and <span class="nowrap">June 30, 2023</span>. Applications for this period open on <strong class="nowrap">December 1, 2022</strong>.</p>
-		
-		<!--Get ready-->
+        
+        <!--Get ready-->
         <h2 id="gtrdy">Get ready to apply</h2>
         <p>Complete any steps you are missing so you're ready to apply when applications open.</p>
         <div class="row mrgn-bttm-md">
@@ -142,35 +142,69 @@
                             </ul>
                           </div>
                         </li>
-                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer0-4&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+                        <li>No
+                          <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert0&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
+                            <div class="wb-fieldflow-header">
+                              <p class="wb-fieldflow-label">Did you earn all your income in 2021 outside of Canada?</p>
+                            </div>
+                            <ul>
+                              <li>Yes
+                                <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert0&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
+                                  <div class="wb-fieldflow-header">
+                                    <p class="wb-fieldflow-label">Did you file a statement of income for the Canada Child Benefit in 2021?</p>
+                                  </div>
+                                  <ul>
+                                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer0-4&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
+                                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer0-5&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer0-6&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+                            </ul>
+                          </div>
+                        </li>
                       </ul>
                     </div>
                   </form>
                 </div>
                 <div id="answers0"> 
                   <!--you and spouse filed taxes or you filed, no spouse-->
-                  <div id="answer0-1" class="hidden alert alert-success alert0 provisional">
-                    <p>Great. The information from your 2021 tax returns will be used to determine if you are eligible for the benefit.</p>
+                  <div id="answer0-1" class="alert alert-success alert0 provisional hidden">
+                    <p>Great. Your 2021 tax returns will be used to determine if you're eligible for the benefit.</p>
                     <div class="mrgn-tp-md">
                       <p>Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>.</p>
                     </div>
                   </div>
                   <!--you filed, spouse did not-->
-                  <div id="answer0-2" class="hidden alert alert-warning alert0 provisional">
+                  <div id="answer0-2" class="alert alert-warning alert0 provisional hidden">
                     <p>Your spouse or common-law partner <strong>who lives with you</strong> must also file their 2021 taxes before you can apply.</p>
                     <p>For information on how to file, go to: <a href="https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax/get-ready-taxes.html">Get ready to do your taxes</a>.</p>
                   </div>
                   <!--you filed, no spouse-->
-                  <div id="answer0-3" class="hidden alert alert-success alert0 provisional">
-                    <p>Since you have filed your 2021 taxes, you're ready for the next step.</p>
+                  <div id="answer0-3" class="alert alert-success alert0 provisional hidden">
+                    <p>Since you've filed your 2021 tax return, you're ready for the next step.</p>
                     <div class="mrgn-tp-md">
                       <p>Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>.</p>
                     </div>
                   </div>
+                  <!--World income, filed a statement of income-->
+                  <div id="answer0-4" class="alert alert-success alert0 provisional hidden">
+                    <p>Great. Your 2021 income will be used to determine if you're eligible for the benefit.</p>
+                    <p>If you have a spouse or common-law partner who lives with you, they will also need to file their 2021 taxes or submit a statement of income before you can apply.</p>
+                    <div class="mrgn-tp-md">
+                      <p>Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>.</p>
+                    </div>
+                  </div>
+                  <!--World income, did not file-->
+                  <div id="answer0-5" class="alert alert-warning alert0 provisional hidden">
+                    <p>You can apply for the Canada Child Benefit to submit a statement of income for 2021.</p>
+                    <p>If you have a spouse or common-law partner who lives with you, they will also need to file their 2021 taxes or submit a statement of income before you can apply.</p>
+                    <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-apply.html#additional">Additional documents to apply for the CCB</a></p>
+                  </div>
                   <!--Did not file-->
-                  <div id="answer0-4" class="hidden alert alert-warning alert0 provisional">
+                  <div id="answer0-6" class="alert alert-warning alert0 provisional hidden">
                     <p>You must file your 2021 taxes before you can apply.</p>
-                    <p>If you have a spouse or common-law partner who lives with you, they must also file their 2021 taxes.</p>
+                    <p>If you have a spouse or common-law partner who lives with you, they will also need to file their 2021 taxes.</p>
                     <p>For information on how to file, go to: <a href="https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax/get-ready-taxes.html">Get ready to do your taxes</a>.</p>
                   </div>
                 </div>
@@ -230,17 +264,18 @@
                   <div id="answer3-3" class="hidden alert alert-warning alert3 provisional">
                     <p>You will not be able to apply for this benefit for your child.</p>
                     <p>Only the other parent or caregiver who receives CCB payments for your child may be eligible. They should complete all the steps.</p>
+                    <p>If your <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-after-you-apply.html#change">CCB custody arrangement has changed</a>, make sure you update your information with the CRA.</p>
                   </div>
                   <!--No one receives CCB-->
                   <div id="answer3-4" class="hidden alert alert-warning alert3 provisional">
                     <p>The dental benefit is only available for families receiving the CCB.</p>
-                    <p>If you are not receiving CCB payments, check if you are eligible to apply.</p>
+                    <p>If you are not receiving CCB payments, check if you're eligible to apply.</p>
                     <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html">Canada Child Benefit (CCB)</a></p>
                   </div>
                   <!--Not sure-->
                   <div id="answer3-5" class="hidden alert alert-warning alert3 provisional">
                     <p>You can sign in to <a href="https://canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a> or check your bank statements to confirm if you are receiving CCB payments. If you have a spouse or common-law partner, they should check as well.</p>
-                    <p>If you are not receiving CCB payments, check if you are eligible to apply.</p>
+                    <p>If you are not receiving CCB payments, check if you're eligible to apply.</p>
                     <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html">Canada Child Benefit (CCB)</a></p>
                   </div>
                 </div>
@@ -344,174 +379,174 @@
                   <div id="answer1-4" class="hidden alert alert-warning alert1 provisional">
                     <p>Having a CRA My Account will make it easier to apply online.</p>
                     <p>If you don't have an account, <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">register for CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a>.</p>
-					  
-					  
-					  <!--div class="mrgn-tp-md">
+                    
+                    <!--div class="mrgn-tp-md">
                       <p>Next, go to: <a href="#deposit"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-dollar-sign fa-stack-1x"></span></span>Set up</span> direct deposit</a>.</p>
-                    </div-->
-					  
+                    </div--> 
+                    
                   </div>
                   <div id="answer1-5" class="hidden alert alert-success alert1 provisional">
-                     <p>You can <a href="https://www.canada.ca/en/employment-social-development/services/my-account.html">sign in to My Service Canada Account</a> to access CRA My Account.</p>
-                    <p class="mrgn-tp-md">In your My Service Canada Account:</p>
+                    <p class="mrgn-tp-md">You can sign in to My Service Canada Account to access your CRA My Account.</p>
                     <ol class="mrgn-tp-md">
+                      <li>Sign in to your <a href="https://www.canada.ca/en/employment-social-development/services/my-account.html">My Service Canada Account</a></li>
                       <li>Click on "<strong>Access CRA</strong>"</li>
-                      <li>Select "<strong>I agree</strong>" on the Registration and Authentication page</li>
-                      
+                      <li>Select "<strong>I agree</strong>" on the Registration and Authentication page to transfer directly to your CRA My Account</li>
                     </ol>
-					   <p class="mrgn-tp-md">This transfers you to CRA My Account.</p>
-					  <div class="mrgn-tp-md">
+                    <div class="mrgn-tp-md">
                       <p>Next, go to: <a href="#deposit"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-dollar-sign fa-stack-1x"></span></span>Set up</span> direct deposit</a>.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-			</div></div>
-          <div class="row mrgn-bttm-md">
-            <div class="col-xs-12">
-              <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
-                <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"> <span class="fas fa-square fa-stack-2x fa-inverse"></span> <span class="fa-stack fa-fw pull-left"><span class="far fa-circle fa-stack-2x "></span><span class="fas fa-dollar-sign fa-stack-1x"></span></span></span></div>
-                <h3 class="pull-left mrgn-tp-0 mrgn-lft-lg h3 text-info" id="deposit">Set up direct deposit</h3>
-                <div class="clearfix"></div>
-                <div class="mrgn-lft-lg">
-                  <p class="text-muted small">Direct deposit will be the fastest way to get payments for this benefit.</p>
-                  <div class="wb-frmvld fieldflow-lg gc-font-2019">
-                    <form>
-                      <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert2, #bank-redir&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}}">
-                        <p>Is your direct deposit information up to date with the CRA?</p>
-                        <ul>
-                          <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
-                          <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No - I want to set it up </li>
-                          <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No - I prefer to receive my payment by cheque</li>
-                        </ul>
-                      </div>
-                      <div id="bank-redir" class="hidden">
-                        <button class="btn btn-primary btn-lg  mrgn-bttm-lg" type="submit" id="bank-redir-btn">Go to your financial institution</button>
-                        <hr>
-                        <p class="mrgn-bttm-lg">Once you have set up direct deposit, go to: <a href="#h-2"><span class="nowrap"><span class="far fa-question fa-lg mrgn-rght-sm"></span>Determine</span> when to apply</a>.</p>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="answers2">
-                    <div id="answer2-1" class="alert alert-success hidden alert2 provisional">
-                      <p>Great.</p>
-                      <p>Direct deposit will be the fastest way to get your payments.</p>
-                      <div class="mrgn-tp-md">
-                        <p>Next, go to: <a href="#how-much"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-question fa-stack-1x"></span></span>Estimate</span> how much you could get</a>.</p>
-                      </div>
-                    </div>
-                    <div id="answer2-2" class="alert alert-info hidden alert2 provisional">
-                      <p>Your mailing address must be up to date:</p>
-                      <ul>
-                        <li><strong>Online:</strong> Confirm it's up to date in your <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a> under your personal profile</li>
-                        <li><strong>By phone:</strong> Call <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal"></span>1-800-959-8281</a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal"></span>1-800-959-8281</strong></li>
-                      </ul>
-                      <p class="mrgn-tp-lg">Once your application is processed, a cheque will take about <strong>10&nbsp;business days</strong>. If you want your payments faster, <a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/direct-deposit.html#dd-individuals">direct deposit</a> payments will take up&nbsp;to&nbsp;5 business days.</p>
-                      <div class="mrgn-tp-md">
-                        <p>Next, go to: <a href="#how-much"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-question fa-stack-1x"></span></span>Estimate</span> how much you could get</a>.</p>
-                      </div>
-                    </div>
-                    <div id="answer2-3" class="alert alert-info hidden alert2 provisional">
-                      <div class="cnjnctn-type-or">
-                        <div class="cnjnctn-col">
-                          <p>You can set up or change your direct deposit information within your personal profile in <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a>.</p>
-                        </div>
-                        <div class="cnjnctn-col">
-                          <p>You can have your financial institution securely update your information with the CRA:</p>
-                          <details>
-                            <summary>Choose your financial institution</summary>
-                            <div data-ajax-replace="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/direct-deposit.html #dd-individuals" class="data-ajax">
-                              <p><a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/direct-deposit.html#dd-individuals">Direct deposit for individuals</a></p>
-                            </div>
-                          </details>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-          <div class="row mrgn-bttm-md">
-            <div class="col-xs-12">
-              <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
-                <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"> <span class="fas fa-square fa-stack-2x fa-inverse"></span> <span class="fa-stack fa-fw pull-left"><span class="far fa-circle fa-stack-2x "></span><span class="fas fa-question fa-stack-1x"></span></span></span></div>
-                <h3 class="pull-left mrgn-tp-0 mrgn-lft-lg h3 text-info" id="how-much">Estimate how much you could get</h3>
-                <div class="clearfix"></div>
-                <div class="mrgn-lft-lg">
-                  <p class="text-muted small">Your benefit amount depends on your <a class="wb-lbx" href="#afni">adjusted family net income <span class="nowrap">(AFNI)<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a>.</p>
-                  <div class="wb-frmvld fieldflow-lg gc-font-2019">
-                    <form>
-                      <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;:  true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert4, #bank-redir&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}}">
-                        <p>What was your adjusted family net income (AFNI) in 2021?</p>
-                        <ul>
-                          <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">less than $70,000</li>
-                          <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">$70,000 to less than $80,000</li>
-                          <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">$80,000 to less than $90,000</li>
-                          <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-4&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">$90,000 or more</li>
-                        </ul>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="answers4">
-                    <div id="answer4-1" class="alert alert-info hidden alert4 provisional">
-                      <h4>If you are eligible for the first benefit period</h4>
-						<p>You may be able to receive <strong>$650</strong> for each eligible child.</p>
-                      <p>You would get half of the benefit amount (<strong>$325</strong>) if you have <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-we-calculate-your-ccb.html#shared">shared custody</a> of the eligible child.</p>
-                    </div>
-                    <div id="answer4-2" class="alert alert-info hidden alert4 provisional">
-                      <h4>If you are eligible for the first benefit period</h4>
-						<p>You may be able to receive <strong>$390</strong> for each eligible child.</p>
-                      <p>You would get half of the benefit amount (<strong>$195</strong>) if you have <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-we-calculate-your-ccb.html#shared">shared custody</a> of the eligible child.</p>
-                    </div>
-                    <div id="answer4-3" class="alert alert-info hidden alert4 provisional">
-                      <h4>If you are eligible for the first benefit period</h4>
-						<p>You may be able to receive <strong>$260</strong> for each eligible child.</p>
-                      <p>You would get half of the benefit amount (<strong>$130</strong>) if you have <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-we-calculate-your-ccb.html#shared">shared custody</a> of the eligible child.</p>
-                    </div>
-                    <div id="answer4-4" class="alert alert-warning hidden alert4 provisional">
-                     <h4>You are not eligible for this benefit</h4> 
-						<p>If your adjusted family net income was more than $90,000 in 2021, you cannot apply for this benefit.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <section id="afni" class="mfp-hide modal-dialog modal-content overlay-def">
-            <header class="modal-header">
-              <h2 class="modal-title">Your adjusted family net income</h2>
-            </header>
-            <div class="modal-body">
-              <p>The CRA calculates your adjusted family net income based on your previous year's tax return. We use this number to determine your eligibility for certain benefits.</p>
-              <p>You do not need to calculate this number. If you want to estimate your benefit amount, you can follow the steps below.</p>
-              <p>For this benefit, include your spouse or common-law partner's amounts if you are married or living common-law on <span class="nowrap">December 1, 2022</span>.</p>
-              <p class="mrgn-tp-md h4">Steps to calculate your adjusted family net income for the first benefit period</p>
-              <ul class="fa-ul lst-spcd mrgn-bttm-lg mrgn-lft-lg">
-                <li><span class="mrgn-tp-0 text-muted h5">your 2021 net income (line 23600)</span></li>
-                <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">your spouse or common-law partner's 2021 net income (line 23600)</span></li>
-                <li>
-                  <hr class="brdr-bttm mrgn-tp-0 mrgn-bttm-md">
-                  <span class="fas fa-equals fa-li" aria-hidden="true"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 text-muted h5">your 2021 household net income</span></li>
-              </ul>
-              <ul class="fa-ul lst-spcd mrgn-bttm-lg mrgn-lft-lg">
-                <li><span class="fas fa-minus fa-li" aria-hidden="true"><span class="wb-inv">minus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 <abbr title="registered disability savings plan">RDSP</abbr> and <abbr title="universal child care benefit">UCCB</abbr> payments to you or your spouse or common-law partner (11700 and line 12500)</span></li>
-                <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 RDSP and UCCB repayments from you or your spouse or common-law partner (line 21300 and line 23200)</span></li>
-                <li>
-                  <hr class="brdr-bttm mrgn-tp-0 mrgn-bttm-md">
-                  <span class="fas fa-equals fa-li" aria-hidden="true"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 text-muted h5">your 2021 adjusted family net income (AFNI)</span></li>
-              </ul>
-            </div>
-          </section>
-          <h2 id="whn">When to apply</h2>
-          <!--p class="mrgn-tp-md"><span class="far fa-clock mrgn-rght-sm mrgn-bttm-sm lead"></span>Applications for Canada Dental Benefit will open on <strong>[date]</strong>.</p--> 
-          <!--p>Applications for Canada Dental Benefit will open on <strong>[date]</strong>. You can apply if your child has a dental appointment between October 1, 2022 and July XX, 2023.</p-->
-          <p>Applications open on <strong class="nowrap">December 1, 2022</strong> for dental services your child receives between October 1, 2022 and June 30, 2023.</p>
-          <p>The second benefit period will open for applications on July 1, 2023. This will cover dental services your child receives between July 1, 2023 and June 30, 2024.</p>
         </div>
+        <div class="row mrgn-bttm-md">
+          <div class="col-xs-12">
+            <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
+              <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"> <span class="fas fa-square fa-stack-2x fa-inverse"></span> <span class="fa-stack fa-fw pull-left"><span class="far fa-circle fa-stack-2x "></span><span class="fas fa-dollar-sign fa-stack-1x"></span></span></span></div>
+              <h3 class="pull-left mrgn-tp-0 mrgn-lft-lg h3 text-info" id="deposit">Set up direct deposit</h3>
+              <div class="clearfix"></div>
+              <div class="mrgn-lft-lg">
+                <p class="text-muted small">Direct deposit will be the fastest way to get payments for this benefit.</p>
+                <div class="wb-frmvld fieldflow-lg gc-font-2019">
+                  <form>
+                    <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert2, #bank-redir&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}}">
+                      <p>Is your direct deposit information up to date with the CRA?</p>
+                      <ul>
+                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
+                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No - I want to set it up </li>
+                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No - I prefer to receive my payment by cheque</li>
+                      </ul>
+                    </div>
+                    <div id="bank-redir" class="hidden">
+                      <button class="btn btn-primary btn-lg  mrgn-bttm-lg" type="submit" id="bank-redir-btn">Go to your financial institution</button>
+                      <hr>
+                      <p class="mrgn-bttm-lg">Once you have set up direct deposit, go to: <a href="#h-2"><span class="nowrap"><span class="far fa-question fa-lg mrgn-rght-sm"></span>Determine</span> when to apply</a>.</p>
+                    </div>
+                  </form>
+                </div>
+                <div class="answers2">
+                  <div id="answer2-1" class="alert alert-success hidden alert2 provisional">
+                    <p>Great.</p>
+                    <p>Direct deposit will be the fastest way to get your payments.</p>
+                    <div class="mrgn-tp-md">
+                      <p>Next, go to: <a href="#how-much"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-question fa-stack-1x"></span></span>Estimate</span> how much you could get</a>.</p>
+                    </div>
+                  </div>
+                  <div id="answer2-2" class="alert alert-info hidden alert2 provisional">
+                    <p>Your mailing address must be up to date:</p>
+                    <ul>
+                      <li><strong>Online:</strong> Confirm it's up to date in your <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a> under your personal profile</li>
+                      <li><strong>By phone:</strong> Call <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal"></span>1-800-959-8281</a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal"></span>1-800-959-8281</strong></li>
+                    </ul>
+                    <p class="mrgn-tp-lg">Once your application is processed, a cheque will take about <strong>10&nbsp;business days</strong>. If you want your payments faster, <a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/direct-deposit.html#dd-individuals">direct deposit</a> payments will take up&nbsp;to&nbsp;5 business days.</p>
+                    <div class="mrgn-tp-md">
+                      <p>Next, go to: <a href="#how-much"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-question fa-stack-1x"></span></span>Estimate</span> how much you could get</a>.</p>
+                    </div>
+                  </div>
+                  <div id="answer2-3" class="alert alert-info hidden alert2 provisional">
+                    <div class="cnjnctn-type-or">
+                      <div class="cnjnctn-col">
+                        <p>You can set up or change your direct deposit information within your personal profile in <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a>.</p>
+                      </div>
+                      <div class="cnjnctn-col">
+                        <p>You can have your financial institution securely update your information with the CRA:</p>
+                        <details>
+                          <summary>Choose your financial institution</summary>
+                          <div data-ajax-replace="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/direct-deposit.html #dd-individuals" class="data-ajax">
+                            <p><a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/direct-deposit.html#dd-individuals">Direct deposit for individuals</a></p>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mrgn-bttm-md">
+          <div class="col-xs-12">
+            <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
+              <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"> <span class="fas fa-square fa-stack-2x fa-inverse"></span> <span class="fa-stack fa-fw pull-left"><span class="far fa-circle fa-stack-2x "></span><span class="fas fa-question fa-stack-1x"></span></span></span></div>
+              <h3 class="pull-left mrgn-tp-0 mrgn-lft-lg h3 text-info" id="how-much">Estimate how much you could get</h3>
+              <div class="clearfix"></div>
+              <div class="mrgn-lft-lg">
+                <p class="text-muted small">Your benefit amount depends on your <a class="wb-lbx" href="#afni">adjusted family net <span class="nowrap">income.<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a></p>
+                <div class="wb-frmvld fieldflow-lg gc-font-2019">
+                  <form>
+                    <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;:  true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert4, #bank-redir&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}}">
+                      <p>What was your adjusted family net income in 2021?</p>
+                      <ul>
+                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">less than $70,000</li>
+                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">$70,000 to $79,999</li>
+                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">$80,000 to $89,999</li>
+                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-4&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">$90,000 or more</li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>
+                <div class="answers4">
+                  <div id="answer4-1" class="alert alert-info hidden alert4 provisional">
+                    <h4>If you are eligible for the first benefit period</h4>
+                    <p>You may be able to receive <strong>$650</strong> for each eligible child.</p>
+                    <p>You would get half of the benefit amount (<strong>$325</strong>) if you have <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-we-calculate-your-ccb.html#shared">shared custody</a> of the eligible child.</p>
+                  </div>
+                  <div id="answer4-2" class="alert alert-info hidden alert4 provisional">
+                    <h4>If you are eligible for the first benefit period</h4>
+                    <p>You may be able to receive <strong>$390</strong> for each eligible child.</p>
+                    <p>You would get half of the benefit amount (<strong>$195</strong>) if you have <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-we-calculate-your-ccb.html#shared">shared custody</a> of the eligible child.</p>
+                  </div>
+                  <div id="answer4-3" class="alert alert-info hidden alert4 provisional">
+                    <h4>If you are eligible for the first benefit period</h4>
+                    <p>You may be able to receive <strong>$260</strong> for each eligible child.</p>
+                    <p>You would get half of the benefit amount (<strong>$130</strong>) if you have <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-we-calculate-your-ccb.html#shared">shared custody</a> of the eligible child.</p>
+                  </div>
+                  <div id="answer4-4" class="alert alert-warning hidden alert4 provisional">
+                    <h4>You are not eligible for this benefit</h4>
+                    <p>If your adjusted family net income was more than $90,000 in 2021, you cannot apply for this benefit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section id="afni" class="mfp-hide modal-dialog modal-content overlay-def">
+          <header class="modal-header">
+            <h2 class="modal-title">Your adjusted family net income</h2>
+          </header>
+          <div class="modal-body">
+            <p>The CRA calculates your adjusted family net income based on your previous year's tax return. We use this number to determine your eligibility for certain benefits.</p>
+            <p>You do not need to calculate this number. If you want to estimate your benefit amount, you can follow the steps below.</p>
+            <p>For this benefit, include your spouse or common-law partner's amounts if you are married or living common-law on <span class="nowrap">December 1, 2022</span>.</p>
+            <p class="mrgn-tp-md h4">Steps to calculate your adjusted family net income for the first benefit period</p>
+            <ul class="fa-ul lst-spcd mrgn-bttm-lg mrgn-lft-lg">
+              <li><span class="mrgn-tp-0 text-muted h5">your 2021 net income (line 23600)</span></li>
+              <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">your spouse or common-law partner's 2021 net income (line 23600)</span></li>
+              <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">your 2021 household world income (if applicable)</span></li>
+              <li>
+                <hr class="brdr-bttm mrgn-tp-0 mrgn-bttm-md">
+                <span class="fas fa-equals fa-li" aria-hidden="true"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 text-muted h5">your 2021 household net income</span></li>
+            </ul>
+            <ul class="fa-ul lst-spcd mrgn-tp-lg mrgn-bttm-lg mrgn-lft-lg">
+              <li><span class="mrgn-tp-0 text-muted h5">your 2021 household net income</span></li>
+              <li><span class="fas fa-minus fa-li" aria-hidden="true"><span class="wb-inv">minus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 <abbr title="registered disability savings plan">RDSP</abbr> and <abbr title="universal child care benefit">UCCB</abbr> payments to you or your spouse or common-law partner (line 11700 and line 12500)</span></li>
+              <li><span class="fas fa-plus fa-li" aria-hidden="true"><span class="wb-inv">plus</span></span> <span class="mrgn-tp-0 text-muted h5">2021 RDSP and UCCB repayments from you or your spouse or common-law partner (line 21300 and line 23200)</span></li>
+              <li>
+                <hr class="brdr-bttm mrgn-tp-0 mrgn-bttm-md">
+                <span class="fas fa-equals fa-li" aria-hidden="true"><span class="wb-inv">equals</span></span> <span class="mrgn-tp-0 text-muted h5">your 2021 adjusted family net income</span></li>
+            </ul>
+          </div>
+        </section>
+        <h2 id="whn">When to apply</h2>
+        <!--p class="mrgn-tp-md"><span class="far fa-clock mrgn-rght-sm mrgn-bttm-sm lead"></span>Applications for Canada Dental Benefit will open on <strong>[date]</strong>.</p--> 
+        <!--p>Applications for Canada Dental Benefit will open on <strong>[date]</strong>. You can apply if your child has a dental appointment between October 1, 2022 and July XX, 2023.</p-->
+        <p>Applications open on <strong class="nowrap">December 1, 2022</strong> for dental services your child receives between October 1, 2022 and June 30, 2023.</p>
+        <p>The second benefit period will open for applications on July 1, 2023. This will cover dental services your child receives between July 1, 2023 and June 30, 2024.</p>
       </div>
     </div>
+  </div>
   </div>
   <div class="container">
     <div class="row row-no-gutters mrgn-tp-xl">
