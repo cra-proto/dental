@@ -325,7 +325,12 @@ fieldset fieldset {
               <h2 class="modal-title">Your adjusted family net income</h2>
             </header>
             <div class="modal-body">
-              <p>The CRA calculates your adjusted family net income based on your previous year's tax return. We use this number to determine your eligibility for certain benefits.</p>
+              <p>The CRA calculates your adjusted family net income based on your:</p>
+              <ul>
+                <li>2021 tax return for the first benefit period (October&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023)</li>
+                <li>2022 tax return for the second benefit period (July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024)</li>
+              </ul>
+              <p>If you have a spouse or common-law partner, their information will be included in the calculation. We use this number to determine your eligibility for certain benefits.</p>
               <p>You do not need to calculate this number. You can use the tool below if you want to estimate your adjusted family net income and your benefit amount.</p>
             </div>
           </section>
@@ -1413,7 +1418,7 @@ fieldset fieldset {
   $document.on("click vclick touchstart", "#printDentalBtn", function (event) {
   	window.print();
   }); 
-</script>  
+</script> 
 <script type="text/javascript">
   	/*  Step button   */
   	$(document).on("click", ".steps-wrapper div.buttons > :button", function (event) {
