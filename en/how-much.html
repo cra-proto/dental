@@ -291,9 +291,9 @@ fieldset fieldset {
             </caption-->
               <thead>
                 <tr>
-                  <th scope="col"><a class="wb-lbx" href="#afni">Adjusted family net <span class="nowrap">income<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a></th>
-                  <th scope="col"><a class="wb-lbx" href="#full-custody"><span class="nowrap">Full custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
-                  <th scope="col"><a class="wb-lbx" href="#custody-help"><span class="nowrap">Shared custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
+                  <th scope="col"><a class="wb-lbx" href="#afni-help">Adjusted family net <span class="nowrap">income<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a></th>
+                  <th scope="col"><a class="wb-lbx" href="#full-custody-help"><span class="nowrap">Full custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
+                  <th scope="col"><a class="wb-lbx" href="#shared-custody-help"><span class="nowrap">Shared custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
                 </tr>
               </thead>
               <tbody>
@@ -320,54 +320,35 @@ fieldset fieldset {
               </tbody>
             </table>
           </div>
-          <section id="afni" class="mfp-hide modal-dialog modal-content overlay-def">
+          <section id="afni-help" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
               <h2 class="modal-title">Your adjusted family net income</h2>
             </header>
             <div class="modal-body">
-              <p>The CRA calculates your adjusted family net income based on your:</p>
+              <p>You do not need to calculate your adjusted family net income. The CRA calculates this number for you to determine your eligibility for certain benefits.</p>
+              <p>You can use the <a href="#h-2">estimator tool</a> if you want to estimate your adjusted family net income and your benefit amount.</p>
+              <p>Adjusted family net income is determined using your net income, <abbr title="Registered Disability Savings Plan">RDSP</abbr>, and <abbr title="Universal Child Care Benefit">UCCB</abbr> amounts from your:</p>
               <ul>
-                <li>2021 tax return for the first benefit period (October&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023)</li>
-                <li>2022 tax return for the second benefit period (July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024)</li>
+                <li><strong>2021 tax return</strong> for the first benefit period (October&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023)</li>
+                <li><strong>2022 tax return</strong> for the second benefit period (July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024)</li>
               </ul>
-              <p>If you have a spouse or common-law partner, their information will be included in the calculation. We use this number to determine your eligibility for certain benefits.</p>
-              <p>You do not need to calculate this number. You can use the tool below if you want to estimate your adjusted family net income and your benefit amount.</p>
+              <p>If you have a spouse or common-law partner, their information will be included in the calculation.</p>
             </div>
           </section>
-          <section id="full-custody" class="mfp-hide modal-dialog modal-content overlay-def">
+          <section id="full-custody-help" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
               <h2 class="modal-title">Full custody</h2>
             </header>
             <div class="modal-body">
-              <p>The dental benefit uses the same custody arrangement as the Canada Child Benefit (CCB) as of:</p>
-              <ul>
-                <li>December 1, 2022 for first benefit period</li>
-                <li>July 1, 2023 for second benefit period</li>
-              </ul>
-              <p>You must have either full or shared custody to receive the CCB. If you have full custody for the CCB, you will be the only one receiving the CCB. If you are not eligible to receive the CCB for your child, you cannot apply for the Canada Dental Benefit.</p>
-              <p>If your <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-after-you-apply.html#change">CCB custody arrangement has changed</a>, make sure you update your information with the CRA.</p>
-              <h3>What counts as full custody for the CCB</h3>
-              <p>If the child lives with you more than 60% of the time, you are considered to have <strong>full custody</strong> for the purposes of the CCB.</p>
-              <p>For example, the child lives with you during the week and with another individual every second weekend.</p>
-              <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-before-you-apply.html#shared">CCB child custody arrangements</a></p>
+              <section data-ajax-replace="return-payment.html#ajax-full"></section>
             </div>
           </section>
-          <section id="custody-help" class="mfp-hide modal-dialog modal-content overlay-def">
+          <section id="shared-custody-help" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
               <h2 class="modal-title">Shared custody</h2>
             </header>
             <div class="modal-body">
-              <p>The dental benefit uses the same custody arrangement as the Canada Child Benefit (CCB) as of:</p>
-              <ul>
-                <li>December 1, 2022 for first benefit period</li>
-                <li>July 1, 2023 for second benefit period</li>
-              </ul>
-              <p>You must have either full or shared custody to receive the CCB. If you have shared custody for the CCB, both you and your child's other parent will be receiving the CCB. If you are not eligible to receive the CCB for your child, you cannot apply for the Canada Dental Benefit.</p>
-              <p>If your <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-after-you-apply.html#change">CCB custody arrangement has changed</a>, make sure you update your information with the CRA.</p>
-              <h3>What counts as shared custody for the CCB</h3>
-              <p>If the child lives with you at least 40% of the time or on an approximately equal basis with you and another individual at a different address, then both individuals are considered to have <strong>shared custody</strong> for the purposes of the CCB.</p>
-              <p>For example, the child lives with you one week and with another individual one week, or with you 4 days a week and with the other individual 3 days a week (between 40% and 60%).</p>
-              <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-before-you-apply.html#shared">CCB child custody arrangements</a></p>
+              <section data-ajax-replace="return-payment.html#ajax-shared"></section>
             </div>
           </section>
           <h3>If dental costs are more than $650</h3>
@@ -461,8 +442,8 @@ fieldset fieldset {
                 <fieldset id="custody" class="gc-chckbxrdio chckbxrdio-grp provisional">
                   <div class="form-group">
                     <legend class="h5 required" tabindex="-1"><span class="field-name">What is your custody arrangement for the children you are applying for?</span> <strong class="required">(required)</strong></legend>
-                    <p class="small text-muted">Custody arrangements are the same as the CCB. If your child lives with you part-time, check if it is <a href="#custody-help" aria-controls="custody-help" class="wb-lbx" role="button">shared custody<span class="mrgn-lft-sm glyphicon glyphicon-question-sign"></span></a></p>
-                    <!--p><a href="#custody-help" aria-controls="custody-help" class="wb-lbx" role="button">What is considered shared custody&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p-->
+                    <p class="small text-muted">Custody arrangements are the same as the CCB. If your child lives with you part-time, check if it is <a href="#shared-custody-help" aria-controls="shared-custody-help" class="wb-lbx" role="button">shared custody<span class="mrgn-lft-sm glyphicon glyphicon-question-sign"></span></a></p>
+                    <!--p><a href="#shared-custody-help" aria-controls="shared-custody-help" class="wb-lbx" role="button">What is considered shared custody&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p-->
                     <ul class="list-unstyled">
                       <li class="radio">
                         <input type="radio" name="custody" id="custody_Full" value="1" data-custody="1" data-rule-required="true">
@@ -784,7 +765,7 @@ fieldset fieldset {
               <div class="panel-body mrgn-lft-sm">
                 <div id="cdb-statement">
                   <p class="mrgn-tp-md">Based on the amounts you entered, your adjusted family net income for this benefit is: <span class="mrgn-tp-0 h5"><strong><span data-output="avg-fam-net-income-value">$0</span></strong></span></p>
-                  <p>Make sure you meet <a href="who-apply.html" target="_blank">all the other eligibility criteria<span class="far fa-window-restore mrgn-lft-sm"></span><span class="wb-inv"> (opens in new window)</span></a> before you apply.</p>
+                  <!--p>Make sure you meet <a href="who-apply.html" target="_blank">all the other eligibility criteria<span class="far fa-window-restore mrgn-lft-sm"></span><span class="wb-inv"> (opens in new window)</span></a> before you apply.</p-->
                   <details class="mrgn-bttm-md">
                     <summary>Show the math for this amount</summary>
                     <p>Your adjusted family net income for this benefit is:</p>
@@ -804,14 +785,14 @@ fieldset fieldset {
                   </details>
                   <!--QUALIFIES-->
                   <div class="alert alert-success provisional" id="qualify">
-                    <p>If you are eligible, your benefit amount for the <span data-output="">first</span> period is:</p>
+                    <p>If you're <a href="who-apply.html">eligible</a>, your benefit amount for the <span data-output="">first</span> period is:</p>
                     <div id="full-cust-benefit">
-                      <p class="lead"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you have full custody of</p>
+                      <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you have full custody of</p>
                     </div>
                     <div data-custody-shared="true">
-                      <p class="lead"><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child you have shared custody of</p>
+                      <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child you have shared custody of</p>
                     </div>
-                    <p>If you are eligible for the second benefit period, you can apply again after July 1, 2023.</p>
+                    <p>If you're eligible for the second benefit period, apply again after July 1, 2023.</p>
                   </div>
                   <!--DOES NOT QUALIFY-->
                   <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
@@ -822,7 +803,7 @@ fieldset fieldset {
                   </div>
                   <!--DISCLAIMER-->
                   <p class="text-muted small">This result is an estimate based on the information you entered. The CRA will determine your benefit amount when you apply.</p>
-                  <p data-custody-shared="true" class="text-muted small shared-custody mixed-custody">Since you have <a href="#custody-help" aria-controls="custody-help" class="wb-lbx" role="button">shared custody<span class="mrgn-lft-sm glyphicon glyphicon-question-sign"></span></a>, your child's other parent may get a different result since their adjusted family net income will be different.</p>
+                  <p data-custody-shared="true" class="text-muted small shared-custody mixed-custody">Since you have <a href="#shared-custody-help" aria-controls="shared-custody-help" class="wb-lbx" role="button">shared custody<span class="mrgn-lft-sm glyphicon glyphicon-question-sign"></span></a>, your child's other parent may get a different result since their adjusted family net income will be different.</p>
                   <!--<p><a href="#dental-statement" class="wb-lbx btn btn-default btn-lg" role="button"><span class="h3"><span class="glyphicon glyphicon-print"></span> Print preview<span class="wb-inv"> Canada dental benefit statement</span></span></a></p>--> 
                 </div>
               </div>
@@ -907,17 +888,17 @@ fieldset fieldset {
         <!-- END OF HELP CONTENT -->
         
         <h2 id="h-3">How many payments you can get</h2>
-        <p>If you have more than one eligible child, you can apply for them all at the same time or separately. For this benefit, you may apply for a <strong>maximum of 2 payments</strong> for each eligible child.</p>
+        <p>If you have more than one eligible child, you can apply for them all at the same time or separately. For this benefit, you may apply for a <strong>maximum of 2&nbsp;payments</strong> for each eligible child.</p>
         <h3>During the first benefit period</h3>
-        <p>Until June 30, 2023, you may apply for:</p>
+        <p>From December&nbsp;1,&nbsp;2022 until June&nbsp;30,&nbsp;2023, you may apply for:</p>
         <ul>
-          <li>one payment for an eligible child who receives dental care between October 1, 2022 and June 30, 2023</li>
+          <li>one payment for an eligible child who receives dental care between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023</li>
         </ul>
         <h3>During the second benefit period</h3>
-        <p>Applications open on <strong>July 1, 2023</strong> for:</p>
+        <p>Applications open on <strong>July&nbsp;1,&nbsp;2023</strong> for:</p>
         <ul>
-          <li>one payment for an eligible child who receives dental care between July 1, 2023 and June 30, 2024</li>
-          <li>one additional payment for dental care over $650 in either benefit period if you <a href="additional-payment.html#lgblty">meet the criteria</a></li>
+          <li>one payment for an eligible child who receives dental care between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024</li>
+          <li>one additional payment for dental care over&nbsp;$650 in either benefit period if you <a href="additional-payment.html#lgblty">meet the criteria</a></li>
         </ul>
         <p>If you receive a payment for a child in the first benefit period, that child will only be eligible for one more payment.</p>
         <!--Uncomment out on July 1, 2023--> 
