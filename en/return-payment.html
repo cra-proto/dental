@@ -3,12 +3,12 @@
 <head prefix="og: http://ogp.me/ns#">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta charset="utf-8"/>
-<title>Return a payment - Canada Dental Benefit</title>
+<title>Who can apply - Canada Dental Benefit</title>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
-<link rel="canonical" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit.html"/>
-<link rel="alternate" hreflang="en" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit.html"/>
-<link rel="alternate" hreflang="fr" href="https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/prestation-dentaire.html"/>
+<link rel="canonical" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html"/>
+<link rel="alternate" hreflang="en" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html"/>
+<link rel="alternate" hreflang="fr" href="https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/prestation-dentaire/qui-demande.html"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <meta name="author" content="Canada Revenue Agency"/>
@@ -25,7 +25,45 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/css/theme.min.css"/>
 <link href="https://test.canada.ca/covid-19-guidance/proto/css/alpha-beta-banner.css" rel="stylesheet">
+<link href="https://cra-arc.gc.ca/wet-boew/css/custom/and-or.css" rel="stylesheet">
 <link href="https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+<style>
+@charset "utf-8";
+/*Fix checkboxes in zebra list*/
+.gc-chckbxrdio>li>input[type=checkbox]+label::before {
+	margin-left: -20px;
+	margin-top: 10px;
+}
+.gc-chckbxrdio>li>input[type=checkbox]+label::after {
+	margin-left: -20px;
+	margin-top: 10px;
+}
+.gc-chckbxrdio>li:nth-child(2n+1)>input[type=checkbox]+label::before {
+	margin-left: 30px;
+	margin-top: 20px;
+	background-color: #fff;
+}
+.gc-chckbxrdio>li:nth-child(2n+1)>input[type=checkbox]+label::after {
+	margin-left: 30px;
+	margin-top: 20px;
+}
+/*fix OR pattern in checklists*/
+[class*=cnjnctn-type-] {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	margin-bottom: 15px;
+	margin-left: -15px; /*was 5*/
+	margin-right: 0px;
+	margin-top: 0px; /*was 15*/
+	position: relative;
+	min-height: 60px;
+}
+/*css to remove OR line for specific pages in dental/housing*/
+[class*=cnjnctn-type-] [class*=cnjnctn-col]:not(:first-child):after {
+	background-image: none !important;
+}
+</style>
 <noscript>
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/css/noscript.min.css"/>
 </noscript>
@@ -46,7 +84,7 @@
           <div class="row">
             <div class="col-md-12">
               <ul class="list-inline mrgn-bttm-0">
-                <li> <a lang="fr" href="../fr/retourner-paiement.html"> <span class="hidden-xs">Fran&ccedil;ais</span> <abbr title="Fran&ccedil;ais" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr> </a> </li>
+                <li> <a lang="fr" href="../fr/qui-demande.html"> <span class="hidden-xs">Fran&ccedil;ais</span> <abbr title="Fran&ccedil;ais" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr> </a> </li>
               </ul>
             </div>
           </div>
@@ -119,573 +157,349 @@
   </header>
 </div>
 <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement" class="container">
-  <div class="mwsgeneric-base-html parbase section">
-    <link href="https://cra-arc.gc.ca/wet-boew/css/custom/steps.css" rel="stylesheet">
-    <!--link href="https://cra-arc.gc.ca/wet-boew/css/custom/theme-topic.css" rel="stylesheet"--> 
-    <!--link href="https://cra-arc.gc.ca/wet-boew/css/custom/noline-css.css" rel="stylesheet"--> 
+  <div class="mwsgeneric-base-html parbase section"> 
+    <!--link href="https://cra-arc.gc.ca/wet-boew/css/custom/steps.css" rel="stylesheet"-->
+    <link href="https://cra-arc.gc.ca/wet-boew/css/custom/theme-topic.css" rel="stylesheet">
+    <link href="https://cra-arc.gc.ca/wet-boew/css/custom/noline-css.css" rel="stylesheet">
     <!--link href="https://cra-arc.gc.ca/wet-boew/css/custom/and-or.css" rel="stylesheet"--> 
     <!--link href="https://test.canada.ca/covid-19-guidance/proto/css/remove-line.css" rel="stylesheet"--> 
   </div>
   <div class="mwstitle section">
-    <h1 property="name" class="wb-inv" id="wb-cont" dir="ltr">Return a payment - Canada Dental Benefit</h1>
+    <h1 property="name" class="wb-inv" id="wb-cont" dir="ltr">Who can apply - Canada Dental Benefit</h1>
   </div>
   <div class="mwsgeneric-base-html parbase section">
     <nav class="provisional gc-subway" aria-label="Section navigation">
       <h1 id="gc-document-nav">Canada Dental Benefit</h1>
       <ul class="gcnav-steps">
-        <li><a href="who-apply.html">Who can apply</a> </li>
+        <li><a class="active" aria-current="page">Who can apply</a>
+          <ul class="gcnav-steps noline">
+            <li><a href="additional-payment.html">Additional payment if dental costs are over&nbsp;$650</a></li>
+          </ul>
+        </li>
         <li><a href="how-much.html">How much you can get</a> </li>
         <li><a href="get-ready.html">Get ready to apply</a> </li>
         <li><a href="how-apply.html">How to apply</a> </li>
-        <li><a class="active" aria-current="page">Return a payment</a> </li>
+        <li><a href="return-payment.html">Return a payment</a> </li>
         <li><a href="contact.html">Contact the CRA</a></li>
       </ul>
     </nav>
-    <h1 property="name" class="gc-thickline">Return a payment</h1>
+    <h1 property="name" class="gc-thickline">Who can apply</h1>
   </div>
   <div class="mwsbodytext text parbase section">
     <div class="row">
       <div class="col-md-8">
-        <h2 class="h3 mrgn-tp-sm">On this page</h2>
-        <ul>
-          <li><a href="#why">Why you may need to repay</a></li>
-          <li><a href="#rpy">How to repay</a></li>
-        </ul>
-        <h2 id="why">Why you may need to repay</h2>
-        <!--p>If you were not eligible for the Canada Dental Benefit, you will have to return any payments you received.</p-->
-        <p>If you made a mistake or your situation changed after you applied for the Canada Dental Benefit, you may no longer be eligible. You will have to return any amounts you were not eligible for.</p>
-        <p>If your child was eligible and their dental costs were less than you received, you <strong>do not</strong> need to return any unused amounts.</p>
-        <div class="row mrgn-bttm-md mrgn-tp-lg">
-          <div class="col-xs-12">
-            <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
-              <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"><span class="fas fa-square fa-stack-2x fa-inverse">&nbsp;</span><span class="fa-stack fa-fw pull-left"><span class="fas fa-sync-alt fa-stack-2x "></span><span class="fas fa-dollar-sign fa-stack-1x"></span></span></span></div>
-              
-              <!--div class="col-xs-12">
-        <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
-          <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm text-info"> <span class="fas fa-square fa-stack-2x fa-inverse"></span> <span class="fa-stack fa-fw pull-left"><span class="far fa-circle fa-stack-2x "></span><span class="fas fa-comments-dollar fa-stack-1x"></span></span></span></div-->
-              <h3 class="pull-left mrgn-tp-0 mrgn-lft-lg h3 text-info" id="repay">Determine if you need to repay benefit amounts</h3>
-              <div class="clearfix"></div>
-              <div class="mrgn-lft-lg"> 
-                <!--p class="text-muted small">Explanation of question goes here.</p-->
-                <div class="wb-frmvld fieldflow-lg gc-font-2019">
-                  <form>
-                    <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true,  &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}}">
-                      <p>Choose the situation that applies to you:</p>
-                      <ul>
-                        <li>Your child's appointment was moved or they did not go
-                          <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
-                            <div class="wb-fieldflow-header">
-                              <p class="wb-fieldflow-label">Will your child still receive dental care between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023?</p>
-                            </div>
-                            <ul>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Not sure</li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li>You received a letter from the CRA
-                          <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
-                            <div class="wb-fieldflow-header">
-                              <p class="wb-fieldflow-label">What type of letter did you receive?</p>
-                            </div>
-                            <ul>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Notice of redetermination</li>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Request for information</li>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Not sure</li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li>Your child had access to a private dental insurance plan
-                          <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
-                            <div class="wb-fieldflow-header">
-                              <p class="wb-fieldflow-label">When did your child go to their dental appointment?</p>
-                              <ul class="fa-ul gc-font-2019">
-                                
-                              </ul>
-                            </div>
-                            <ul>
-                              <li>Before I applied
-                                <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
-                                  <div class="wb-fieldflow-header">
-                                    <p class="wb-fieldflow-label">Did your child have access to dental insurance when they went to their appointment?</p>
-                                  </div>
-                                  <ul>
-                                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
-                                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
-                                  </ul>
-                                </div>
-                              </li>
-                              <li>After I applied
-                                <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
-                                  <div class="wb-fieldflow-header">
-                                    <p class="wb-fieldflow-label">Did your child have access to dental insurance when you applied?</p>
-                                  </div>
-                                  <ul>
-                                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
-                                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
-                                  </ul>
-                                </div>
-                              </li>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-4&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Both before and after I applied</li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li>Your child's dental costs were covered by another government program
-                          <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
-                            <div class="wb-fieldflow-header">
-                              <p class="wb-fieldflow-label">Does the other government program cover all of your child's dental costs?</p>
-                            </div>
-                            <ul>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
-                              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer4-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Unsure</li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer5&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">You did not meet the eligibility criteria</li>
-                        <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer6&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">None of the above</li>
-                      </ul>
-                    </div>
-                  </form>
+        <p>There are 2 benefit periods for the interim Canada Dental Benefit. The eligibility criteria is specific to the period when your child receives dental care. Check if you meet the criteria for each child you are applying for.</p>
+        <h2 id="lgblty">Eligibility criteria</h2>
+        <div class="wb-frmvld fieldflow-lg gc-font-2019">
+          <form>
+            <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true,  &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.chcklst&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}}">
+              <p>For dental care services your child receives in:</p>
+              <ul>
+                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;.chcklst1, #action-no-msg&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Period 1: October&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023</li>
+                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;.chcklst2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Period 2: July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024</li>
+                <!--li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;.chcklst3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Additional payment</li-->
+              </ul>
+            </div>
+          </form>
+        </div>
+        
+        <!--Start of period 1 checklist-->
+        <section class="chcklst chcklst1">
+          <h3 id="lgblty-1" class="mrgn-bttm-0 h2">First benefit period - Eligibility checklist</h3>
+          <p class="text-muted mrgn-tp-0">Period&nbsp;1: October&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023</p>
+          <p class="lead">You must meet all of the following for each child you apply for:</p>
+          <ul class="checkbox-zebra gc-chckbxrdio">
+            <li class="checkbox">
+              <input type="checkbox" id="eg4" class="action-checkbox-1 cb-dmm">
+              <label for="eg4">Your child was born <strong>on or after December&nbsp;2,&nbsp;2010</strong> (under 12&nbsp;years&nbsp;old as of December&nbsp;1,&nbsp;2022)</label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg5" class="action-checkbox-1 cb-dmm">
+              <label for="eg5">
+              <p>Your child receives dental care services in Canada between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023</p>
+              <details class="mrgn-rght-md mrgn-tp-md">
+                <summary>If your child does not have a dental appointment</summary>
+                <p>We recommend you book a dental appointment for your child before applying. You must provide details about your child's dental provider and  expected appointment date when you apply.</p>
+                <p>You will need to <strong>repay</strong> amounts you received if your child does not receive dental care within this period.</p>
+              </details>
+              <details class="mrgn-rght-md mrgn-tp-md">
+                <summary>Who can provide dental care services for your child</summary>
+                <ul>
+                  <li>a dentist</li>
+                  <li>a denturist</li>
+                  <li>a dental hygienist</li>
+                </ul>
+              </details>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg6" class="action-checkbox-1 cb-dmm">
+              <label for="eg6">
+              <p>Your child does <strong>not</strong> have access to a private dental insurance plan</p>
+              <details class="mrgn-rght-md mrgn-tp-md">
+                <summary>What counts as access to private dental insurance</summary>
+                <p class="mrgn-tp-md">Your child is considered to have access to private dental insurance if:</p>
+                <ul>
+                  <li>Some or all of your child's dental costs are covered by a private dental insurance plan</li>
+                  <!--li>You or someone else has a private dental insurance plan for your child</li-->
+                  <li>Your employer provides a dental insurance plan for your child</li>
+                  <li>Your child's other parent or caregiver's employer provides a dental insurance plan for your child</li>
+                  <li>You or someone else declined an employer provided dental insurance plan that would have covered the dental care for your child</li>
+                </ul>
+              </details>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg7" class="action-checkbox-1 cb-dmm">
+              <label for="eg7">Your child's dental costs are <strong>not</strong> fully covered by another dental program provided by any level of government</label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg3" class="action-checkbox-1 cb-dmm">
+              <label for="eg3">
+              <div class="cnjnctn-type-or mrgn-tp-0">
+                <div class="cnjnctn-col">
+                  <p>You are the only parent or caregiver receiving the <abbr title="Canada Child Benefit">CCB</abbr> for your child as of December&nbsp;1,&nbsp;2022</p>
+                  <details class="mrgn-bttm-md">
+                    <summary>Who receives CCB payments</summary>
+                    <p>You must be the person who is <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-before-you-apply.html">eligible to receive CCB <span class="nowrap">payments<span class="far fa-window-restore mrgn-lft-sm mrgn-rght-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a> for your child <strong>as of December 1, 2022</strong> to apply for the dental benefit.</p>
+                    <p>If you are getting the CCB, you can see your payments in "Benefits and credits" in your <a href="https://canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a>. If there are no CCB payments and you have a spouse or common-law partner, they should check their account.</p>
+                    <p>You can also review your bank statements or the name is on the cheques.</p>
+                  </details>
                 </div>
-                
-                <!--Start of FF answers-->
-                <div id="answers">
-                  <div id="answer1-1" class="alert alert-info alert1 hidden">
-                    <h4>You can keep the benefit</h4>
-                    <p>Based on your response, you can keep the benefit for your child.</p>
-                    <p>You do <strong>not</strong> have to call the CRA if your child's dental appointment was rescheduled within the same benefit period.</p>
-                    <p>Keep your receipts for 6 years in case the CRA needs to validate your eligibility. </p>
-                  </div>
-                  <div id="answer1-2" class="alert alert-warning alert1 hidden">
-                    <h4>You will need to repay</h4>
-                    <p>If your child does not receive dental care in this benefit period, you will need to repay.</p>
-                  </div>
-                  <div id="answer1-3" class="alert alert-warning alert1 hidden">
-                    <h4>You may need to repay</h4>
-                    <p>If your child does not receive dental care in this benefit period, you will need to repay.</p>
-                  </div>
-                  <div id="answer2-1" class="alert alert-warning alert1 hidden">
-                    <h4>Repay the amount from your letter</h4>
-                    <p>The CRA has determined that you were not eligible for the benefit. Follow the instructions in your letter to repay the amount due.</p>
-                    <p><a href="validation.html#h-4">If your application was denied</a> and you do not agree with the decision, you may be able to request a second review.</p>
-                  </div>
-                  <div id="answer2-2" class="alert alert-info alert1 hidden">
-                    <h4>Provide additional information requested by the CRA</h4>
-                    <p>You must respond <strong>within 30 days</strong> or you may need to repay the benefit. We may call you or your dental care provider to confirm the information you provide.</p>
-                    <p>For details: <a href="validation.html">Validating your application</a>.</p>
-                    <!--p>Make sure the documents you send are clear and easy to read. On the top of all documents you send, print your Social Insurance Number and the reference number from your letter.</p>
-                    <details>
-                      <summary>Documents you may need to provide</summary>
-                      <p class="mrgn-tp-md">To validate your eligibility, you may need to provide <strong>one</strong> of the following:</p>
-                      <ul class="mrgn-tp-sm mrgn-bttm-md">
-                        <li>receipt for dental care services</li>
-                        <li>invoice for dental care services</li>
-                        <li>dental statement of account</li>
-                        <li>letter from the dental care provider</li>
-                      </ul>
-                      <p>Your document must include:</p>
-                      <ul class="mrgn-tp-sm mrgn-bttm-0">
-                        <li>name and address of your child</li>
-                        <li>name and address of the dental care provider</li>
-                        <li>date of the dental appointment</li>
-                        <li>cost of the dental care service</li>
-                      </ul>
-                    </details>
-                    <details>
-                      <summary>How to submit your validation documents</summary>
-                      <dl class="dl-horizontal brdr-0">
-                        <dt id="validate-online">Online</dt>
-                        <dd>
-                          <p class="mrgn-tp-0"><strong>Submit your documents through CRA My Account</strong></p>
-                          <ol>
-                            <li>Sign in to your <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html">CRA My Account</a></li>
-                            <li>Select "Submit documents" (in left navigation)</li>
-                            <li>Enter your reference number</li>
-                            <li>Select tax year 2021, 2022, or 2023 from the dropdown</li>
-                            <li>Enter a short description and upload your files</li>
-                          </ol>
-                        </dd>
-                        <dt id="validate-mail">By mail</dt>
-                        <dd>
-                          <p class="mrgn-tp-0"><strong>Mail your documents to:</strong></p>
-                          <ul class="lst-none">
-                            <li>Canada Dental Benefit</li>
-                            <li>P.O. Box XXXXX</li>
-                            <li>CITY, PR XXXXX</li>
-                          </ul>
-                        </dd>
-                        <dt id="validate-fax">By fax</dt>
-                        <dd>
-                          <p class="mrgn-tp-0"><strong>Send your documents by fax</strong></p>
-                          <ol>
-                            <li>Include a cover sheet with your full name, SIN, reference number, a daytime phone number, and the number of pages you're faxing</li>
-                            <li>Label the cover sheet "Supporting documents for Canada Dental Benefit"</li>
-                            <li>Fax your documents to <strong><span class="nowrap">1-833-325-0555</span></strong></li>
-                          </ol>
-                        </dd>
-                      </dl>
-                    </details--> 
-                  </div>
-                  <div id="answer2-3" class="alert alert-info alert1 hidden">
-                    <h4>Contact us if you're unsure</h4>
-                    <p>In your letter, you may be asked to provide more information to <a href="validation.html">validate your application</a>.</p>
-                    <p>If there is a phone number in your letter, use that number to call us. If you cannot find a phone number, contact the CRA at <a href="tel:18007158836" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-715-8836<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-715-8836</strong>.</p>
-                  </div>
-                  <div id="answer3-1" class="alert alert-warning alert1 hidden">
-                    <h4>You must repay</h4>
-                    <p>Since your child had access to a private dental insurance plan when they went to their dental appointment, you must repay the benefit.</p>
-                    <p>You must repay the amount for each child who is in the same situation.</p>
-                  </div>
-                  <div id="answer3-2" class="alert alert-info alert1 hidden">
-                    <h4>You can keep the benefit</h4>
-		    <p>Your child’s appointment must have been within the benefit period.</p>
-                    <p>Based on your responses, you can keep the benefit for your child.</p>
-                  </div>
-                  <div id="answer3-3" class="alert alert-warning alert1 hidden">
-                    <h4>You must repay</h4>
-                    <p>Since your child had access to a private dental insurance plan when you applied, you must repay the benefit.</p>
-                    <p>You must repay the amount for each child who is in the same situation.</p>
-                  </div>
-                  <div id="answer3-4" class="alert alert-info alert1 hidden">
-                    <h4>You may be able to keep the benefit</h4>
-                    <p>You may <strong>not</strong> need to repay if:</p>
-                    <ul>
-                      <li>your child did not have access to dental insurance when you applied, but got insurance later</li>
-                      <li>your child had access to dental insurance when you applied but they already received dental care while not insured</li>
-                    </ul>
-                    <p class="mrgn-tp-md">If you are still concerned you might need to repay, contact the CRA at <a href="tel:18007158836" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-715-8836<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-715-8836</strong>.</p>
-                  </div>
-                  <div id="answer4-1" class="alert alert-warning alert1 hidden">
-                    <h4>You must repay</h4>
-                    <p>Since you did <strong>not</strong> pay any of your child's dental costs, you must repay the benefit.</p>
-                    <p>You must repay the amount for each child who is in the same situation.</p>
-                  </div>
-                  <div id="answer4-2" class="alert alert-info alert1 hidden">
-                    <h4>You can keep the benefit</h4>
-                    <p>Since you had to pay for some of your child's dental costs, you can keep the benefit.</p>
-                  </div>
-                  <div id="answer4-3" class="alert alert-info alert1 hidden">
-                    <h4>Only repay if your child's dental costs are fully covered</h4>
-                    <p>Wait to find out how much of your child's dental costs were covered by the other government program.</p>
-                    <p>If your child's dental costs are fully reimbursed or paid for by the other program, you must repay the Canada Dental Benefit.</p>
-                  </div>
-                  <div id="answer5" class="alert alert-warning alert1 hidden">
-                    <h4>You must repay</h4>
-                    <p>Since you did <strong>not</strong> meet the eligibility criteria, you must repay the benefit.</p>
-                    <p>You must repay the amount for each child who was not eligible.</p>
-                  </div>
-                  <div id="answer6" class="alert alert-warning alert1 hidden">
-                    <h4>Contact us if you're unsure about repaying</h4>
-                    <p>If you are still concerned you might need to repay, contact the CRA at <a href="tel:18007158836" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-715-8836<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-715-8836</strong>.</p>
-                  </div>
+                <div class="cnjnctn-col">
+                  <p>You have shared custody of your child and receive half of the CCB for your child as of December&nbsp;1,&nbsp;2022</p>
+                  <details>
+                    <summary>Shared custody benefit amounts are split</summary>
+                    <p>If your child only lives with you part-time, you may be considered to have shared custody for the Canada Child Benefit (CCB). This benefit uses the same custody arrangement as the CCB as of December&nbsp;1,&nbsp;2022.</p>
+                    <p>Your Canada Dental Benefit payment will be adjusted to 50% of your benefit amount based on your own adjusted family net income. This means you may receive a different amount than your child's other parent.</p>
+                  </details>
                 </div>
-                <!--End of FF answers--> 
-                
               </div>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg1" class="action-checkbox-1 cb-dmm">
+              <label for="eg1">
+              <p>You filed your 2021 taxes</p>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg2" class="action-checkbox-1 cb-dmm">
+              <label for="eg2">
+              <div class="cnjnctn-type-or mrgn-tp-0">
+                <div class="cnjnctn-col">
+                  <p>Your spouse or common-law partner filed their 2021 taxes</p>
+                </div>
+                <div class="cnjnctn-col">
+                  <p>You do not have a spouse or common-law partner as of December&nbsp;1,&nbsp;2022</p>
+                </div>
+              </div>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg8" class="action-checkbox-1 cb-dmm">
+              <label for="eg8">
+              <p>Your adjusted family net income is less&nbsp;than&nbsp;$90,000 in&nbsp;2021</p>
+              <details class="mrgn-rght-md mrgn-tp-md">
+                <summary>How your adjusted family net income is calculated</summary>
+                <p class="mrgn-tp-md">The CRA calculates your adjusted family net income for this benefit based on your 2021 tax returns.</p>
+                <p>You do not need to calculate this number, but you can use it to <a href="how-much.html">estimate your benefit amount</a>.</p>
+              </details>
+              </label>
+            </li>
+          </ul>
+          
+          <!--No boxes checked-->
+          <div class="alert alert-info provisional" id="action-no-msg-1">
+            <h4>You need all of the above to be eligible</h4>
+            <div>
+              <p>To be eligible for the Canada Dental Benefit, you must meet all of the above criteria for each child you apply for.</p>
+              <p>If you have more than one child, check your eligibility for each child.</p>
+            </div>
+          </div>
+          <!--All boxes checked-->
+          <div class="alert alert-success hidden provisional" id="action-msg1-1">
+            <h4>You may be eligible for this benefit</h4>
+            <div>
+              <p>You can apply for your child <strong>until June&nbsp;30,&nbsp;2023</strong> for dental care your child receives between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023.</p>
+              <p>When you apply, you will need to provide details to confirm your eligibility.</p>
+              <p>Find out <a href="how-much.html">how much you can get</a>.</p>
+            </div>
+          </div>
+          <!--Some boxes checked-->
+          <div class="alert alert-warning hidden provisional" id="action-msg2-1">
+            <h4>You need all of the above to be eligible</h4>
+            <div>
+              <p>To be eligible for the Canada Dental Benefit, you must meet all of the above criteria for each child you apply for.</p>
+              <p>If you have more than one child, check your eligibility for each child.</p>
+            </div>
+          </div>
+        </section>
+        <!--End of period 1 checklist--> 
+        <!--Start of period 2 checklist-->
+        
+        <div class="hidden chcklst chcklst2">
+          <h3 id="lgblty-2" class="mrgn-bttm-0 h2">Second benefit period - Eligibility checklist</h3>
+          <p class="text-muted mrgn-tp-0">Period 2: July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024 <span class="label label-warning">Status: Opens on July&nbsp;1,&nbsp;2023</span></p>
+          <p class="lead">You must meet all of the following for each child you apply for:</p>
+          <ul class="checkbox-zebra gc-chckbxrdio">
+            <li class="checkbox">
+              <input type="checkbox" id="eg4-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg4-2">Your child was born <strong>on or after July&nbsp;2,&nbsp;2011</strong> (under&nbsp;12&nbsp;years&nbsp;old as of July&nbsp;1,&nbsp;2023)</label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg5-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg5-2">
+              <p>Your child receives dental care services in Canada between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024</p>
+              <details class="mrgn-rght-md mrgn-tp-md">
+                <summary>If your child does not have a dental appointment</summary>
+                <p>We recommend you book a dental appointment for your child before applying. You must provide details about your child's dental provider and  expected appointment date when you apply.</p>
+                <p>You will need to <strong>repay</strong> amounts you received if your child does not receive dental care within this period.</p>
+              </details>
+              <details class="mrgn-rght-md mrgn-tp-md">
+                <summary>Who can provide dental care services for your child</summary>
+                <ul>
+                  <li>a dentist</li>
+                  <li>a denturist</li>
+                  <li>a dental hygienist</li>
+                </ul>
+              </details>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg6-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg6-2">
+              <p>Your child does <strong>not</strong> have access to a private dental insurance plan</p>
+              <details class="mrgn-rght-md mrgn-tp-md">
+                <summary>What counts as access to private dental insurance</summary>
+                <p class="mrgn-tp-md">Your child is considered to have access to private dental insurance if:</p>
+                <ul>
+                  <li>Some or all of your child's dental costs are covered by a private dental insurance plan</li>
+                  <li>Your employer provides a dental insurance plan for your child</li>
+                  <li>Your child's other parent or caregiver's employer provides a dental insurance plan for your child</li>
+                  <li>You or someone else declined an employer provided dental insurance plan that would have covered the dental care for your child </li>
+                </ul>
+              </details>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg7-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg7-2">Your child's dental costs are <strong>not</strong> fully covered by another dental program provided by any level of government</label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg3-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg3-2">
+              <div class="cnjnctn-type-or mrgn-tp-0">
+                <div class="cnjnctn-col">
+                  <p>You are the only parent or caregiver receiving the <abbr title="Canada Child Benefit">CCB</abbr> for your child as of July&nbsp;1,&nbsp;2023</p>
+                  <details>
+                    <summary>Who receives CCB payments</summary>
+                    <p>You must be the person who is <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-before-you-apply.html">eligible to receive CCB <span class="nowrap">payments<span class="far fa-window-restore mrgn-lft-sm mrgn-rght-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a> for your child <strong>as of July 1, 2023</strong> to apply for the dental benefit.</p>
+                    <p>If you are getting the CCB, you can see your payments in "Benefits and credits" in your <a href="https://canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a>. If there are no CCB payments and you have a spouse or common-law partner, they should check their account.</p>
+                    <p>You can also review your bank statements or the name is on the cheques.</p>
+                  </details>
+                </div>
+                <div class="cnjnctn-col">
+                  <p>You have shared custody of your child and receive half of the CCB for your child as of July&nbsp;1,&nbsp;2023</p>
+                  <details>
+                    <summary>Shared custody benefit amounts are split</summary>
+                    <p>If your child only lives with you part-time, you may be considered to have shared custody for the Canada Child Benefit (CCB). This benefit uses the same custody arrangement as the CCB as of July&nbsp;1,&nbsp;2023.</p>
+                    <p>Your Canada Dental Benefit payment will be adjusted to 50% of your benefit amount based on your own adjusted family net income. This means you may receive a different amount than your child's other parent.</p>
+                  </details>
+                </div>
+              </div>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg1-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg1-2">
+              <p>You filed your 2022 taxes</p>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg2-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg2-2">
+              <div class="cnjnctn-type-or mrgn-tp-0">
+                <div class="cnjnctn-col">
+                  <p>Your spouse or common-law partner filed their 2022 taxes</p>
+                </div>
+                <div class="cnjnctn-col">
+                  <p>You do not have a spouse or common-law partner as of July&nbsp;1,&nbsp;2023</p>
+                </div>
+              </div>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg8-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg8-2">
+              <p>Your adjusted family net income is less&nbsp;than&nbsp;$90,000 in&nbsp;2022</p>
+              <details class="mrgn-rght-md mrgn-tp-md">
+                <summary>How your adjusted family net income is calculated</summary>
+                <p class="mrgn-tp-md">The CRA calculates your adjusted family net income for this benefit based on your 2022 tax returns.</p>
+                <p>You do not need to calculate this number, but you can use it to <a href="how-much.html">estimate your benefit amount</a>.</p>
+              </details>
+              </label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" id="eg9-2" class="action-checkbox-2 cb-dmm">
+              <label for="eg9-2">
+              No one has applied for the additional payment for your child's dental costs in the first benefit period
+              <details>
+                <summary>If you have shared custody</summary>
+                <p>If your child only lives with you part-time, you may be considered to have shared custody for the Canada Child Benefit (CCB). If you are splitting the benefit amounts and your custody arrangement has <strong>not changed</strong> since December&nbsp;1,&nbsp;2022, it does not matter when your child's other parent applies.</p>
+                <p>Each parent may receive a <strong>maximum of 2 payments</strong> for each eligible child.</p>
+              </details>
+              </label>
+            </li>
+          </ul>
+          
+          <!--No boxes checked-->
+          <div class="alert alert-info provisional" id="action-no-msg-2">
+            <h4>You need all of the above to be eligible</h4>
+            <div>
+              <p>To be eligible for the Canada Dental Benefit, you must meet all of the above criteria for each child you apply for.</p>
+              <p>If you have more than one child, check your eligibility for each child.</p>
+            </div>
+          </div>
+          <!--All boxes checked-->
+          <div class="alert alert-success hidden provisional" id="action-msg1-2">
+            <h4>You may be eligible for this benefit</h4>
+            <div>
+              <p>You can start applying on <strong>July&nbsp;1,&nbsp;2023</strong> for dental care your child receives between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024.</p>
+              <p>When you apply, you will need to provide details to confirm your eligibility.</p>
+              <p>Find out <a href="how-much.html">how much you can get</a>.</p>
+            </div>
+          </div>
+          <!--Some boxes checked-->
+          <div class="alert alert-warning hidden provisional" id="action-msg2-2">
+            <h4>You need all of the above to be eligible</h4>
+            <div>
+              <p>To be eligible for the Canada Dental Benefit, you must meet all of the above criteria for each child you apply for.</p>
+              <p>If you have more than one child, check your eligibility for each child.</p>
             </div>
           </div>
         </div>
-        <h3>If you provide false information</h3>
-        <p>If you are found to have misrepresented or concealed essential information to make a claim, you will be ineligible for the benefit amounts you received and cannot apply again. You will have to return any payments you received.</p>
-        <p>If you think you made an honest mistake, <a href="contact.html">contact us</a>.</p>
+        <!--End of period 2 checklist--> 
         
-        <!--p>Individuals who intentionally made fraudulent claims may face additional consequences.</p-->
-        <h2 id="rpy">How to repay</h2>
-        <p>If you were not eligible for the Canada Dental Benefit, you must return the amount you received for each child who was not eligible.</p>
-        <ol class="lst-stps">
-          <li>
-            <h3>Find out how much you received</h3>
-            <p>To confirm your amounts received:</p>
-            <ul>
-              <li>check your bank statements or cheques</li>
-              <li>check your payments under "Benefits and credits" in your CRA My Account</li>
-              <li>contact the CRA at <a href="tel:18007158836" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-715-8836<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-715-8836</strong></li>
-            </ul>
-          </li>
-          <li>
-            <h3>Determine how much to repay</h3>
-            <p>The benefit paid a set amount for each child. You must return the amount you received for each child who was not eligible. The amount you received per child depended on your adjusted family net income.</p>
-            <h4 id="amounts">Benefit amounts per eligible child</h4>
-            <div class="table-responsive">
-              <table aria-labelledby="amounts" class="table table-bordered table-responsive table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col"><a class="wb-lbx" href="#afni">Adjusted family net <span class="nowrap">income<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a></th>
-                    <th scope="col"><a class="wb-lbx" href="#full"><span class="nowrap">Full custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
-                    <th scope="col"><a class="wb-lbx" href="#shared"><span class="nowrap">Shared custody<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></span></a> amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">less than $70,000</th>
-                    <td>$650</td>
-                    <td>$325</td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><span class="nowrap">$70,000 to $79,999</span></th>
-                    <td>$390</td>
-                    <td>$195</td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><span class="nowrap">$80,000 to $89,999</span></th>
-                    <td>$260</td>
-                    <td>$130</td>
-                  </tr>
-                  <!--tr>
-              <th scope="row">$90,000 or more</th>
-              <td>not eligible</td>
-              <td>not eligible</td>
-            </tr-->
-                </tbody>
-              </table>
-            </div>
-          </li>
-          <!--Use this instead of the tabbed interface if options are same as CCB-->
-          <li>
-            <h3>Make a repayment</h3>
-            <p>You can make your repayment to the CRA online, by mail, or in person.</p>
-            <p>For options, go to <a href="https://www.canada.ca/en/revenue-agency/services/payments-cra/individual-payments/make-payment.html">make a payment</a></p>
-            <details>
-              <summary>If you have the original cheque</summary>
-              <p>You should only return the original cheque if you need to repay the full amount. You may return it by mail to the address below.</p>
-              <ul class="lst-none">
-                <li>Revenue Processing – Repayment of ???<br>
-                  Sudbury Tax Centre <br>
-                  1050 Notre Dame Avenue <br>
-                  Sudbury ON P3A 0C3</li>
-              </ul>
-              <p class="mrgn-tp-md">Be sure to include:</p>
-              <ol>
-                <li>The reason for returning the cheque ("not entitled" or "overpayment")</li>
-                <li>Your Social Insurance Number (SIN) </li>
-              </ol>
-            </details>
-            <h4>If you cannot pay in full</h4>
-            <p>The CRA <strong>does not</strong> charge interest on Canada Dental Benefit debts.</p>
-            <details>
-              <summary>If you need more time to repay</summary>
-              <p>Contact the CRA to help you <a href="https://www.canada.ca/en/revenue-agency/services/payments-cra/payment-arrangements.html">arrange to pay your debt over time</a>.</p>
-              <p>If the CRA has already contacted you about your debt, get details for the <a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/when-you-money-collections-cra/benefits-overpayment-recovery.html">collection of overpayments</a>.</p>
-            </details>
-            <details>
-              <summary>If you do not repay</summary>
-              <p>If you are <a href="https://www.canada.ca/en/revenue-agency/services/payments-cra/individual-payments/unable-pay.html">unable to pay</a> your debt right now or unable to pay it at all, contact the CRA to discuss your options.</p>
-              <p>The CRA may keep all or a portion of future payments, income tax refunds, or goods and services tax/harmonized sales tax (GST/HST) credits until your balance owing is repaid.</p>
-              <p>This may also apply to other federal, provincial, and territorial programs that the CRA administers.</p>
-            </details>
-          </li>
-        </ol>
-        <section id="afni" class="mfp-hide modal-dialog modal-content overlay-def">
-          <header class="modal-header">
-            <h2 class="modal-title">Your adjusted family net income</h2>
-          </header>
-          <div class="modal-body">
-            <div id="ajax-afni">
-              <p>You do not need to calculate your adjusted family net income. The CRA calculates this number for you to determine your eligibility for certain benefits.</p>
-              <p>You can use the <a href="how-much.html#h-2">estimator tool</a> if you want to estimate your adjusted family net income and your benefit amount.</p>
-              <p>Adjusted family net income is determined using your net income, <abbr title="Registered Disability Savings Plan">RDSP</abbr>, and <abbr title="Universal Child Care Benefit">UCCB</abbr> amounts from your:</p>
-              <ul>
-                <li><strong>2021 tax return</strong> for the first benefit period (October&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023)</li>
-                <li><strong>2022 tax return</strong> for the second benefit period (July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024)</li>
-              </ul>
-              <p>If you have a spouse or common-law partner, their information will be included in the calculation.</p>
-            </div>
-          </div>
-        </section>
-        <section id="full" class="mfp-hide modal-dialog modal-content overlay-def">
-          <header class="modal-header">
-            <h2 class="modal-title">Full custody</h2>
-          </header>
-          <div class="modal-body">
-            <div id="ajax-full">
-              <p>The dental benefit uses the same custody arrangement as the Canada Child Benefit (CCB) as of:</p>
-              <ul>
-                <li>December 1, 2022 for first benefit period</li>
-                <li>July 1, 2023 for second benefit period</li>
-              </ul>
-              <p>You must have either full or shared custody to receive the CCB. If you have full custody for the CCB, you will be the only one receiving the CCB. If you are not eligible to receive the CCB for your child, you cannot apply for the Canada Dental Benefit.</p>
-              <p>If your <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-after-you-apply.html#change">CCB custody arrangement has changed</a>, make sure you update your information with the CRA.</p>
-              <h3>What counts as full custody for the CCB</h3>
-              <p>If the child lives with you more than 60% of the time, you are considered to have <strong>full custody</strong> for the purposes of the CCB.</p>
-              <p>For example, the child lives with you during the week and with another individual every second weekend.</p>
-              <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-before-you-apply.html#shared">CCB child custody arrangements</a></p>
-            </div>
-          </div>
-        </section>
-        <section id="shared" class="mfp-hide modal-dialog modal-content overlay-def">
-          <header class="modal-header">
-            <h2 class="modal-title">Shared custody</h2>
-          </header>
-          <div class="modal-body">
-            <div id="ajax-shared">
-              <p>The dental benefit uses the same custody arrangement as the Canada Child Benefit (CCB) as of:</p>
-              <ul>
-                <li>December 1, 2022 for first benefit period</li>
-                <li>July 1, 2023 for second benefit period</li>
-              </ul>
-              <p>You must have either full or shared custody to receive the CCB. If you have shared custody for the CCB, both you and your child's other parent will be receiving the CCB. If you are not eligible to receive the CCB for your child, you cannot apply for the Canada Dental Benefit.</p>
-              <p>If your <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-after-you-apply.html#change">CCB custody arrangement has changed</a>, make sure you update your information with the CRA.</p>
-              <h3>What counts as shared custody for the CCB</h3>
-              <p>If the child lives with you at least 40% of the time or on an approximately equal basis with you and another individual at a different address, then both individuals are considered to have <strong>shared custody</strong> for the purposes of the CCB.</p>
-              <p>For example, the child lives with you one week and with another individual one week, or with you 4 days a week and with the other individual 3 days a week (between 40% and 60%).</p>
-              <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-before-you-apply.html#shared">CCB child custody arrangements</a></p>
-            </div>
-          </div>
-        </section>
-        
-        <!--h2 id="h-2">How to repay</h2>
-    <p>If you received any benefit payments that you were not eligible for, you have options to pay back what you owe in full or over time.</p>
-    <ol class="lst-stps">
-      <li><h3>Find out how much you need to repay</h3>
-		  <p>Lead-in for list:</p>
-        <ul>
-          <li>check your bank statements for the amount you received</li>
-          <li>check your statement of account in CRA My Account <span class="label label-danger">if available</span></li>
-          <li>contact the CRA to speak to a call agent</li>
-        </ul>
-      </li>
-		<li><h3>Choose your payment method</h3>
-			<p>For options, go to <a href="https://www.canada.ca/en/revenue-agency/services/payments-cra/individual-payments/make-payment.html">make a payment</a></p></li>
-    </ol--> 
-        
-        <!--h2 id="rpy">How to repay</h2>
-    <p>If you received any dental benefit payments that you were not eligible for, you have options to pay back what you owe in full or over time.</p>
-    <h3>Options to pay back your overpayments in full</h3>
-    <p>You can make your repayment to the CRA online, by mail, or in person.</p>
-    <div class="wb-tabs">
-      <div class="tabpanels">
-        <details id="online" open>
-          <summary>Pay online</summary>
-          <div class="accordion">
-            <h3 class="mrgn-tp-md">CRA My Account:</h3>
-            <ul class="list-inline">
-              <li class="mrgn-rght-md"><span class="fas fa-check text-success"></span> Interac Debit</li>
-              <li class="mrgn-rght-md"><span class="fas fa-check text-success"></span> Visa Debit</li>
-              <li><span class="fas fa-check text-success"></span> Debit Mastercard</li>
-            </ul>
-            <details class="acc-group">
-              <summary class="wb-toggle tgl-tab" data-toggle="{&quot;parent&quot;: &quot;.accordion&quot;, &quot;group&quot;: &quot;.acc-group&quot;}">How to pay online with your CRA My Account</summary>
-              <div class="tgl-panel">
-                <ol class="mrgn-tp-md">
-                  <li>Sign in to CRA My Account </li>
-                  <li>Find <strong>???</strong></li>
-                  <li>Select <strong>???</strong></li>
-                </ol>
-                <p>Keep a copy of your transaction receipt for your records.</p>
-              </div>
-            </details>
-            <p class="mrgn-bttm-lg mrgn-tp-sm"><a class="btn btn-call-to-action mrgn-bttm-0" href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html">Sign in to CRA My Account</a></p>
-            <h3>CRA My Payment:</h3>
-            <ul class="list-inline">
-              <li class="mrgn-rght-md"><span class="fas fa-check text-success"></span> Interac Debit</li>
-              <li class="mrgn-rght-md"><span class="fas fa-check text-success"></span> Visa Debit</li>
-              <li><span class="fas fa-check text-success"></span> Debit Mastercard</li>
-            </ul>
-            <details class="acc-group">
-              <summary class="wb-toggle tgl-tab" data-toggle="{&quot;parent&quot;: &quot;.accordion&quot;, &quot;group&quot;: &quot;.acc-group&quot;}">How to pay online with CRA My Payment</summary>
-              <div class="tgl-panel">
-                <p class="mrgn-tp-md">CRA My Payment lets you pay directly to the CRA with your bank card.</p>
-                <ol>
-                  <li>Go to <a href="https://www.canada.ca/en/revenue-agency/services/e-services/payment-save-time-pay-online.html" target="_blank">Pay now with My <span class="nowrap">Payment<i title="Opens in a new tab" class="far fa-window-restore mrgn-lft-sm"></i></span></a></li>
-                  <li>Select the <strong>Pay now</strong> button</li>
-                  <li>Select payment type: <strong>???</strong> in Step 1</li>
-                  <li>Select payment allocation: <strong>???</strong> in Step 2 and follow the instructions </li>
-                </ol>
-                <p>Keep a copy of your transaction receipt for your records.</p>
-              </div>
-            </details>
-            <h3>Online banking:</h3>
-            <ul class="list-inline">
-              <li><span class="fas fa-check text-success"></span> Canadian financial institutions</li>
-            </ul>
-            <details class="acc-group">
-              <summary class="wb-toggle tgl-tab" data-toggle="{&quot;parent&quot;: &quot;.accordion&quot;, &quot;group&quot;: &quot;.acc-group&quot;}">How to pay using your online banking service</summary>
-              <div class="tgl-panel">
-                <ol class="mrgn-tp-md">
-                  <li>Sign in to your financial institution's online service </li>
-                  <li>Under "Add a payee", look for an option such as <strong>???</strong> or <strong>???</strong> to repay the CRA-administered <span class="nowrap">dental</span> benefit</li>
-                  <li>Enter your 9-digit Social Insurance Number (SIN) as the CRA account number</li>
-                </ol>
-              </div>
-            </details>
-            <h3>Other online services:</h3>
-            <ul class="list-inline">
-              <li><span class="fas fa-check text-success"></span> Credit card</li>
-              <li><span class="fas fa-check text-success"></span> Debit card</li>
-              <li><span class="fas fa-check text-success"></span> PayPal</li>
-              <li><span class="fas fa-check text-success"></span> Interac e-Transfer</li>
-            </ul>
-            <details class="acc-group mrgn-bttm-lg">
-              <summary class="wb-toggle tgl-tab" data-toggle="{&quot;parent&quot;: &quot;.accordion&quot;, &quot;group&quot;: &quot;.acc-group&quot;}">How to pay online with PaySimply</summary>
-              <div class="tgl-panel">
-                <p class="mrgn-tp-md">PaySimply is a third-party service provider (service fees apply).</p>
-                <ol>
-                  <li>Go to <a href="https://www.paysimply.ca/cra/" rel="external"><span class="nowrap">PaySimply<span class="fas fa-external-link-alt mrgn-lft-sm"></span></span><span class="wb-inv"> (external link)</span></a></li>
-                  <li>Select <strong>???</strong></li>
-                  <li>Fill in the <strong>Taxpayer Details</strong> and follow the instructions to complete the payment process</li>
-                </ol>
-              </div>
-            </details>
-          </div>
-        </details>
-        <details id="mail">
-          <summary>Pay by mail</summary>
-          <h3 class="mrgn-tp-md">Send a payment by mail:</h3>
-          <ul class="list-inline">
-            <li class="mrgn-rght-md"><span class="fas fa-check text-success"></span> Cheque</li>
-            <li class="mrgn-rght-md"><span class="fas fa-check text-success"></span> Money order</li>
-            <li><span class="fas fa-times text-danger"></span> Cash (not accepted)</li>
+        <!--Start of extra checklist-->
+        <div class="hidden chcklst chcklst3">
+          <h3 id="lgblty-3">Eligibility criteria for the additional payment</h3>
+          <p>If you meet all the conditions above, you may be eligible for an additional payment if:</p>
+          <ul>
+            <li>Your child's dental costs were more than $650 for services received between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023</li>
+            <li>No one will be applying for the Canada Dental Benefit for services your child received between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024.</li>
           </ul>
-          <h3 class="mrgn-tp-md">How to pay with a Canadian cheque or money order</h3>
-          <p>Cash is not accepted.</p>
-          <ol>
-            <li>Make the cheque or money order payable to <strong>Receiver General for Canada</strong> </li>
-            <li>Specify the name of the benefit you are repaying</li>
-            <li>Indicate which eligibility period you are repaying</li>
-            <li>Include your Social Insurance Number (SIN) </li>
-            <li>Mail the cheque or money order to:
-              <ul class="lst-none">
-                <li>Revenue Processing – Repayment of ???<br>
-                  Sudbury Tax Centre <br>
-                  1050 Notre Dame Avenue <br>
-                  Sudbury ON P3A 0C3</li>
-              </ul>
-            </li>
-          </ol>
-          <p>If your payment is not honoured, the CRA will charge a fee.</p>
-          <h3>If you have the original cheque</h3>
-          <p>You may return it by mail to the address above.</p>
-          <p>Be sure to include:</p>
-          <ol>
-            <li>The reason for returning the cheque ("not entitled" or "overpayment")</li>
-            <li>Your Social Insurance Number (SIN) </li>
-          </ol>
-        </details>
-        <details id="person">
-          <summary>Pay in person</summary>
-          <h3 class="mrgn-tp-md">Make a payment at Canada Post:</h3>
-          <ul class="list-inline">
-            <li class="mrgn-rght-md"><span class="fas fa-check text-success"></span> Debit card</li>
-            <li><span class="fas fa-check text-success"></span> Cash</li>
-          </ul>
-          <h3 class="mrgn-tp-md">How to pay at a Canada Post location with a QR code</h3>
-          <p>You need a <abbr title="Quick Response">QR</abbr> code to pay at a Canada Post location (service fees apply).</p>
-          <ol>
-            <li><a href="https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra/pay-canada-post.html">Create a QR code</a></li>
-            <li>Bring your QR code to a Canada Post outlet to make your payment </li>
-          </ol>
-        </details>
-      </div>
-    </div>
-    <h3>If you cannot repay your overpayment in full</h3>
-    <p>Contact the CRA to help you <a href="https://www.canada.ca/en/revenue-agency/services/payments-cra/payment-arrangements.html">arrange to pay your debt over time</a>. The CRA <strong>does not</strong> charge interest on Canada Dental Benefit debts.</p--> 
-        <!--Add when collections process starts
-    <p>If the CRA has already contacted you about your debt, get details for the <a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/when-you-money-collections-cra/benefits-overpayment-recovery.html">Collection of overpayments</a>.</p>
-    <h3>If you are unable to repay</h3>
-    <p>The CRA may keep all or a portion of future benefit payments, income tax refunds, or goods and services tax/harmonized sales tax (GST/HST) credits until your balance owing is repaid.</p>
-    <p>This may also apply to other federal, provincial, and territorial programs that the CRA administers.</p--> 
+        </div>
+        <!--End of extra checklist-->
+        <h3>Additional payment for higher dental costs</h3>
+        <p>An additional payment may be available <strong>starting on July&nbsp;1,&nbsp;2023</strong> for some eligible children. You may meet the criteria if you are not applying for both benefit periods and your child's dental costs are more than $650 in the period you apply for. You must have already applied and been eligible in order to meet the <a href="additional-payment.html">criteria for the additional payment</a>.</p>
+        <!--p><strong>For details:</strong> <a href="additional-payment.html">Additional payment if dental costs are over $650</a></p-->
+        <h2>Verifying your eligibility</h2>
+        <p>The CRA regularly checks to confirm if people were eligible for the payments they received.</p>
+        <p>If your application is selected for review, we may ask for more information to validate your application. If you are found to be ineligible or cannot provide the required information, you will have to <a href="return-payment.html">return any payments</a> you received.</p>
+        <p>If you are found to have misrepresented or concealed essential information to make a claim, you will be ineligible for the benefit amounts you received and cannot apply again for any of your children.</p>
+        <p>Additional consequences or penalties may also be applied.</p>
+        <p>To report suspected misuse, go to: <a href="https://www.canada.ca/en/revenue-agency/programs/about-canada-revenue-agency-cra/suspected-tax-cheating-in-canada-overview.html">CRA's Leads program</a>.</p>
       </div>
     </div>
   </div>
@@ -695,7 +509,7 @@
         <nav role="navigation" class="mrgn-bttm-lg mrgn-tp-lg">
           <h3 class="wb-inv">Section navigation</h3>
           <ul class="pager">
-            <li class="next"><a href="contact.html" rel="next"><span class="wb-inv">Next: </span>Contact the CRA</a></li>
+            <li class="next"><a href="how-much.html" rel="next"><span class="wb-inv">Next: </span>How much you can get</a></li>
           </ul>
         </nav>
       </div>
@@ -711,7 +525,7 @@
                 <input type="hidden" name="institutionopt" value="CRA">
                 <input type="hidden" name="themeopt" value="Taxes">
                 <input type="hidden" name="sectionopt" value="NewBen">
-                <input type="hidden" name="pageTitle" value="Return a payment - Canada Dental Benefit">
+                <input type="hidden" name="pageTitle" value="Who can apply - Canada Dental Benefit">
                 <input type="hidden" name="emailTemplate" value="servcan/gc-pagesuccessen">
                 <div class="gc-pg-hlpfl-btn">
                   <div class="row row-no-gutters">
@@ -822,6 +636,51 @@
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/ep-pp.min.js"></script> 
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script> 
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script> 
+<script>
+/*Select first radio button*/
+var checkLoad = setInterval(function () {			
+	if ($("input[value^='Period 1']").length) {
+			($("input[value^='Period 1']")).prop("checked",true);
+			clearInterval(checkLoad);
+			}
+	}, 100);
+</script> 
+<script>
+        $(".action-checkbox-1").change(function() {
+            if ($('.action-checkbox-1:checked').length == $('.action-checkbox-1').length) {
+                $("#action-msg1-1").removeClass("hidden").addClass("visible");
+                $("#action-no-msg-1, #action-msg2-1").addClass("hidden").removeClass("visible");
+            }
+
+            if ($('.action-checkbox-1:checked').length !== $('.action-checkbox-1').length) {
+                $("#action-msg1-1, #action-no-msg-1").addClass("hidden").removeClass("visible");
+                $("#action-msg2-1").removeClass("hidden").addClass("visible");
+            }
+
+            if ($('.action-checkbox-1:checked').length == 0) {
+                $("#action-msg1-1, #action-msg2-1").addClass("hidden").removeClass("visible");
+                $("#action-no-msg-1").removeClass("hidden").addClass("visible");
+            }
+        })
+</script> 
+<script>
+        $(".action-checkbox-2").change(function() {
+            if ($('.action-checkbox-2:checked').length == $('.action-checkbox-2').length) {
+                $("#action-msg1-2").removeClass("hidden").addClass("visible");
+                $("#action-no-msg-2, #action-msg2-2").addClass("hidden").removeClass("visible");
+            }
+
+            if ($('.action-checkbox-2:checked').length !== $('.action-checkbox-2').length) {
+                $("#action-msg1-2, #action-no-msg-2").addClass("hidden").removeClass("visible");
+                $("#action-msg2-2").removeClass("hidden").addClass("visible");
+            }
+
+            if ($('.action-checkbox-2:checked').length == 0) {
+                $("#action-msg1-2, #action-msg2-2").addClass("hidden").removeClass("visible");
+                $("#action-no-msg-2").removeClass("hidden").addClass("visible");
+            }
+        })
+</script> 
 <script src="https://test.canada.ca/covid-19-guidance/proto/js/alpha-banner.js"></script>
 </body>
 </html>
