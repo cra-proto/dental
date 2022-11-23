@@ -1177,7 +1177,8 @@ fieldset fieldset {
   			return 0;
   		},
   		partnerWorld: function () {
-  			if (this.hasWorld() === true) {
+  			let relation = relationship();
+  			if (this.hasWorld() === true && relation.partner === true) {
   				return parseInt($("#partnerWorldIncome").val(), 10) || 0;
   			}
   			return 0;
