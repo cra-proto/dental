@@ -555,6 +555,7 @@ fieldset fieldset {
                     <div class="input-group col-sm-4 col-xs-7"> <span class="input-group-addon">$</span>
                       <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                       <span class="input-group-addon">.00</span> </div>
+                    <p class="small">Include world income received when you were not a resident of Canada.</p>
                   </div>
                   <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group">
                     <label for="partnerWorldIncome">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s world income for
@@ -564,11 +565,12 @@ fieldset fieldset {
                     <div class="input-group col-sm-4 col-xs-7"> <span class="input-group-addon">$</span>
                       <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
                       <span class="input-group-addon">.00</span> </div>
+                    <p class="small">Include world income received when they were not a resident of Canada.</p>
                   </div>
                 </div>
                 <section id="worldIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
                   <header class="modal-header">
-                    <h2 class="modal-title">Household world income</h2>
+                    <h2 class="modal-title">World income</h2>
                   </header>
                   <div class="modal-body">
                     <p>All residents of Canada are required to report their world income when they file an income tax return. You might have to file an additional statement to report your world income if you were resident in another country for all or part of
@@ -1177,8 +1179,7 @@ fieldset fieldset {
   			return 0;
   		},
   		partnerWorld: function () {
-  			let relation = relationship();
-  			if (this.hasWorld() === true && relation.partner === true) {
+  			if (this.hasWorld() === true) {
   				return parseInt($("#partnerWorldIncome").val(), 10) || 0;
   			}
   			return 0;
