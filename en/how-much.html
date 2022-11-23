@@ -627,7 +627,7 @@ fieldset fieldset {
                         <input type="text" name="partnerRdspIncome" size="7" maxlength="7" value="" id="partnerRdspIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
-                    <p class="small visible-sm visible-xs" data-has-partner="true">This is line 12500 on your <span data-partner-case="false">spouse</span>'s
+                    <p class="hidden" data-partner-info="true">This is line 12500 on your <span data-partner-case="false">spouse</span>'s
                       <time data-eligible="year">2021</time>
                       tax return.</p>
                     <p class="small visible-md visible-lg">This is line 12500 on<span data-has-partner="true"> you and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
@@ -654,7 +654,7 @@ fieldset fieldset {
                         <input type="text" name="partnerRdspRepayment" size="7" maxlength="7" value="" id="partnerRdspRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
-                    <p class="small visible-sm visible-xs" data-has-partner="true">This is the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts that is entered on line 23200 of your <span data-partner-case="false">spouse</span>'s
+                    <p class="hidden" data-partner-info="true">This is the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts that is entered on line 23200 of your <span data-partner-case="false">spouse</span>'s
                       <time data-eligible="year">2021</time>
                       tax return.</p>
                     <p class="small visible-md visible-lg">This is the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts that is entered on line 23200 of<span data-has-partner="true"> you and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
@@ -716,7 +716,7 @@ fieldset fieldset {
                         <input type="text" name="partnerUccbIncome" size="7" maxlength="7" value="" id="partnerUccbIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
-                    <p class="small visible-sm visible-xs" data-has-partner="true">This is line 11700 of your <span data-partner-case="false">spouse</span>'s
+                    <p class="hidden" data-partner-info="true">This is line 11700 of your <span data-partner-case="false">spouse</span>'s
                       <time data-eligible="year">2021</time>
                       tax return.</p>
                     <p class="small visible-md visible-lg">This is line 11700 of<span data-has-partner="true"> you and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
@@ -743,7 +743,7 @@ fieldset fieldset {
                         <input type="text" name="partnerUccbRepayment" size="7" maxlength="7" value="" id="partnerUccbRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
                         <span class="input-group-addon">.00</span> </div>
                     </div>
-                    <p class="small visible-sm visible-xs" data-has-partner="true">This is line 21300 of your <span data-partner-case="false">spouse</span>'s
+                    <p class="hidden" data-partner-info="true">This is line 21300 of your <span data-partner-case="false">spouse</span>'s
                       <time data-eligible="year">2021</time>
                       tax return.</p>
                     <p class="small visible-md visible-lg">This is line 21300 of<span data-has-partner="true"> you and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
@@ -1329,6 +1329,7 @@ fieldset fieldset {
   		$("[data-input-col1=true]").removeClass("col-md-12");
   		$("[data-input-col1=true] .input-group").addClass("col-sm-7 col-xs-8");
   		$("[data-input-col1=true] .input-group").removeClass("col-sm-4 col-xs-7");
+                $("[data-partner-info=true]").attr("class", "small visible-sm visible-xs");
   		$("[data-partner-case=true]").text(relation.relationType.toLowerCase());
   		$("[data-partner-case=false]").text(relation.relationType.toLowerCase());
   		if (relation.partnerShorten !== null) {
@@ -1344,6 +1345,7 @@ fieldset fieldset {
   		$("[data-input-col1=true]").removeClass("col-md-6");
   		$("[data-input-col1=true] .input-group").addClass("col-sm-4 col-xs-7");
   		$("[data-input-col1=true] .input-group").removeClass("col-sm-7 col-xs-8");
+                $("[data-partner-info=true]").attr("class", "hidden");
   	}
   	updateWorldIncReq(relation.partner);
   	updateResults();
