@@ -1253,10 +1253,10 @@ fieldset fieldset {
   		$("[data-input-col1=true] .input-group").addClass("col-sm-7 col-xs-8");
   		$("[data-input-col1=true] .input-group").removeClass("col-sm-4 col-xs-7");
                 $("[data-partner-info=true]").attr("class", "small visible-sm visible-xs");
-  		$("[data-partner-case=true]").text(relation.relationType.toLowerCase());
+  		$("[data-partner-case=true]").text(relation.relationType);
   		$("[data-partner-case=false]").text(relation.relationType.toLowerCase());
   		if (relation.partnerShorten !== null) {
-  			$("[data-partner-case=true][data-shortform=true]").text(relation.partnerShorten.toLowerCase());
+  			$("[data-partner-case=true][data-shortform=true]").text(relation.partnerShorten);
   			$("[data-partner-case=false][data-shortform=true]").text(relation.partnerShorten.toLowerCase());
   		}
   	} else {
