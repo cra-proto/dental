@@ -1137,7 +1137,7 @@ fieldset fieldset {
   			return this.net() + this.partner() + this.world() + this.partnerWorld();
   		},
   		avgFamNet: function () {
-  			return this.household() - (this.rdsp() + this.partnerRdsp() + this.uccb() + this.partnerUccb()) + (rdspRepayment() + partnerRdspRepayment() + uccbRepayment() + partnerUccbRepayment());
+  			return Math.max(0, this.household() - (this.rdsp() + this.partnerRdsp() + this.uccb() + this.partnerUccb()) + (rdspRepayment() + partnerRdspRepayment() + uccbRepayment() + partnerUccbRepayment()));
   		}
   	},
   	benefitAmt_perChild = function () {
