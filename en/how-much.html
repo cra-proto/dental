@@ -553,7 +553,7 @@ fieldset fieldset {
                       </span> <span class="wb-inv">(dollars only, no cents)</span><strong id="worldIncomeRequire" class="required hidden"> (required)</strong></label>
                     <!--<a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>-->
                     <div class="input-group col-sm-4 col-xs-7"> <span class="input-group-addon">$</span>
-                      <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
+                      <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" inputmode="numeric" pattern="[0-9]*" data-rule-digits="true">
                       <span class="input-group-addon">.00</span> </div>
                     <p class="small">Include world income received when you were not a resident of Canada.</p>
                   </div>
@@ -563,7 +563,7 @@ fieldset fieldset {
                       </span> <span class="wb-inv">(dollars only, no cents)</span></label>
                     <!--<a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">What is world income?</span></a>-->
                     <div class="input-group col-sm-4 col-xs-7"> <span class="input-group-addon">$</span>
-                      <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" data-msg="Please enter only digits.">
+                      <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" inputmode="numeric" pattern="[0-9]*" data-rule-digits="true">
                       <span class="input-group-addon">.00</span> </div>
                     <p class="small">Include world income received when they were not a resident of Canada.</p>
                   </div>
