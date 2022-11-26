@@ -1203,8 +1203,6 @@ fieldset fieldset {
           $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world() + income.partnerWorld()));
           $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + partnerRdspRepayment() + partnerUccbRepayment()));
           $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.partnerRdsp() + income.uccb() + income.partnerUccb()));
-          $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + partnerRdspRepayment() + partnerUccbRepayment()));
-          $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.partnerRdsp() + income.uccb() + income.partnerUccb()));
       } else {
           $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world()));
           $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment()));
