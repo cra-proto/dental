@@ -1625,7 +1625,11 @@
                     return parseInt($("#partnerUccbIncome").val(), 10) || 0;
                 }, 
                 household: function() {
-                    return this.net() + this.partner() + this.world() + this.partnerWorld();
+                    if (relationship().partner === true) {
+                        return this.net() + this.partner() + this.world() + this.partnerWorld();
+                    } else {
+                        return this.net() + this.world();
+                    }
                 },
                 avgFamNet: function() {
                     return this.household() - (this.rdsp() + this.uccb()) + (rdspRepayment() + uccbRepayment());
@@ -1688,9 +1692,19 @@
                 }
                 $("[data-output=net-income-value]").html(currencyFormatter.format(income.net()));
                 $("[data-output=partner-net-income-value]").html(currencyFormatter.format(income.partner()));
-                $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world() + income.partnerWorld()));
-                $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + partnerRdspRepayment() + partnerUccbRepayment()));
-                $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.partnerRdsp() + income.uccb() + income.partnerUccb()));
+                if (relation.partner === true) {
+                    $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world() + income.partnerWorld()));
+                    $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + partnerRdspRepayment() + partnerUccbRepayment()));
+                    $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.partnerRdsp() + income.uccb() + income.partnerUccb()));
+                    $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment() + partnerRdspRepayment() + partnerUccbRepayment()));
+                    $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.partnerRdsp() + income.uccb() + income.partnerUccb()));
+                } else {
+                    $("[data-output=family-world-income-value]").html(currencyFormatter.format(income.world()));
+                    $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment()));
+                    $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.partnerRdsp()));
+                    $("[data-output=adjusted-payment-value]").html(currencyFormatter.format(rdspRepayment() + uccbRepayment()));
+                    $("[data-output=adjusted-income-value]").html(currencyFormatter.format(income.rdsp() + income.uccb()));
+                }
                 $("[data-output=household-income-value]").html(currencyFormatter.format(income.household()));
                 $("[data-output=avg-fam-net-income-value]").html(currencyFormatter.format(income.avgFamNet()));
                 if (income.avgFamNet() < income.max_eligible_household) {
