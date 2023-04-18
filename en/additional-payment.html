@@ -266,14 +266,14 @@
                     </div>
                     <!--All boxes checked-->
                     <div tabindex="0" class="alert alert-success hidden provisional" id="action-msg1-1">
-                      <p class="text-muted small">Based on your selections above:</p>
+                      <p class="text-muted small">Based on your selections:</p>
                       <h4>You meet the criteria</h4>
                       <p>You may be eligible for the additional payment for the first benefit period. Both payments would be the same as your <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/how-much.html#h-1">benefit amount for each eligible child</a>.</p>
                       <p>Applications open on <strong>July&nbsp;1,&nbsp;2023</strong>.</p>
                     </div>
                     <!--Some boxes checked-->
                     <div tabindex="0" class="alert alert-warning hidden provisional" id="action-msg2-1">
-                      <p class="text-muted small">Based on your selections above:</p>
+                      <p class="text-muted small">Based on your selections:</p>
                       <h4>You may not meet the criteria</h4>
                       <p>You must meet all of the above criteria to be eligible for the additional payment for the first benefit period.</p>
                       <p>If you do not meet the criteria, <a href="../who-apply.html#lgblty">check if you are eligible for the second benefit period</a>.</p>
@@ -288,7 +288,7 @@
               <div class="col-xs-12">
                 <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
                   <div class="pstn-lft-xs pstn-tp-xs"><span class="fa-stack fa-fw mrgn-lft-sm"> <span class="fas fa-square fa-stack-2x fa-inverse"></span> <span class="far fa-calendar-alt fa-stack-2x text-info"></span></span></div>
-                  <h3 class="pull-left mrgn-tp-0 mrgn-lft-lg text-info" id="p2">Second benefit period:July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024</h3>
+                  <h3 class="pull-left mrgn-tp-0 mrgn-lft-lg text-info" id="p2">Second benefit period: July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024</h3>
                   <div class="clearfix"></div>
                   <div class="mrgn-lft-lg">
                     <p class="lead mrgn-tp-md mrgn-bttm-sm">You could be eligible for an <strong>additional payment</strong> if:</p>
@@ -298,6 +298,12 @@
                         <label for="eg2-2">
                         <p>You are eligible and applied for the second benefit period (July&nbsp;1,&nbsp;2023 to June&nbsp;30,&nbsp;2024)</p>
                         <p><a href="../who-apply.html#lgblty"> Check eligibility for the second benefit period</a></p>
+                        </label>
+                      </li>
+                      <li class="checkbox" id="chbx-ap2-appt">
+                        <input type="checkbox" id="eg0-2" class="action-checkbox-2 cb-dmm" data-gc-analytics-customclick="CRA|ARC:Dental - additional-payment:P2-0 eligible for P1 checkbox">
+                        <label for="eg0-2">
+                        <p>Your child's dental appointment has already occurred</p>
                         </label>
                       </li>
                       <li class="checkbox" id="chbx-ap2-cost">
@@ -340,18 +346,26 @@
                       <li class="checkbox" id="chbx-ap2-p1">
                         <input type="checkbox" id="eg4-2" class="action-checkbox-2 cb-dmm" data-gc-analytics-customclick="CRA|ARC:Dental - additional-payment:P2-4 p1 checkbox" >
                         <label for="eg4-2">
-                        <p>You would have met the eligibility criteria for the first benefit period if your child had gone to the dentist</p>
-                        <details class="mrgn-rght-md">
-                          <summary>How can I check?</summary>
-                          <p>If you would have met the criteria, you will see the option to apply for the additional payment in your CRA My Account.</p>
-                          <p>If you don't see the option to apply, you may be ineligible for one of these reasons:</p>
-                          <ul>
-                            <li>You did not receive the December 1, 2022 CCB payment</li>
-                            <li>Your adjusted family net income was more than $90,000 in 2021</li>
-                            <li>You did not file your 2021 taxes</li>
+                        <p>You would have met the eligibility criteria for the first benefit period (October&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023), but either:</p>
+                        <ul>
+                          <li>your child did not receive dental care during that period</li>
+                          <li>you did not apply</li>
+                        </ul>
+                        <details class="mrgn-rght-md mrgn-tp-md">
+                          <summary>Check if you were eligible</summary>
+                          <h4>If you have CRA My Account</h4>
+                          <p>You will see the option to apply for the additional payment in your CRA My Account if you met the criteria.</p>
+                          <p>If you do not see this option, it may be for one of these reasons:</p>
+                          <ul class="mrgn-bttm-md">
+                            <li>You were not the parent or caregiver who received the December&nbsp;1,&nbsp;2022 CCB payment</li>
+                            <li>Your 2021 adjusted family net income was too high to qualify (more than $90,000)</li>
+                            <li>You did not file your 2021&nbsp;taxes</li>
                           </ul>
-                          <p>If you did not file your 2021 taxes, you may be eligibe for the additional payment after you file your taxes.</p>
-                          <p><a href="../who-apply.html#lgblty"> Check eligibility for the first benefit period</a></p>
+                          <p>If you have not filed your 2021&nbsp;taxes yet, you may still be able to apply for the additional payment after getting your 2021 notice of assessment.</p>
+                          <!--p>You are not eligible to apply for the additional payment if you have not received the December 1, 2022 CCB payment or your adjusted family net income was more than $90,000 in 2021.</p--> 
+                          <!--p><a href="../who-apply.html#lgblty"> Check eligibility for the first benefit period</a></p-->
+                          <h4>If you do not have CRA My Account</h4>
+                          <p>Check your <a href="../who-apply.html#lgblty">eligibility for the first benefit period</a> before applying by phone.</p>
                         </details>
                         </label>
                       </li>
@@ -383,14 +397,14 @@
                     </div>
                     <!--All boxes checked-->
                     <div tabindex="0" class="alert alert-success hidden provisional mrgn-tp-sm" id="action-msg1-2">
-                      <p class="text-muted small">Based on your selections above:</p>
-                      <h4>You may meet the criteria</h4>
+                      <p class="text-muted small">Based on your selections:</p>
+                      <h4>You meet the criteria</h4>
                       <p>You must apply for your child's first payment for the second benefit period  before you can apply for the additional payment. Both payments would be the same as your <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/how-much.html#h-1">benefit amount for each eligible child</a>.</p>
                       <p>Applications open on <strong>July&nbsp;1,&nbsp;2023</strong>.</p>
                     </div>
                     <!--Some boxes checked-->
                     <div tabindex="0" class="alert alert-warning hidden provisional mrgn-tp-sm" id="action-msg2-2">
-                      <p class="text-muted small">Based on your selections above:</p>
+                      <p class="text-muted small">Based on your selections:</p>
                       <h4>You may not meet the criteria</h4>
                       <p>You must meet all of the above criteria to be eligible for the additional payment for the second benefit period.</p>
                     </div>
