@@ -134,7 +134,7 @@
   <div class="mwsgeneric-base-html parbase section">
     <div class="row">
       <div class="col-md-8">
-        <p> Answer the questions below. Complete any steps you are missing to make it easier to apply for the benefit. </p>
+        <p>Answer the questions below. Complete any steps you are missing to make it easier to apply for the benefit. </p>
         <div class="row mrgn-bttm-md">
           <div class="col-xs-12">
             <div class="brdr-lft mrgn-lft-md mrgn-tp-sm">
@@ -146,99 +146,159 @@
                 <div class="wb-frmvld fieldflow-lg gc-font-2019">
                   <form>
                     <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden", "live": true}}'>
+                    <div class="wb-fieldflow-header">
+                      <p class="wb-fieldflow-label"> Select the payment you are applying for: </p>
+                      <!--p class="text-muted">Use the period when your child received or will receive dental care.</p-->
+                      <ul class="fa-ul text-muted mrgn-bttm-lg">
+                        <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 1: October 1, 2022 to June 30, 2023</li>
+                        <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 2: July 1, 2023 to June 30, 2024</li>
+                      </ul>
+                    </div>
+                    <ul>
+                    <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-p1", "class": "hidden", "live": true}'>Period 1: Original payment</li>
+                    <li>Period 2: Original payment
+                      <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden", "live": true}}'>
                       <div class="wb-fieldflow-header">
-                        <p class="wb-fieldflow-label"> Select the period you are applying for: </p>
-                        <p class="text-muted">Use the period when your child received or will receive dental care.</p>
+                        <p class="wb-fieldflow-label"> Have you filed your 2022 income taxes? </p>
                       </div>
                       <ul>
-                        <li> Period 1: October 1, 2022 to June 30, 2023
-                          <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden", "live": true}}'>
+                        <li> Yes
+                          <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
                             <div class="wb-fieldflow-header">
-                              <p class="wb-fieldflow-label"> Did you already receive a Canada Dental Benefit payment for the first period? </p>
+                              <p class="wb-fieldflow-label"> If you have a spouse or common-law partner, have they also filed their 2022 taxes? </p>
+                              <p class="text-muted"> Use your marital status as of July&nbsp;1&nbsp;2023. </p>
                             </div>
                             <ul>
-                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-0a", "class": "hidden", "live": true}'> Yes </li>
-                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-0b", "class": "hidden", "live": true}'> No </li>
+                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-1-p2", "class": "hidden", "live": true}'> Yes, they have filed </li>
+                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-p2", "class": "hidden", "live": true}'> No, they have not filed yet
+                                <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                                  <div class="wb-fieldflow-header">
+                                    <p class="wb-fieldflow-label"> Did your spouse or common-law partner become a resident of Canada for tax purposes in 2022 or 2023? </p>
+                                  </div>
+                                  <ul>
+                                    <li> Yes
+                                      <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                                        <div class="wb-fieldflow-header">
+                                          <p class="wb-fieldflow-label"> Did they submit a statement of world income for 2022? </p>
+                                        </div>
+                                        <ul>
+                                          <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-1-p2", "class": "hidden", "live": true}'> Yes </li>
+                                          <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-2-p2", "class": "hidden", "live": true}'> No </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-3-p2", "class": "hidden", "live": true}'> No </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-3-p2", "class": "hidden", "live": true}'> I do not have a spouse or common-law partner </li>
                             </ul>
                           </div>
                         </li>
-                        <li> Period 2: July 1, 2023 to June 30, 2024
-                          <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden", "live": true}}'>
-                          <div class="wb-fieldflow-header">
-                            <p class="wb-fieldflow-label"> Have you filed your 2022 income taxes? </p>
+                        <li> No
+                          <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                            <div class="wb-fieldflow-header">
+                              <p class="wb-fieldflow-label"> Did you become a resident of Canada for tax purposes in 2022 or 2023? </p>
+                            </div>
+                            <ul>
+                              <li> Yes
+                                <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                                  <div class="wb-fieldflow-header">
+                                    <p class="wb-fieldflow-label"> Did you submit a statement of world income for 2022? </p>
+                                  </div>
+                                  <ul>
+                                    <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-4-p2", "class": "hidden", "live": true}'> Yes </li>
+                                    <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-5-p2", "class": "hidden", "live": true}'> No </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-6-p2", "class": "hidden", "live": true}'> No </li>
+                            </ul>
                           </div>
-                          <ul>
-                            <li> Yes
-                              <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
-                                <div class="wb-fieldflow-header">
-                                  <p class="wb-fieldflow-label"> If you have a spouse or common-law partner, have they also filed their 2022 taxes? </p>
-                                  <p class="text-muted"> Use your marital status as of July&nbsp;1&nbsp;2023. </p>
-                                </div>
-                                <ul>
-                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-1-p2", "class": "hidden", "live": true}'> Yes, they have filed </li>
-                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-p2", "class": "hidden", "live": true}'> No, they have not filed yet
-                                    <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
-                                      <div class="wb-fieldflow-header">
-                                        <p class="wb-fieldflow-label"> Did your spouse or common-law partner become a resident of Canada for tax purposes in 2022 or 2023? </p>
-                                      </div>
-                                      <ul>
-                                        <li> Yes
-                                          <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
-                                            <div class="wb-fieldflow-header">
-                                              <p class="wb-fieldflow-label"> Did they submit a statement of world income for 2022? </p>
-                                            </div>
-                                            <ul>
-                                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-1-p2", "class": "hidden", "live": true}'> Yes </li>
-                                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-2-p2", "class": "hidden", "live": true}'> No </li>
-                                            </ul>
-                                          </div>
-                                        </li>
-                                        <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-3-p2", "class": "hidden", "live": true}'> No </li>
-                                      </ul>
-                                    </div>
-                                  </li>
-                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-3-p2", "class": "hidden", "live": true}'> I do not have a spouse or common-law partner </li>
-                                </ul>
-                              </div>
-                            </li>
-                            <li> No
-                              <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
-                                <div class="wb-fieldflow-header">
-                                  <p class="wb-fieldflow-label"> Did you become a resident of Canada for tax purposes in 2022 or 2023? </p>
-                                </div>
-                                <ul>
-                                  <li> Yes
-                                    <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
-                                      <div class="wb-fieldflow-header">
-                                        <p class="wb-fieldflow-label"> Did you submit a statement of world income for 2022? </p>
-                                      </div>
-                                      <ul>
-                                        <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-4-p2", "class": "hidden", "live": true}'> Yes </li>
-                                        <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-5-p2", "class": "hidden", "live": true}'> No </li>
-                                      </ul>
-                                    </div>
-                                  </li>
-                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-6-p2", "class": "hidden", "live": true}'> No </li>
-                                </ul>
-                              </div>
-                            </li>
-                          </ul>
                         </li>
                       </ul>
+                    </li>
+                    <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-ap1", "class": "hidden", "live": true}'>Period 1: Additional payment </li>
+                    <li>Period 2: Additional payment
+                      <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden", "live": true}}'>
+                      <div class="wb-fieldflow-header">
+                        <p class="wb-fieldflow-label">Have you filed your 2021 income taxes? </p>
+                        <p class="text-muted">You must have already filed your 2022 taxes before you applied for the original payment.</p>
+                      </div>
+                      <ul>
+                        <li>Yes
+                          <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                            <div class="wb-fieldflow-header">
+                              <p class="wb-fieldflow-label">If you have a spouse or common-law partner, have they also filed their 2021 taxes? </p>
+                              <p class="text-muted">Use your marital status as of December&nbsp;1&nbsp;2022. </p>
+                            </div>
+                            <ul>
+                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-1", "class": "hidden", "live": true}'>Yes, they have filed </li>
+                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2", "class": "hidden", "live": true}'>No, they have not filed yet
+                                <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                                  <div class="wb-fieldflow-header">
+                                    <p class="wb-fieldflow-label">Did your spouse or common-law partner become a resident of Canada for tax purposes in 2021 or 2022? </p>
+                                  </div>
+                                  <ul>
+                                    <li>Yes
+                                      <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                                        <div class="wb-fieldflow-header">
+                                          <p class="wb-fieldflow-label">Did they submit a statement of world income for 2021? </p>
+                                        </div>
+                                        <ul>
+                                          <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-1", "class": "hidden", "live": true}'>Yes </li>
+                                          <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-2", "class": "hidden", "live": true}'>No </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-2-3", "class": "hidden", "live": true}'> No </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-3", "class": "hidden", "live": true}'> I do not have a spouse or common-law partner </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li> No
+                          <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                            <div class="wb-fieldflow-header">
+                              <p class="wb-fieldflow-label"> Did you become a resident of Canada for tax purposes in 2021 or 2022? </p>
+                            </div>
+                            <ul>
+                              <li> Yes
+                                <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert0", "class": "hidden"}}'>
+                                  <div class="wb-fieldflow-header">
+                                    <p class="wb-fieldflow-label"> Did you submit a statement of world income for 2021? </p>
+                                  </div>
+                                  <ul>
+                                    <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-4", "class": "hidden", "live": true}'> Yes </li>
+                                    <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-5", "class": "hidden", "live": true}'> No </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer0-6", "class": "hidden", "live": true}'> No </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
                     </div>
                   </form>
                 </div>
-                <div id="answers0"> <!--P1 addition payment-->
-                  <div id="answer0-0a" class="alert alert-success alert0 provisional hidden">
-                    <p> Great. Since you applied for the first benefit period, you meet the tax filing requirement for the <a href="#additionalPayment-help" aria-controls="additionalPayment-help" class="wb-lbx" role="button">additional payment for dental costs over $650<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></a>.</p>
+                <div id="answers0"> 
+                  <!--P1 original payment-->
+                  <div id="answer0-p1" class="alert alert-danger alert0 provisional hidden">
+                    <h2 class="h4">You can no longer apply for this payment for period 1</h2>
+                    <p>The last day to apply for period 1 was <strong>June 30, 2023</strong>.</p>
+                    <p>If you did <strong>not</strong> apply for period 1, you may be <a href="who-apply.html#lgblty-2">eligible</a> to apply for both the original payment and the <a href="#additionalPayment-help" aria-controls="additionalPayment-help" class="wb-lbx" role="button">additional payment<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></a> for period 2.</p>
+                  </div>
+                  <!--P1 addition payment-->
+                  <div id="answer0-ap1" class="alert alert-info alert0 provisional hidden">
+                    <p>To be eligible for the <a href="#additionalPayment-help" aria-controls="additionalPayment-help" class="wb-lbx" role="button">additional payment for dental costs over $650<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></a> you must have received a payment for the first period. This means you meet the tax filing requirement.</p>
+                    <!--p> Great. If you applied for the first benefit period, you meet the tax filing requirement for the <a href="#additionalPayment-help" aria-controls="additionalPayment-help" class="wb-lbx" role="button">additional payment for dental costs over $650<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></a>.</p-->
                     <div class="mrgn-tp-md">
                       <p> Next, go to: <a href="#confirm-registration"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="far fa-user-circle fa-stack-2x"></span></span>Confirm</span> you have access to your CRA My Account</a>. </p>
                     </div>
-                  </div>
-                  <!--P1 regular payment-->
-                  <div id="answer0-0b" class="alert alert-danger alert0 provisional hidden">
-                    <h2 class="h4">You can no longer apply the first benefit period</h2>
-                    <p>The last day to apply for the first benefit period was <strong>June 30, 2023</strong>.</p>
                   </div>
                   <!--P2 you and spouse filed taxes or you filed, no spouse-->
                   <div id="answer0-1-p2" class="alert alert-success alert0 provisional hidden">
@@ -301,6 +361,67 @@
                     </div>
                     <p> For information on how to file, go to: <a href="https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax/get-ready-taxes.html">Get ready to do your taxes</a>. </p>
                   </div>
+                  <!--AP2 you and spouse filed taxes or you filed, no spouse-->
+                  <div id="answer0-1" class="alert alert-success alert0 provisional hidden">
+                    <p> Great. Your 2021 tax returns will be used to determine if you're eligible for the benefit. </p>
+                    <div class="mrgn-tp-md">
+                      <p> Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>. </p>
+                    </div>
+                  </div>
+                  <!--AP2 you filed, non-resident spouse filed SOI-->
+                  <div id="answer0-2-1" class="alert alert-success alert0 provisional hidden">
+                    <p> Great. We will need this information to determine if you're eligible for the benefit. </p>
+                    <div class="mrgn-tp-md">
+                      <p> Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>. </p>
+                    </div>
+                  </div>
+                  <!--AP2 you filed, non-resident spouse did not file SOI-->
+                  <div id="answer0-2-2" class="alert alert-warning alert0 provisional hidden">
+                    <p> Your spouse or common-law partner must file their 2021 tax return or submit a statement of world income before you can apply. </p>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-apply.html#additional">Additional documents to apply for the CCB</a> </p>
+                    </div>
+                  </div>
+                  <!--AP2 you filed, spouse did not-->
+                  <div id="answer0-2-3" class="alert alert-warning alert0 provisional hidden">
+                    <p> Your spouse or common-law partner must file their 2021 taxes before you can apply. </p>
+                    <p> For information on how to file, go to: <a href="https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax/get-ready-taxes.html">Get ready to do your taxes</a>. </p>
+                  </div>
+                  <!--AP2 you filed, no spouse-->
+                  <div id="answer0-3" class="alert alert-success alert0 provisional hidden">
+                    <p> Since you've filed your 2021 tax return, you're ready for the next step. </p>
+                    <div class="mrgn-tp-md">
+                      <p> Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>. </p>
+                    </div>
+                  </div>
+                  <!--AP2 World income, filed a statement of income-->
+                  <div id="answer0-4" class="alert alert-success alert0 provisional hidden">
+                    <p> Great. We will need your 2021 world income to determine if you're eligible for the benefit. </p>
+                    <p> If you have a spouse or common-law partner, we will also need their information. They must file a 2021 tax return or submit a statement of world income before you can apply. </p>
+                    <div class="mrgn-tp-md">
+                      <p> Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>. </p>
+                    </div>
+                  </div>
+                  <!--AP2 World income, did not file-->
+                  <div id="answer0-5" class="alert alert-warning alert0 provisional hidden">
+                    <p> You will need to apply for the Canada Child Benefit (CCB) and provide your personal information and world income. If you have a spouse or common-law partner, you will also need to provide their information. </p>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-apply.html#additional">Additional documents to apply for the CCB</a> </p>
+                    </div>
+                    <p> If you already applied for the CCB and your 2021 world income is missing, you can call the benefit line at <a href="tel:18003871193" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-387-1193<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-387-1193</strong> to provide that information. </p>
+                  </div>
+                  <!--AP2 Did not file-->
+                  <div id="answer0-6" class="alert alert-warning alert0 provisional hidden">
+                    <h3> You must file your 2021 taxes before you can apply </h3>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> If you have a spouse or common-law partner, they will also need to file their 2021 taxes. </p>
+                    </div>
+                    <p> Generally, a tax return will be assessed within 2&nbsp;weeks if filed electronically or 8 weeks if sent by mail. Make sure your return is assessed before you apply for the Canada Dental Benefit. </p>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> If you have no taxable income in 2021, you still need to report your income as zero on your 2021 tax return. </p>
+                    </div>
+                    <p> For information on how to file, go to: <a href="https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax/get-ready-taxes.html">Get ready to do your taxes</a>. </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -318,12 +439,65 @@
                   <form>
                     <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert3", "class": "hidden", "live": true}}'>
                     <div class="wb-fieldflow-header">
-                      <p class="wb-fieldflow-label"> Select the period you are applying for: </p>
-                      <p class="text-muted">Use the period when your child received or will receive dental care.</p>
+                      <p class="wb-fieldflow-label"> Select the payment you are applying for: </p>
+                      <!--p class="text-muted">Use the period when your child received or will receive dental care.</p-->
+                      <ul class="fa-ul text-muted mrgn-bttm-lg">
+                        <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 1: October 1, 2022 to June 30, 2023</li>
+                        <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 2: July 1, 2023 to June 30, 2024</li>
+                      </ul>
                     </div>
                     <ul>
-                      <li> Period 1: October 1, 2022 to June 30, 2023
+                      <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-p1", "class": "hidden", "live": true}'>Period 1: Original payment</li>
+                      <li>Period 2: Original payment
                         <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert3", "class": "hidden", "live": true}}'>
+                          <div class="wb-fieldflow-header">
+                            <p class="wb-fieldflow-label"> Do you receive CCB payments for your child as of July&nbsp;1,&nbsp;2023? </p>
+                          </div>
+                          <ul>
+                            <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-1-p2", "class": "hidden", "live": true}'> Yes </li>
+                            <li> No
+                              <div class="wb-fieldflow-sub" data-wb-fieldflow='{"renderas": "radio", "gcChckbxrdio":true, "isoptional": true, "reset": {"action": "addClass", "source": ".alert3", "class": "hidden"}}'>
+                                <div class="wb-fieldflow-header">
+                                  <p class="wb-fieldflow-label"> Who receives CCB payments for your child as of July&nbsp;1,&nbsp;2023? </p>
+                                </div>
+                                <ul>
+                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-2-p2", "class": "hidden", "live": true}'> My spouse or common-law partner </li>
+                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-3-p2", "class": "hidden", "live": true}'> My child's other parent or caregiver who does not live with me </li>
+                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-4-p2", "class": "hidden", "live": true}'> No one receives CCB payments for my child </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-5-p2", "class": "hidden", "live": true}'> Not sure </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-ap1", "class": "hidden", "live": true}'>Period 1: Additional payment</li>
+                      <li>Period 2: Additional payment
+                        <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert3", "class": "hidden", "live": true}}'>
+                          <div class="wb-fieldflow-header">
+                            <p class="wb-fieldflow-label"> Do you receive CCB payments for your child as of December&nbsp;1,&nbsp;2022? </p>
+                            <p class="text-muted">You also need to recieve the July 1, 2023 CCB payment. You must have received that payment before you applied for the original payment.</p>
+                          </div>
+                          <ul>
+                            <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-1", "class": "hidden", "live": true}'> Yes </li>
+                            <li> No
+                              <div class="wb-fieldflow-sub" data-wb-fieldflow='{"renderas": "radio", "gcChckbxrdio":true, "isoptional": true, "reset": {"action": "addClass", "source": ".alert3", "class": "hidden"}}'>
+                                <div class="wb-fieldflow-header">
+                                  <p class="wb-fieldflow-label"> Who receives CCB payments for your child as of December&nbsp;1,&nbsp;2022? </p>
+                                </div>
+                                <ul>
+                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-2", "class": "hidden", "live": true}'> My spouse or common-law partner </li>
+                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-3", "class": "hidden", "live": true}'> My child's other parent or caregiver who does not live with me </li>
+                                  <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-4", "class": "hidden", "live": true}'> No one receives CCB payments for my child </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-5", "class": "hidden", "live": true}'> Not sure </li>
+                          </ul>
+                        </div>
+                      </li>
+                      
+                      <!--div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert3", "class": "hidden", "live": true}}'>
                           <div class="wb-fieldflow-header">
                             <p class="wb-fieldflow-label"> Did you already receive a Canada Dental Benefit payment for the first period? </p>
                           </div>
@@ -354,12 +528,19 @@
                             <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-5-p2", "class": "hidden", "live": true}'> Not sure </li>
                           </ul>
                         </div>
-                      </li>
+                      </li-->
                     </ul>
                   </form>
                 </div>
-                <div id="answers3"> <!--P1 addition payment-->
-                  <div id="answer3-0a" class="alert alert-success alert3 provisional hidden">
+                <div id="answers3"> 
+                  <!--P1 regular payment-->
+                  <div id="answer3-p1" class="alert alert-danger alert3 provisional hidden">
+                    <h2 class="h4">You can no longer apply for this payment for period 1</h2>
+                    <p>The last day to apply for period 1 was <strong>June 30, 2023</strong>.</p>
+                    <p>If you did <strong>not</strong> apply for period 1, you may be <a href="who-apply.html#lgblty-2">eligible</a> to apply for both the original payment and the <a href="#additionalPayment-help" aria-controls="additionalPayment-help" class="wb-lbx" role="button">additional payment<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></a> for period 2.</p>
+                  </div>
+                  <!--P1 addition payment-->
+                  <div id="answer3-ap1" class="alert alert-success alert3 provisional hidden">
                     <p> Great. Since you got the Canada Dental Benefit payment for the first period, you meet the CCB requirement for the <a href="#additionalPayment-help" aria-controls="additionalPayment-help" class="wb-lbx" role="button">additional payment for dental costs over $650<span class="glyphicon glyphicon-question-sign mrgn-lft-sm"></span></a>. </p>
                     <div class="mrgn-tp-md">
                       <p>You must be the parent who was eligible to receive CCB payments for your child <strong>as of December&nbsp;1,&nbsp;2022</strong> in order to get an additional payment for the first period of the Canada Dental Benefit.</p>
@@ -371,11 +552,7 @@
                       <p> Next, go to: <a href="#confirm-registration"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="far fa-user-circle fa-stack-2x"></span></span>Confirm</span> you have access to your CRA My Account</a>. </p>
                     </div>
                   </div>
-                  <!--P1 regular payment-->
-                  <div id="answer3-0b" class="alert alert-danger alert3 provisional hidden">
-                    <h2 class="h4">You can no longer apply the first benefit period</h2>
-                    <p>The last day to apply for the first benefit period was <strong>June 30, 2023</strong>.</p>
-                  </div>
+                  
                   <!--P2 Receives CCB-->
                   <div id="answer3-1-p2" class="hidden alert alert-success alert3 provisional">
                     <p> Great. You must be the parent who is eligible to receive CCB payments for your child <strong>as of July&nbsp;1,&nbsp;2023</strong> in order to apply for the second dental benefit period. </p>
@@ -427,6 +604,68 @@
                       <p> If you are not receiving CCB payments, check if you're eligible to apply. </p>
                     </div>
                     <p> For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html">Canada Child Benefit (CCB)</a> </p>
+                  </div>
+                  <!--AP2 Receives CCB-->
+                  <div id="answer3-1" class="hidden alert alert-success alert3 provisional">
+                    <p> Great. You must be the parent who is eligible to receive CCB payments for your child <strong>as of December&nbsp;1,&nbsp;2022</strong> in order to apply for the dental benefit. </p>
+                    <div class="mrgn-tp-md">
+                      <p> If your spouse or common-law partner receives the CCB for your child, they should complete the next steps. </p>
+                    </div>
+                    <div class="mrgn-tp-md">
+                      <p> Next, go to: <a href="#confirm-registration"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="far fa-user-circle fa-stack-2x"></span></span>Confirm</span> you have access to your CRA My Account</a>. </p>
+                    </div>
+                  </div>
+                  <!--AP2 Spouse receives CCB-->
+                  <div id="answer3-2" class="hidden alert alert-info alert3 provisional">
+                    <h3>Your spouse or common-law partner should apply</h3>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> Only the person who is eligible to receive CCB payments for your child <strong>as of December&nbsp;1,&nbsp;2022</strong> may apply for the dental benefit. </p>
+                    </div>
+                    <p> Since your spouse or common-law partner receives CCB payments for your child, they should apply for the dental benefit. They should complete the next steps. </p>
+                  </div>
+                  <!--AP2 Other parent receives CCB-->
+                  <div id="answer3-3" class="hidden alert alert-warning alert3 provisional">
+                    <h3>You may not be able to apply</h3>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> Only your child's other parent or caregiver who receives CCB payments for your child <strong>as of December&nbsp;1,&nbsp;2022</strong> may be eligible. They should complete all the steps. </p>
+                    </div>
+                    <p> If your <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-after-you-apply.html#change">custody arrangement has changed</a>, you may have been eligible to receive the CCB. Make sure you update your information with the CRA. </p>
+                    <div class="mrgn-tp-md">
+                      <p> If you are eligible to receive the CCB as of December&nbsp;1&nbsp;2022, you may apply for the Canada Dental Benefit. </p>
+                    </div>
+                  </div>
+                  <!--AP2 No one receives CCB-->
+                  <div id="answer3-4" class="hidden alert alert-warning alert3 provisional">
+                    <h3>Apply for the CCB</h3>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> The dental benefit is only available for families who are eligible to receive the CCB <strong>as of December&nbsp;1,&nbsp;2022</strong>. </p>
+                    </div>
+                    <p> If you are not receiving CCB payments, check if you're eligible to apply. </p>
+                    <div class="mrgn-tp-md">
+                      <p> For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html">Canada Child Benefit (CCB)</a> </p>
+                    </div>
+                  </div>
+                  <!--AP2 Not sure-->
+                  <div id="answer3-5" class="hidden alert alert-warning alert3 provisional">
+                    <h3>Check if you receive CCB</h3>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> You can sign in to <a href="https://canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html" target="_blank" rel="noopener">CRA My <span class="nowrap">Account<span class="far fa-window-restore mrgn-lft-sm"></span></span><span class="wb-inv"> (opens in new window)</span></a> or check your bank statements to confirm if you are receiving CCB payments. If you have a spouse or common-law partner, they should check as well. </p>
+                    </div>
+                    <p> You must be eligible to receive CCB payments for your child <strong>as of December&nbsp;1,&nbsp;2022</strong> in order to apply for the dental benefit. </p>
+                    <div class="mrgn-tp-md mrgn-bttm-md">
+                      <p> If you are not receiving CCB payments, check if you're eligible to apply. </p>
+                    </div>
+                    <p> For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html">Canada Child Benefit (CCB)</a> </p>
+                  </div>
+                  <!--AP2 Receives CCB-->
+                  <div id="answer3-1-p2" class="hidden alert alert-success alert3 provisional">
+                    <p> Great. You must be the parent who is eligible to receive CCB payments for your child <strong>as of July&nbsp;1,&nbsp;2023</strong> in order to apply for the second dental benefit period. </p>
+                    <div class="mrgn-tp-md">
+                      <p> If your spouse or common-law partner receives the CCB for your child, they should complete the next steps. </p>
+                    </div>
+                    <div class="mrgn-tp-md">
+                      <p> Next, go to: <a href="#confirm-registration"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="far fa-user-circle fa-stack-2x"></span></span>Confirm</span> you have access to your CRA My Account</a>. </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -610,7 +849,7 @@
           <h2 class="modal-title">Additional payment for higher dental costs</h2>
         </header>
         <div class="modal-body">
-          <p>An additional payment may be available <strong>starting on July&nbsp;1,&nbsp;2023</strong> for some eligible children. You may meet the criteria if you are not applying for both benefit periods and your child's dental costs are more than $650 in the period you apply for. You must have already applied and been eligible in order to meet the <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html">criteria for the additional payment</a>.</p>
+          <p>You may meet the criteria if you are not applying for both benefit periods and your child's dental costs are more than $650 in the period you apply for. You must have already applied and been eligible in order to meet the <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html">criteria for the additional payment</a>.</p>
         </div>
       </section>
     </div>
