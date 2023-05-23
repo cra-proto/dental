@@ -781,7 +781,7 @@ fieldset fieldset {
                       </details>
                       <!--QUALIFIES-->
                       <div class="alert alert-success provisional" id="qualify">
-                        <div id="p1-benefit">
+                        <div class="p1-benefit">
                           <p>The first period closed on June&nbsp;30,&nbsp;2023.</p>
                           <p>If you were <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html">eligible</a>, your benefit amount for the <span data-output="">first</span> period was:</p>
                           <div id="full-cust-benefit">
@@ -790,9 +790,9 @@ fieldset fieldset {
                           <div data-custody-shared="true">
                             <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child you had shared custody of</p>
                           </div>
-                          <p>This is the amount you could recieve if you meet the <a href="additional-payment.html#p1">criteria for the period 1 additional payment</a>.</p>
+                          <p>This is the amount you could recieve if you also meet the <a href="additional-payment.html#p1">criteria for the period 1 additional payment</a>.</p>
                         </div>
-                        <div id="p2-benefit">
+                        <div class="p2-benefit">
                           <p>If you're <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html">eligible</a>, your benefit amount for the <span data-output="">second</span> period is:</p>
                           <div id="full-cust-benefit">
                             <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you have full custody of</p>
@@ -804,10 +804,17 @@ fieldset fieldset {
                       </div>
                       <!--DOES NOT QUALIFY-->
                       <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
-                        <h4>You may not be able to apply</h4>
-                        <p>Based on the amounts you entered, your adjusted family net income is more than $90,000 and <strong>does not</strong> qualify for the <span data-output="">first</span> period of this benefit.</p>
-                        <p>If you are not sure if you entered your amounts correctly, you can sign in to <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html">CRA My Account</a> to check. You will not be able to start an application if your adjusted family net income is too high.</p>
-                        <p>If your income changes, you may be eligible for the second benefit period.</p>
+                        <div class="p1-benefit">
+                          <h4>You may not have been able to apply</h4>
+                          <p>Based on the amounts you entered, your adjusted family net income was more than $90,000 and <strong>did not</strong> qualify for the <span data-output="">first</span> period of this benefit.</p>
+                          <p>If you are not sure if you entered your amounts correctly, you can <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/contact.html">contact us</a> to check.</p>
+                          <p>If your income changes, you may be eligible for the second benefit period.</p>
+                        </div>
+                        <div class="p2-benefit">
+                          <h4>You may not be able to apply</h4>
+                          <p>Based on the amounts you entered, your adjusted family net income is more than $90,000 and <strong>does not</strong> qualify for the <span data-output="">second</span> period of this benefit.</p>
+                          <p>If you are not sure if you entered your amounts correctly, you can sign in to <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html">CRA My Account</a> to check. You will not be able to start an application if your adjusted family net income is too high.</p>                          
+                        </div>
                       </div>
                       <!--DISCLAIMER-->
                       <p class="text-muted small">This result is an estimate based on the information you entered. The CRA will determine your benefit amount when you apply.</p>
@@ -1303,11 +1310,11 @@ fieldset fieldset {
   		$("time[data-eligible=year]").text(claim.claimYear);
   		$("time[data-eligible=maritalDate]").text(dateFormatter.format(claimDate));
 		if(claim.claimYear === 2021){
-			$("#p2-benefit").addClass("hidden");
-  			$("#p1-benefit").removeClass("hidden");};
+			$(".p2-benefit").addClass("hidden");
+  			$(".p1-benefit").removeClass("hidden");};
 		if(claim.claimYear === 2022){
-			$("#p1-benefit").addClass("hidden");
-  			$("#p2-benefit").removeClass("hidden");};
+			$(".p1-benefit").addClass("hidden");
+  			$(".p2-benefit").removeClass("hidden");};
   	}
   	updateResults();
   });
