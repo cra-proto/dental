@@ -146,9 +146,9 @@
         <nav class="provisional gc-subway">
           <h1>Canada Dental Benefit</h1>
           <ul>
-            <li><a href="who-apply.html" class="active">Who can apply</a>
+            <li><a href="who-apply-july-1.html" class="active">Who can apply</a>
               <ul class="noline">
-                <li> <a href="additional-payment.html">Additional payment if dental costs are over&nbsp;$650</a> </li>
+                <li> <a href="additional-payment-july-1.html">Additional payment if dental costs are over&nbsp;$650</a> </li>
               </ul>
             </li>
             <li> <a href="how-much-july-1.html">How much you can get</a> </li>
@@ -323,6 +323,11 @@
                 <div class="mrgn-tp-md">
                   <p>Depending on your adjusted family net income, you may have received a payment of $260, $390, or $650 for each eligible child. You can check the amount you received in the "Benefits" tab in CRA My Account.</p>
                   <p>The last day to apply for the first benefit period was <strong>June&nbsp;30,&nbsp;2023</strong>.</p>
+                  <details class="mrgn-bttm-0">
+                    <summary>If you did not apply for the first period</summary>
+                    <p>You met all of the eligibility criteria for the first benefit period. You may be able to apply for the <a href="additional-payment.html#p2">additional payment for period 2</a>.</p>
+                  </details>
+                  
                   <!--details class="mrgn-bttm-0"><summary>If you did not apply on time</summary>
 					<p>If you did not apply for period 1, you may be eligible to apply for both the original payment and the additional payment for period 2.</p></details--> 
                   <!--p>You can apply for your child <strong>until June&nbsp;30,&nbsp;2023</strong> for dental care your child receives between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023.</p>
@@ -337,6 +342,19 @@
                 <div class="mrgn-tp-md">
                   <p>To have been eligible for the first period of the Canada Dental Benefit, you must have met all of the above criteria for each child you applied for.</p>
                   <p>If you're not sure if you were eligible for a payment you received, find out if you need to <a href="return-payment-.html">return a payment</a>.</p>
+                </div>
+              </div>
+              <!--All but dental care checked-->
+              <div tabindex="0" class="alert alert-info hidden provisional" id="action-msg3-1">
+                <p class="text-muted small">Based on your selections above:</p>
+                <h4>You may not have met the criteria</h4>
+                <div class="mrgn-tp-md">
+                  <p>To have been eligible for the first period of the Canada Dental Benefit, you must have met all of the above criteria for each child you applied for.</p>
+                  <p>If you're not sure if you were eligible for a payment you received, find out if you need to <a href="return-payment-.html">return a payment</a>.</p>
+                  <details class="mrgn-bttm-0">
+                    <summary>If you did not apply for the first period</summary>
+                    <p>Since you met all of the other eligibility criteria for the first benefit period, you may be able to apply for the <a href="additional-payment.html#p2">additional payment for period 2</a>.</p>
+                  </details>
                 </div>
               </div>
             </section>
@@ -701,21 +719,25 @@ var checkLoad = setInterval(function () {
 	}, 100);
 </script> 
 <script>
-        $(".action-checkbox-1").change(function() {
-            if ($('.action-checkbox-1:checked').length == $('.action-checkbox-1').length) {
-                $("#action-msg1-1").removeClass("hidden").addClass("visible");
-                $("#action-no-msg-1, #action-msg2-1").addClass("hidden").removeClass("visible");
+        $(".action-checkbox-1").change(function() { 
+			if ($('.action-checkbox-1:checked').length == $('.action-checkbox-1').length) {                
+                $("#action-no-msg-1, #action-msg2-1, #action-msg3-1").addClass("hidden").removeClass("visible");
+				$("#action-msg1-1").removeClass("hidden").addClass("visible");
             }
-
-            if ($('.action-checkbox-1:checked').length !== $('.action-checkbox-1').length) {
-                $("#action-msg1-1, #action-no-msg-1").addClass("hidden").removeClass("visible");
+            if (($('.action-checkbox-1:checked').length == ($('.action-checkbox-1').length)-1) && ($('#eg5')[0].checked == false)) {
+				$("#action-no-msg-1, #action-msg2-1, #action-msg1-1").addClass("hidden").removeClass("visible");
+				$("#action-msg3-1").removeClass("hidden").addClass("visible");
+            }
+			else if ($('.action-checkbox-1:checked').length !== $('.action-checkbox-1').length) {
+				$("#action-msg1-1, #action-no-msg-1, #action-msg3-1").addClass("hidden").removeClass("visible");
                 $("#action-msg2-1").removeClass("hidden").addClass("visible");
             }
-
-            if ($('.action-checkbox-1:checked').length == 0) {
-                $("#action-msg1-1, #action-msg2-1").addClass("hidden").removeClass("visible");
+		    if ($('.action-checkbox-1:checked').length == 0) {
+                $("#action-msg1-1, #action-msg2-1, #action-msg3-1").addClass("hidden").removeClass("visible");
                 $("#action-no-msg-1").removeClass("hidden").addClass("visible");
             }
+			
+			
         })
 </script> 
 <script>
