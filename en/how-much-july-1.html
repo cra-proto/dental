@@ -365,471 +365,468 @@ fieldset fieldset {
       </section>
       <h3>If dental costs are more than $650</h3>
       <p>If you only apply for one benefit period and your child's dental costs are over $650 in that period, you may meet the <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html#lgblty">criteria for the additional payment</a>.</p>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h2 id="h-2">Estimate your benefit amount</h2>
-            <p>You can use the tool to estimate your adjusted family net income based on your tax information. The result will show your adjusted family net income for this benefit and the amount you may receive for each eligible child.</p>
-            <details>
-              <summary>Read the privacy statement for the estimator tool</summary>
-              <p>The CRA is not collecting or retaining any of the information you enter on this page. These amounts are only used to help you estimate the Canada Dental Benefit payment amount you may be eligible for. You may be required to provide additional information for verification after you apply.</p>
-            </details>
-            <!--START OF TOOL-->
-            <h3 id="calculator">Use the tool to estimate your benefit amount</h3>
-            <p class="small text-muted">Your data is not collected or saved. If you leave or refresh the page, you will need to enter your information again.</p>
-            <div class="alert alert-warning norun">
-              <p>This tool will not work if JavaScript is disabled in your browser.</p>
+      <h2 id="h-2">Estimate your benefit amount</h2>
+      <p>You can use the tool to estimate your adjusted family net income based on your tax information. The result will show your adjusted family net income for this benefit and the amount you may receive for each eligible child.</p>
+      <details>
+        <summary>Read the privacy statement for the estimator tool</summary>
+        <p>The CRA is not collecting or retaining any of the information you enter on this page. These amounts are only used to help you estimate the Canada Dental Benefit payment amount you may be eligible for. You may be required to provide additional information for verification after you apply.</p>
+      </details>
+      <!--START OF TOOL-->
+      <h3 id="calculator">Use the tool to estimate your benefit amount</h3>
+      <p class="small text-muted">Your data is not collected or saved. If you leave or refresh the page, you will need to enter your information again.</p>
+      <div class="alert alert-warning norun">
+        <p>This tool will not work if JavaScript is disabled in your browser.</p>
+      </div>
+      <!-- START OF CALC -->
+      <div class="wb-frmvld provisional wb-steps hidden dynamic-content">
+        <form id="dental_cal_form" name="dental_cal_form" action="#" method="get" autocomplete="off" class="panel panel-default mrgn-bttm-md">
+          <!-- STEP 1-->
+          <fieldset id="claimPeriod" class="panel-default p-0">
+            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Dental benefit period</span></legend>
+            <div class="panel-body mrgn-lft-sm gc-font-2019">
+              <div class="form-group">
+                <label for="dentalclaimPeriod" class="required"><span class="field-name">Select the period when your child receives dental care services in Canada?</span> <strong class="required">(required)</strong></label>
+                <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required>
+                  <option label="Select a period"></option>
+                  <option value="2022-12-01T00:00:00" data-claim-year="2021">Period 1: October 1, 2022 to June 30, 2023</option>
+                  <option value="2023-07-01T00:00:00" data-claim-year="2022">Period 2: July 1, 2023 to June 30, 2024 (current period)</option>
+                </select>
+              </div>
             </div>
-            <!-- START OF CALC -->
-            <div class="wb-frmvld provisional wb-steps hidden dynamic-content">
-              <form id="dental_cal_form" name="dental_cal_form" action="#" method="get" autocomplete="off" class="panel panel-default mrgn-bttm-md">
-                <!-- STEP 1-->
-                <fieldset id="claimPeriod" class="panel-default p-0">
-                  <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Dental benefit period</span></legend>
-                  <div class="panel-body mrgn-lft-sm gc-font-2019">
-                    <div class="form-group">
-                      <label for="dentalclaimPeriod" class="required"><span class="field-name">Select the period when your child receives dental care services in Canada?</span> <strong class="required">(required)</strong></label>
-                      <select name="dentalclaimPeriod" id="dentalclaimPeriod" class="form-control" required>
-                        <option label="Select a period"></option>
-                        <option value="2022-12-01T00:00:00" data-claim-year="2021">Period 1: October 1, 2022 to June 30, 2023</option>
-                        <option value="2023-07-01T00:00:00" data-claim-year="2022">Period 2: July 1, 2023 to June 30, 2024 (current period)</option>
-                      </select>
-                    </div>
-                  </div>
-                </fieldset>
-                <!--STEP 2-->
-                <fieldset id="marital" class="panel-default p-0">
-                  <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
-                  <div class="panel-body mrgn-lft-sm gc-font-2019">
-                    <div class="form-group">
-                      <label for="maritalStatus" class="required">What was your <span class="field-name">marital status as of
-                        <time data-eligible="maritalDate">December 1, 2022</time>
-                        ? </span> <strong class="required">(required)</strong></label>
-                      <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a>
-                      <select name="maritalStatus" id="maritalStatus" class="form-control" required>
-                        <option label="Select your marital status"></option>
-                        <option value="Common-law partner" data-shortform="Common-law" data-partner="true">Common-law</option>
-                        <option value="Divorced" data-partner="false">Divorced</option>
-                        <option value="Spouse" data-partner="true">Married</option>
-                        <option value="Separated" data-partner="false">Separated</option>
-                        <option value="Single" data-partner="false">Single</option>
-                        <option value="widowed" data-partner="false">Widowed</option>
-                      </select>
-                    </div>
-                    <section id="maritalStatus-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                      <header class="modal-header">
-                        <h2 class="modal-title">Marital status</h2>
-                      </header>
-                      <div class="modal-body">
-                        <dl>
-                          <dt>Common-law partner</dt>
-                          <dd>
-                            <p>A person you are living with in a conjugal relationship, but are not married to, and one of the following situations apply:</p>
-                            <ul>
-                              <li>you have been living together for at least 12 continuous months during which you have not been separated due to a breakdown in the relationship for more than 90 days</li>
-                              <li>they are the parent of your child by birth or adoption</li>
-                              <li>they have custody and control of your child (or did immediately before the child turned 19 years of age) and your child is wholly dependent on them for support</li>
-                            </ul>
-                          </dd>
-                          <dt class="mrgn-tp-md">Separated</dt>
-                          <dd>
-                            <p>You are separated when you have been living apart from your spouse or common-law partner because of a breakdown in the relationship for a period of <strong>at least 90 days</strong>.</p>
-                            <p>Once you are considered separated, the day you started living apart is the effective date of your separation.</p>
-                          </dd>
-                          <dt class="mrgn-tp-md">Married</dt>
-                          <dd>
-                            <p>You have a spouse. This term only applies to a person you are legally married to.</p>
-                          </dd>
-                          <dt class="mrgn-tp-md">Widowed</dt>
-                          <dd>
-                            <p>You had a spouse or common-law partner who is now deceased.</p>
-                          </dd>
-                          <dt class="mrgn-tp-md">Divorced</dt>
-                          <dd>
-                            <p>You are legally divorced from your former spouse.</p>
-                          </dd>
-                          <dt class="mrgn-tp-md">Single </dt>
-                          <dd>
-                            <p>None of the other marital statuses applies to you.</p>
-                          </dd>
-                        </dl>
-                        <p class="mrgn-tp-lg">If your marital status has changed, you must tell the CRA before you apply.<br>
-                          For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/update-your-marital-status-canada-revenue-agency.html#def" target="help" rel="noopener noreferrer">Update your marital status</a></p>
-                      </div>
-                    </section>
-                  </div>
-                </fieldset>
-                <!--STEP 3-->
-                <fieldset id="custodyArrangment" class="panel-default p-0">
-                  <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Custody arrangement</span></legend>
-                  <div class="panel-body mrgn-lft-sm gc-font-2019">
-                    <fieldset id="custody" class="gc-chckbxrdio chckbxrdio-grp provisional">
-                      <div class="form-group">
-                        <legend class="h5 required" tabindex="-1"><span class="field-name">What is your custody arrangement for the children you are applying for?</span> <strong class="required">(required)</strong></legend>
-                        <p class="small text-muted">Custody arrangements are the same as the CCB. If your child lives with you part-time, check if it is <a href="#shared-custody-help" aria-controls="shared-custody-help" class="wb-lbx" role="button">shared custody<span class="mrgn-lft-sm glyphicon glyphicon-question-sign"></span></a></p>
-                        <ul class="list-unstyled">
-                          <li class="radio">
-                            <input type="radio" name="custody" id="custody_Full" value="1" data-custody="1" data-rule-required="true">
-                            <label for="custody_Full">Full custody</label>
-                          </li>
-                          <li class="radio">
-                            <input type="radio" name="custody" id="custody_shared" value="2" data-custody="2" data-rule-required="true">
-                            <label for="custody_shared">Shared custody</label>
-                          </li>
-                          <li class="radio">
-                            <input type="radio" name="custody" id="custody_both" value="3" data-custody="3" data-rule-required="true">
-                            <label for="custody_both">Different for each child</label>
-                          </li>
-                        </ul>
-                      </div>
-                    </fieldset>
-                  </div>
-                </fieldset>
-                <!--STEP 4--> 
-                <!--YOUR INCOME-->
-                <fieldset id="income" class="panel-default p-0">
-                  <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Family net income</span></legend>
-                  <div class="panel-body mrgn-lft-sm gc-font-2019">
-                    <div class="form-group">
-                      <label for="netIncome" class="required">Your <span class="field-name">net income for
-                        <time data-eligible="year">2021</time>
-                        </span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
-                      <div class="input-group col-sm-4 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" required>
-                        <span class="input-group-addon">.00</span> </div>
-                      <p class="small">This is line 23600 of your
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                    </div>
-                    <section id="netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                      <header class="modal-header">
-                        <h2 class="modal-title">Net Income</h2>
-                      </header>
-                      <div class="modal-body">
-                        <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
-                        <p>If your net income is negative, enter '0'.</p>
-                      </div>
-                    </section>
-                    <!--PARTNER INCOME-->
-                    
-                    <div id="partnerNetIncomeElm" data-has-partner="true" class="form-group">
-                      <label for="partnerNetIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s net income for
-                        <time data-eligible="year">2021</time>
-                        </span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
-                      <div class="input-group col-sm-4 col-xs-8"> <span class="input-group-addon">$</span>
-                        <input type="text" name="partnernetIncome" size="7" maxlength="7" value="" id="partnerNetIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal">
-                        <span class="input-group-addon">.00</span> </div>
-                      <p class="small">This is line 23600 of your <span data-partner-case="false">spouse</span>'s
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                    </div>
-                    <section id="partner_netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                      <header class="modal-header">
-                        <h2 class="modal-title">Spouse or Common law partner's net income</h2>
-                      </header>
-                      <div class="modal-body">
-                        <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your spouse or common law partner's tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
-                        <p>If your spouse or common law partner's net income is negative, enter '0'.</p>
-                      </div>
-                    </section>
-                    <fieldset id="includeWorldIncome" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
-                      <div class="form-group">
-                        <legend class="h5 required" tabindex="-1"><span class="field-name">Did you<span data-has-partner="true"> or your <span data-partner-case="false">spouse</span></span> receive income in another country during
-                        <time data-eligible="year">2021</time>
-                        while not a resident of Canada?</span> <strong class="required">(required)</strong></legend>
-                        <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button">Who must report world income? <span class="glyphicon glyphicon-question-sign"></span></a>
-                        <ul class="list-unstyled">
-                          <li class="radio">
-                            <input type="radio" name="hasWorldIncome" id="world-income-true" value="true" data-world-income="true" data-rule-required="true">
-                            <label for="world-income-true">Yes</label>
-                          </li>
-                          <li class="radio">
-                            <input type="radio" name="hasWorldIncome" id="world-income-false" value="false" data-world-income="false" data-rule-required="true">
-                            <label for="world-income-false">No</label>
-                          </li>
-                        </ul>
-                      </div>
-                    </fieldset>
-                    <!--WORLD INCOME-->
-                    <div id="worldIncomefields">
-                      <div id="worldIncomeElm" class="form-group">
-                        <label id="worldIncomeLabel" for="worldIncome">Your <span class="field-name">world income for
-                          <time data-eligible="year">2021</time>
-                          </span> <span class="wb-inv">(dollars only, no cents)</span><strong id="worldIncomeRequire" class="required hidden"> (required)</strong></label>
-                        <div class="input-group col-sm-4 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" inputmode="numeric" pattern="[0-9]*" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                        <p class="small">Include world income received when you were not a resident of Canada. If your world income is negative, enter '0'.</p>
-                      </div>
-                      <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group">
-                        <label for="partnerWorldIncome">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s world income for
-                          <time data-eligible="year">2021</time>
-                          </span> <span class="wb-inv">(dollars only, no cents)</span></label>
-                        <div class="input-group col-sm-4 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" inputmode="numeric" pattern="[0-9]*" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                        <p class="small">Include world income received when they were not a resident of Canada. If their world income is negative, enter '0'.</p>
-                      </div>
-                    </div>
-                    <section id="worldIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                      <header class="modal-header">
-                        <h2 class="modal-title">World income</h2>
-                      </header>
-                      <div class="modal-body">
-                        <p>All residents of Canada are required to report their world income when they file an income tax return. You might have to file an additional statement to report your world income if you were resident in another country for all or part of
-                          <time data-eligible="year">2021</time>
-                          .</p>
-                      </div>
-                    </section>
-                  </div>
-                </fieldset>
-                <!--STEP 5-->
-                <fieldset id="uccbAndRdsp" class="panel-default p-0">
-                  <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Adjustments</span></legend>
-                  <div class="panel-body mrgn-lft-sm gc-font-2019"> 
-                    <!--RDSP-->
-                    <p class="h2 mrgn-tp-md">Registered Disability Savings Plan (RDSP)</p>
-                    <fieldset id="includeRDSP" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
-                      <div class="form-group">
-                        <legend class="h5 required" tabindex="-1"><span class="field-name">Did you claim <abbr title="Registered Disability Savings Plan">RDSP</abbr> income or make a <abbr title="Registered Disability Savings Plan">RDSP</abbr> repayment in
-                        <time data-eligible="year">2021</time>
-                        ?</span> <strong class="required">(required)</strong></legend>
-                        <p><a href="#rdsp-help" aria-controls="rdsp-help" class="wb-lbx" role="button">What is the Registered Disability Savings Plan&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
-                        <ul class="list-unstyled">
-                          <li class="radio">
-                            <input type="radio" name="rdsp" id="rdspTRUE" value="true" data-rdsp="true" data-rule-required="true">
-                            <label for="rdspTRUE">Yes</label>
-                          </li>
-                          <li class="radio">
-                            <input type="radio" name="rdsp" id="rdspFALSE" value="false" data-rdsp="false" data-rule-required="true">
-                            <label for="rdspFALSE">No</label>
-                          </li>
-                        </ul>
-                      </div>
-                    </fieldset>
-                    <div id="rdspfields" class="row">
-                      <p class="text-muted">Leave fields blank if amounts are zero.</p>
-                      <div class="form-group col-md-6 brdr-rght" data-input-col1="true">
-                        <label for="rdspIncome"><span class="field-name">
-                          <time data-eligible="year">2021</time>
-                          <abbr title="Registered Disability Savings Plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                        <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                      </div>
-                      <p class="small visible-sm visible-xs">This is line 12500 of your
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                      <div class="form-group col-md-6" data-has-partner="true">
-                        <label for="partnerRdspIncome"><span class="field-name">
-                          <time data-eligible="year">2021</time>
-                          <span data-partner-case="true" data-shortform="true">spouse</span>'s <abbr title="Registered Disability Savings Plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                        <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="partnerRdspIncome" size="7" maxlength="7" value="" id="partnerRdspIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                      </div>
-                      <p class="hidden" data-partner-info="true">This is line 12500 on your <span data-partner-case="false">spouse</span>'s
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                      <p class="small visible-md visible-lg">This is line 12500 on<span data-has-partner="true"> your and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
-                        <time data-eligible="year">2021</time>
-                        tax returns.</p>
-                      <div class="form-group col-md-6 brdr-rght" data-input-col1="true">
-                        <label for="rdspRepayment"><span class="field-name">
-                          <time data-eligible="year">2021</time>
-                          <abbr title="Registered Disability Savings Plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                        <div class="input-group input col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                      </div>
-                      <p class="small visible-sm visible-xs">This is the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts that is entered on line 23200 of your
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                      <div class="form-group col-md-6" data-has-partner="true">
-                        <label for="partnerRdspRepayment"><span class="field-name">
-                          <time data-eligible="year">2021</time>
-                          <span data-partner-case="true" data-shortform="true">spouse</span>'s <abbr title="Registered Disability Savings Plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                        <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="partnerRdspRepayment" size="7" maxlength="7" value="" id="partnerRdspRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                      </div>
-                      <p class="hidden" data-partner-info="true">This is the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts entered on line 23200 of your <span data-partner-case="false">spouse</span>'s
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                      <p class="small visible-md visible-lg">These are the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts entered on line 23200 of<span data-has-partner="true"> your and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
-                        <time data-eligible="year">2021</time>
-                        tax returns.</p>
-                      <section id="rdsp-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                        <header class="modal-header">
-                          <h2 class="modal-title">Registered Disability Savings Plan</h2>
-                        </header>
-                        <div class="modal-body">
-                          <p>A Registered Disability Savings Plan (RDSP) is a savings plan intended to help parents and others save for the long term financial security of a person who is eligible for the Disability Tax Credit (DTC).</p>
-                          <p class="mrgn-tp-lg">For details: <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/registered-disability-savings-plan-rdsp.html" target="help" rel="noopener noreferrer">Registered Disability Savings Plan</a></p>
-                        </div>
-                      </section>
-                    </div>
-                    <div class="clearfix"></div>
-                    <!--UCCB-->
-                    <p class="h2">Universal Child Care Benefit (UCCB)</p>
-                    <fieldset id="includeUCCB" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
-                      <div class="form-group">
-                        <legend class="h5 required" tabindex="-1"><span class="field-name">Did you claim <abbr title="Universal Child Care Benefit">UCCB</abbr> income or make a <abbr title="Universal Child Care Benefit">UCCB</abbr> repayment in
-                        <time data-eligible="year">2021</time>
-                        ?</span> <strong class="required">(required)</strong></legend>
-                        <p><a href="#uccb-help" aria-controls="uccb-help" class="wb-lbx" role="button">What is the Universal Child Care Benefit&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
-                        <ul class="list-unstyled">
-                          <li class="radio">
-                            <input type="radio" name="uccb" id="uccbTRUE" value="true" data-uccb="true" data-rule-required="true">
-                            <label for="uccbTRUE">Yes</label>
-                          </li>
-                          <li class="radio">
-                            <input type="radio" name="uccb" id="uccbFALSE" value="false" data-uccb="false" data-rule-required="true">
-                            <label for="uccbFALSE">No</label>
-                          </li>
-                        </ul>
-                      </div>
-                    </fieldset>
-                    <div id="uccbfields" class="row">
-                      <p class="text-muted">Leave fields blank if amounts are zero.</p>
-                      <div class="form-group col-md-6 brdr-rght" data-input-col1="true">
-                        <label for="uccbIncome"><span class="field-name">
-                          <time data-eligible="year">2021</time>
-                          <abbr title="Universal Child Care Benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                        <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                      </div>
-                      <p class="small visible-sm visible-xs">This is line 11700 of your
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                      <div class="form-group col-md-6" data-has-partner="true">
-                        <label for="partnerUccbIncome"><span class="field-name">
-                          <time data-eligible="year">2021</time>
-                          <span data-partner-case="true" data-shortform="true">spouse</span>'s <abbr title="Universal Child Care Benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                        <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="partnerUccbIncome" size="7" maxlength="7" value="" id="partnerUccbIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                      </div>
-                      <p class="hidden" data-partner-info="true">This is line 11700 of your <span data-partner-case="false">spouse</span>'s
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                      <p class="small visible-md visible-lg">This is line 11700 of<span data-has-partner="true"> your and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
-                        <time data-eligible="year">2021</time>
-                        tax returns.</p>
-                      <div class="form-group col-md-6 brdr-rght" data-input-col1="true">
-                        <label for="uccbRepayment"><span class="field-name">
-                          <time data-eligible="year">2021</time>
-                          <abbr title="Universal Child Care Benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                        <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                      </div>
-                      <p class="small visible-sm visible-xs">This is line 21300 of your
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                      <div class="form-group col-md-6" data-has-partner="true">
-                        <label for="partnerUccbRepayment"><span class="field-name">
-                          <time data-eligible="year">2021</time>
-                          <span data-partner-case="true" data-shortform="true">spouse</span>'s <abbr title="Universal Child Care Benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
-                        <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
-                          <input type="text" name="partnerUccbRepayment" size="7" maxlength="7" value="" id="partnerUccbRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
-                          <span class="input-group-addon">.00</span> </div>
-                      </div>
-                      <p class="hidden" data-partner-info="true">This is line 21300 of your <span data-partner-case="false">spouse</span>'s
-                        <time data-eligible="year">2021</time>
-                        tax return.</p>
-                      <p class="small visible-md visible-lg">This is line 21300 of<span data-has-partner="true"> your and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
-                        <time data-eligible="year">2021</time>
-                        tax returns.</p>
-                      <section id="uccb-help" class="mfp-hide modal-dialog modal-content overlay-def">
-                        <header class="modal-header">
-                          <h2 class="modal-title">Universal Child Care Benefit</h2>
-                        </header>
-                        <div class="modal-body">
-                          <p>The <abbr title="Universal Child Care Benefit">UCCB</abbr> was a taxable benefit paid for children under 18 years old. It was available to all eligible individuals regardless of their income. Payments ended in July 2016, but lump-sum payments are still being issued for the months prior to that date. The Canada Child Benefit (CCB) replaced the <abbr title="Universal Child Care Benefit">UCCB</abbr> in 2016.</p>
-                          <p class="mrgn-tp-lg">For details: <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">Line 11700 - Universal Child Care Benefit (UCCB)</a></p>
-                        </div>
-                      </section>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </fieldset>
-                <!--STEP 6--> 
-                <!--START OF RESULTS-->
-                <fieldset id="results" class="panel-default p-0">
-                  <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Estimated benefit amount</span></legend>
-                  <div class="panel-body mrgn-lft-sm">
-                    <div id="cdb-statement">
-                      <p class="mrgn-tp-md">Based on the amounts you entered, your adjusted family net income for this benefit is: <span class="mrgn-tp-0 h5"><strong><span data-output="avg-fam-net-income-value">$0</span></strong></span></p>
-                      <details class="mrgn-bttm-md">
-                        <summary>Show the math for this amount</summary>
-                        <p>Your adjusted family net income for this benefit is:</p>
-                        <ul class="fa-ul lst-spcd">
-                          <li id="netIncomeResult"><span class="mrgn-tp-0 h5"><span data-output="net-income-value">$0</span><span class="text-muted"> (your net income)</span></span></li>
-                          <li id="partnerNetIncomeResult"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="partner-net-income-value">$0</span><span class="text-muted"> (your <span data-partner-case="false">spouse</span>'s net income)</span></span></li>
-                          <li id="worldIncomeResult" class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="family-world-income-value">$0</span><span class="text-muted"> (your world income)</span></span></li>
-                          <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><span data-output="household-income-value">$0</span><span class="text-muted"> (your family net income)</span></span></li>
-                        </ul>
-                        <br>
-                        <ul class="fa-ul lst-spcd">
-                          <li><span class="mrgn-tp-0 h5"><span data-output="household-income-value">$0</span><span class="text-muted"> (your family net income)</span></span></li>
-                          <li><span class="fas fa-minus fa-li"><span class="wb-inv">minus</span></span><span class="h5"><span data-output="adjusted-income-value">$0</span><span class="text-muted"> (<abbr title="Universal Child Care Benefit">UCCB</abbr> and <abbr title="Registered Disability Savings Plan">RDSP</abbr> income)</span></span></li>
-                          <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="adjusted-payment-value">$0</span><span class="text-muted"> (<abbr title="Universal Child Care Benefit">UCCB</abbr> and <abbr title="Registered Disability Savings Plan">RDSP</abbr> repayment)</span></span></li>
-                          <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><span data-output="avg-fam-net-income-value">$0</span><span class="text-muted"> (your adjusted family net income)</span></span></li>
-                        </ul>
-                      </details>
-                      <!--QUALIFIES-->
-                      <div class="alert alert-success provisional" id="qualify">
-                        <div class="p1-benefit">
-                          <p>The first period closed on June&nbsp;30,&nbsp;2023.</p>
-                          <p>If you were <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html">eligible</a>, your benefit amount for the <span data-output="">first</span> period was:</p>
-                          <div id="full-cust-benefit">
-                            <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you had full custody of</p>
-                          </div>
-                          <div data-custody-shared="true">
-                            <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child you had shared custody of</p>
-                          </div>
-                          <p>This is the amount you could receive if you also meet the <a href="additional-payment.html#p1">criteria for the period 1 additional payment</a>.</p>
-                        </div>
-                        <div class="p2-benefit">
-                          <p>If you're <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html">eligible</a>, your benefit amount for the <span data-output="">second</span> period is:</p>
-                          <div id="full-cust-benefit">
-                            <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you have full custody of</p>
-                          </div>
-                          <div data-custody-shared="true">
-                            <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child you have shared custody of</p>
-                          </div>
-                        </div>
-                      </div>
-                      <!--DOES NOT QUALIFY-->
-                      <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
-                        <div class="p1-benefit">
-                          <h4>You may not have been able to apply</h4>
-                          <p>Based on the amounts you entered, your adjusted family net income was more than $90,000 and <strong>did not</strong> qualify for the <span data-output="">first</span> period of this benefit.</p>
-                          <p>If you are not sure if you entered your amounts correctly, you can <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/contact.html">contact us</a> to check.</p>
-                          <p>If your income changes, you may be eligible for the second benefit period.</p>
-                        </div>
-                        <div class="p2-benefit">
-                          <h4>You may not be able to apply</h4>
-                          <p>Based on the amounts you entered, your adjusted family net income is more than $90,000 and <strong>does not</strong> qualify for the <span data-output="">second</span> period of this benefit.</p>
-                          <p>If you are not sure if you entered your amounts correctly, you can sign in to <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html">CRA My Account</a> to check. You will not be able to start an application if your adjusted family net income is too high.</p>                          
-                        </div>
-                      </div>
-                      <!--DISCLAIMER-->
-                      <p class="text-muted small">This result is an estimate based on the information you entered. The CRA will determine your benefit amount when you apply.</p>
-                      <p data-custody-shared="true" class="text-muted small shared-custody mixed-custody">Since you have <a href="#shared-custody-help" aria-controls="shared-custody-help" class="wb-lbx" role="button">shared custody<span class="mrgn-lft-sm glyphicon glyphicon-question-sign"></span></a>, your child's other parent may get a different result since their adjusted family net income will be different.</p>
-                      <!--<p><a href="#dental-statement" class="wb-lbx btn btn-default btn-lg" role="button"><span class="h3"><span class="glyphicon glyphicon-print"></span> Print preview<span class="wb-inv"> Canada dental benefit statement</span></span></a></p>--> 
-                    </div>
-                  </div>
-                </fieldset>
-                <!--END OF RESULTS-->
-                <button id="calc-dental-benefit" class="btn btn-primary hidden" type="submit">Calculate your estimated dental benefit</button>
-              </form>
-              <!--END OF CALC--> 
+          </fieldset>
+          <!--STEP 2-->
+          <fieldset id="marital" class="panel-default p-0">
+            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Marital status</span></legend>
+            <div class="panel-body mrgn-lft-sm gc-font-2019">
+              <div class="form-group">
+                <label for="maritalStatus" class="required">What was your <span class="field-name">marital status as of
+                  <time data-eligible="maritalDate">December 1, 2022</time>
+                  ? </span> <strong class="required">(required)</strong></label>
+                <a href="#maritalStatus-help" aria-controls="maritalStatus-help" class="wb-lbx" role="button"><span class="glyphicon glyphicon-question-sign"></span><span class="wb-inv">Help for Marital status</span></a>
+                <select name="maritalStatus" id="maritalStatus" class="form-control" required>
+                  <option label="Select your marital status"></option>
+                  <option value="Common-law partner" data-shortform="Common-law" data-partner="true">Common-law</option>
+                  <option value="Divorced" data-partner="false">Divorced</option>
+                  <option value="Spouse" data-partner="true">Married</option>
+                  <option value="Separated" data-partner="false">Separated</option>
+                  <option value="Single" data-partner="false">Single</option>
+                  <option value="widowed" data-partner="false">Widowed</option>
+                </select>
+              </div>
+              <section id="maritalStatus-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                <header class="modal-header">
+                  <h2 class="modal-title">Marital status</h2>
+                </header>
+                <div class="modal-body">
+                  <dl>
+                    <dt>Common-law partner</dt>
+                    <dd>
+                      <p>A person you are living with in a conjugal relationship, but are not married to, and one of the following situations apply:</p>
+                      <ul>
+                        <li>you have been living together for at least 12 continuous months during which you have not been separated due to a breakdown in the relationship for more than 90 days</li>
+                        <li>they are the parent of your child by birth or adoption</li>
+                        <li>they have custody and control of your child (or did immediately before the child turned 19 years of age) and your child is wholly dependent on them for support</li>
+                      </ul>
+                    </dd>
+                    <dt class="mrgn-tp-md">Separated</dt>
+                    <dd>
+                      <p>You are separated when you have been living apart from your spouse or common-law partner because of a breakdown in the relationship for a period of <strong>at least 90 days</strong>.</p>
+                      <p>Once you are considered separated, the day you started living apart is the effective date of your separation.</p>
+                    </dd>
+                    <dt class="mrgn-tp-md">Married</dt>
+                    <dd>
+                      <p>You have a spouse. This term only applies to a person you are legally married to.</p>
+                    </dd>
+                    <dt class="mrgn-tp-md">Widowed</dt>
+                    <dd>
+                      <p>You had a spouse or common-law partner who is now deceased.</p>
+                    </dd>
+                    <dt class="mrgn-tp-md">Divorced</dt>
+                    <dd>
+                      <p>You are legally divorced from your former spouse.</p>
+                    </dd>
+                    <dt class="mrgn-tp-md">Single </dt>
+                    <dd>
+                      <p>None of the other marital statuses applies to you.</p>
+                    </dd>
+                  </dl>
+                  <p class="mrgn-tp-lg">If your marital status has changed, you must tell the CRA before you apply.<br>
+                    For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/update-your-marital-status-canada-revenue-agency.html#def" target="help" rel="noopener noreferrer">Update your marital status</a></p>
+                </div>
+              </section>
             </div>
-            <!--START OF PRINT STATEMENT--> 
-            <!--section id="dental-statement" class="mfp-hide modal-dialog modal-content overlay-def">
+          </fieldset>
+          <!--STEP 3-->
+          <fieldset id="custodyArrangment" class="panel-default p-0">
+            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Custody arrangement</span></legend>
+            <div class="panel-body mrgn-lft-sm gc-font-2019">
+              <fieldset id="custody" class="gc-chckbxrdio chckbxrdio-grp provisional">
+                <div class="form-group">
+                  <legend class="h5 required" tabindex="-1"><span class="field-name">What is your custody arrangement for the children you are applying for?</span> <strong class="required">(required)</strong></legend>
+                  <p class="small text-muted">Custody arrangements are the same as the CCB. If your child lives with you part-time, check if it is <a href="#shared-custody-help" aria-controls="shared-custody-help" class="wb-lbx" role="button">shared custody<span class="mrgn-lft-sm glyphicon glyphicon-question-sign"></span></a></p>
+                  <ul class="list-unstyled">
+                    <li class="radio">
+                      <input type="radio" name="custody" id="custody_Full" value="1" data-custody="1" data-rule-required="true">
+                      <label for="custody_Full">Full custody</label>
+                    </li>
+                    <li class="radio">
+                      <input type="radio" name="custody" id="custody_shared" value="2" data-custody="2" data-rule-required="true">
+                      <label for="custody_shared">Shared custody</label>
+                    </li>
+                    <li class="radio">
+                      <input type="radio" name="custody" id="custody_both" value="3" data-custody="3" data-rule-required="true">
+                      <label for="custody_both">Different for each child</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+            </div>
+          </fieldset>
+          <!--STEP 4--> 
+          <!--YOUR INCOME-->
+          <fieldset id="income" class="panel-default p-0">
+            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Family net income</span></legend>
+            <div class="panel-body mrgn-lft-sm gc-font-2019">
+              <div class="form-group">
+                <label for="netIncome" class="required">Your <span class="field-name">net income for
+                  <time data-eligible="year">2021</time>
+                  </span> <span class="wb-inv">(dollars only, no cents)</span> <strong class="required">(required)</strong></label>
+                <div class="input-group col-sm-4 col-xs-8"> <span class="input-group-addon">$</span>
+                  <input type="text" name="netIncome" size="7" maxlength="7" value="" id="netIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal" required>
+                  <span class="input-group-addon">.00</span> </div>
+                <p class="small">This is line 23600 of your
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+              </div>
+              <section id="netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                <header class="modal-header">
+                  <h2 class="modal-title">Net Income</h2>
+                </header>
+                <div class="modal-body">
+                  <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
+                  <p>If your net income is negative, enter '0'.</p>
+                </div>
+              </section>
+              <!--PARTNER INCOME-->
+              
+              <div id="partnerNetIncomeElm" data-has-partner="true" class="form-group">
+                <label for="partnerNetIncome" class="required">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s net income for
+                  <time data-eligible="year">2021</time>
+                  </span> <span class="wb-inv">(dollars only, no cents)</span><strong class="required">(required)</strong></label>
+                <div class="input-group col-sm-4 col-xs-8"> <span class="input-group-addon">$</span>
+                  <input type="text" name="partnernetIncome" size="7" maxlength="7" value="" id="partnerNetIncome" class="form-control text-right" pattern="-?[0-9]*" inputmode="decimal">
+                  <span class="input-group-addon">.00</span> </div>
+                <p class="small">This is line 23600 of your <span data-partner-case="false">spouse</span>'s
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+              </div>
+              <section id="partner_netIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                <header class="modal-header">
+                  <h2 class="modal-title">Spouse or Common law partner's net income</h2>
+                </header>
+                <div class="modal-body">
+                  <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-23600-net-income.html" target="help" rel="noopener noreferrer">Line 23600</a> on your spouse or common law partner's tax return and/or <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/help-page-child-family-benefits-calculator.html" target="help" rel="noopener noreferrer">world income</a> (if applicable).</p>
+                  <p>If your spouse or common law partner's net income is negative, enter '0'.</p>
+                </div>
+              </section>
+              <fieldset id="includeWorldIncome" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
+                <div class="form-group">
+                  <legend class="h5 required" tabindex="-1"><span class="field-name">Did you<span data-has-partner="true"> or your <span data-partner-case="false">spouse</span></span> receive income in another country during
+                  <time data-eligible="year">2021</time>
+                  while not a resident of Canada?</span> <strong class="required">(required)</strong></legend>
+                  <a href="#worldIncome-help" aria-controls="worldIncome-help" class="wb-lbx" role="button">Who must report world income? <span class="glyphicon glyphicon-question-sign"></span></a>
+                  <ul class="list-unstyled">
+                    <li class="radio">
+                      <input type="radio" name="hasWorldIncome" id="world-income-true" value="true" data-world-income="true" data-rule-required="true">
+                      <label for="world-income-true">Yes</label>
+                    </li>
+                    <li class="radio">
+                      <input type="radio" name="hasWorldIncome" id="world-income-false" value="false" data-world-income="false" data-rule-required="true">
+                      <label for="world-income-false">No</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <!--WORLD INCOME-->
+              <div id="worldIncomefields">
+                <div id="worldIncomeElm" class="form-group">
+                  <label id="worldIncomeLabel" for="worldIncome">Your <span class="field-name">world income for
+                    <time data-eligible="year">2021</time>
+                    </span> <span class="wb-inv">(dollars only, no cents)</span><strong id="worldIncomeRequire" class="required hidden"> (required)</strong></label>
+                  <div class="input-group col-sm-4 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="worldIncome" size="7" maxlength="7" value="" id="worldIncome" class="form-control text-right" inputmode="numeric" pattern="[0-9]*" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                  <p class="small">Include world income received when you were not a resident of Canada. If your world income is negative, enter '0'.</p>
+                </div>
+                <div id="partnerWorldIncomeElm" data-has-partner="true" class="form-group">
+                  <label for="partnerWorldIncome">Your <span class="field-name"><span data-partner-case="false">spouse</span>'s world income for
+                    <time data-eligible="year">2021</time>
+                    </span> <span class="wb-inv">(dollars only, no cents)</span></label>
+                  <div class="input-group col-sm-4 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="partnereWorldIncome" size="7" maxlength="7" value="" id="partnerWorldIncome" class="form-control text-right" inputmode="numeric" pattern="[0-9]*" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                  <p class="small">Include world income received when they were not a resident of Canada. If their world income is negative, enter '0'.</p>
+                </div>
+              </div>
+              <section id="worldIncome-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                <header class="modal-header">
+                  <h2 class="modal-title">World income</h2>
+                </header>
+                <div class="modal-body">
+                  <p>All residents of Canada are required to report their world income when they file an income tax return. You might have to file an additional statement to report your world income if you were resident in another country for all or part of
+                    <time data-eligible="year">2021</time>
+                    .</p>
+                </div>
+              </section>
+            </div>
+          </fieldset>
+          <!--STEP 5-->
+          <fieldset id="uccbAndRdsp" class="panel-default p-0">
+            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Adjustments</span></legend>
+            <div class="panel-body mrgn-lft-sm gc-font-2019"> 
+              <!--RDSP-->
+              <p class="h2 mrgn-tp-md">Registered Disability Savings Plan (RDSP)</p>
+              <fieldset id="includeRDSP" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
+                <div class="form-group">
+                  <legend class="h5 required" tabindex="-1"><span class="field-name">Did you claim <abbr title="Registered Disability Savings Plan">RDSP</abbr> income or make a <abbr title="Registered Disability Savings Plan">RDSP</abbr> repayment in
+                  <time data-eligible="year">2021</time>
+                  ?</span> <strong class="required">(required)</strong></legend>
+                  <p><a href="#rdsp-help" aria-controls="rdsp-help" class="wb-lbx" role="button">What is the Registered Disability Savings Plan&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
+                  <ul class="list-unstyled">
+                    <li class="radio">
+                      <input type="radio" name="rdsp" id="rdspTRUE" value="true" data-rdsp="true" data-rule-required="true">
+                      <label for="rdspTRUE">Yes</label>
+                    </li>
+                    <li class="radio">
+                      <input type="radio" name="rdsp" id="rdspFALSE" value="false" data-rdsp="false" data-rule-required="true">
+                      <label for="rdspFALSE">No</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <div id="rdspfields" class="row">
+                <p class="text-muted">Leave fields blank if amounts are zero.</p>
+                <div class="form-group col-md-6 brdr-rght" data-input-col1="true">
+                  <label for="rdspIncome"><span class="field-name">
+                    <time data-eligible="year">2021</time>
+                    <abbr title="Registered Disability Savings Plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                  <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="rdspIncome" size="7" maxlength="7" value="" id="rdspIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                </div>
+                <p class="small visible-sm visible-xs">This is line 12500 of your
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+                <div class="form-group col-md-6" data-has-partner="true">
+                  <label for="partnerRdspIncome"><span class="field-name">
+                    <time data-eligible="year">2021</time>
+                    <span data-partner-case="true" data-shortform="true">spouse</span>'s <abbr title="Registered Disability Savings Plan">RDSP</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                  <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="partnerRdspIncome" size="7" maxlength="7" value="" id="partnerRdspIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                </div>
+                <p class="hidden" data-partner-info="true">This is line 12500 on your <span data-partner-case="false">spouse</span>'s
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+                <p class="small visible-md visible-lg">This is line 12500 on<span data-has-partner="true"> your and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
+                  <time data-eligible="year">2021</time>
+                  tax returns.</p>
+                <div class="form-group col-md-6 brdr-rght" data-input-col1="true">
+                  <label for="rdspRepayment"><span class="field-name">
+                    <time data-eligible="year">2021</time>
+                    <abbr title="Registered Disability Savings Plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                  <div class="input-group input col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="rdspRepayment" size="7" maxlength="7" value="" id="rdspRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                </div>
+                <p class="small visible-sm visible-xs">This is the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts that is entered on line 23200 of your
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+                <div class="form-group col-md-6" data-has-partner="true">
+                  <label for="partnerRdspRepayment"><span class="field-name">
+                    <time data-eligible="year">2021</time>
+                    <span data-partner-case="true" data-shortform="true">spouse</span>'s <abbr title="Registered Disability Savings Plan">RDSP</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                  <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="partnerRdspRepayment" size="7" maxlength="7" value="" id="partnerRdspRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                </div>
+                <p class="hidden" data-partner-info="true">This is the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts entered on line 23200 of your <span data-partner-case="false">spouse</span>'s
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+                <p class="small visible-md visible-lg">These are the <abbr title="Registered Disability Savings Plan">RDSP</abbr> amounts entered on line 23200 of<span data-has-partner="true"> your and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
+                  <time data-eligible="year">2021</time>
+                  tax returns.</p>
+                <section id="rdsp-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                  <header class="modal-header">
+                    <h2 class="modal-title">Registered Disability Savings Plan</h2>
+                  </header>
+                  <div class="modal-body">
+                    <p>A Registered Disability Savings Plan (RDSP) is a savings plan intended to help parents and others save for the long term financial security of a person who is eligible for the Disability Tax Credit (DTC).</p>
+                    <p class="mrgn-tp-lg">For details: <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/registered-disability-savings-plan-rdsp.html" target="help" rel="noopener noreferrer">Registered Disability Savings Plan</a></p>
+                  </div>
+                </section>
+              </div>
+              <div class="clearfix"></div>
+              <!--UCCB-->
+              <p class="h2">Universal Child Care Benefit (UCCB)</p>
+              <fieldset id="includeUCCB" class="gc-chckbxrdio chckbxrdio-grp provisional hidden">
+                <div class="form-group">
+                  <legend class="h5 required" tabindex="-1"><span class="field-name">Did you claim <abbr title="Universal Child Care Benefit">UCCB</abbr> income or make a <abbr title="Universal Child Care Benefit">UCCB</abbr> repayment in
+                  <time data-eligible="year">2021</time>
+                  ?</span> <strong class="required">(required)</strong></legend>
+                  <p><a href="#uccb-help" aria-controls="uccb-help" class="wb-lbx" role="button">What is the Universal Child Care Benefit&nbsp;<span class="glyphicon glyphicon-question-sign"></span></a></p>
+                  <ul class="list-unstyled">
+                    <li class="radio">
+                      <input type="radio" name="uccb" id="uccbTRUE" value="true" data-uccb="true" data-rule-required="true">
+                      <label for="uccbTRUE">Yes</label>
+                    </li>
+                    <li class="radio">
+                      <input type="radio" name="uccb" id="uccbFALSE" value="false" data-uccb="false" data-rule-required="true">
+                      <label for="uccbFALSE">No</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <div id="uccbfields" class="row">
+                <p class="text-muted">Leave fields blank if amounts are zero.</p>
+                <div class="form-group col-md-6 brdr-rght" data-input-col1="true">
+                  <label for="uccbIncome"><span class="field-name">
+                    <time data-eligible="year">2021</time>
+                    <abbr title="Universal Child Care Benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                  <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="uccbIncome" size="7" maxlength="7" value="" id="uccbIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                </div>
+                <p class="small visible-sm visible-xs">This is line 11700 of your
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+                <div class="form-group col-md-6" data-has-partner="true">
+                  <label for="partnerUccbIncome"><span class="field-name">
+                    <time data-eligible="year">2021</time>
+                    <span data-partner-case="true" data-shortform="true">spouse</span>'s <abbr title="Universal Child Care Benefit">UCCB</abbr> income</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                  <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="partnerUccbIncome" size="7" maxlength="7" value="" id="partnerUccbIncome" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                </div>
+                <p class="hidden" data-partner-info="true">This is line 11700 of your <span data-partner-case="false">spouse</span>'s
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+                <p class="small visible-md visible-lg">This is line 11700 of<span data-has-partner="true"> your and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
+                  <time data-eligible="year">2021</time>
+                  tax returns.</p>
+                <div class="form-group col-md-6 brdr-rght" data-input-col1="true">
+                  <label for="uccbRepayment"><span class="field-name">
+                    <time data-eligible="year">2021</time>
+                    <abbr title="Universal Child Care Benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                  <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="uccbRepayment" size="7" maxlength="7" value="" id="uccbRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                </div>
+                <p class="small visible-sm visible-xs">This is line 21300 of your
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+                <div class="form-group col-md-6" data-has-partner="true">
+                  <label for="partnerUccbRepayment"><span class="field-name">
+                    <time data-eligible="year">2021</time>
+                    <span data-partner-case="true" data-shortform="true">spouse</span>'s <abbr title="Universal Child Care Benefit">UCCB</abbr> repayment</span><span class="wb-inv"> (dollars only, no cents)</span></label>
+                  <div class="input-group col-sm-7 col-xs-8"> <span class="input-group-addon">$</span>
+                    <input type="text" name="partnerUccbRepayment" size="7" maxlength="7" value="" id="partnerUccbRepayment" class="form-control text-right" pattern="[0-9]*" inputmode="numeric" data-rule-digits="true">
+                    <span class="input-group-addon">.00</span> </div>
+                </div>
+                <p class="hidden" data-partner-info="true">This is line 21300 of your <span data-partner-case="false">spouse</span>'s
+                  <time data-eligible="year">2021</time>
+                  tax return.</p>
+                <p class="small visible-md visible-lg">This is line 21300 of<span data-has-partner="true"> your and</span> your<span data-has-partner="true"> <span data-partner-case="false">spouse</span>'s</span>
+                  <time data-eligible="year">2021</time>
+                  tax returns.</p>
+                <section id="uccb-help" class="mfp-hide modal-dialog modal-content overlay-def">
+                  <header class="modal-header">
+                    <h2 class="modal-title">Universal Child Care Benefit</h2>
+                  </header>
+                  <div class="modal-body">
+                    <p>The <abbr title="Universal Child Care Benefit">UCCB</abbr> was a taxable benefit paid for children under 18 years old. It was available to all eligible individuals regardless of their income. Payments ended in July 2016, but lump-sum payments are still being issued for the months prior to that date. The Canada Child Benefit (CCB) replaced the <abbr title="Universal Child Care Benefit">UCCB</abbr> in 2016.</p>
+                    <p class="mrgn-tp-lg">For details: <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/line-11700-universal-child-care-benefit-uccb.html" target="help" rel="noopener noreferrer">Line 11700 - Universal Child Care Benefit (UCCB)</a></p>
+                  </div>
+                </section>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </fieldset>
+          <!--STEP 6--> 
+          <!--START OF RESULTS-->
+          <fieldset id="results" class="panel-default p-0">
+            <legend class="panel-heading mrgn-bttm-0"><span class="panel-title">Estimated benefit amount</span></legend>
+            <div class="panel-body mrgn-lft-sm">
+              <div id="cdb-statement">
+                <p class="mrgn-tp-md">Based on the amounts you entered, your adjusted family net income for this benefit is: <span class="mrgn-tp-0 h5"><strong><span data-output="avg-fam-net-income-value">$0</span></strong></span></p>
+                <details class="mrgn-bttm-md">
+                  <summary>Show the math for this amount</summary>
+                  <p>Your adjusted family net income for this benefit is:</p>
+                  <ul class="fa-ul lst-spcd">
+                    <li id="netIncomeResult"><span class="mrgn-tp-0 h5"><span data-output="net-income-value">$0</span><span class="text-muted"> (your net income)</span></span></li>
+                    <li id="partnerNetIncomeResult"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="partner-net-income-value">$0</span><span class="text-muted"> (your <span data-partner-case="false">spouse</span>'s net income)</span></span></li>
+                    <li id="worldIncomeResult" class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="family-world-income-value">$0</span><span class="text-muted"> (your world income)</span></span></li>
+                    <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><span data-output="household-income-value">$0</span><span class="text-muted"> (your family net income)</span></span></li>
+                  </ul>
+                  <br>
+                  <ul class="fa-ul lst-spcd">
+                    <li><span class="mrgn-tp-0 h5"><span data-output="household-income-value">$0</span><span class="text-muted"> (your family net income)</span></span></li>
+                    <li><span class="fas fa-minus fa-li"><span class="wb-inv">minus</span></span><span class="h5"><span data-output="adjusted-income-value">$0</span><span class="text-muted"> (<abbr title="Universal Child Care Benefit">UCCB</abbr> and <abbr title="Registered Disability Savings Plan">RDSP</abbr> income)</span></span></li>
+                    <li class="brdr-bttm"><span class="fas fa-plus fa-li"><span class="wb-inv">plus</span></span><span class="h5"><span data-output="adjusted-payment-value">$0</span><span class="text-muted"> (<abbr title="Universal Child Care Benefit">UCCB</abbr> and <abbr title="Registered Disability Savings Plan">RDSP</abbr> repayment)</span></span></li>
+                    <li><span class="fas fa-equals fa-li"><span class="wb-inv">equals</span></span><span class="mrgn-tp-0 h4"><span data-output="avg-fam-net-income-value">$0</span><span class="text-muted"> (your adjusted family net income)</span></span></li>
+                  </ul>
+                </details>
+                <!--QUALIFIES-->
+                <div class="alert alert-success provisional" id="qualify">
+                  <div class="p1-benefit">
+                    <p>The first period closed on June&nbsp;30,&nbsp;2023.</p>
+                    <p>If you were <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html">eligible</a>, your benefit amount for the <span data-output="">first</span> period was:</p>
+                    <div id="full-cust-benefit">
+                      <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you had full custody of</p>
+                    </div>
+                    <div data-custody-shared="true">
+                      <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child you had shared custody of</p>
+                    </div>
+                    <p>This is the amount you could receive if you also meet the <a href="additional-payment.html#p1">criteria for the period 1 additional payment</a>.</p>
+                  </div>
+                  <div class="p2-benefit">
+                    <p>If you're <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html">eligible</a>, your benefit amount for the <span data-output="">second</span> period is:</p>
+                    <div id="full-cust-benefit">
+                      <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you have full custody of</p>
+                    </div>
+                    <div data-custody-shared="true">
+                      <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-shared-child">$0</span></strong> for each eligible child you have shared custody of</p>
+                    </div>
+                  </div>
+                </div>
+                <!--DOES NOT QUALIFY-->
+                <div class="alert alert-danger provisional hidden" id="doesnt-qualify">
+                  <div class="p1-benefit">
+                    <h4>You may not have been able to apply</h4>
+                    <p>Based on the amounts you entered, your adjusted family net income was more than $90,000 and <strong>did not</strong> qualify for the <span data-output="">first</span> period of this benefit.</p>
+                    <p>If you are not sure if you entered your amounts correctly, you can <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/contact.html">contact us</a> to check.</p>
+                    <p>If your income changes, you may be eligible for the second benefit period.</p>
+                  </div>
+                  <div class="p2-benefit">
+                    <h4>You may not be able to apply</h4>
+                    <p>Based on the amounts you entered, your adjusted family net income is more than $90,000 and <strong>does not</strong> qualify for the <span data-output="">second</span> period of this benefit.</p>
+                    <p>If you are not sure if you entered your amounts correctly, you can sign in to <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html">CRA My Account</a> to check. You will not be able to start an application if your adjusted family net income is too high.</p>
+                  </div>
+                </div>
+                <!--DISCLAIMER-->
+                <p class="text-muted small">This result is an estimate based on the information you entered. The CRA will determine your benefit amount when you apply.</p>
+                <p data-custody-shared="true" class="text-muted small shared-custody mixed-custody">Since you have <a href="#shared-custody-help" aria-controls="shared-custody-help" class="wb-lbx" role="button">shared custody<span class="mrgn-lft-sm glyphicon glyphicon-question-sign"></span></a>, your child's other parent may get a different result since their adjusted family net income will be different.</p>
+                <!--<p><a href="#dental-statement" class="wb-lbx btn btn-default btn-lg" role="button"><span class="h3"><span class="glyphicon glyphicon-print"></span> Print preview<span class="wb-inv"> Canada dental benefit statement</span></span></a></p>--> 
+              </div>
+            </div>
+          </fieldset>
+          <!--END OF RESULTS-->
+          <button id="calc-dental-benefit" class="btn btn-primary hidden" type="submit">Calculate your estimated dental benefit</button>
+        </form>
+        <!--END OF CALC--> 
+      </div>
+      <!--START OF PRINT STATEMENT--> 
+      <!--section id="dental-statement" class="mfp-hide modal-dialog modal-content overlay-def">
               <header class="modal-header">
                 <h2 class="modal-title">Print preview for the Canada dental benefit statement</h2>
               </header>
@@ -846,84 +843,75 @@ fieldset fieldset {
               </div>
               <div class="modal-footer hidden"> </div>
             </section--> 
-            <!--END OF PRINT STATEMENT--> 
-            <!--END OF TOOL-->
-            <h2 id="h-3">How many payments you can get</h2>
-            <p>If you have more than one eligible child, you can apply for all of them at the same time or separately. For this benefit, you may apply for a <strong>maximum of 2&nbsp;payments</strong> for each eligible child.</p>
-            <h3>During the first benefit period</h3>
-            <p>From December&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023, you could only apply for <strong>one payment</strong> for each eligible child who received dental care between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023.</p>
-            <h3>During the second benefit period</h3>
-            <!--p>Applications open on <strong>July&nbsp;1,&nbsp;2023</strong> for:</p>
+      <!--END OF PRINT STATEMENT--> 
+      <!--END OF TOOL-->
+      <h2 id="h-3">How many payments you can get</h2>
+      <p>If you have more than one eligible child, you can apply for all of them at the same time or separately. For this benefit, you may apply for a <strong>maximum of 2&nbsp;payments</strong> for each eligible child.</p>
+      <h3>During the first benefit period</h3>
+      <p>From December&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023, you could only apply for <strong>one payment</strong> for each eligible child who received dental care between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023.</p>
+      <h3>During the second benefit period</h3>
+      <!--p>Applications open on <strong>July&nbsp;1,&nbsp;2023</strong> for:</p>
           <ul>
             <li>one payment for an eligible child who receives dental care between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024</li>
             <li>one additional payment for dental care over&nbsp;$650 in either benefit period if you <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html#lgblty">meet the criteria</a></li>
           </ul-->
-            <p>You can apply for <strong>one or two payments</strong> for each eligible child depending on your situation.</p>
-            <p>If you received a payment for a child in the first benefit period, that child will only be eligible for one more payment.</p>
-            <!--Uncomment out on July 1, 2023-->
-            <div class="wb-frmvld fieldflow-lg gc-font-2019 dynamic-content hidden">
-              <form>
-                <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true,  &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.p2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}, &quot;unhideelm&quot;: &quot;.dynamic-content&quot;, &quot;hideelm&quot;: &quot;.norun&quot;}">
-                  <p>Did you receive a payment for your child during the first benefit period?</p>
-                  <ul>
-                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#first&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
-                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#second&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
-                  </ul>
-                </div>
-              </form>
-            </div>
-            <!--div class="p2 alert alert-info" id="default">
+      <p>You can apply for <strong>one or two payments</strong> for each eligible child depending on your situation.</p>
+      <p>If you received a payment for a child in the first benefit period, that child will only be eligible for one more payment.</p>
+      <!--Uncomment out on July 1, 2023-->
+      <div class="wb-frmvld fieldflow-lg gc-font-2019 dynamic-content hidden">
+        <form>
+          <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true,  &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.p2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}, &quot;unhideelm&quot;: &quot;.dynamic-content&quot;, &quot;hideelm&quot;: &quot;.norun&quot;}">
+            <p>Did you receive a payment for your child during the first benefit period?</p>
+            <ul>
+              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#first&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
+              <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#second&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <!--div class="p2 alert alert-info" id="default">
           <p>You can only get 2 payments during the second benefit period if you did not receive a payment during the first benefit period.</p>
         </div-->
-            <h3 class="norun">If you received a payment during the first benefit period</h3>
-            <div class="p2 alert alert-info norun" id="first">
-              <h4 class="mrgn-bttm-lg">You may only get one payment in the second period</h4>
-              <p>You may apply for <strong>one</strong> of the following for your eligible child:</p>
-              <div class="mrgn-lft-md">
-                <ul class="list-unstyled cnjnctn-type-or mrgn-lft-sm">
-                  <li class="cnjnctn-col">
-                    <p>A payment for dental care between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024</p>
-                  </li>
-                  <li class="cnjnctn-col">
-                    <p>The <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html#p1">additional payment for the first period</a> if their dental costs were over&nbsp;$650 between October 1, 2022 and June 30, 2023</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <h3 class="norun">If you did not receive a payment during the first benefit period</h3>
-            <div class="p2 alert alert-info norun" id="second">
-              <h4 class="mrgn-bttm-lg">You could get up to 2 payments in the second period</h4>
-              <p>If eligible, you could apply for <strong>both</strong> of the following:</p>
-              <div class="mrgn-lft-md">
-                <ul class="list-unstyled cnjnctn-type-and">
-                  <li class="cnjnctn-col">
-                    <p>A payment for your child's dental care between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024</p>
-                  </li>
-                  <li class="cnjnctn-col">
-                    <p>The <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html#p2">additional payment for the second period</a> if your child's dental costs were over&nbsp;$650 and you meet the criteria</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <h3>For shared custody arrangements</h3>
-            <p>If your child only lives with you part-time, you may be considered to have shared custody for the Canada Child Benefit (CCB).</p>
-            <p>If you split the CCB as of December&nbsp;1,&nbsp;2022, each eligible parent may receive a <strong>maximum of 2 split payments</strong> (50% of the benefit amount) for that child. Your eligibility or benefit amount will not change even if the other parent does not apply.</p>
-            <p>It is possible for parents of the same child to get different amounts because it is based on their own family's net income which may not be the same.</p>
-          </div>
+      <h3 class="norun">If you received a payment during the first benefit period</h3>
+      <div class="p2 alert alert-info norun" id="first">
+        <h4 class="mrgn-bttm-lg">You may only get one payment in the second period</h4>
+        <p>You may apply for <strong>one</strong> of the following for your eligible child:</p>
+        <div class="mrgn-lft-md">
+          <ul class="list-unstyled cnjnctn-type-or mrgn-lft-sm">
+            <li class="cnjnctn-col">
+              <p>A payment for dental care between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024</p>
+            </li>
+            <li class="cnjnctn-col">
+              <p>The <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html#p1">additional payment for the first period</a> if their dental costs were over&nbsp;$650 between October 1, 2022 and June 30, 2023</p>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <nav role="navigation" class="mrgn-bttm-lg mrgn-tp-lg">
-              <h3 class="wb-inv">Section navigation</h3>
-              <ul class="pager">
-                <li class="next"><a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/get-ready.html" rel="next"><span class="wb-inv">Next: </span>Get ready to apply</a></li>
-              </ul>
-            </nav>
-          </div>
+      <h3 class="norun">If you did not receive a payment during the first benefit period</h3>
+      <div class="p2 alert alert-info norun" id="second">
+        <h4 class="mrgn-bttm-lg">You could get up to 2 payments in the second period</h4>
+        <p>If eligible, you could apply for <strong>both</strong> of the following:</p>
+        <div class="mrgn-lft-md">
+          <ul class="list-unstyled cnjnctn-type-and">
+            <li class="cnjnctn-col">
+              <p>A payment for your child's dental care between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024</p>
+            </li>
+            <li class="cnjnctn-col">
+              <p>The <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html#p2">additional payment for the second period</a> if your child's dental costs were over&nbsp;$650 and you meet the criteria</p>
+            </li>
+          </ul>
         </div>
       </div>
+      <h3>For shared custody arrangements</h3>
+      <p>If your child only lives with you part-time, you may be considered to have shared custody for the Canada Child Benefit (CCB).</p>
+      <p>If you split the CCB as of December&nbsp;1,&nbsp;2022, each eligible parent may receive a <strong>maximum of 2 split payments</strong> (50% of the benefit amount) for that child. Your eligibility or benefit amount will not change even if the other parent does not apply.</p>
+      <p>It is possible for parents of the same child to get different amounts because it is based on their own family's net income which may not be the same.</p>
+      <nav role="navigation" class="mrgn-bttm-lg mrgn-tp-lg">
+        <h3 class="wb-inv">Section navigation</h3>
+        <ul class="pager">
+          <li class="next"><a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/get-ready.html" rel="next"><span class="wb-inv">Next: </span>Get ready to apply</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
   <div class="mwsgeneric-base-html parbase section">
