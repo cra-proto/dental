@@ -776,7 +776,7 @@ fieldset fieldset {
                 <div class="alert alert-success provisional" id="qualify">
                   <div class="p1-benefit">
                     <p>If you're <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html">eligible</a>, your benefit amount for the <span data-output="">first</span> period is:</p>
-                    <div id="full-cust-benefit">
+                    <div class="full-cust-benefit">
                       <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you have full custody of</p>
                     </div>
                     <div data-custody-shared="true">
@@ -786,7 +786,7 @@ fieldset fieldset {
                   </div>
                   <div class="p2-benefit">
                     <p>If you're <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html">eligible</a>, your benefit amount for the <span data-output="">second</span> period is:</p>
-                    <div id="full-cust-benefit">
+                    <div class="full-cust-benefit">
                       <p class="lead mrgn-tp-sm mrgn-bttm-sm"><strong><span data-output="benefit-per-child">$0</span></strong> for each eligible child you have full custody of</p>
                     </div>
                     <div data-custody-shared="true">
@@ -1342,16 +1342,16 @@ fieldset fieldset {
   $(formId).on("click vclick touchstart", "input[type=radio][name=custody]", function (event) {
   	switch (custody()) {
   		case (3): // Different custody for each child 
-  			$("#full-cust-benefit").removeClass("hidden");
+  			$(".full-cust-benefit").removeClass("hidden");
   			$("[data-custody-shared=true]").removeClass("hidden");
   			break;
   		case (2): // Shared custody
-  			$("#full-cust-benefit").addClass("hidden");
+  			$(".full-cust-benefit").addClass("hidden");
   			$("[data-custody-shared=true]").removeClass("hidden");
   			break;
   		case (1):
   		default: // Full custody 
-  			$("#full-cust-benefit").removeClass("hidden");
+  			$(".full-cust-benefit").removeClass("hidden");
   			$("[data-custody-shared=true]").addClass("hidden");
   	}
   	updateResults();
