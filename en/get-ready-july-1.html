@@ -318,7 +318,7 @@
                   </div>
                   <!--P2 you filed, non-resident spouse did not file SOI-->
                   <div id="answer0-2-2-p2" class="alert alert-warning alert0 provisional hidden">
-                        <p> Your spouse or common-law partner must file their 2022 tax return or submit a statement of world income before you can apply. </p>
+                    <p> Your spouse or common-law partner must file their 2022 tax return or submit a statement of world income before you can apply. </p>
                     <div class="mrgn-tp-md mrgn-bttm-md">
                       <p> For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-apply.html#additional">Additional documents to apply for the CCB</a> </p>
                     </div>
@@ -367,14 +367,14 @@
                   <div id="answer0-1" class="alert alert-success alert0 provisional hidden">
                     <p> Great. Your 2021 tax returns will be used to determine if you're eligible for the additional payment. </p>
                     <div class="mrgn-tp-md">
-                      <p> Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>. </p>
+                      <p> Next, go to: <a href="#confirm-registration"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="far fa-user-circle fa-stack-2x"></span></span>Confirm</span> you have access to your CRA My Account</a>. </p>
                     </div>
                   </div>
                   <!--AP2 you filed, non-resident spouse filed SOI-->
                   <div id="answer0-2-1" class="alert alert-success alert0 provisional hidden">
                     <p> Great. We will need this information to determine if you're eligible for the additional payment. </p>
                     <div class="mrgn-tp-md">
-                      <p> Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>. </p>
+                      <p> Next, go to: <a href="#confirm-registration"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="far fa-user-circle fa-stack-2x"></span></span>Confirm</span> you have access to your CRA My Account</a>. </p>
                     </div>
                   </div>
                   <!--AP2 you filed, non-resident spouse did not file SOI-->
@@ -393,7 +393,7 @@
                   <div id="answer0-3" class="alert alert-success alert0 provisional hidden">
                     <p> Since you've filed your 2021 tax return, you're ready for the next step. </p>
                     <div class="mrgn-tp-md">
-                      <p> Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>. </p>
+                      <p> Next, go to: <a href="#confirm-registration"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="far fa-user-circle fa-stack-2x"></span></span>Confirm</span> you have access to your CRA My Account</a>. </p>
                     </div>
                   </div>
                   <!--AP2 World income, filed a statement of income-->
@@ -401,7 +401,7 @@
                     <p> Great. We will need your 2021 world income to determine if you're eligible for the additional payment. </p>
                     <p> If you have a spouse or common-law partner, we will also need their information. They must file a 2021 tax return or submit a statement of world income before you can apply. </p>
                     <div class="mrgn-tp-md">
-                      <p> Next, go to: <a href="#ccb"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="fa fa-child fa-stack-1x"></span></span>Confirm</span> you receive the Canada Child Benefit (CCB)</a>. </p>
+                      <p> Next, go to: <a href="#confirm-registration"><span class="nowrap"><span class="fa-stack fa-xs mrgn-rght-sm"><span class="far fa-circle fa-stack-2x"></span><span class="far fa-user-circle fa-stack-2x"></span></span>Confirm</span> you have access to your CRA My Account</a>. </p>
                     </div>
                   </div>
                   <!--AP2 World income, did not file-->
@@ -441,16 +441,22 @@
                   <form>
                     <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert3", "class": "hidden", "live": true}}'>
                     <div class="wb-fieldflow-header">
-                      <p class="wb-fieldflow-label"> Select the payment you are applying for: </p>
-                      <!--p class="text-muted">Use the period when your child received or will receive dental care.</p-->
-                      <ul class="fa-ul text-muted mrgn-bttm-lg">
-                        <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 1: October 1, 2022 to June 30, 2023</li>
-                        <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 2: July 1, 2023 to June 30, 2024</li>
-                      </ul>
+                      <p class="wb-fieldflow-label"> Select the period you are applying for: </p>
+                      <p class="text-muted">Use the period when your child received or will receive dental care.</p>
                     </div>
                     <ul>
-                      <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-p1", "class": "hidden", "live": true}'>Period 1: Original payment</li>
-                      <li>Period 2: Original payment
+                      <li>Period 1: October 1, 2022 to June 30, 2023
+                        <div class="wb-fieldflow-sub" data-wb-fieldflow='{"renderas": "radio", "gcChckbxrdio":true, "isoptional": true, "reset": {"action": "addClass", "source": ".alert3", "class": "hidden"}}'>
+                          <div class="wb-fieldflow-header">
+                            <p class="wb-fieldflow-label"> Which payment are you applying for? </p>
+                          </div>
+                          <ul>
+                            <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-ap1", "class": "hidden", "live": true}'> Period 1: Additional payment </li>
+                            <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-p1", "class": "hidden", "live": true}'> Period 1: Original payment </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>Period 2: July 1, 2023 to June 30, 2024
                         <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert3", "class": "hidden", "live": true}}'>
                           <div class="wb-fieldflow-header">
                             <p class="wb-fieldflow-label"> Did you receive CCB payments for your child as of July&nbsp;1,&nbsp;2023? </p>
@@ -473,12 +479,11 @@
                           </ul>
                         </div>
                       </li>
-                      <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-ap1", "class": "hidden", "live": true}'>Period 1: Additional payment</li>
+                      <!--li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-ap1", "class": "hidden", "live": true}'>Period 1: Additional payment</li>
                       <li>Period 2: Additional payment
                         <div class="wb-fieldflow-sub" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".alert3", "class": "hidden", "live": true}}'>
                           <div class="wb-fieldflow-header">
                             <p class="wb-fieldflow-label"> Did you receive CCB payments for your child as of December&nbsp;1,&nbsp;2022 and July&nbsp;1,&nbsp;2023? </p>
-                            <!--p class="text-muted"></p--> 
                           </div>
                           <ul>
                             <li data-wb-fieldflow='{"action": "removeClass", "source": "#answer3-1", "class": "hidden", "live": true}'> Yes </li>
