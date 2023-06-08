@@ -127,10 +127,11 @@
         <h1>Canada Dental Benefit</h1>
         <ul>
           <li> <a href="who-apply-july-1.html">Who can apply</a> </li>
-          <li> <a href="how-much-july-1.html" class="active">How much you can get</a> 
-			<ul class="noline">
-                <li> <a href="estimate-benefit-july-1.html">Estimate your benefit amount</a> </li>
-              </ul></li>
+          <li> <a href="how-much-july-1.html" class="active">How much you can get</a>
+            <ul class="noline">
+              <li> <a href="estimate-benefit-july-1.html">Estimate your benefit amount</a> </li>
+            </ul>
+          </li>
           <li> <a href="get-ready-july-1.html">Get ready to apply</a> </li>
           <li> <a href="how-apply-july-1.html">How to apply</a> </li>
           <li> <a href="return-payment-july-1.html">Return a payment</a> </li>
@@ -146,7 +147,7 @@
       </ul>
       <h2 id="h-1">Benefit amounts based on income</h2>
       <p>The CRA determines your benefit amount based on your adjusted family net income. The benefit amount for each eligible child will not change based on your dental costs.</p>
-      <details>
+      <details class="mrgn-tp-md mrgn-bttm-md">
         <summary>How shared custody benefit amounts are split</summary>
         <p>If your child only lives with you part-time, you may be considered to have shared custody for the Canada Child Benefit (CCB). You will receive half of the dental benefit amount if you share custody of your child and currently split the CCB.</p>
         <p>Both parents can apply for the dental benefit if they are eligible. The amount you receive would be 50% of the benefit amount based on your own adjusted family net income. This means you may receive a different amount than your child's other parent.</p>
@@ -156,8 +157,12 @@
           <li>July&nbsp;1,&nbsp;2023 for the second benefit period</li>
         </ul>
       </details>
+      <p>Use your adjusted family net income from:</p>
+      <ul>
+        <li>2021 for dental care received between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023</li>
+        <li>2022 for dental care received between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024</li>
+      </ul>
       <h3 id="amounts">Benefit amounts per eligible child</h3>
-      
       <div class="table-responsive">
         <table aria-labelledby="amounts" class="table table-bordered table-responsive table-hover">
           <!--caption class="wb-inv">
@@ -194,14 +199,14 @@
           </tbody>
         </table>
       </div>
-		<p>If you do not know your adjusted family net income, you can <a href="estimate-benefit.html">estimate your benefit amount</a>.</p>
+      <p><a href="estimate-benefit.html"><span class="fas fa-calculator mrgn-rght-sm"></span>Estimate your benefit amount</a> if you're still unsure or do not know your adjusted family net income.</p>
       <section id="afni-help" class="mfp-hide modal-dialog modal-content overlay-def">
         <header class="modal-header">
           <h2 class="modal-title">Your adjusted family net income</h2>
         </header>
         <div class="modal-body">
           <p>You do not need to calculate your adjusted family net income. The CRA calculates this number for you to determine your eligibility for certain benefits.</p>
-          <p>You can use the <a href="estimate-benefit.html">estimator tool</a> if you want to estimate your adjusted family net income and your benefit amount.</p>
+          <p>You can use the <a href="estimate-benefit.html"><span class="fas fa-calculator mrgn-rght-sm"></span>estimator tool</a> if you want to estimate your adjusted family net income and your benefit amount.</p>
           <p>Your adjusted family net income is determined using net income, <abbr title="Registered Disability Savings Plan">RDSP</abbr>, and <abbr title="Universal Child Care Benefit">UCCB</abbr> amounts from your:</p>
           <ul>
             <li><strong>2021 tax return</strong> for the first benefit period (October&nbsp;1,&nbsp;2022 to June&nbsp;30,&nbsp;2023)</li>
@@ -252,7 +257,6 @@
       </section>
       <h3>If dental costs are more than $650</h3>
       <p>If you only apply for one benefit period and your child's dental costs are over $650 in that period, you may meet the <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply/additional-payment.html#lgblty">criteria for the additional payment</a>.</p>
-      
       <h2 id="h-3">How many payments you can get</h2>
       <p>If you have more than one eligible child, you can apply for all of them at the same time or separately. For this benefit, you may apply for a <strong>maximum of 2&nbsp;payments</strong> for each eligible child.</p>
       <h3>During the first benefit period</h3>
@@ -328,9 +332,9 @@
       <p>If your child only lives with you part-time, you may be considered to have shared custody for the Canada Child Benefit (CCB).</p>
       <p>If you split the CCB as of December&nbsp;1,&nbsp;2022, each eligible parent may receive a <strong>maximum of 2 split payments</strong> (50% of the benefit amount) for that child. Your eligibility or benefit amount will not change even if the other parent does not apply.</p>
       <p>It is possible for parents of the same child to get different amounts because it is based on their own family's net income which may not be the same.</p>
-		<h4>Coordinate applications for the same child</h4>
+      <h4>Coordinate applications for the same child</h4>
       <p>If both parents are applying for a child, they must choose the <strong class="nowrap">same 2 payments</strong> to apply for:</p>
-		<!--p>Both parents must apply for the <strong>same 2</strong> of the following:</p-->
+      <!--p>Both parents must apply for the <strong>same 2</strong> of the following:</p-->
       <ul>
         <li>Period 1: Original payment</li>
         <li>Period 1: Additional payment</li>
@@ -612,6 +616,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> 
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script> 
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script> 
-<script src="https://www.canada.ca/etc/designs/canada/wet-boew/méli-mélo/2022-06-banff.min.js" crossorigin="anonymous" integrity="sha256-xiXogLzHjlg4vsTCAcJzpzCjXED2xmw9IisLSog0Pfg="></script> 
+<script src="https://www.canada.ca/etc/designs/canada/wet-boew/méli-mélo/2022-06-banff.min.js" crossorigin="anonymous" integrity="sha256-xiXogLzHjlg4vsTCAcJzpzCjXED2xmw9IisLSog0Pfg="></script>
 </body>
 </html>
