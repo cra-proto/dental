@@ -214,22 +214,24 @@
                               <li>Before I applied
                                 <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
                                   <div class="wb-fieldflow-header">
-                                    <p class="wb-fieldflow-label">Did your child have access to dental insurance when they went to their appointment?</p>
+                                    <p class="wb-fieldflow-label">Did your child have access to private dental insurance when they went to their appointment?</p>
                                   </div>
                                   <ul>
                                     <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-before-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
                                     <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-before-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+									  <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-unsure&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Not sure</li>
                                   </ul>
                                 </div>
                               </li>
                               <li>After I applied
                                 <div class="wb-fieldflow-sub" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true, &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.alert1&quot;, &quot;class&quot;: &quot;hidden&quot;}}">
                                   <div class="wb-fieldflow-header">
-                                    <p class="wb-fieldflow-label">Did your child have access to dental insurance when you applied?</p>
+                                    <p class="wb-fieldflow-label">Did your child have access to private dental insurance when you applied?</p>
                                   </div>
                                   <ul>
                                     <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-after-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Yes</li>
                                     <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-after-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">No</li>
+									  <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer3-unsure&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Not sure</li>
                                   </ul>
                                 </div>
                               </li>
@@ -339,7 +341,8 @@
                   <!--Letter, RFI-->
                   <div id="answer2-2" class="alert alert-info alert1 hidden">
                     <h4>Provide additional information requested by the CRA</h4>
-                    <p>You must respond <strong>within 30 days</strong> or you may need to repay the benefit. We may call you or your dental care provider to confirm the information you provide.</p>
+					  
+                    <p>If you do not respond <strong>within 30 days</strong>, you may need to repay the benefit and may not be able to apply for another payment. We may call you or your dental care provider to confirm the information you provide.</p>
                     <p>For details: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/dental-benefit/how-apply/validation.html">Validating your application</a>.</p>
                   </div>
                   <!--Letter, unsure-->
@@ -359,12 +362,14 @@
                     <h4>You can keep the benefit</h4>
                     <!--p>Your child's appointment must have been within the benefit period.</p-->
                     <p>Since your child did <strong>not</strong> have access to a private dental insurance plan when they went to their dental appointment, you can keep the benefit.</p>
+					  <section data-ajax-replace="#insurance"></section>
                   </div>
                   <!--Private insurance, no access when they applied-->
                   <div id="answer3-after-1" class="alert alert-info alert1 hidden">
                     <h4>You can keep the benefit</h4>
                     <!--p>Your child's appointment must have been within the benefit period.</p-->
                     <p>Since your child did <strong>not</strong> have access to a private dental insurance plan when you applied, you can keep the benefit.</p>
+					  <section data-ajax-replace="#insurance"></section>
                   </div>
                   <!--Private insurance, had access when they applied-->
                   <div id="answer3-after-2" class="alert alert-warning alert1 hidden">
@@ -380,7 +385,30 @@
                       <li>your child did not have access to dental insurance when you applied, but got insurance later</li>
                       <li>your child had access to dental insurance when you applied but they already received dental care while not insured</li>
                     </ul>
+					  <section data-ajax-replace="#insurance"></section>
                     <p class="mrgn-tp-md">If you are still concerned you might need to repay, contact the CRA at <a href="tel:18007158836" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-715-8836<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-715-8836</strong>.</p>
+                  </div>
+					<!--Private insurance, unsure-->
+                  <div id="answer3-unsure" class="alert alert-info alert1 hidden">
+					   <h4>Contact us if unsure</h4>
+					   <p>You may <strong>not</strong> need to repay if:</p>
+                    <ul>
+                      <li>your child did not have access to dental insurance when you applied, but got insurance later</li>
+                      <li>your child had access to dental insurance when you applied but they already received dental care while not insured</li>
+                    </ul><details id="insurance">
+                    <summary>What counts as access to private dental insurance</summary>
+                    
+                     
+                      <p>Your child is considered to have access to private dental insurance if:</p>
+                      <ul class="lst-spcd">
+                        <li>Some or all of your child's dental costs are covered by a private dental insurance plan of any kind</li>
+                        <li>Your employer provides a dental insurance plan for your child (including health care spending accounts)</li>
+                        <li>Your child's other parent or caregiver's employer provides a dental insurance plan for your child (including health care spending accounts)</li>
+                        <li>You or someone else declined an employer provided dental insurance plan that would have covered the dental care for your child </li>
+						 
+                      </ul>
+                   </details>
+					  <p class="mrgn-tp-md">If you are still concerned you might need to repay, contact the CRA at <a href="tel:18007158836" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-715-8836<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-715-8836</strong>.</p>
                   </div>
                   <!--Government program, all costs covered-->
                   <div id="answer4-1" class="alert alert-warning alert1 hidden">
@@ -397,8 +425,9 @@
                   <div id="answer4-3" class="alert alert-info alert1 hidden">
                     <h4>Only repay if your child's dental costs are fully covered</h4>
                     <p>Wait to find out how much of your child's dental costs were covered by another government program.</p>
-                    <p>If your child's dental costs are <strong>fully reimbursed</strong> or paid for by the other program, you must repay the Canada Dental Benefit.</p>
+                    <p>If your child's dental costs are <strong>fully covered</strong> by the other program, you must repay the Canada Dental Benefit.</p>
                     <p>If you had to pay for some of your child's dental costs, you can keep the payment for that period.</p>
+					   <p class="mrgn-tp-md">If you are still concerned you might need to repay, contact the CRA at <a href="tel:18007158836" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-715-8836<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-715-8836</strong>.</p>
                   </div>
                   <!--P1, some costs-->
                   <div id="answer5-p1" class="alert alert-info alert1 hidden">
