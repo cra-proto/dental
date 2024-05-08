@@ -206,33 +206,16 @@
             <section data-ajax-replace="https://www.canada.ca/content/dam/cra-arc/includes/housing-dental.txt#dental-benefit-eng"></section>
             <p>There were 2 benefit periods for the interim Canada Dental Benefit. The eligibility criteria was specific to the period when your child received dental care. Check if you met the criteria for each child you applied for.</p>
             <h2 id="lgblty">Eligibility criteria - closed</h2>
+            <!--URL mapping & FF-->
             <div data-wb-urlmapping='{
-		"period=p1": { "action": "removeClass", "source": ".show-p1", "class": "hidden" },
-		"period=p2": { "action": "removeClass", "source": ".show-p2", "class": "hidden" },
-		"period=ap1": { "action": "removeClass", "source": ".show-ap1", "class": "hidden" },
-		"period=ap2": { "action": "removeClass", "source": ".show-ap2", "class": "hidden" }
+		"period=p1": [{ "action": "selectInput", "source": "#eligibilityOptions", "value": "Period 1: Original payment" },{ "action": "removeClass", "source": ".show-p1", "class": "hidden" },{ "action": "addClass", "source": "#action-no-msg", "class": "hidden" }],
+		"period=p2": [{ "action": "selectInput", "source": "#eligibilityOptions", "value": "Period 2: Original payment" },{ "action": "removeClass", "source": ".show-p2", "class": "hidden" },{ "action": "addClass", "source": "#action-no-msg", "class": "hidden" }],
+		"period=ap1": [{ "action": "selectInput", "source": "#eligibilityOptions", "value": "Period 1: Additional payment" },{ "action": "removeClass", "source": ".show-ap1", "class": "hidden" },{ "action": "addClass", "source": "#action-no-msg", "class": "hidden" }],
+		"period=ap2": [{ "action": "selectInput", "source": "#eligibilityOptions", "value": "Period 2: Additional payment" },{ "action": "removeClass", "source": ".show-ap2", "class": "hidden" },{ "action": "addClass", "source": "#action-no-msg", "class": "hidden" }]
 	}'></div>
-            <div data-wb-urlmapping='{
-	    "period=p1": { "action": "addClass", "source": ".hide-p1,#action-no-msg", "class": "hidden" },
-		"period=p2": { "action": "addClass", "source": ".hide-p2,#action-no-msg", "class": "hidden" },
-		"period=ap1": { "action": "addClass", "source": ".hide-ap1,#action-no-msg", "class": "hidden" },
-		"period=ap2": { "action": "addClass", "source": ".hide-ap2,#action-no-msg", "class": "hidden" }
-	}'></div>
-            <p><strong>For payments received for:</strong></p>
-            <!--ul class="fa-ul text-muted mrgn-bttm-lg">
-                      <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 1: October 1, 2022 to June 30, 2023</li>
-                      <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 2: July 1, 2023 to June 30, 2024</li>
-                    </ul-->
-            <ul>
-              <li><a href="?period=p1#lgblty-p1" class="hide-p1">Period 1: Original payment (October 1, 2022 to June 30, 2023)</a><strong class="show-p1 hidden">Period 1: Original payment (October 1, 2022 to June 30, 2023)</strong></li>
-              <li><a href="?period=ap1#lgblty-ap1" class="hide-ap1">Period 1: Additional payment (October 1, 2022 to June 30, 2023)</a><strong class="show-ap1 hidden">Period 1: Additional payment (October 1, 2022 to June 30, 2023)</strong></li>
-              <li><a href="?period=p2#lgblty-p2" class="hide-p2">Period 2: Original payment (July 1, 2023 to June 30, 2024)</a><strong class="show-p2 hidden">Period 2: Original payment (July 1, 2023 to June 30, 2024)</strong></li>
-              <li><a href="?period=ap2#lgblty-ap2" class="hide-ap2">Period 2: Additional payment (July 1, 2023 to June 30, 2024)</a><strong class="show-ap2 hidden">Period 2: Additional payment (July 1, 2023 to June 30, 2024)</strong></li>
-            </ul>
-            
-            <!--div class="wb-frmvld fieldflow-lg gc-font-2019">
-              <form>
-                <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;:true,  &quot;renderas&quot;:&quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.chcklst,#action-no-msg&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}}">
+            <div class="wb-frmvld gc-font-2019">
+              <form id="eligibilityOptions" class="hidden">
+                <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".chcklst,#action-no-msg", "class": "hidden", "live": true}, "itmselector": "#options", "unhideelm": "#eligibilityOptions", "hideelm": ".chcklst"}'>
                   <div class="wb-fieldflow-header">
                     <p class="wb-fieldflow-label">For payments received for:</p>
                     <ul class="fa-ul text-muted mrgn-bttm-lg">
@@ -240,16 +223,19 @@
                       <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 2: July 1, 2023 to June 30, 2024</li>
                     </ul>
                   </div>
-                  <ul>
-                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;.show-p1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Period 1: Original payment</li>
-                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;.show-ap1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true">Period 1: Additional payment</li>
-                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;.show-p2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Period 2: Original payment</li>
-                    <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;.show-ap2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Period 2: Additional payment</li>
-                  </ul>
+                  <div id="options">
+                    <ul>
+                      <li data-wb-fieldflow='{"action": "removeClass", "source": ".show-p1", "class": "hidden", "live": true}'>Period 1: Original payment</li>
+                      <li data-wb-fieldflow='{"action": "removeClass", "source": ".show-p2", "class": "hidden", "live": true}'>Period 2: Original payment</li>
+                      <li data-wb-fieldflow='{"action": "removeClass", "source": ".show-ap1", "class": "hidden", "live": true}'>Period 1: Additional payment</li>
+                      <li data-wb-fieldflow='{"action": "removeClass", "source": ".show-ap2", "class": "hidden", "live": true}'>Period 2: Additional payment</li>
+                    </ul>
+                  </div>
                 </div>
               </form>
-            </div--> 
-            <!--Nothing selected in FF-->
+            </div>
+            <!--End of URL mapping & FF--> 
+            <!--Alert if nothing selected in FF-->
             <div tabindex="0" class="alert alert-info provisional mrgn-tp-sm" id="action-no-msg">
               <h4>The interim Canada Dental Benefit is no longer available</h4>
               <p>Select the payment you recieved to review the eligibility criteria.</p>
