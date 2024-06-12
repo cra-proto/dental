@@ -230,15 +230,15 @@
                       <li><span class="far fa-calendar-alt mrgn-rght-sm"></span>Period 2: July 1, 2023 to June 30, 2024</li>
                     </ul>
 		  <p>There were 2 types of payments for this benefit. The original payment was for dental care received in the specific period you applied for. The additional payment was available if your child had dental costs that were more than $650 in one of the benefit periods. The eligibility criteria was specific to the type of payment you applied for.</p>
-		  <span  id="review-eligibility"></span>
+		  
             <!--URL mapping & FF-->
             <div data-wb-urlmapping='{
 		"period=p1": [{ "action": "selectInput", "source": "#eligibilityOptions", "value": "Period 1: Original payment" },{ "action": "removeClass", "source": ".show-p1", "class": "hidden" },{ "action": "addClass", "source": "#action-no-msg", "class": "hidden" }],
 		"period=p2": [{ "action": "selectInput", "source": "#eligibilityOptions", "value": "Period 2: Original payment" },{ "action": "removeClass", "source": ".show-p2", "class": "hidden" },{ "action": "addClass", "source": "#action-no-msg", "class": "hidden" }],
 		"period=ap1": [{ "action": "selectInput", "source": "#eligibilityOptions", "value": "Period 1: Additional payment" },{ "action": "removeClass", "source": ".show-ap1", "class": "hidden" },{ "action": "addClass", "source": "#action-no-msg", "class": "hidden" }],
 		"period=ap2": [{ "action": "selectInput", "source": "#eligibilityOptions", "value": "Period 2: Additional payment" },{ "action": "removeClass", "source": ".show-ap2", "class": "hidden" },{ "action": "addClass", "source": "#action-no-msg", "class": "hidden" }]
-	}'></div>
-            <div class="wb-frmvld gc-font-2019">
+	}'></div> 
+            <div id="review-eligibility" class="wb-frmvld gc-font-2019">
               <form id="eligibilityOptions" class="hidden">
                 <div class="wb-fieldflow" data-wb-fieldflow='{"noForm": true, "isoptional": true, "gcChckbxrdio":true, "renderas":"radio", "reset": {"action": "addClass", "source": ".chcklst,#action-no-msg", "class": "hidden", "live": true}, "itmselector": "#options", "unhideelm": "#eligibilityOptions", "hideelm": ".chcklst"}'>
                   <div class="wb-fieldflow-header">
