@@ -326,69 +326,183 @@
                   </form>
                 </div>
                 <!--Start of FF answers-->
-                <div id="answers">
-                  <div id="answer1-1" tabindex="0" class="alert alert-info alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax1-1"></section>
-                  </div>
-                  <div id="answer1-2" tabindex="0" class="alert alert-warning alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax1-2"></section>
-                  </div>
-                  <div id="answer1-3" tabindex="0" class="alert alert-warning alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax1-3"></section>
-                  </div>
-                  <div id="answer2-1" tabindex="0" class="alert alert-warning alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax2-1"></section>
-                  </div>
-                  <div id="answer2-2" tabindex="0" class="alert alert-info alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax2-2"></section>
-                  </div>
-                  <div id="answer2-3" tabindex="0" class="alert alert-info alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax2-3"></section>
-                  </div>
-                  <div id="answer3-1" tabindex="0" class="alert alert-warning alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax3-1"></section>
-                  </div>
-                  <div id="answer3-2" tabindex="0" class="alert alert-info alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax3-2"></section>
-                  </div>
-                  <div id="answer3-3" tabindex="0" class="alert alert-warning alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax3-3"></section>
-                  </div>
-                  <div id="answer3-4" tabindex="0" class="alert alert-info alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax3-4"></section>
-                  </div>
-                  <div id="answer4-1" tabindex="0" class="alert alert-warning alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax4-1"></section>
-                  </div>
-                  <div id="answer4-2" tabindex="0" class="alert alert-info alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax4-2"></section>
-                  </div>
-                  <div id="answer4-3" tabindex="0" class="alert alert-info alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax4-3"></section>
-                  </div>
-                  <div id="answer5" tabindex="0" class="alert alert-warning alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax5"></section>
-                  </div>
-                  <div id="answer6" tabindex="0" class="alert alert-warning alert1 hidden">
-                    <p class="text-muted small">Result:</p>
-                    <section data-ajax-replace="#ajax6"></section>
-                  </div>
+              <div id="answers"> 
+                <!--P1 Moved appointment, child went-->
+                <div id="answer1-p1-1" class="alert alert-info alert1 hidden">
+                  <h4>You can keep the payment</h4>
+                  <p>Based on your response, you can keep the payment for your child.</p>
+                  <p>You did <strong>not</strong> have to call the CRA if your child's dental appointment was rescheduled within the same benefit period.</p>
+                  <p>Keep your receipts for 6 years in case the CRA needs to validate your eligibility. Your receipt needs to show you paid for your child's dental care. Services provided for free or fully covered by another government program are not eligible for the Canada Dental Benefit. </p>
                 </div>
-                <!--End of FF answers--> 
+                <!--P1 Moved appointment, child did not go-->
+                <div id="answer1-p1-2" class="alert alert-warning alert1 hidden">
+                  <h4>You need to repay</h4>
+                  <p>If your child did not receive dental care in the first benefit period, you must repay the amount you received for that child.</p>
+                </div>
+                <!--P2 Moved appointment, child went-->
+                <div id="answer1-p2-1" class="alert alert-info alert1 hidden">
+                  <h4>You can keep the payment</h4>
+                  <p>Based on your response, you can keep the payment for your child.</p>
+                  <p>You did <strong>not</strong> have to call the CRA if your child's dental appointment was rescheduled within the same benefit period.</p>
+                  <p>Keep your receipts for 6 years in case the CRA needs to validate your eligibility. </p>
+                </div>
+                <!--P2 Moved appointment, child did not go-->
+                <div id="answer1-p2-2" class="alert alert-warning alert1 hidden">
+                  <h4>You will need to repay</h4>
+                  <p>If your child did not receive dental care in this benefit period, you must repay the amount you received for that child.</p>
+                </div>
+                <!--Letter, NOR-->
+                <div id="answer2-1" class="alert alert-warning alert1 hidden">
+                  <h4>Repay the amount from your letter</h4>
+                  <p>The CRA has determined that you were not eligible for the benefit. Follow the instructions in your letter to repay the amount due.</p>
+                  <p><a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/application-denied.html">If you disagree with the decision</a>, you may be able to request a second review.</p>
+                </div>
+                <!--Letter, RFI-->
+                <div id="answer2-2" class="alert alert-info alert1 hidden">
+                  <h4>Provide additional information requested by the CRA</h4>
+                  <p>If you do not respond <strong>within 30 days</strong>, you may need to repay the benefit. We may call you or your dental care provider to confirm the information you provide.</p>
+                  <p>For details: <a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/validation.html">Validating your application</a>.</p>
+                </div>
+                <!--Letter, unsure-->
+                <div id="answer2-3" class="alert alert-info alert1 hidden">
+                  <h4>Contact us if you're unsure</h4>
+                  <p>In your letter, you may be asked to provide more information to <a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/validation.html">validate your application</a>.</p>
+                  <p>If there is a phone number in your letter, use that number to call us. If you cannot find a phone number, contact the CRA at <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-959-8281<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-959-8281</strong>.</p>
+                </div>
+                <!--Private insurance, had access when they went to appointment-->
+                <div id="answer3-before-1" class="alert alert-warning alert1 hidden">
+                  <h4>You must repay</h4>
+                  <p>Since your child had access to a private dental insurance plan when they went to their dental appointment, you must repay the benefit.</p>
+                  <p>You must repay the amount for each child who is in the same situation.</p>
+                </div>
+                <!--Private insurance, no access when they went to appointment-->
+                <div id="answer3-before-2" class="alert alert-info alert1 hidden">
+                  <h4>You can keep the benefit</h4>
+                  <!--p>Your child's appointment must have been within the benefit period.</p-->
+                  <p>Since your child did <strong>not</strong> have access to a private dental insurance plan when they went to their dental appointment, you can keep the benefit.</p>
+                  <section data-ajax-replace="#insurance"></section>
+                </div>
+                <!--Private insurance, no access when they applied-->
+                <div id="answer3-after-1" class="alert alert-info alert1 hidden">
+                  <h4>You can keep the benefit</h4>
+                  <!--p>Your child's appointment must have been within the benefit period.</p-->
+                  <p>Since your child did <strong>not</strong> have access to a private dental insurance plan when you applied, you can keep the benefit.</p>
+                  <section data-ajax-replace="#insurance"></section>
+                </div>
+                <!--Private insurance, had access when they applied-->
+                <div id="answer3-after-2" class="alert alert-warning alert1 hidden">
+                  <h4>You must repay</h4>
+                  <p>Since your child had access to a private dental insurance plan when you applied, you must repay the benefit.</p>
+                  <p>You must repay the amount for each child who is in the same situation.</p>
+                </div>
+                <!--Private insurance, multiple appointments-->
+                <div id="answer3-both" class="alert alert-info alert1 hidden">
+                  <h4>You may be able to keep the benefit</h4>
+                  <p>You may <strong>not</strong> need to repay if:</p>
+                  <ul>
+                    <li>Your child did not have access to dental insurance when you applied, but got insurance later</li>
+                    <li>Your child had access to dental insurance when you applied but they already received dental care while not insured</li>
+                  </ul>
+                  <section data-ajax-replace="#insurance"></section>
+                  <p class="mrgn-tp-md">If you are still concerned you might need to repay, contact the CRA at <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-959-8281<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-959-8281</strong>.</p>
+                </div>
+                <!--Private insurance, unsure-->
+                <div id="answer3-unsure" class="alert alert-info alert1 hidden">
+                  <h4>Contact us if you're unsure</h4>
+                  <p>You may <strong>not</strong> need to repay if:</p>
+                  <ul>
+                    <li>Your child did not have access to dental insurance when you applied, but got insurance later</li>
+                    <li>Your child had access to dental insurance when you applied but they already received dental care while not insured</li>
+                  </ul>
+                  <details id="insurance">
+                    <summary>What counted as access to private dental insurance</summary>
+                    <p>Your child was considered to have access to private dental insurance if:</p>
+                    <ul class="lst-spcd">
+                      <li>Some or all of your child's dental costs were covered by a private dental insurance plan of any kind</li>
+                      <li>Your employer provided a dental insurance plan for your child (including health care spending accounts)</li>
+                      <li>Your child's other parent or caregiver's employer provided a dental insurance plan for your child (including health care spending accounts)</li>
+                      <li>You or someone else declined an employer provided dental insurance plan that would have covered the dental care for your child </li>
+                    </ul>
+                  </details>
+                  <p class="mrgn-tp-md">If you are still concerned you might need to repay, contact the CRA at <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-959-8281<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-959-8281</strong>.</p>
+                </div>
+                <!--Government program, all costs covered-->
+                <div id="answer4-1" class="alert alert-warning alert1 hidden">
+                  <h4>You must repay</h4>
+                  <p>Since you did <strong>not</strong> pay any of your child's dental costs, you must repay the amount you received for that period.</p>
+                  <p>This applies for each child who is in the same situation.</p>
+                </div>
+                <!--Government program, some costs covered-->
+                <div id="answer4-2" class="alert alert-info alert1 hidden">
+                  <h4>You can keep the payment</h4>
+                  <p>Since you had to pay for some of your child's dental costs, you can keep the payment.</p>
+                </div>
+                <!--Government program, unsure if costs covered-->
+                <div id="answer4-3" class="alert alert-info alert1 hidden">
+                  <h4>Only repay if your child's dental costs are fully covered</h4>
+                  <p>If your child's dental costs were <strong>fully covered</strong> by the other program, you must repay the Canada Dental Benefit.</p>
+                  <p>If you had to pay for some of your child's dental costs, you can keep the payment for that period.</p>
+                  <p class="mrgn-tp-md">If you are still concerned you might need to repay, contact the CRA at <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-959-8281<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-959-8281</strong>.</p>
+                </div>
+                <!--P1, some costs-->
+                <div id="answer5-p1" class="alert alert-info alert1 hidden">
+                  <h4>You can keep the payment if you met the eligibility criteria</h4>
+                  <p>If your child was eligible and their dental costs were less than the payment you received, you <strong>do not</strong> need to return any unused amounts.</p>
+                  <p>You only need to repay the benefit if you did not have any dental costs for your child between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023.</p>
+                </div>
+                <!--P2, some costs-->
+                <div id="answer5-p2" class="alert alert-info alert1 hidden">
+                  <h4>You can keep the payment if you met the eligibility criteria</h4>
+                  <p>If your child was eligible and their dental costs were less than the payment you received, you <strong>do not</strong> need to return any unused amounts.</p>
+                  <p>You only need to repay the benefit if you did not have any dental costs for your child between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024.</p>
+                </div>
+                <!--AP1, paid over $650-->
+                <div id="answer5-ap1-1" class="alert alert-success alert1 hidden">
+                  <h4>You can keep the payment</h4>
+                  <p>If your child's dental costs were <strong class="nowrap">more than $650</strong> for services received between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023, you can keep the payment.</p>
+                  <section data-ajax-replace="/content/canadasite/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#ajax-costs"><a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#costs-ap1">Which dental costs could have been included</a></section>
+                </div>
+                <!--AP2, paid over $650-->
+                <div id="answer5-ap2-1" class="alert alert-success alert1 hidden">
+                  <h4>You can keep the payment</h4>
+                  <p>If your child's dental costs were <strong class="nowrap">more than $650</strong> for services received between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024, you can keep the payment.</p>
+                  <section data-ajax-replace="/content/canadasite/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#ajax-costs"><a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#costs-ap2">Which dental costs could have been included</a></section>
+                </div>
+                <!--AP1 & AP2, Paid less than $650-->
+                <div id="answer5-ap-2" class="alert alert-warning alert1 hidden">
+                  <h4>You must repay if your child's dental costs were less than $650</h4>
+                  <p>If your costs were less than $650, you need to repay the amount for the additional payment.</p>
+                  <p>You can keep your original payment if you met the eligibility criteria for that payment.</p>
+                  <section data-ajax-replace="/content/canadasite/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#ajax-costs"><a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#costs-ap1">Which dental costs could have been included</a></section>
+                </div>
+                <!--AP1 Unsure-->
+                <div id="answer5-ap1-3" class="alert alert-info alert1 hidden">
+                  <h4>Contact us if you're unsure about repaying</h4>
+                  <p>If your child's dental costs were <strong class="nowrap">more than $650</strong> for services received between October&nbsp;1,&nbsp;2022 and June&nbsp;30,&nbsp;2023, you can keep the payment.</p>
+                  <section data-ajax-replace="/content/canadasite/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#ajax-costs"><a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#costs-ap1">Which dental costs could have been included</a></section>
+                  <p>If you are still concerned you might need to repay, contact the CRA at <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-959-8281<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-959-8281</strong>.</p>
+                </div>
+                <!--AP2 Unsure-->
+                <div id="answer5-ap2-3" class="alert alert-info alert1 hidden">
+                  <h4>Contact us if you're unsure about repaying</h4>
+                  <p>If your child's dental costs were <strong class="nowrap">more than $650</strong> for services received between July&nbsp;1,&nbsp;2023 and June&nbsp;30,&nbsp;2024, you can keep the payment.</p>
+                  <section data-ajax-replace="/content/canadasite/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#ajax-costs"><a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#costs-ap2">Which dental costs could have been included</a></section>
+                  <p>If you are still concerned you might need to repay, contact the CRA at <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-959-8281<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-959-8281</strong>.</p>
+                </div>
+                <!--Not eligible-->
+                <div id="answer6" class="alert alert-warning alert1 hidden">
+                  <h4>You must repay</h4>
+                  <p>Since you did <strong>not</strong> meet the eligibility criteria, you must repay the benefit.</p>
+                  <p>You must repay the amount for each child who was not eligible.</p>
+                </div>
+                <!--Unsure-->
+                <div id="answer7" class="alert alert-warning alert1 hidden">
+                  <h4>Contact us if you're unsure about repaying</h4>
+				  <p>You can check if you met the <a href="/en/revenue-agency/services/child-family-benefits/dental-benefit/who-apply.html#lgblty">eligibility criteria</a>.</p>
+                  <p>If you are still concerned you might need to repay, contact the CRA at <a href="tel:18009598281" class="hidden-md hidden-lg nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span> 1-800-959-8281<span class="wb-inv"> (opens up phone application)</span></a><strong class="hidden-xs hidden-sm nowrap"><span class="fas fa-phone fa-flip-horizontal" aria-hidden="true"></span>1-800-959-8281</strong>.</p>
+                </div>
+              </div>
+              <!--End of FF answers--> 
               </div>
             </details>
             <details id="full-text">
