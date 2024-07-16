@@ -515,8 +515,11 @@
                   <li><a href="#a2">You received a letter from the CRA</a></li>
                   <li><a href="#a3">Your child had access to a private dental insurance plan</a></li>
                   <li><a href="#a4">Your child's dental costs were covered by another government program</a></li>
-                  <li><a href="#a5">You did not meet the eligibility criteria</a></li>
-                  <li><a href="#a6">None of the above</a></li>
+					
+				  <li><a href="#a5">Your child's dental costs were less than expected</a></li>
+					
+                  <li><a href="#a6">You did not meet the eligibility criteria</a></li>
+                  <li><a href="#a7">None of the above</a></li>
                 </ul>
                 <div class="accordion">
                   <h5 id="a1">Your child's appointment was moved or they did not go</h5>
@@ -639,7 +642,34 @@
                       <p>If your child's dental costs are fully reimbursed or paid for by the other program, you must repay the Canada Dental Benefit.</p>
                     </div>
                   </details>
-                  <h5 id="a5">You did not meet the eligibility criteria</h5>
+					
+					
+					<h5 id="a5">If your child's dental costs were less than expected</h5>
+                  <details class="acc-group">
+                    <summary class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>If the other government program covered <strong>all</strong> of your child's dental costs</summary>
+                    <div class="tgl-panel" id="ajax4-1">
+                      <h4>You must repay</h4>
+                      <p>Since you did <strong>not</strong> pay any of your child's dental costs, you must repay the benefit.</p>
+                      <p>You must repay the amount for each child who is in the same situation.</p>
+                    </div>
+                  </details>
+                  <details class="acc-group">
+                    <summary class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>If the other government program did <strong>not</strong> cover all of your child's dental costs</summary>
+                    <div class="tgl-panel" id="ajax4-2">
+                      <h4>You can keep the benefit</h4>
+                      <p>Since you had to pay for some of your child's dental costs, you can keep the benefit.</p>
+                    </div>
+                  </details>
+                  <details class="acc-group">
+                    <summary class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>If you're <strong>unsure</strong> if the other government program will cover all of your child's dental costs</summary>
+                    <div class="tgl-panel" id="ajax4-3">
+                      <h4>Only repay if your child's dental costs are fully covered</h4>
+                      <p>Wait to find out how much of your child's dental costs were covered by the other government program.</p>
+                      <p>If your child's dental costs are fully reimbursed or paid for by the other program, you must repay the Canada Dental Benefit.</p>
+                    </div>
+                  </details>
+					
+                  <h5 id="a6">You did not meet the eligibility criteria</h5>
                   <details class="acc-group">
                     <summary class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>If you did not meet the eligibility criteria</summary>
                     <div class="tgl-panel" id="ajax5">
@@ -648,7 +678,7 @@
                       <p>You must repay the amount for each child who was not eligible.</p>
                     </div>
                   </details>
-                  <h5 id="a6">None of the above</h5>
+                  <h5 id="a7">None of the above</h5>
                   <details class="acc-group mrgn-bttm-md">
                     <summary class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>If none of the situations above apply to you</summary>
                     <div class="tgl-panel" id="ajax6">
